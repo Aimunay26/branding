@@ -1,0 +1,13 @@
+.venv/
+.venv-win/
+.venv-local/
+.claude/
+.env
+.env.*
+!.env.example
+__pycache__/
+*.pyc
+.pytest_cache/
+datos/*.db
+datos/*.db-*
+datos/pdf/

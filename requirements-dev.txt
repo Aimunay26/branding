@@ -1,0 +1,12 @@
+# Dependencias de desarrollo. No hacen falta para servir la aplicación.
+#
+#   python -m pip install -r requirements-dev.txt
+#   python -m pytest -q
+#
+# Va en un fichero aparte y no en requirements.txt porque pytest no pinta nada
+# en producción, y meter herramientas de desarrollo en la imagen que se despliega
+# es superficie de ataque gratis.
+
+-r requirements.txt
+
+pytest==9.1.1

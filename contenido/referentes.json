@@ -1,0 +1,1997 @@
+{
+  "referentes": [
+    {
+      "id": "john-lennon",
+      "nombre": "John Lennon",
+      "epoca": "1960-1980",
+      "campo": "Música / activismo",
+      "arquetipo_primario": "FOR",
+      "arquetipos_secundarios": [
+        "SAB"
+      ],
+      "titular": "El iconoclasta que convirtió su vida privada en manifiesto.",
+      "estilo_visual": "Dos etapas nítidas. Primero, el uniforme Beatle: traje sin solapas, botines de tacón cubano, corte de pelo geométrico. Después, la desaparición del disfraz: pantalón blanco de lino, camiseta lisa, chaqueta militar verde oliva, cazadora vaquera con chapas, gabardina beige. Silueta cada vez más suelta, casi doméstica, hasta acabar en pijama en una cama de hotel como escenario político. Nada de brillo: telas mate, blanco quirúrgico, denim gastado.",
+      "cabello": "Del flequillo mop-top perfectamente recortado de 1963 al pelo largo hasta los hombros con raya al medio y barba tupida de 1969. Luego el gesto radical: rapado casi al cero en 1970. Su pelo era un cronómetro ideológico; cuando cambiaba de idea, cambiaba de cabeza.",
+      "paleta": [
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco total"
+        },
+        {
+          "hex": "#1C1C1C",
+          "nombre": "Negro tinta"
+        },
+        {
+          "hex": "#4A5D3A",
+          "nombre": "Verde militar"
+        },
+        {
+          "hex": "#D9C7A3",
+          "nombre": "Beige gabardina"
+        },
+        {
+          "hex": "#C0392B",
+          "nombre": "Rojo consigna"
+        }
+      ],
+      "prendas_firma": [
+        "Gafas redondas de montura metálica fina",
+        "Chaqueta militar verde oliva",
+        "Camiseta blanca lisa sin logo",
+        "Pantalón blanco de lino ancho",
+        "Cazadora vaquera con chapas y pins de protesta",
+        "Gabardina beige larga"
+      ],
+      "tono_comunicacion": "Frase corta, seca, con doble filo. Mezclaba la boutade provocadora con la sentencia sincera sin transición ni aviso. Se reía de sí mismo antes de que lo hicieran los demás y usaba el humor como palanca para colar ideas incómodas. Nunca pedía permiso para contradecirse en público.",
+      "gesto_diferenciador": "Las gafas redondas de montura metálica, tan finas que casi desaparecen: convirtió un modelo de gafas de la seguridad social británica, un objeto médico feo y barato, en el símbolo global del intelectual pacifista. Un único objeto de cinco euros lo hacía reconocible en silueta a treinta metros.",
+      "para_quien": "Este referente encaja si tú necesitas que tu vida privada y tu discurso público sean la misma cosa, si te incomoda el traje que te pusieron y si prefieres una idea incómoda bien dicha a diez ideas cómodas. Funciona cuando tu marca vive de posicionarse, no de gustar.",
+      "riesgo": "Confundir la provocación con el contenido. Lennon mal imitado es un señor con gafas redondas soltando frases grandilocuentes sobre la paz sin haber hecho nada. Su sombra: el ego que se disfraza de causa, la crueldad verbal con los cercanos y la coherencia exigida a todos menos a uno mismo.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/85/John_Lennon_1969_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:John_Lennon_1969_(cropped).jpg",
+        "licencia": "CC0",
+        "autor": "Joost Evers / Anefo",
+        "atribucion": "Foto: Joost Evers / Anefo — CC0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/john-lennon.jpg"
+      }
+    },
+    {
+      "id": "freddie-mercury",
+      "nombre": "Freddie Mercury",
+      "epoca": "1970-1991",
+      "campo": "Música / escena",
+      "arquetipo_primario": "AMA",
+      "arquetipos_secundarios": [
+        "BUF",
+        "MAG"
+      ],
+      "titular": "El que trataba un estadio de 80.000 personas como una conversación íntima.",
+      "estilo_visual": "El arco va del andrógino barroco al obrero hipermasculino. Primero: maillots de licra ceñidos, escotes hasta el ombligo, capa de armiño y corona, uñas pintadas de negro en una sola mano, kimonos y blusas de satén. Después, el giro de los ochenta: bigote recortado, camiseta blanca de tirantes, vaqueros ajustados, muñequeras de cuero tachonado. La silueta siempre marca cuerpo, siempre pide luz, siempre está construida para verse desde la última fila.",
+      "cabello": "Melena negra larga y lacia en los setenta, sin capas, muy de estrella de rock clásica. En 1980 la corta al ras y se deja el bigote espeso que le costó una rebelión de parte de su público. Ese bigote, más el pelo corto, fue una declaración de identidad tan potente como cualquier letra.",
+      "paleta": [
+        {
+          "hex": "#FFD700",
+          "nombre": "Oro corona"
+        },
+        {
+          "hex": "#000000",
+          "nombre": "Negro laca"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco tirantes"
+        },
+        {
+          "hex": "#B01030",
+          "nombre": "Rojo terciopelo"
+        },
+        {
+          "hex": "#E8E8E8",
+          "nombre": "Plata armiño"
+        }
+      ],
+      "prendas_firma": [
+        "Maillot de licra amarillo con franjas",
+        "Camiseta blanca de tirantes",
+        "Muñequera de cuero con tachuelas",
+        "Capa de armiño y corona",
+        "Media caña de micrófono sin pie",
+        "Vaquero azul ajustado y cinturón ancho"
+      ],
+      "tono_comunicacion": "Grandilocuente en escena, tímido y cortés en privado; esa brecha era parte del personaje. En público: exceso, ironía, mano al pecho, cero pudor. En entrevista: respuestas breves, evasivas elegantes, ningún interés en explicarse. Nunca convirtió su intimidad en material promocional.",
+      "gesto_diferenciador": "La media caña de micrófono: el pie roto que sostiene como un cetro, una espada, una guitarra imaginaria. Eso, más la llamada y respuesta con el público, un cantante haciendo que 80.000 personas canten a coro sílabas sin sentido. Convirtió el escenario en un instrumento de mando.",
+      "para_quien": "Este referente encaja si tú das la cara en directo, si tu producto es una experiencia y no un objeto, y si tu poder está en hacer que la gente se sienta parte de algo más grande. Encaja si eres reservado en corto y expansivo en largo.",
+      "riesgo": "Todo escenario y nada de sustancia. El Mercury mal copiado es puro histrionismo: gestos grandes sin voz que los sostenga. Su sombra: la soledad detrás del exceso, el personaje que se come a la persona y la fiesta permanente como forma de no estar solo.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/ef/Freddie_Mercury_performing_in_New_Haven%2C_CT%2C_November_1977.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Freddie_Mercury_performing_in_New_Haven,_CT,_November_1977.jpg",
+        "licencia": "CC BY-SA 3.0",
+        "autor": "Carl Lender",
+        "atribucion": "Foto: Carl Lender — CC BY-SA 3.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/freddie-mercury.jpg"
+      }
+    },
+    {
+      "id": "madonna",
+      "nombre": "Madonna",
+      "epoca": "1980-actualidad",
+      "campo": "Música / provocación cultural",
+      "arquetipo_primario": "FOR",
+      "arquetipos_secundarios": [
+        "AMA",
+        "GOB"
+      ],
+      "titular": "La que hizo de la reinvención total un modelo de negocio.",
+      "estilo_visual": "No tiene un estilo: tiene una serie de estilos ejecutados con disciplina militar. La chica de los encajes y crucifijos y las pulseras de goma de 1984. La rubia platino de traje masculino y corsé cónico de 1990. La vaquera de 2000. La dominatrix de cuero. Cada disco, un cuerpo nuevo, un color de pelo nuevo y un vestuario coherente hasta el último detalle. La constante: lencería como ropa exterior, crucifijos vaciados de religión y una silueta que siempre reivindica el cuerpo como territorio propio.",
+      "cabello": "Un catálogo entero: los rizos oscuros desordenados con lazo, el platino de Hollywood con ondas al agua, el pixie oscuro, las trenzas, el pelo largo liso castaño. Lo cambia como quien cambia de argumento. Nunca se le ve un pelo que no sea deliberado.",
+      "paleta": [
+        {
+          "hex": "#000000",
+          "nombre": "Negro encaje"
+        },
+        {
+          "hex": "#F5C6D6",
+          "nombre": "Rosa corsé"
+        },
+        {
+          "hex": "#EFE3C0",
+          "nombre": "Platino"
+        },
+        {
+          "hex": "#C8102E",
+          "nombre": "Rojo labios"
+        },
+        {
+          "hex": "#D4AF37",
+          "nombre": "Oro crucifijo"
+        }
+      ],
+      "prendas_firma": [
+        "Corsé cónico de satén rosa",
+        "Crucifijos grandes como bisutería",
+        "Guantes de encaje sin dedos",
+        "Pulseras de goma apiladas",
+        "Body de cuero negro",
+        "Cinturón con la hebilla 'Boy Toy'"
+      ],
+      "tono_comunicacion": "Frontal, controlado, sin rodeos. Habla en imperativo y responde a la crítica atacando el marco de la pregunta, no la pregunta. Domina la entrevista como si fuera su escenario. Cero disculpas públicas, cero explicaciones a posteriori.",
+      "gesto_diferenciador": "El corsé cónico: convirtió la ropa interior en armadura y la puso por fuera. El gesto exacto es sacar a la superficie lo que se supone que va oculto, y hacerlo con tal aplomo que el escándalo se vuelve tendencia en seis meses. También la mano en la cadera, barbilla alta, mirada directa a cámara.",
+      "para_quien": "Este referente encaja si tú necesitas reinventarte cada ciclo sin perder el hilo, si tu marca crece a base de tensar el límite de lo aceptable y si tienes la disciplina de trabajo brutal que hace falta para sostener el escándalo. No es para quien improvisa.",
+      "riesgo": "La provocación que se vuelve rutina y deja de provocar. Si copias la forma sin el trabajo, te quedas en el disfraz. Su sombra: la frialdad calculadora, la reinvención como huida hacia adelante y el pánico a la irrelevancia disfrazado de audacia.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Madonna_Rebel_Heart_Tour_2015_-_Stockholm_%2823051472299%29_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Madonna_Rebel_Heart_Tour_2015_-_Stockholm_(23051472299)_(cropped).jpg",
+        "licencia": "CC BY-SA 2.0",
+        "autor": "chrisweger",
+        "atribucion": "Foto: chrisweger — CC BY-SA 2.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/madonna.jpg"
+      }
+    },
+    {
+      "id": "johnny-depp",
+      "nombre": "Johnny Depp",
+      "epoca": "1990-actualidad",
+      "campo": "Cine / interpretación",
+      "arquetipo_primario": "FOR",
+      "arquetipos_secundarios": [
+        "BUF",
+        "EXP"
+      ],
+      "titular": "El galán que huyó del guapo para poder disfrazarse toda la vida.",
+      "estilo_visual": "Bohemio acumulativo: capas sobre capas sin lógica aparente y con una coherencia final indiscutible. Sombrero de fieltro de ala ancha, chalecos, camisas holgadas, foulards y pañuelos anudados al cuello, abrigos largos, botas gastadas, anillos en casi todos los dedos, collares apilados, pulseras de cuero y cuentas. Nada nuevo, nada planchado: todo parece heredado o rescatado de un mercadillo. Un guardarropa de pirata literario.",
+      "cabello": "Media melena castaña despeinada, a menudo recogida en un moño bajo o cubierta por el sombrero. Perilla, barba de tres días o bigote fino según el personaje. Su pelo casi nunca se ve limpio del todo, y eso es intencionado.",
+      "paleta": [
+        {
+          "hex": "#3B2F2F",
+          "nombre": "Marrón cuero"
+        },
+        {
+          "hex": "#6E7B8B",
+          "nombre": "Gris humo"
+        },
+        {
+          "hex": "#8B7355",
+          "nombre": "Camel gastado"
+        },
+        {
+          "hex": "#1A1A1A",
+          "nombre": "Negro sombrero"
+        },
+        {
+          "hex": "#A6431E",
+          "nombre": "Óxido"
+        }
+      ],
+      "prendas_firma": [
+        "Sombrero de fieltro de ala ancha",
+        "Gafas de sol redondas de cristal azul o violeta",
+        "Anillos de plata en varios dedos",
+        "Foulard anudado al cuello",
+        "Chaleco sobre camisa holgada",
+        "Botas de piel muy gastadas"
+      ],
+      "tono_comunicacion": "Bajo, pausado, casi murmurado. Contesta con anécdotas y desvíos en lugar de con respuestas. Se sitúa siempre como extraño en su propia industria: habla de Hollywood como si él estuviera de paso. Ironía suave, incomodidad exhibida.",
+      "gesto_diferenciador": "Las gafas de sol redondas y pequeñas con cristal de color, llevadas puertas adentro y a cualquier hora. Sumadas al exceso de anillos en las dos manos: cada gesto de la mano se convierte en una firma visual. Nunca está del todo presente y nunca está del todo desarmado.",
+      "para_quien": "Este referente encaja si tú eres un camaleón profesional, si tu valor está en desaparecer dentro del trabajo y si te niegas a que el mercado te encasille en lo que mejor vendes. Encaja si prefieres el personaje raro al papel rentable.",
+      "riesgo": "La excentricidad como coartada. Cuando el disfraz sustituye al criterio, queda un señor cargado de collares haciendo muecas. Su sombra: la autodestrucción romantizada, la vida caótica vendida como autenticidad y la incapacidad de separar el personaje de la persona.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/21/Johnny_Depp_2020.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Johnny_Depp_2020.jpg",
+        "licencia": "CC BY-SA 3.0",
+        "autor": "Harald Krichel",
+        "atribucion": "Foto: Harald Krichel — CC BY-SA 3.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/johnny-depp.jpg"
+      }
+    },
+    {
+      "id": "david-bowie",
+      "nombre": "David Bowie",
+      "epoca": "1969-2016",
+      "campo": "Música / arte total",
+      "arquetipo_primario": "MAG",
+      "arquetipos_secundarios": [
+        "CRE",
+        "FOR"
+      ],
+      "titular": "El que demostró que la identidad es un material de trabajo, no un destino.",
+      "estilo_visual": "Una sucesión de personajes con vestuario cerrado y coherente. Ziggy Stardust: monos asimétricos de Kansai Yamamoto, plataformas rojas, rayo pintado en la cara. El Duque Blanco: chaleco negro, camisa blanca impecable, pantalón de pinzas, elegancia gélida de entreguerras. Los ochenta: traje pastel amplio, pelo rubio, sonrisa. Los últimos años: sastrería inglesa perfecta, negro sobre negro. Siempre silueta afilada, siempre delgadísimo, siempre un plano por encima de la moda del momento.",
+      "cabello": "El mullet rojo fuego cortado a navaja de Ziggy, laqueado hacia arriba, es probablemente el corte más influyente del siglo XX. Antes, la melena rubia hippy. Después, el rubio peinado hacia atrás del Duque, el flequillo rubio platino de los ochenta y el pelo corto castaño y natural del final. Cada era empieza por la cabeza.",
+      "paleta": [
+        {
+          "hex": "#E4002B",
+          "nombre": "Rojo Ziggy"
+        },
+        {
+          "hex": "#0057B8",
+          "nombre": "Azul eléctrico"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco Duque"
+        },
+        {
+          "hex": "#111111",
+          "nombre": "Negro sastre"
+        },
+        {
+          "hex": "#F2A900",
+          "nombre": "Ámbar escénico"
+        }
+      ],
+      "prendas_firma": [
+        "Rayo rojo y azul pintado sobre el rostro",
+        "Mono asimétrico de una sola pierna",
+        "Botas de plataforma",
+        "Chaleco negro sobre camisa blanca",
+        "Traje de sastrería impecable",
+        "Parche o maquillaje sobre un ojo"
+      ],
+      "tono_comunicacion": "Curioso, culto, generoso con las referencias. Citaba a novelistas, pintores y filósofos sin pedantería y preguntaba más de lo que afirmaba. Educadísimo, irónico, siempre un paso lateral respecto a lo que se esperaba de él. Hablaba de sí mismo en tercera persona, como de un proyecto.",
+      "gesto_diferenciador": "El rayo rojo y azul cruzándole la cara: una sola brochada convierte un rostro en un logotipo. Es el ejemplo perfecto de marca personal reducida a un signo gráfico reproducible por un niño con un rotulador. Cincuenta años después se sigue dibujando en mejillas de todo el mundo.",
+      "para_quien": "Este referente encaja si tú trabajas por proyectos y cada uno merece su propio mundo, si tu curiosidad es tu materia prima y si necesitas permiso para abandonar lo que funciona justo cuando funciona. Encaja si te aburre tu propio éxito.",
+      "riesgo": "El cambio por el cambio, sin obra que lo sostenga. Reinventarse sin tener nada que decir es sólo cambiarse de ropa. Su sombra: la frialdad, el vampirismo cultural, la desaparición del yo detrás de tantas máscaras que ya no queda nadie a quien volver.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e8/David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:David-Bowie_Chicago_2002-08-08_photoby_Adam-Bielawski-cropped.jpg",
+        "licencia": "CC BY-SA 3.0",
+        "autor": "Adam Bielawski",
+        "atribucion": "Foto: Adam Bielawski — CC BY-SA 3.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/david-bowie.jpg"
+      }
+    },
+    {
+      "id": "steve-jobs",
+      "nombre": "Steve Jobs",
+      "epoca": "1976-2011",
+      "campo": "Tecnología / empresa",
+      "arquetipo_primario": "MAG",
+      "arquetipos_secundarios": [
+        "CRE",
+        "GOB"
+      ],
+      "titular": "El que eliminó de su vida toda decisión que no fuera el producto.",
+      "estilo_visual": "El uniforme más extremo del capitalismo moderno: jersey negro de cuello alto de Issey Miyake, vaquero Levi's 501 azul, zapatillas New Balance grises. Repetido cientos de veces, sin variación, durante más de una década. Antes de eso, la pajarita y el traje de los ochenta. La silueta es irrelevante: ese es el punto. La ropa está diseñada para desaparecer y dejar todo el ancho de banda visual al objeto que sostiene en la mano.",
+      "cabello": "Pelo oscuro con entradas, cada vez más corto y más gris, siempre sin peinado reconocible. Barba recortada y gafas redondas sin montura de titanio. La cara, igual que la ropa: neutralizada a propósito.",
+      "paleta": [
+        {
+          "hex": "#000000",
+          "nombre": "Negro cuello alto"
+        },
+        {
+          "hex": "#4A6C8C",
+          "nombre": "Azul denim"
+        },
+        {
+          "hex": "#B0B0B0",
+          "nombre": "Gris New Balance"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco producto"
+        },
+        {
+          "hex": "#E5E5E5",
+          "nombre": "Gris aluminio"
+        }
+      ],
+      "prendas_firma": [
+        "Jersey negro de cuello alto",
+        "Vaquero Levi's 501",
+        "Zapatillas New Balance 991 grises",
+        "Gafas redondas sin montura",
+        "Reloj de correa de cuero (a veces ninguno)",
+        "Manos vacías salvo por el producto"
+      ],
+      "tono_comunicacion": "Binario y absoluto: algo es genial o es una mierda, sin grises. Habla en pausas largas, con silencios calculados y una palabra final que aterriza sola. Usa el 'una cosa más' como mecanismo narrativo. Persuade con la certeza, no con el argumento.",
+      "gesto_diferenciador": "El jersey negro de cuello alto repetido idénticamente año tras año, sumado a la pose de escenario: pantalla en negro detrás, un objeto pequeño en la palma abierta, el brazo extendido hacia el público. Redujo su propia imagen a un fondo neutro para que el producto fuera lo único con color.",
+      "para_quien": "Este referente encaja si tú vendes producto y no vendes personalidad, si crees que la coherencia obsesiva es una ventaja competitiva y si estás dispuesto a eliminar de tu vida todas las decisiones triviales para concentrar la energía en una sola cosa.",
+      "riesgo": "Copiar el jersey sin tener el producto. El uniforme sin obsesión es cosplay de fundador. Su sombra: la crueldad con el equipo, el control convertido en tiranía y la 'visión' usada como excusa para no escuchar a nadie.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/Steve_Jobs_Headshot_2010-CROP2.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Steve_Jobs_Headshot_2010-CROP2.jpg",
+        "licencia": "CC BY-SA 3.0",
+        "autor": "MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg made by Matt Yohe",
+        "atribucion": "Foto: MetalGearLiquid, based on File:Steve_Jobs_Headshot_2010-CROP.jpg made by Matt Yohe — CC BY-SA 3.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/steve-jobs.jpg"
+      }
+    },
+    {
+      "id": "coco-chanel",
+      "nombre": "Coco Chanel",
+      "epoca": "1910-1971",
+      "campo": "Moda / diseño",
+      "arquetipo_primario": "CRE",
+      "arquetipos_secundarios": [
+        "GOB",
+        "FOR"
+      ],
+      "titular": "La que quitó ropa a las mujeres hasta que pudieron moverse.",
+      "estilo_visual": "Sustracción radical. Jersey de punto de jersey, entonces material de ropa interior masculina, convertido en vestido. Pantalón ancho de marinero. Traje de chaqueta de tweed sin cuello, con galón y botones dorados. El vestido negro corto, que la prensa comparó con un Ford por su ubicuidad. Y encima, siempre, un exceso deliberado de perlas y cadenas doradas sobre un fondo austero. Su regla es tensión: lo más simple posible, cargado de lo más ostentoso posible.",
+      "cabello": "Se cortó el pelo a lo garçon en los años veinte y no volvió atrás: melena corta oscura, algo ondulada, apartada de la cara. Fue de las primeras en decir en público que el pelo corto significaba libertad de movimiento, no rebeldía estética.",
+      "paleta": [
+        {
+          "hex": "#000000",
+          "nombre": "Negro Chanel"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco camelia"
+        },
+        {
+          "hex": "#C6A664",
+          "nombre": "Oro cadena"
+        },
+        {
+          "hex": "#F0EAD6",
+          "nombre": "Beige tweed"
+        },
+        {
+          "hex": "#8C8C8C",
+          "nombre": "Gris perla"
+        }
+      ],
+      "prendas_firma": [
+        "Traje de chaqueta de tweed sin cuello",
+        "Sartas de perlas superpuestas",
+        "El vestido negro corto",
+        "Zapato bicolor beige y negro",
+        "Camelia blanca de tela en la solapa",
+        "Bolso acolchado con cadena dorada"
+      ],
+      "tono_comunicacion": "Aforística y cortante. Hablaba en sentencias breves diseñadas para ser citadas, con una arrogancia que no se molestaba en suavizar. Despreciaba abiertamente a sus competidores y a los clientes que no la entendían. Nunca argumentaba: decretaba.",
+      "gesto_diferenciador": "Las perlas. Cuerdas y cuerdas de perlas, reales y falsas mezcladas sin distinción, sobre un jersey negro sencillo. Ese choque entre austeridad absoluta y joyería excesiva es su firma, y sigue siendo la fórmula más copiada de la elegancia occidental. Añadía además una camelia blanca de tela y el zapato bicolor que acorta el pie y alarga la pierna.",
+      "para_quien": "Este referente encaja si tú construyes desde la sustracción, si tu marca vive de quitar y no de añadir, y si sabes que un solo exceso bien colocado sobre un fondo sobrio vale más que diez adornos repartidos.",
+      "riesgo": "El minimalismo como pobreza de ideas. Sin la tensión del exceso puntual, el fondo austero es sólo aburrimiento caro. Su sombra: la biografía llena de zonas oscuras, el oportunismo político y la crueldad como marca de estilo.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/22/Coco_Chanel_in_Los_Angeles%2C_1931_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Coco_Chanel_in_Los_Angeles,_1931_(cropped).jpg",
+        "licencia": "CC BY 4.0",
+        "autor": "Los Angeles Times",
+        "atribucion": "Foto: Los Angeles Times — CC BY 4.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/coco-chanel.jpg"
+      }
+    },
+    {
+      "id": "audrey-hepburn",
+      "nombre": "Audrey Hepburn",
+      "epoca": "1953-1993",
+      "campo": "Cine / filantropía",
+      "arquetipo_primario": "INO",
+      "arquetipos_secundarios": [
+        "CUI",
+        "AMA"
+      ],
+      "titular": "La que descubrió que la contención es la forma más ruidosa de presencia.",
+      "estilo_visual": "Línea limpia y silueta gráfica. Pantalón capri negro ajustado, jersey fino de cuello alto o barco, bailarinas planas. Vestidos de línea A, corte impecable, escote barco. El vestido negro largo con collar de perlas y guantes hasta el codo. Nada de estampados llamativos, nada de escotes profundos: el foco va siempre al cuello, a los hombros y a los ojos. Su elegancia consiste en no competir consigo misma.",
+      "cabello": "Flequillo corto y recto sobre las cejas, o el moño alto pulido con mechones sueltos. También el pixie muy corto que popularizó en los cincuenta y que rompía con la melena ondulada obligatoria de la época. Cejas gruesas, marcadas, casi rectas: su rasgo más imitado.",
+      "paleta": [
+        {
+          "hex": "#000000",
+          "nombre": "Negro capri"
+        },
+        {
+          "hex": "#F8F4EC",
+          "nombre": "Marfil"
+        },
+        {
+          "hex": "#C9A227",
+          "nombre": "Oro discreto"
+        },
+        {
+          "hex": "#D6CFC7",
+          "nombre": "Gris topo"
+        },
+        {
+          "hex": "#7FBFAE",
+          "nombre": "Verde Tiffany"
+        }
+      ],
+      "prendas_firma": [
+        "Pantalón capri negro tobillero",
+        "Bailarinas planas negras",
+        "Gafas de sol oversize de pasta",
+        "Jersey fino de cuello barco",
+        "Guantes largos por encima del codo",
+        "Collar de perlas de varias vueltas"
+      ],
+      "tono_comunicacion": "Suave, cortés, con un fondo de acero. Hablaba despacio, sin subir la voz, y se restaba importancia constantemente. En su etapa en UNICEF, en cambio, era directa y concreta: cifras, hechos, sin sentimentalismo. Nunca usó su fama para hablar de sí misma.",
+      "gesto_diferenciador": "El pantalón capri negro con bailarinas planas: renunció al tacón, la herramienta obligatoria de la feminidad de su época, y salió ganando altura simbólica. Añade el moño alto y las gafas de sol enormes de pasta negra. Un cuello largo, unos hombros rectos y ni un solo elemento gritando.",
+      "para_quien": "Este referente encaja si tú quieres que te recuerden por cómo te comportas y no por cómo llamas la atención, si tu poder es la calma en una sala ruidosa y si tu marca se construye a largo plazo por acumulación de coherencia.",
+      "riesgo": "La contención que se lee como falta de carácter, o la elegancia que se congela en una postal decorativa sin nada detrás. Su sombra: la fragilidad exhibida como virtud y la exigencia de perfección que se cobra un precio invisible.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/6/6e/Audrey_Hepburn_in_1966.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Audrey_Hepburn_in_1966.jpg",
+        "licencia": "CC BY-SA 3.0 nl",
+        "autor": "Anefo",
+        "atribucion": "Foto: Anefo — CC BY-SA 3.0 nl, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/audrey-hepburn.jpg"
+      }
+    },
+    {
+      "id": "kurt-cobain",
+      "nombre": "Kurt Cobain",
+      "epoca": "1987-1994",
+      "campo": "Música / contracultura",
+      "arquetipo_primario": "FOR",
+      "arquetipos_secundarios": [
+        "INO",
+        "CRE"
+      ],
+      "titular": "El que se vistió para que no lo miraran y acabó definiendo cómo se vestía una generación.",
+      "estilo_visual": "Antimoda absoluta, o eso pretendía. Camisa de franela a cuadros abierta sobre camiseta de banda desgastada. Vaqueros rotos en las rodillas, no por diseño sino por uso. Rebeca de punto vieja, de segunda mano, con agujeros. Zapatillas Converse All Star destrozadas. Gafas de sol blancas de plástico barato. Todo mal combinado, todo demasiado grande, todo comprado de segunda mano. La ironía histórica es que ese desinterés se convirtió en la silueta más vendida de los noventa.",
+      "cabello": "Rubio sucio, sin corte discernible, cayendo sobre la cara y tapando los ojos. Se lo tiñó puntualmente de rojo o rosa. Nunca peinado, nunca limpio del todo, siempre por delante de la mirada: un flequillo usado como muro.",
+      "paleta": [
+        {
+          "hex": "#8B2F2F",
+          "nombre": "Rojo franela"
+        },
+        {
+          "hex": "#3E5C76",
+          "nombre": "Azul lavado"
+        },
+        {
+          "hex": "#6B705C",
+          "nombre": "Verde musgo"
+        },
+        {
+          "hex": "#D8D3C4",
+          "nombre": "Crudo desgastado"
+        },
+        {
+          "hex": "#2B2B2B",
+          "nombre": "Gris carbón"
+        }
+      ],
+      "prendas_firma": [
+        "Camisa de franela a cuadros rojos abierta",
+        "Rebeca de punto vieja color mostaza",
+        "Gafas de sol blancas de plástico",
+        "Converse All Star gastadas",
+        "Camiseta de banda desteñida",
+        "Vaquero roto en las rodillas por uso"
+      ],
+      "tono_comunicacion": "Reticente, mordaz, incómodo con el micrófono. Contestaba con sarcasmo o con monosílabos y despreciaba abiertamente los rituales de la fama. Escribía con mucha más claridad de la que hablaba. Su comunicación era el rechazo a comunicar en los términos que le exigían.",
+      "gesto_diferenciador": "La rebeca de punto de segunda mano, holgada y llena de bolas, llevada como si fuera lo único limpio que encontró. Sumada a las gafas de sol blancas baratas y al pelo tapando los ojos. El gesto es el rechazo activo del glamour: cada prenda dice explícitamente que no se ha esforzado.",
+      "para_quien": "Este referente encaja si tú desconfías del marketing y tu público te sigue precisamente por eso, si tu autenticidad es incompatible con el brillo y si prefieres perder oportunidades comerciales antes que parecer que las buscas.",
+      "riesgo": "La antimoda es una moda, y muy cara de sostener. Fingir desinterés es la forma más transparente de interés. Su sombra: el dolor real romantizado por el mercado, y una estética construida sobre un sufrimiento que acabó siendo mortal.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/37/Nirvana_around_1992_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Nirvana_around_1992_(cropped).jpg",
+        "licencia": "CC BY-SA 2.0",
+        "autor": "P.B. Rage from USA",
+        "atribucion": "Foto: P.B. Rage from USA — CC BY-SA 2.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/kurt-cobain.jpg"
+      }
+    },
+    {
+      "id": "prince",
+      "nombre": "Prince",
+      "epoca": "1978-2016",
+      "campo": "Música / producción",
+      "arquetipo_primario": "MAG",
+      "arquetipos_secundarios": [
+        "AMA",
+        "CRE"
+      ],
+      "titular": "El que hizo del morado un dominio privado y de la ambigüedad un arma.",
+      "estilo_visual": "Barroco, sensual y minuciosamente construido. Levita de terciopelo morado con volantes de encaje en el puño y el cuello, camisa con chorreras, blusas transparentes, pantalón ceñidísimo de cintura alta. Botas de tacón cubano, siempre: medía poco y lo convirtió en firma. Bastones, chaquetas con hombreras, lunares de raso, brocados. Su ropa mezcla el romanticismo del XVIII con el funk y el cuero. Ningún hombre de su época se atrevía a tanto encaje.",
+      "cabello": "Cardado alto, rizado, brillante y voluminoso, a veces con patillas marcadas o un rizo perfecto sobre la frente. Bigote fino y perilla recortada al milímetro. Delineador de ojos. El pelo siempre esculpido, nunca dejado a su suerte.",
+      "paleta": [
+        {
+          "hex": "#5B2C8D",
+          "nombre": "Morado Prince"
+        },
+        {
+          "hex": "#000000",
+          "nombre": "Negro terciopelo"
+        },
+        {
+          "hex": "#E8B4C8",
+          "nombre": "Rosa encaje"
+        },
+        {
+          "hex": "#D4AF37",
+          "nombre": "Oro brocado"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco chorreras"
+        }
+      ],
+      "prendas_firma": [
+        "Levita de terciopelo morado",
+        "Camisa con chorreras y puños de encaje",
+        "Botas de tacón cubano",
+        "Guitarra con forma de símbolo",
+        "Delineador de ojos y lunar dibujado",
+        "Bastón de empuñadura"
+      ],
+      "tono_comunicacion": "Críptico y escasísimo. Casi no daba entrevistas, prohibía las grabadoras, hablaba bajo y en enigmas. Llegó a cambiarse el nombre por un símbolo impronunciable para no tener que ser nombrado en los términos de otros. El silencio era su estrategia de comunicación.",
+      "gesto_diferenciador": "El morado como propiedad privada: no un color favorito, sino un territorio de marca defendido durante cuarenta años hasta que el Pantone del morado se asocia a él antes que a la realeza. Añade el tacón cubano en un hombre de 1,57 y el símbolo impronunciable como sustituto del nombre.",
+      "para_quien": "Este referente encaja si tú controlas todas las fases de tu obra, si tu poder crece con la escasez y el misterio en lugar de con la exposición, y si estás dispuesto a pelearte con la industria por la propiedad de lo que haces.",
+      "riesgo": "El misterio sin obra es sólo inaccesibilidad. Copiar el hermetismo sin el virtuosismo produce a alguien insoportable y poco talentoso. Su sombra: el control obsesivo, el aislamiento y la incapacidad de delegar nada a nadie.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/0a/Prince_Brussels_1986_%28retouched%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Prince_Brussels_1986_(retouched).jpg",
+        "licencia": "CC BY 2.0",
+        "autor": "Yves Lorson",
+        "atribucion": "Foto: Yves Lorson — CC BY 2.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/prince.jpg"
+      }
+    },
+    {
+      "id": "rihanna",
+      "nombre": "Rihanna",
+      "epoca": "2005-actualidad",
+      "campo": "Música / empresa / moda",
+      "arquetipo_primario": "GOB",
+      "arquetipos_secundarios": [
+        "FOR",
+        "AMA"
+      ],
+      "titular": "La que dejó de vender canciones para vender el sistema entero.",
+      "estilo_visual": "Riesgo calculado con aire de improvisación. Abrigos oversize sobre nada, vestidos naked de red y cristales, chándal de lujo con tacón de aguja, sudadera enorme con pendientes de diamantes. Mezcla streetwear y alta costura en la misma silueta sin transición. Domina el volumen: arriba enorme, abajo ajustado, o al revés. En el embarazo convirtió la barriga descubierta en editorial de moda y rompió la norma no escrita de la maternidad discreta.",
+      "cabello": "Un archivo entero: el pixie asimétrico negro con flequillo lacado, el bob rojo fuego, el rubio platino, las rastas, el pelo largo liso, el rapado lateral. Cambia de pelo con una frecuencia que sería caótica en cualquier otra y en ella es método.",
+      "paleta": [
+        {
+          "hex": "#C41E3A",
+          "nombre": "Rojo Fenty"
+        },
+        {
+          "hex": "#000000",
+          "nombre": "Negro cuero"
+        },
+        {
+          "hex": "#E7C9A9",
+          "nombre": "Nude ampliado"
+        },
+        {
+          "hex": "#00A79D",
+          "nombre": "Verde isla"
+        },
+        {
+          "hex": "#F2F2F2",
+          "nombre": "Blanco perla"
+        }
+      ],
+      "prendas_firma": [
+        "Abrigo oversize sobre lencería",
+        "Gafas de sol de sol pequeñas y ovaladas",
+        "Pendientes de aro enormes",
+        "Uñas larguísimas de almendra",
+        "Tacón de aguja con chándal",
+        "Cadenas de oro apiladas"
+      ],
+      "tono_comunicacion": "Descarada, seca y muy divertida. Responde a los haters en su propio idioma y con más gracia. Es empresaria hablando de márgenes y a los diez segundos suelta una grosería perfecta. Nunca finge solemnidad ni pide perdón por ganar dinero.",
+      "gesto_diferenciador": "Las gafas de sol minúsculas colocadas en la punta de la nariz para mirar por encima, combinadas con uñas de varios centímetros. Ese gesto de mirar por encima de la montura es literalmente su marca: te está evaluando y ni siquiera se molesta en subirse las gafas.",
+      "para_quien": "Este referente encaja si tú tienes una audiencia y quieres convertirla en un negocio propio en lugar de alquilarla a otras marcas, si te aburre el producto y te interesa el sistema, y si tu autoridad viene de no necesitar el permiso de nadie.",
+      "riesgo": "La imagen que se convierte en catálogo. Si sólo copias la actitud sin construir el negocio detrás, te queda una pose de jefa sin empresa. Su sombra: la marca que devora a la artista y la desaparición de la obra bajo la operación comercial.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/1/16/Rihanna_visits_U.S._Embassy_in_Barbados_2024_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Rihanna_visits_U.S._Embassy_in_Barbados_2024_(cropped).jpg",
+        "licencia": "Public domain",
+        "autor": "U.S. Embassy Bridgetown",
+        "atribucion": "Foto: U.S. Embassy Bridgetown — Public domain, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/rihanna.jpg"
+      }
+    },
+    {
+      "id": "lady-gaga",
+      "nombre": "Lady Gaga",
+      "epoca": "2008-actualidad",
+      "campo": "Música / performance / cine",
+      "arquetipo_primario": "CRE",
+      "arquetipos_secundarios": [
+        "MAG",
+        "FOR"
+      ],
+      "titular": "La que usó el disfraz extremo como puerta de entrada a los raros.",
+      "estilo_visual": "Dos extremos y nada en medio. Por un lado, la escultura andante: vestido de carne cruda, pelucas geométricas, zapatos imposibles de plataforma Armadillo, huevo gigante, hombreras arquitectónicas, prótesis faciales. Por otro, el giro hacia el jazz y Hollywood: vestidos de gala clásicos, guantes largos, elegancia de los cincuenta. Su coherencia no está en el estilo sino en la lógica: cada aparición pública es una pieza de arte con concepto.",
+      "cabello": "Rubio platino como base, pero tratado como escultura: lazo hecho de pelo, moños geométricos, flequillos de peluca, pelucas azules, rosas, verdes. Después, el pelo natural castaño y liso de sus etapas más despojadas. Ningún peinado es accidental.",
+      "paleta": [
+        {
+          "hex": "#F5F5F5",
+          "nombre": "Blanco platino"
+        },
+        {
+          "hex": "#000000",
+          "nombre": "Negro látex"
+        },
+        {
+          "hex": "#E0115F",
+          "nombre": "Fucsia shock"
+        },
+        {
+          "hex": "#C0C0C0",
+          "nombre": "Plata escultura"
+        },
+        {
+          "hex": "#7B2CBF",
+          "nombre": "Violeta neón"
+        }
+      ],
+      "prendas_firma": [
+        "Gafas de sol imposibles (de metal, de cigarrillos, sin lentes)",
+        "Plataformas Armadillo",
+        "Lazo hecho con el propio pelo",
+        "Guantes largos de ópera",
+        "Hombreras arquitectónicas",
+        "Body de látex negro"
+      ],
+      "tono_comunicacion": "Emocional, generosa, casi predicadora. Se dirige a su público como una comunidad de excluidos y les da un nombre. Habla mucho de dolor, salud mental y pertenencia, sin ironía y sin distancia. Es lo contrario del cool: se implica hasta la vergüenza ajena y ahí está su fuerza.",
+      "gesto_diferenciador": "Las gafas imposibles y el vestido de carne son famosos, pero su gesto real es más profundo: llamar a su público por un nombre propio y colectivo, convirtiendo a los fans en una identidad. La estética extrema era el reclamo; la pertenencia era el producto.",
+      "para_quien": "Este referente encaja si tú quieres construir comunidad y no sólo clientes, si tu público se siente fuera de sitio y necesita un sitio, y si estás dispuesto a hacer el ridículo en público para que otros se atrevan a existir.",
+      "riesgo": "El shock que caduca. La estética extrema envejece rápido y deja al descubierto si había o no un artista debajo. Su sombra: el mesianismo, la explotación emocional del vínculo con los fans y el agotamiento del cuerpo puesto al servicio del concepto.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f3/Lady_Gaga_at_Oscars_2016.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Lady_Gaga_at_Oscars_2016.jpg",
+        "licencia": "Public domain",
+        "autor": "Office of the Vice President of the United States",
+        "atribucion": "Foto: Office of the Vice President of the United States — Public domain, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/lady-gaga.jpg"
+      }
+    },
+    {
+      "id": "beyonce",
+      "nombre": "Beyoncé",
+      "epoca": "1997-actualidad",
+      "campo": "Música / espectáculo / empresa",
+      "arquetipo_primario": "GOB",
+      "arquetipos_secundarios": [
+        "HER",
+        "MAG"
+      ],
+      "titular": "La que convirtió la disciplina invisible en una forma de realeza.",
+      "estilo_visual": "Poder puesto en escena. Body de cristales Swarovski, capas doradas, trajes de sastre impecables, vestidos de gala escultóricos, sombreros de ala ancha, todo en oro, blanco o negro. Cuando construye un universo lo construye entero: el western dorado de una era, el afrofuturismo de otra, el traje de novia blanco de otra. Su cuerpo siempre en el centro del encuadre, siempre con luz frontal, siempre con una silueta que dice mando.",
+      "cabello": "Melena larga con ondas, casi siempre rubio miel sobre base oscura, con volumen y movimiento estudiado. También trenzas, peinados afro y coronas de pelo. En sus proyectos más políticos usa el pelo como declaración de herencia cultural, no sólo como estética.",
+      "paleta": [
+        {
+          "hex": "#D4AF37",
+          "nombre": "Oro Beyoncé"
+        },
+        {
+          "hex": "#000000",
+          "nombre": "Negro mando"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco ceremonial"
+        },
+        {
+          "hex": "#8A6E2F",
+          "nombre": "Bronce"
+        },
+        {
+          "hex": "#C0C0C0",
+          "nombre": "Plata cristal"
+        }
+      ],
+      "prendas_firma": [
+        "Body de cristales de pedrería",
+        "Sombrero de ala ancha",
+        "Capa dorada de escenario",
+        "Traje de chaqueta blanco impecable",
+        "Guantes largos",
+        "Pendientes-arquitectura de metal"
+      ],
+      "tono_comunicacion": "El silencio como estrategia. Casi no da entrevistas, publica sin avisar, deja que la obra hable. Cuando habla, habla en comunicados escritos, medidos al milímetro. Su control de la narrativa es absoluto: nada sale de su equipo sin haber sido decidido.",
+      "gesto_diferenciador": "El lanzamiento sin previo aviso: publicar un álbum entero a medianoche, sin promoción, y hacer que el mundo se detenga. Trasladado a la imagen, es lo mismo que hace con el sombrero de ala ancha y la capa: aparecer sin explicación, ocupar todo el espacio, no dar entrevistas. Escasez más magnitud.",
+      "para_quien": "Este referente encaja si tú prefieres que hable el trabajo, si tu ventaja es una capacidad de ejecución que otros no pueden igualar y si crees que la escasez de apariciones aumenta el valor de cada una.",
+      "riesgo": "La perfección que se vuelve inhumana y aleja. El control absoluto deja fuera la espontaneidad, y sin grietas no hay identificación. Su sombra: la distancia glacial y la presión de un estándar que nadie a tu alrededor puede sostener.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b7/Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_%2810_of_118%29_%2852946364598%29_%28best_crop%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Beyonc%C3%A9_-_Tottenham_Hotspur_Stadium_-_1st_June_2023_(10_of_118)_(52946364598)_(best_crop).jpg",
+        "licencia": "CC BY 2.0",
+        "autor": "Raph_PH",
+        "atribucion": "Foto: Raph_PH — CC BY 2.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/beyonce.jpg"
+      }
+    },
+    {
+      "id": "frida-kahlo",
+      "nombre": "Frida Kahlo",
+      "epoca": "1925-1954",
+      "campo": "Pintura",
+      "arquetipo_primario": "CRE",
+      "arquetipos_secundarios": [
+        "FOR",
+        "AMA"
+      ],
+      "titular": "La que hizo de su dolor y de su herencia un traje que nadie podía quitarle.",
+      "estilo_visual": "El traje de tehuana como armadura política. Blusa huipil bordada a mano, falda larga de volantes con encaje blanco en el bajo, rebozo cruzado al hombro. Joyería precolombina pesada: collares de jade, plata oaxaqueña, aretes grandes. Todo saturado de color y de trabajo artesanal mexicano en un momento en que la élite miraba a París. El vestido largo cumplía además una función práctica: tapaba la pierna dañada. Belleza y defensa en la misma prenda.",
+      "cabello": "Recogido en trenzas enrolladas sobre la cabeza como una corona, entretejidas con lanas de colores, cintas y flores frescas. Y la decisión más radical: no depilarse las cejas unidas ni el bozo, y además acentuarlos en sus autorretratos. Convirtió lo que la sociedad consideraba un defecto en su firma gráfica.",
+      "paleta": [
+        {
+          "hex": "#0047AB",
+          "nombre": "Azul Casa Azul"
+        },
+        {
+          "hex": "#D62828",
+          "nombre": "Rojo carmín"
+        },
+        {
+          "hex": "#F4A300",
+          "nombre": "Amarillo cempasúchil"
+        },
+        {
+          "hex": "#2E8B57",
+          "nombre": "Verde jade"
+        },
+        {
+          "hex": "#E8D8C3",
+          "nombre": "Blanco encaje"
+        }
+      ],
+      "prendas_firma": [
+        "Huipil bordado a mano",
+        "Trenzas coronadas con flores y cintas",
+        "Collar de jade precolombino",
+        "Falda larga de volantes con encaje",
+        "Rebozo cruzado al hombro",
+        "Cejas unidas sin depilar"
+      ],
+      "tono_comunicacion": "Cruda, sexual, sin filtro y muy divertida. Escribía cartas y diarios llenos de tacos, ternura y desgarro en la misma frase. Se burlaba de la solemnidad del mundo del arte. Rechazaba la etiqueta que le colgaban los demás: decía que no pintaba sueños, sino su propia realidad.",
+      "gesto_diferenciador": "Las cejas unidas, sin retocar, pintadas incluso más marcadas de lo que eran. Es el gesto más valioso del catálogo: coger el rasgo por el que el mundo te dice que eres fea y convertirlo en tu logotipo. Añade la corona de trenzas con flores y el traje tehuana.",
+      "para_quien": "Este referente encaja si tú tienes una herencia cultural que otros consideran folclore y tú consideras identidad, si trabajas desde la herida en lugar de esconderla y si tu diferencia física o biográfica es exactamente lo que te hace irrepetible.",
+      "riesgo": "Convertirse en souvenir. Frida es hoy una bolsa de tela y una taza: la iconografía sin el dolor ni la política es decoración. Su sombra: la identificación total con el sufrimiento, la dependencia amorosa devastadora y el riesgo de que tu imagen se venda mejor que tu obra.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/09/Frida_Kahlo%2C_by_Guillermo_Kahlo_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Frida_Kahlo,_by_Guillermo_Kahlo_(cropped).jpg",
+        "licencia": "Public domain",
+        "autor": "Guillermo Kahlo",
+        "atribucion": "Foto: Guillermo Kahlo — Public domain, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/frida-kahlo.jpg"
+      }
+    },
+    {
+      "id": "karl-lagerfeld",
+      "nombre": "Karl Lagerfeld",
+      "epoca": "1965-2019",
+      "campo": "Moda / dirección creativa",
+      "arquetipo_primario": "GOB",
+      "arquetipos_secundarios": [
+        "CRE",
+        "SAB"
+      ],
+      "titular": "El que se diseñó a sí mismo como el logotipo de las casas que dirigía.",
+      "estilo_visual": "Un uniforme cerrado y blindado, repetido durante décadas: traje negro estrecho, camisa blanca de cuello alto y almidonado con alfiler, corbata negra fina, guantes de cuero sin dedos, americana entallada, botines negros. Silueta rígida, vertical, sin una arruga. Su cuerpo era una línea negra rematada en blanco. No dejaba ni un centímetro de piel a la interpretación.",
+      "cabello": "Coleta baja empolvada de blanco, tirante, sin un pelo suelto. Un peinado del siglo XVIII trasladado a la sala de juntas. Sumado a las gafas de sol negras permanentes, hacía que su rostro fuera una máscara constante.",
+      "paleta": [
+        {
+          "hex": "#000000",
+          "nombre": "Negro Lagerfeld"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco cuello"
+        },
+        {
+          "hex": "#C0C0C0",
+          "nombre": "Plata coleta"
+        },
+        {
+          "hex": "#2C2C2C",
+          "nombre": "Antracita"
+        },
+        {
+          "hex": "#D9D9D9",
+          "nombre": "Gris ceniza"
+        }
+      ],
+      "prendas_firma": [
+        "Gafas de sol negras siempre puestas",
+        "Guantes de cuero negro sin dedos",
+        "Cuello de camisa alto y almidonado",
+        "Coleta baja blanca",
+        "Corbata negra estrecha",
+        "Anillos de plata gruesos"
+      ],
+      "tono_comunicacion": "Venenoso, cultísimo y rapidísimo. Soltaba frases demoledoras sobre cualquiera, incluido él mismo, con una sonrisa. Leía compulsivamente y presumía de ello. Odiaba la nostalgia y despreciaba el pasado en voz alta, incluido el suyo. Cada declaración estaba diseñada para ser titular.",
+      "gesto_diferenciador": "El uniforme completo como armadura: gafas negras que nunca se quita, guantes sin dedos, cuello altísimo y coleta blanca. Es la operación contraria a la de Jobs: en vez de neutralizar su imagen para que brille el producto, se convirtió él mismo en un logotipo dibujable con cuatro trazos, tan reconocible como el de la casa que dirigía.",
+      "para_quien": "Este referente encaja si tú eres la cara visible de una marca que no es tuya y necesitas una silueta propia e intransferible, si trabajas más que nadie y quieres que se note, y si tu autoridad se basa en un criterio afilado y expresado sin anestesia.",
+      "riesgo": "La armadura que impide ver a la persona y la crueldad convertida en marca personal. Sus declaraciones sobre el cuerpo de las mujeres envejecieron muy mal. Su sombra: el juicio permanente, el desprecio como deporte y la incapacidad de mostrar una sola grieta.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a0/Karl_Lagerfeld_2014.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Karl_Lagerfeld_2014.jpg",
+        "licencia": "CC BY-SA 2.0",
+        "autor": "Christopher William Adach",
+        "atribucion": "Foto: Christopher William Adach — CC BY-SA 2.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/karl-lagerfeld.jpg"
+      }
+    },
+    {
+      "id": "iris-apfel",
+      "nombre": "Iris Apfel",
+      "epoca": "1950-2024",
+      "campo": "Interiorismo / moda",
+      "arquetipo_primario": "BUF",
+      "arquetipos_secundarios": [
+        "CRE",
+        "EXP"
+      ],
+      "titular": "La que demostró que el estilo no caduca a los cuarenta, ni a los noventa.",
+      "estilo_visual": "Maximalismo alegre y con criterio. Capas y capas de collares étnicos enormes, pulseras hasta el codo en los dos brazos, chaquetas bordadas, plumas, pieles, caftanes, estampados imposibles combinados entre sí. Mezcla alta costura con bisutería de mercadillo de Marrakech y una pieza de un anticuario de París en el mismo conjunto, y funciona porque el criterio es suyo, no del mercado. Es exceso, pero es exceso compuesto.",
+      "cabello": "Pelo blanco corto y con volumen, sin teñir, sin disimular la edad. Labios de rojo intenso. La edad nunca fue algo que corregir en su imagen: era la base sobre la que montaba el color.",
+      "paleta": [
+        {
+          "hex": "#E63946",
+          "nombre": "Rojo Iris"
+        },
+        {
+          "hex": "#00A6A6",
+          "nombre": "Turquesa"
+        },
+        {
+          "hex": "#F4D35E",
+          "nombre": "Amarillo mostaza"
+        },
+        {
+          "hex": "#7B1FA2",
+          "nombre": "Púrpura"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco pelo"
+        }
+      ],
+      "prendas_firma": [
+        "Gafas redondas gigantes de pasta negra",
+        "Brazaletes apilados desde la muñeca al codo",
+        "Collares étnicos superpuestos",
+        "Caftanes y chaquetas bordadas",
+        "Plumas y pieles de color",
+        "Labios rojos intensos"
+      ],
+      "tono_comunicacion": "Divertidísima, sensata y sin paciencia para las tonterías. Hablaba del estilo como de una forma de pensar, no de comprar. Se reía de la industria de la moda desde dentro. Repetía que más vale ser feliz que guapa, y lo decía en serio.",
+      "gesto_diferenciador": "Las gafas redondas enormes de pasta negra, del tamaño de dos platos, llevadas con orgullo de miope y no como accesorio de moda. Con eso, y las decenas de brazaletes que suenan cuando mueve el brazo, hizo que el sonido de su llegada precediera a su imagen. Su cara es un logo: dos círculos negros y una boca roja.",
+      "para_quien": "Este referente encaja si tú acumulas en lugar de sustraer, si tu criterio es tan fuerte que puedes mezclar lo caro y lo barato sin miedo, y si necesitas un referente que demuestre que la relevancia no tiene fecha de caducidad.",
+      "riesgo": "Sin criterio, el maximalismo es un disfraz de carnaval. Iris funcionaba porque debajo de las capas había cincuenta años de oficio en textiles. Su sombra: convertirse en la mascota simpática de una industria que celebra tu excentricidad para no tener que escuchar tus opiniones.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/d/d6/Iris_Apfel_at_MIFF_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Iris_Apfel_at_MIFF_(cropped).jpg",
+        "licencia": "CC BY-SA 2.0",
+        "autor": "MiamiFilmFestival",
+        "atribucion": "Foto: MiamiFilmFestival — CC BY-SA 2.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/iris-apfel.jpg"
+      }
+    },
+    {
+      "id": "james-dean",
+      "nombre": "James Dean",
+      "epoca": "1951-1955",
+      "campo": "Cine",
+      "arquetipo_primario": "FOR",
+      "arquetipos_secundarios": [
+        "INO",
+        "AMA"
+      ],
+      "titular": "El que inventó al adolescente moderno en tres películas y murió antes de estropearlo.",
+      "estilo_visual": "La plantilla más copiada del guardarropa masculino del siglo XX, y son cuatro prendas. Cazadora roja de nailon abierta sobre camiseta blanca lisa. Vaqueros Lee de talle alto con vuelta en el bajo. Botas de trabajo o mocasines. Cigarrillo. En otras imágenes: camiseta blanca sola, cazadora de cuero negro, abrigo largo con las manos en los bolsillos. Silueta encorvada, hombros caídos, postura de quien no quiere estar en la foto.",
+      "cabello": "Rubio oscuro, con volumen, ligeramente engominado y despeinado a la vez: el tupé desordenado. Nunca el peinado perfecto de los galanes de estudio de su época. Un mechón siempre fuera de sitio, deliberadamente.",
+      "paleta": [
+        {
+          "hex": "#C1272D",
+          "nombre": "Rojo cazadora"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco camiseta"
+        },
+        {
+          "hex": "#3C5A80",
+          "nombre": "Azul denim"
+        },
+        {
+          "hex": "#1B1B1B",
+          "nombre": "Negro cuero"
+        },
+        {
+          "hex": "#8C7B6B",
+          "nombre": "Gris niebla"
+        }
+      ],
+      "prendas_firma": [
+        "Cazadora roja de nailon",
+        "Camiseta blanca lisa",
+        "Vaquero de talle alto con vuelta en el bajo",
+        "Cazadora de cuero negro",
+        "Cigarrillo en la comisura",
+        "Botas de trabajo marrones"
+      ],
+      "tono_comunicacion": "Escaso, introspectivo, incómodo. Hablaba poco y miraba mucho. En pantalla, el famoso método: pausas, tartamudeos, frases dejadas a medias. Su comunicación era la vulnerabilidad masculina puesta en público por primera vez sin vergüenza.",
+      "gesto_diferenciador": "La camiseta blanca lisa como prenda exterior. Antes de él era ropa interior de obrero; después de él, el uniforme de la juventud. Sumado a la postura: hombros hundidos, manos en los bolsillos, mirada baja. Convirtió el desgarbo en carisma.",
+      "para_quien": "Este referente encaja si tú buscas la máxima potencia con el mínimo de elementos, si tu atractivo está en la vulnerabilidad y no en la fuerza, y si necesitas un guardarropa de cuatro prendas que funcione durante setenta años.",
+      "riesgo": "El mito construido sobre una muerte temprana. Es un referente sin segunda parte, sin madurez, sin errores. Su sombra: el romanticismo del joven atormentado, que a los veinticuatro es magnético y a los cuarenta es un problema.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e6/James_Dean_in_Rebel_Without_a_Cause.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:James_Dean_in_Rebel_Without_a_Cause.jpg",
+        "licencia": "Public domain",
+        "autor": "In-house publicity still",
+        "atribucion": "Foto: In-house publicity still — Public domain, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/james-dean.jpg"
+      }
+    },
+    {
+      "id": "grace-jones",
+      "nombre": "Grace Jones",
+      "epoca": "1977-actualidad",
+      "campo": "Música / modelo / cine",
+      "arquetipo_primario": "FOR",
+      "arquetipos_secundarios": [
+        "MAG",
+        "CRE"
+      ],
+      "titular": "La que rompió la frontera entre lo masculino y lo femenino y se quedó a vivir en el hueco.",
+      "estilo_visual": "Escultura andante. Hombreras extremas, líneas rectas y geométricas, trajes de chaqueta masculinos sin nada debajo, monos de látex, capuchas, guantes largos. Silueta angular, casi arquitectónica, construida con Jean-Paul Goude para deformar la escala del cuerpo humano. Cuando lleva vestido, lo lleva como armadura. Un cuerpo tratado como material de diseño gráfico.",
+      "cabello": "El corte flattop rapado y cuadrado: el pelo esculpido en un plano horizontal perfecto, como un bloque. Radicalmente masculino en una mujer en 1980, y todavía hoy uno de los cortes más difíciles de llevar. También el cráneo casi rapado y los tocados escultóricos.",
+      "paleta": [
+        {
+          "hex": "#000000",
+          "nombre": "Negro escultura"
+        },
+        {
+          "hex": "#E10600",
+          "nombre": "Rojo lacado"
+        },
+        {
+          "hex": "#D4AF37",
+          "nombre": "Oro máscara"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco geométrico"
+        },
+        {
+          "hex": "#2F4F4F",
+          "nombre": "Gris pizarra"
+        }
+      ],
+      "prendas_firma": [
+        "Hombreras angulares extremas",
+        "Corte de pelo flattop rapado",
+        "Traje de chaqueta masculino sin camisa",
+        "Tocados escultóricos y máscaras",
+        "Guantes largos de cuero",
+        "Sombrero de ala rígida"
+      ],
+      "tono_comunicacion": "Imperiosa, teatral y absolutamente imprevisible. No modula: no le importa incomodar en directo, interrumpir, reñir al entrevistador. Habla con una voz grave y un acento jamaicano que usa como instrumento. La docilidad no está en su repertorio.",
+      "gesto_diferenciador": "El flattop: un plano horizontal perfecto sobre la cabeza, esculpido, que convierte su silueta en una figura geométrica reconocible en negro sobre blanco. Con las hombreras angulares, su sombra recortada es identificable sin cara, sin color y sin nombre. Es el nivel máximo de reducción de una persona a un signo.",
+      "para_quien": "Este referente encaja si tú no encajas en la categoría que te asignaron, si trabajas la imagen como escultura y no como adorno, y si tu presencia física es tu argumento principal. Encaja si te da igual gustar.",
+      "riesgo": "La intimidación como única nota. Si sólo copias la dureza y la geometría, quedas frío y decorativo. Su sombra: el cuerpo objetivado incluso por quienes lo celebran, y el personaje intimidante que acaba impidiendo el acceso a la persona.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/7/7f/Grace_Jones_at_Carriageworks_%28Vivid%29_-_1st_June_2015_08.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Grace_Jones_at_Carriageworks_(Vivid)_-_1st_June_2015_08.jpg",
+        "licencia": "CC BY 2.0",
+        "autor": "Bruce",
+        "atribucion": "Foto: Bruce — CC BY 2.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/grace-jones.jpg"
+      }
+    },
+    {
+      "id": "bjork",
+      "nombre": "Björk",
+      "epoca": "1993-actualidad",
+      "campo": "Música / arte digital",
+      "arquetipo_primario": "CRE",
+      "arquetipos_secundarios": [
+        "INO",
+        "MAG"
+      ],
+      "titular": "La que nunca dejó de ver el mundo por primera vez.",
+      "estilo_visual": "Naturaleza, ciencia ficción y juego infantil en la misma silueta. El vestido de cisne, con la cabeza del animal sobre el hombro. Kimonos deconstruidos, volúmenes orgánicos, prótesis, máscaras de silicona, vestidos que parecen organismos vivos o corales. Colabora con diseñadores experimentales y les pide criaturas, no ropa. Casi nunca lleva algo que se pueda comprar en una tienda. Su cuerpo es un ecosistema en miniatura.",
+      "cabello": "Moños dobles a los lados de la cabeza, trenzas complejas, recogidos con formas geométricas, pelo cubierto de tocados y adornos florales. A veces flequillo recto y liso muy corto. Su pelo casi siempre está estructurado como una escultura o como una planta.",
+      "paleta": [
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco cisne"
+        },
+        {
+          "hex": "#FF6FA0",
+          "nombre": "Rosa orgánico"
+        },
+        {
+          "hex": "#4DD0C1",
+          "nombre": "Turquesa glaciar"
+        },
+        {
+          "hex": "#2B2B4A",
+          "nombre": "Azul volcánico"
+        },
+        {
+          "hex": "#A3D977",
+          "nombre": "Verde musgo"
+        }
+      ],
+      "prendas_firma": [
+        "Vestido cisne",
+        "Moños dobles a los lados",
+        "Máscaras y prótesis faciales",
+        "Vestidos de formas orgánicas y corales",
+        "Maquillaje gráfico de puntos y líneas",
+        "Tocados de flores y ramas"
+      ],
+      "tono_comunicacion": "Entusiasta, físico, con un vocabulario propio. Habla de biología, de software y de emociones en la misma frase y con las manos. No adopta la pose cool ni la ironía: se emociona en voz alta. Su acento y su sintaxis heterodoxa forman parte del encanto.",
+      "gesto_diferenciador": "El vestido de cisne en una alfombra roja: aparecer en el sitio más convencional del mundo vestida de animal, con total inocencia, sin ironía y sin buscar el escándalo. Ese es el gesto: la sinceridad extrema en un contexto que sólo entiende el cálculo. Y los dos moños a los lados de la cabeza como firma permanente.",
+      "para_quien": "Este referente encaja si tú trabajas en la frontera entre disciplinas, si tu curiosidad es genuina y no una estrategia, y si prefieres que te llamen rara antes que renunciar a la manera exacta en que ves las cosas.",
+      "riesgo": "La rareza que se vuelve manierismo. La inocencia fingida se nota inmediatamente y resulta insoportable. Su sombra: la excentricidad que aísla, y un público que celebra tu extrañeza sin escuchar nunca la música.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/cc/Bj%C3%B6rk_at_Cannes.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Bj%C3%B6rk_at_Cannes.jpg",
+        "licencia": "CC BY-SA 3.0",
+        "autor": "Georges Biard",
+        "atribucion": "Foto: Georges Biard — CC BY-SA 3.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/bjork.jpg"
+      }
+    },
+    {
+      "id": "bad-bunny",
+      "nombre": "Bad Bunny",
+      "epoca": "2016-actualidad",
+      "campo": "Música urbana",
+      "arquetipo_primario": "FOR",
+      "arquetipos_secundarios": [
+        "BUF",
+        "AMA"
+      ],
+      "titular": "El que llegó a lo más alto del pop mundial sin cantar una sola línea en inglés.",
+      "estilo_visual": "Color saturado y desafío a las normas de género del reguetón. Camisas de estampado tropical desabrochadas, conjuntos de colores imposibles, faldas y tops en videoclips, gafas de sol de formas raras, gorros de pescador, sudaderas oversize, cadenas y joyas de fantasía. Mezcla la calle de San Juan con la alta costura sin pedir permiso a ninguna de las dos. Su silueta es holgada, cómoda, hecha para moverse.",
+      "cabello": "Cambiante y llamativo: rapado con dibujos, teñido de rubio platino, de rosa, de azul; a veces gorro de pescador cubriéndolo todo. Y las uñas: pintadas de colores, largas, con diseños, un gesto que en su género era un tabú y él normalizó en dos años.",
+      "paleta": [
+        {
+          "hex": "#FF3EA5",
+          "nombre": "Rosa Bunny"
+        },
+        {
+          "hex": "#00E5C0",
+          "nombre": "Turquesa neón"
+        },
+        {
+          "hex": "#FFD400",
+          "nombre": "Amarillo caribe"
+        },
+        {
+          "hex": "#7B2FF7",
+          "nombre": "Violeta bench"
+        },
+        {
+          "hex": "#101010",
+          "nombre": "Negro contraste"
+        }
+      ],
+      "prendas_firma": [
+        "Uñas pintadas de colores",
+        "Gafas de sol de formas geométricas raras",
+        "Gorro de pescador",
+        "Camisa tropical desabrochada",
+        "Sudadera oversize de color saturado",
+        "Joyas y cadenas de fantasía"
+      ],
+      "tono_comunicacion": "Directo, gamberro y político sin avisar. Habla en español siempre, en cualquier escenario, y ha convertido esa decisión en su declaración más fuerte. Alterna la broma soez con la denuncia sobre Puerto Rico en el mismo párrafo. Se ríe de la masculinidad de su propio género musical desde dentro.",
+      "gesto_diferenciador": "Las uñas pintadas. En un género hipermasculino, pintarse las uñas de colores y salir así en cada foto fue un gesto minúsculo con consecuencias enormes: cambió lo que era aceptable para toda una generación de artistas latinos. Un frasco de esmalte como acto político.",
+      "para_quien": "Este referente encaja si tú te niegas a traducirte para gustar a un mercado más grande, si vienes de una periferia y quieres llevarla contigo al centro, y si la incomodidad que generas en tu propio sector es exactamente la señal de que vas bien.",
+      "riesgo": "La transgresión que se vuelve producto de marketing. Si el gesto rompedor lo aprueba primero el departamento de marca, ya no rompe nada. Su sombra: el machismo residual que convive con el discurso rupturista, y la coherencia difícil de sostener a escala de estadio.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b1/Bad_Bunny_2019_by_Glenn_Francis_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Bad_Bunny_2019_by_Glenn_Francis_(cropped).jpg",
+        "licencia": "CC BY-SA 4.0",
+        "autor": "Toglenn",
+        "atribucion": "Foto: Toglenn — CC BY-SA 4.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/bad-bunny.jpg"
+      }
+    },
+    {
+      "id": "rosalia",
+      "nombre": "Rosalía",
+      "epoca": "2017-actualidad",
+      "campo": "Música / flamenco experimental",
+      "arquetipo_primario": "CRE",
+      "arquetipos_secundarios": [
+        "MAG",
+        "FOR"
+      ],
+      "titular": "La que puso el flamenco en el futuro sin pedirle permiso al pasado.",
+      "estilo_visual": "Choque frontal entre tradición y calle. Uñas larguísimas de porcelana con cristales, aros gigantes, chándal deportivo con mantón de Manila, chaquetas de motociclista, encaje y volantes cortados en clave streetwear, cadenas de oro, licra. Trabaja con la iconografía del flamenco (el peinado, el gesto de las manos, el clavel) y la instala en un imaginario de videoclip urbano. Su silueta pasa del chándal al vestido de gala sin escala intermedia.",
+      "cabello": "Recogido tirante con baby hairs dibujados a gel sobre la frente en curvas perfectas, la coleta alta muy tensa, la raya al medio dura. También trenzas, moños bajos y adornos de pedrería. El pelo es superficie de diseño: se dibuja sobre él.",
+      "paleta": [
+        {
+          "hex": "#E8112D",
+          "nombre": "Rojo clavel"
+        },
+        {
+          "hex": "#000000",
+          "nombre": "Negro mantón"
+        },
+        {
+          "hex": "#F5F0E6",
+          "nombre": "Blanco marfil"
+        },
+        {
+          "hex": "#D4AF37",
+          "nombre": "Oro aro"
+        },
+        {
+          "hex": "#7EC8E3",
+          "nombre": "Azul chándal"
+        }
+      ],
+      "prendas_firma": [
+        "Uñas de porcelana larguísimas con pedrería",
+        "Aros de oro enormes",
+        "Baby hairs dibujados con gel",
+        "Mantón bordado sobre ropa deportiva",
+        "Cadenas gruesas de oro",
+        "Chaqueta de cuero con volantes"
+      ],
+      "tono_comunicacion": "Apasionada, técnica y muy segura de su criterio. Habla de compás y de producción con la misma naturalidad. Cambia de registro entre el catalán, el castellano andaluzado y el inglés. Responde a la polémica sobre apropiación sin defensividad: reivindica el estudio y las horas de trabajo.",
+      "gesto_diferenciador": "Las uñas de porcelana larguísimas, decoradas, imposibles, usadas para hacer el gesto flamenco de las manos: el braceo tradicional ejecutado con manicura de barrio. Es la síntesis exacta de su marca en un solo plano de cámara. Añade los baby hairs dibujados a gel como firma sobre la frente.",
+      "para_quien": "Este referente encaja si tú trabajas con una tradición y quieres empujarla hacia adelante, si tienes formación técnica seria que otros no ven bajo tu estética, y si estás dispuesto a que los puristas te odien mientras el público te sigue.",
+      "riesgo": "La línea entre el homenaje y la apropiación es delgada y te la van a recordar siempre. Sin el oficio detrás, la mezcla es sólo un collage vacío. Su sombra: la estética que se despega de la raíz que dice honrar.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f1/2023-11-16_Gala_de_los_Latin_Grammy%2C_27_%28cropped%2902.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:2023-11-16_Gala_de_los_Latin_Grammy,_27_(cropped)02.jpg",
+        "licencia": "CC BY-SA 2.0",
+        "autor": "Junta de Andalucía",
+        "atribucion": "Foto: Junta de Andalucía — CC BY-SA 2.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/rosalia.jpg"
+      }
+    },
+    {
+      "id": "tilda-swinton",
+      "nombre": "Tilda Swinton",
+      "epoca": "1986-actualidad",
+      "campo": "Cine / performance",
+      "arquetipo_primario": "MAG",
+      "arquetipos_secundarios": [
+        "CRE",
+        "EXP"
+      ],
+      "titular": "La que parece de otra especie y ha decidido no disimularlo.",
+      "estilo_visual": "Andrógino, esculpido, sin concesiones. Trajes masculinos de corte impecable, abrigos oversize con líneas arquitectónicas, monos de una pieza, volúmenes que ocultan el cuerpo en vez de marcarlo. Colores planos, sin estampado. Prefiere a los diseñadores más conceptuales y lleva sus piezas como si fueran ropa de calle. Nunca hay escote, nunca hay tacón alto, nunca hay coquetería convencional. Su elegancia es la de un objeto de diseño.",
+      "cabello": "Rubio muy claro, casi blanco, cortado corto y masculino, a veces peinado hacia atrás, a veces despeinado como recién levantada. Cejas y pestañas casi invisibles, piel pálida sin maquillaje aparente. Una cara deliberadamente desprovista de los códigos habituales de feminidad.",
+      "paleta": [
+        {
+          "hex": "#F2EFE6",
+          "nombre": "Blanco hueso"
+        },
+        {
+          "hex": "#D94F2B",
+          "nombre": "Naranja quemado"
+        },
+        {
+          "hex": "#1F1F1F",
+          "nombre": "Negro arquitectura"
+        },
+        {
+          "hex": "#B8B8B8",
+          "nombre": "Gris alabastro"
+        },
+        {
+          "hex": "#7A5C99",
+          "nombre": "Malva profundo"
+        }
+      ],
+      "prendas_firma": [
+        "Traje masculino de corte impecable",
+        "Abrigo oversize de línea arquitectónica",
+        "Pelo blanco corto peinado hacia atrás",
+        "Zapato plano de suela gruesa",
+        "Cara lavada, sin maquillaje",
+        "Piezas de diseñador conceptual"
+      ],
+      "tono_comunicacion": "Literaria, precisa y algo élfica. Habla despacio, con frases largas y bien construidas, sobre cine como si fuera arte contemporáneo. No usa la promoción como promoción: convierte la entrevista en conversación. Rechaza explícitamente la categoría de estrella.",
+      "gesto_diferenciador": "La cara lavada. Aparecer en una alfombra roja sin maquillaje, con las cejas casi invisibles y el pelo corto blanco, en un contexto donde todas las demás llevan dos horas de trabajo encima. La ausencia total de artificio, en ese entorno, es el artificio más potente que existe.",
+      "para_quien": "Este referente encaja si tú te mueves entre el arte y la industria y no quieres elegir, si prefieres el proyecto raro al papel rentable, y si tu diferencia física o de carácter es tu activo y no tu problema.",
+      "riesgo": "La rareza aristocrática que se lee como distancia y esnobismo. El rechazo del glamour desde una posición privilegiada puede sonar a pose. Su sombra: la inaccesibilidad, y una imagen tan singular que impide cualquier identificación.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/23/Tilda_Swinton_by_Gage_Skidmore_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Tilda_Swinton_by_Gage_Skidmore_(cropped).jpg",
+        "licencia": "CC BY-SA 3.0",
+        "autor": "Gage Skidmore",
+        "atribucion": "Foto: Gage Skidmore — CC BY-SA 3.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/tilda-swinton.jpg"
+      }
+    },
+    {
+      "id": "keanu-reeves",
+      "nombre": "Keanu Reeves",
+      "epoca": "1989-actualidad",
+      "campo": "Cine",
+      "arquetipo_primario": "COM",
+      "arquetipos_secundarios": [
+        "HER",
+        "SAB"
+      ],
+      "titular": "La estrella que se comporta como si no lo fuera, y ahí está todo.",
+      "estilo_visual": "Discreción sin estudio aparente. Traje negro sencillo y bien cortado en los eventos, sin corbata, camisa oscura. Fuera de eso: camiseta negra, vaquero, chaqueta de cuero o abrigo largo, botas de moto. Ropa que no destaca, que se repite, que parece elegida en dos minutos. Barba de varios días. Nunca hay logotipo visible, nunca hay ostentación, nunca hay estilismo detectable.",
+      "cabello": "Media melena oscura, lisa, a menudo con raya al medio y algo despeinada, y barba oscura tupida. Ha canoso con naturalidad, sin tinte y sin comentario. Su pelo dice que no ha pensado en su pelo.",
+      "paleta": [
+        {
+          "hex": "#111111",
+          "nombre": "Negro discreto"
+        },
+        {
+          "hex": "#3A3A3A",
+          "nombre": "Gris grafito"
+        },
+        {
+          "hex": "#5D4037",
+          "nombre": "Marrón cuero"
+        },
+        {
+          "hex": "#E8E8E8",
+          "nombre": "Blanco camisa"
+        },
+        {
+          "hex": "#2C3E50",
+          "nombre": "Azul noche"
+        }
+      ],
+      "prendas_firma": [
+        "Traje negro sin corbata",
+        "Camiseta negra lisa",
+        "Botas de motorista gastadas",
+        "Abrigo largo oscuro",
+        "Barba de varios días",
+        "Ausencia total de joyas y logos"
+      ],
+      "tono_comunicacion": "Amable, pausado, casi tímido, con silencios largos antes de responder. Da las gracias más de lo necesario. Rechaza el elogio y devuelve la atención al equipo. Su humildad no es una campaña: es tan constante y tan poco rentable que resulta creíble.",
+      "gesto_diferenciador": "Ceder el asiento en el metro. La foto de una de las mayores estrellas del mundo de pie en un vagón, con la mochila entre los pies, ofreciéndole el sitio a una desconocida, hizo más por su marca que cualquier campaña. Su gesto es el no-gesto: no ocupar más espacio del que le corresponde.",
+      "para_quien": "Este referente encaja si tú tienes poder o éxito y quieres que no se te note, si tu credibilidad se construye tratando bien a la gente sin público delante, y si crees que la mejor estrategia de marca es no tener ninguna.",
+      "riesgo": "La humildad, en cuanto se comunica, deja de serlo. Si construyes una campaña sobre lo humilde que eres, el efecto se invierte en un segundo. Su sombra: la santificación pública de alguien que sólo se comporta con normalidad, y el peso de tener que estar siempre a la altura del mito de bondad.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b4/Keanu_Reeves_at_TIFF_2025_02_%28Cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Keanu_Reeves_at_TIFF_2025_02_(Cropped).jpg",
+        "licencia": "CC BY-SA 4.0",
+        "autor": "Gabriel Hutchinson",
+        "atribucion": "Foto: Gabriel Hutchinson — CC BY-SA 4.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/keanu-reeves.jpg"
+      }
+    },
+    {
+      "id": "zendaya",
+      "nombre": "Zendaya",
+      "epoca": "2010-actualidad",
+      "campo": "Cine / moda",
+      "arquetipo_primario": "HER",
+      "arquetipos_secundarios": [
+        "AMA",
+        "CRE"
+      ],
+      "titular": "La que trata cada alfombra roja como un papel distinto.",
+      "estilo_visual": "Camaleónica con dirección de arte. Cada aparición es un personaje construido con su estilista: la armadura robótica de metal, el vestido húmedo escultórico, el traje de sastre masculino, el homenaje literal a un vestido de archivo de los noventa. Silueta muy variable pero siempre limpia, muy trabajada la línea del hombro y la caída. Alterna alta costura arriesgadísima con un estilo cotidiano casi neutro. La coherencia está en el nivel de ejecución, no en el estilo.",
+      "cabello": "De todo, y siempre relevante: rastas, afro, melena lisa larguísima, pixie, moño alto tirante, ondas de Hollywood. Ha usado el pelo como declaración política explícita después de recibir comentarios racistas sobre sus rastas en una alfombra roja.",
+      "paleta": [
+        {
+          "hex": "#B76E79",
+          "nombre": "Rosa metal"
+        },
+        {
+          "hex": "#1C1C1C",
+          "nombre": "Negro pulido"
+        },
+        {
+          "hex": "#C0C0C0",
+          "nombre": "Plata armadura"
+        },
+        {
+          "hex": "#7B0D1E",
+          "nombre": "Granate profundo"
+        },
+        {
+          "hex": "#F0E6D2",
+          "nombre": "Champán"
+        }
+      ],
+      "prendas_firma": [
+        "Vestido escultórico de metal o armadura",
+        "Traje de sastre masculino sin camisa",
+        "Moño alto tirante",
+        "Homenajes a vestidos de archivo",
+        "Joyería mínima y arquitectónica",
+        "Silueta de hombro marcado"
+      ],
+      "tono_comunicacion": "Serena, madura y sorprendentemente precisa para su edad. Elige muy bien sus batallas: habla poco y cuando habla es sobre representación, racismo o industria, con datos y sin histeria. Guarda su vida privada con un celo absoluto.",
+      "gesto_diferenciador": "El método camaleón: no tener un estilo, sino un director de arte fijo y tratar cada evento como un rodaje distinto, hasta el punto de vestirse como el personaje de la película que promociona. Convirtió la alfombra roja en una extensión del guion, y eso hoy es una disciplina profesional que ella normalizó.",
+      "para_quien": "Este referente encaja si tú te presentas ante públicos muy distintos y quieres una versión distinta para cada uno sin perder credibilidad, si trabajas con un equipo creativo de confianza y si tu carrera es larga y prefieres construir despacio.",
+      "riesgo": "Sin un equipo detrás, el camaleonismo es incoherencia. Y si el estilismo se come a la actriz, quedas como una percha de lujo. Su sombra: la imagen tan controlada que no deja ver a nadie, y el agotamiento de una perfección constante desde la adolescencia.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/2/28/Zendaya_-_2019_by_Glenn_Francis.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Zendaya_-_2019_by_Glenn_Francis.jpg",
+        "licencia": "CC BY-SA 4.0",
+        "autor": "Toglenn",
+        "atribucion": "Foto: Toglenn — CC BY-SA 4.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/zendaya.jpg"
+      }
+    },
+    {
+      "id": "pharrell-williams",
+      "nombre": "Pharrell Williams",
+      "epoca": "1998-actualidad",
+      "campo": "Música / producción / moda",
+      "arquetipo_primario": "CRE",
+      "arquetipos_secundarios": [
+        "INO",
+        "BUF"
+      ],
+      "titular": "El que no envejece porque nunca dejó de jugar.",
+      "estilo_visual": "Streetwear de lujo con espíritu de patio de colegio. Sudadera con capucha bajo una americana de sastre, pantalón corto con chaqueta buena, zapatillas exclusivas, camisetas gráficas, colores primarios y estampados alegres. Es el hombre que consiguió que un sombrero ridículo fuera portada. Silueta relajada, nunca rígida, siempre con al menos un elemento infantil o absurdo dentro de un conjunto por lo demás caro y correcto.",
+      "cabello": "Rapado, trenzas cortas, o simplemente cubierto por una gorra o un sombrero. Barba muy fina y recortada. Su cara, que no aparenta la edad que tiene, forma parte del mito y del discurso de la marca.",
+      "paleta": [
+        {
+          "hex": "#F2C230",
+          "nombre": "Amarillo Happy"
+        },
+        {
+          "hex": "#2D5BFF",
+          "nombre": "Azul primario"
+        },
+        {
+          "hex": "#E8452C",
+          "nombre": "Rojo juguete"
+        },
+        {
+          "hex": "#F5F5F5",
+          "nombre": "Blanco zapatilla"
+        },
+        {
+          "hex": "#1A1A1A",
+          "nombre": "Negro base"
+        }
+      ],
+      "prendas_firma": [
+        "Sombrero Vivienne Westwood de ala ancha (el 'sombrero de los Grammy')",
+        "Zapatillas de edición limitada",
+        "Sudadera con capucha bajo americana",
+        "Joyería de perlas en el cuello",
+        "Gafas de sol de color",
+        "Camiseta gráfica bajo traje"
+      ],
+      "tono_comunicacion": "Optimista, espiritual y algo naíf, en serio. Habla de energía, de universo y de gratitud sin ninguna ironía. Es un productor durísimo en el estudio con un discurso público de niño feliz, y esa combinación desarma.",
+      "gesto_diferenciador": "El sombrero absurdo. Aparecer en los Grammy con un sombrero de ala ancha desproporcionado, aguantar la burla de internet durante 48 horas y salir de ahí con un icono que se convirtió en meme, en merchandising y en una historia de marca. El gesto es no retirarse cuando se ríen de ti.",
+      "para_quien": "Este referente encaja si tú trabajas detrás de las cámaras y quieres tener también una cara pública, si tu marca es el optimismo y no te avergüenza, y si sabes que un detalle ridículo bien defendido vale más que un conjunto impecable.",
+      "riesgo": "El optimismo permanente puede sonar vacío y comercial. Y el estilo juvenil sostenido demasiado tiempo se vuelve una negación de la edad. Su sombra: la marca personal tan simpática que nadie te toma en serio como autor.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/4/4f/Pharrell_Williams_2024_%2854133384149%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Pharrell_Williams_2024_(54133384149).jpg",
+        "licencia": "CC BY 2.0",
+        "autor": "Web Summit/Ramsey Cardy/Sportsfile",
+        "atribucion": "Foto: Web Summit/Ramsey Cardy/Sportsfile — CC BY 2.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/pharrell-williams.jpg"
+      }
+    },
+    {
+      "id": "oprah-winfrey",
+      "nombre": "Oprah Winfrey",
+      "epoca": "1986-actualidad",
+      "campo": "Televisión / medios / empresa",
+      "arquetipo_primario": "CUI",
+      "arquetipos_secundarios": [
+        "SAB",
+        "GOB"
+      ],
+      "titular": "La que convirtió escuchar en el negocio más rentable de la televisión.",
+      "estilo_visual": "Calidez con autoridad. Trajes de chaqueta en tonos cálidos, vestidos de línea limpia en color liso, camel, crema, dorado, vino. Nada agresivo, nada gélido, nada que ponga una barrera entre ella y quien tiene enfrente. Cuellos abiertos, brazos a menudo visibles, texturas suaves. Cuando quiere autoridad, sube el contraste; cuando quiere confianza, baja a los tonos tierra. Su ropa está diseñada para que le cuentes cosas.",
+      "cabello": "Melena voluminosa con rizo trabajado, castaña, con movimiento. Ha llevado el pelo natural y alisado en distintas etapas y ha hablado en público de lo que significa cada opción. Su pelo siempre está impecable pero nunca rígido: comunica cercanía.",
+      "paleta": [
+        {
+          "hex": "#C89B6B",
+          "nombre": "Camel cálido"
+        },
+        {
+          "hex": "#7B1E3A",
+          "nombre": "Vino profundo"
+        },
+        {
+          "hex": "#F3E9DC",
+          "nombre": "Crema"
+        },
+        {
+          "hex": "#D4A017",
+          "nombre": "Dorado suave"
+        },
+        {
+          "hex": "#3E2C23",
+          "nombre": "Marrón tierra"
+        }
+      ],
+      "prendas_firma": [
+        "Traje de chaqueta en tono cálido",
+        "Vestido de color liso y línea limpia",
+        "Melena voluminosa con rizo",
+        "Joyería discreta de oro",
+        "Cuello abierto, sin corbata visual",
+        "Zapato cómodo de tacón medio"
+      ],
+      "tono_comunicacion": "La escucha como técnica de poder. Pregunta, se calla, deja el silencio incómodo y espera. Se coloca al nivel del otro y cuenta sus propias vulnerabilidades primero para que el otro cuente las suyas. Su registro es íntimo incluso ante millones de espectadores.",
+      "gesto_diferenciador": "Inclinarse hacia delante y quedarse callada. La pausa después de una pregunta difícil, sostenida sin rescatar al entrevistado, es una técnica que se estudia. Y el gesto de contar su propia herida antes de pedir la del otro. Convirtió la empatía en un formato de negocio de miles de millones.",
+      "para_quien": "Este referente encaja si tú vendes confianza, si tu producto depende de que la gente se abra contigo y si tu poder no viene de hablar sino de hacer que otros hablen. Encaja si construyes una comunidad a partir de la vulnerabilidad compartida.",
+      "riesgo": "La empatía instrumentalizada se detecta y destruye la confianza en un solo movimiento. Su sombra: la promoción de gurús y pseudociencias desde una plataforma de credibilidad enorme, y la conversión del dolor ajeno en producto de audiencia.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/e/e0/Oprah_Winfrey_2016.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Oprah_Winfrey_2016.jpg",
+        "licencia": "Public domain",
+        "autor": "US Embassy  South Africa",
+        "atribucion": "Foto: US Embassy  South Africa — Public domain, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/oprah-winfrey.jpg"
+      }
+    },
+    {
+      "id": "barack-obama",
+      "nombre": "Barack Obama",
+      "epoca": "2004-actualidad",
+      "campo": "Política",
+      "arquetipo_primario": "GOB",
+      "arquetipos_secundarios": [
+        "SAB",
+        "HER"
+      ],
+      "titular": "El que redujo su vestuario a dos trajes para no gastar decisiones en ropa.",
+      "estilo_visual": "Sobriedad institucional con un punto de calidez. Traje azul marino o gris, camisa blanca o azul claro, corbata lisa o de rayas discretas en azul o granate. Nunca un patrón llamativo, nunca un color arriesgado, nunca un accesorio innecesario. Los fines de semana: camisa blanca con las mangas remangadas, sin corbata, cuello abierto. La remangada es en sí misma una señal codificada de 'me pongo a trabajar'.",
+      "cabello": "Corte muy corto, pulcro, sin variación en veinte años. Encaneció en directo durante su presidencia y lo utilizó como argumento visual del peso del cargo. Sonrisa amplia y arrugas visibles: nunca intentó parecer más joven.",
+      "paleta": [
+        {
+          "hex": "#1B2A4A",
+          "nombre": "Azul marino"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco camisa"
+        },
+        {
+          "hex": "#7A0019",
+          "nombre": "Granate corbata"
+        },
+        {
+          "hex": "#8A9BA8",
+          "nombre": "Gris acero"
+        },
+        {
+          "hex": "#C8A46B",
+          "nombre": "Arena"
+        }
+      ],
+      "prendas_firma": [
+        "Traje azul marino de dos botones",
+        "Camisa blanca con las mangas remangadas",
+        "Corbata lisa azul o granate",
+        "Bandera en la solapa",
+        "Reloj sencillo de correa negra",
+        "Ausencia de cualquier ostentación"
+      ],
+      "tono_comunicacion": "Cadencia de predicador aplicada a la política: pausas largas, repeticiones rítmicas, subida gradual hasta una frase corta que remata. Empieza siempre reconociendo el argumento del contrario. Usa el humor autodepreciativo como desactivador de tensión. Habla en primera persona del plural.",
+      "gesto_diferenciador": "Las mangas remangadas y sin corbata: un cambio de vestuario de tres segundos que traduce visualmente 'ahora estoy trabajando para ti'. Y la decisión de llevar solo dos colores de traje, contada en público como método para no malgastar energía mental en decisiones triviales.",
+      "para_quien": "Este referente encaja si tú necesitas transmitir competencia y calma en un entorno de ruido, si tu autoridad depende de que confíen en tu criterio y no en tu carisma visual, y si quieres que la ropa sea completamente invisible.",
+      "riesgo": "La sobriedad puede leerse como frialdad o tibieza, y la calma como falta de urgencia. Su sombra: el gesto de moderación que decepciona a los suyos y el discurso brillante que no siempre encuentra traducción en hechos.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8d/President_Barack_Obama.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:President_Barack_Obama.jpg",
+        "licencia": "Public domain",
+        "autor": "Official White House Photo by Pete Souza",
+        "atribucion": "Foto: Official White House Photo by Pete Souza — Public domain, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/barack-obama.jpg"
+      }
+    },
+    {
+      "id": "anna-wintour",
+      "nombre": "Anna Wintour",
+      "epoca": "1988-actualidad",
+      "campo": "Prensa / moda",
+      "arquetipo_primario": "GOB",
+      "arquetipos_secundarios": [
+        "SAB"
+      ],
+      "titular": "La que no se quita las gafas de sol para que nunca sepas lo que piensa.",
+      "estilo_visual": "Uniforme rígido y repetido durante casi cuarenta años. Vestido de corte recto por la rodilla, con estampado floral o geométrico, mangas cortas, cintura marcada. Encima, un abrigo de piel o un chaquetón bien estructurado. Sandalias de tiras con tacón medio. Collar de piedras grandes. La silueta es siempre la misma: rodilla a la vista, hombro definido, cero variaciones. Cuarenta años sin cambiar la fórmula.",
+      "cabello": "El bob con flequillo recto, cortado a la altura de la mandíbula, con volumen y sin un pelo fuera de sitio, mantenido idéntico desde los años setenta. Es probablemente el corte de pelo más constante de la historia de la moda: un casco.",
+      "paleta": [
+        {
+          "hex": "#1A1A1A",
+          "nombre": "Negro gafas"
+        },
+        {
+          "hex": "#C8102E",
+          "nombre": "Rojo editorial"
+        },
+        {
+          "hex": "#E5C9A5",
+          "nombre": "Beige piel"
+        },
+        {
+          "hex": "#F2E6DC",
+          "nombre": "Nude"
+        },
+        {
+          "hex": "#3F5D6B",
+          "nombre": "Azul acero"
+        }
+      ],
+      "prendas_firma": [
+        "Gafas de sol negras de pasta, puestas en interiores",
+        "Bob con flequillo recto",
+        "Vestido estampado por la rodilla",
+        "Collar de piedras grandes",
+        "Sandalias de tiras",
+        "Abrigo de piel sobre los hombros"
+      ],
+      "tono_comunicacion": "Brevísima. Frases de cinco palabras, decisiones inmediatas, cero conversación de cortesía. No sube la voz nunca: la autoridad la ejerce con la economía verbal y con la rapidez. Un correo suyo de una línea puede hundir o levantar una carrera.",
+      "gesto_diferenciador": "Las gafas de sol negras en interiores, en primera fila de un desfile, con luz artificial. Ella misma ha explicado su función: son una armadura, impiden que nadie lea su reacción. Es el gesto de poder más limpio del catálogo: no ocultar la cara, sino ocultar el juicio. Y el bob idéntico durante cincuenta años.",
+      "para_quien": "Este referente encaja si tú tomas decisiones que afectan a otros y necesitas proteger tu criterio del ruido, si tu valor está en la consistencia absoluta y si tu escasez de palabras aumenta el peso de cada una.",
+      "riesgo": "La armadura que se convierte en aislamiento y en fama de tirana. Sin acceso, no hay lealtad, sólo miedo. Su sombra: la crueldad institucional normalizada, y una consistencia tan extrema que se vuelve incapacidad de cambiar cuando el mundo cambia.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/8/8c/Anna_Wintour_in_2024_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Anna_Wintour_in_2024_(cropped).jpg",
+        "licencia": "CC BY-SA 2.0",
+        "autor": "UKinUSA",
+        "atribucion": "Foto: UKinUSA — CC BY-SA 2.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/anna-wintour.jpg"
+      }
+    },
+    {
+      "id": "jimi-hendrix",
+      "nombre": "Jimi Hendrix",
+      "epoca": "1966-1970",
+      "campo": "Música",
+      "arquetipo_primario": "MAG",
+      "arquetipos_secundarios": [
+        "FOR",
+        "CRE"
+      ],
+      "titular": "El que tocaba el instrumento al revés y sonaba como nadie hacia adelante.",
+      "estilo_visual": "Bohemio psicodélico y militar a la vez. Chaqueta de húsar del ejército británico con alamares dorados, camisas de seda estampadas con volantes, chalecos de flecos de ante, pantalones de campana de terciopelo, pañuelo atado a la cabeza, anillos, collares de cuentas. Silueta suelta, colores saturados, texturas ricas. Mezcla la ropa de soldado con la de gitano y la de dandi victoriano, sin jerarquía. Cada prenda es un objeto encontrado.",
+      "cabello": "Afro voluminoso y libre, en una época en que se esperaba que un músico negro llevara el pelo alisado y un traje de escenario. Con la cinta o el pañuelo atado a la frente. Patillas y bigote fino. Su pelo era en sí mismo una declaración política aunque él nunca la formulase así.",
+      "paleta": [
+        {
+          "hex": "#8E2DE2",
+          "nombre": "Púrpura psicodélico"
+        },
+        {
+          "hex": "#E85D04",
+          "nombre": "Naranja fuego"
+        },
+        {
+          "hex": "#D4AF37",
+          "nombre": "Oro alamares"
+        },
+        {
+          "hex": "#0F5257",
+          "nombre": "Verde botella"
+        },
+        {
+          "hex": "#B5651D",
+          "nombre": "Ante flecos"
+        }
+      ],
+      "prendas_firma": [
+        "Chaqueta militar de húsar con alamares dorados",
+        "Pañuelo atado a la frente",
+        "Chaleco de flecos de ante",
+        "Camisa de seda con volantes y estampado",
+        "Pantalón de campana",
+        "Guitarra diestra tocada del revés"
+      ],
+      "tono_comunicacion": "Suave, casi susurrado, tímido en la conversación y desbordante en el escenario. Contestaba con humor lacónico y evitaba las preguntas grandes. Toda su elocuencia estaba en las manos: hablaba poco porque el discurso lo daba con el amplificador.",
+      "gesto_diferenciador": "La guitarra para diestros tocada al revés por un zurdo, con las cuerdas invertidas: una limitación técnica convertida en su sonido irrepetible. Sumado a la chaqueta militar de húsar con alamares dorados, robada al uniforme del imperio y llevada por un veterano negro americano en Londres. Dos gestos, los dos son apropiaciones invertidas.",
+      "para_quien": "Este referente encaja si tú trabajas con lo que tienes en contra, si tu limitación es tu firma y si tu virtuosismo es tan evidente que no necesitas defenderlo con palabras. Encaja si mezclas mundos que nadie había juntado.",
+      "riesgo": "El virtuosismo sin obra es fuego artificial, y la estética psicodélica caduca en cuanto se convierte en disfraz. Su sombra: la explotación por parte de una industria que lo devoró en cuatro años, y el exceso como precio de la genialidad.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/aa/Jimi_Hendrix_%281967%29_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Jimi_Hendrix_(1967)_(cropped).jpg",
+        "licencia": "Public domain",
+        "autor": "Original photographer unknown",
+        "atribucion": "Foto: Original photographer unknown — Public domain, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/jimi-hendrix.jpg"
+      }
+    },
+    {
+      "id": "amy-winehouse",
+      "nombre": "Amy Winehouse",
+      "epoca": "2003-2011",
+      "campo": "Música",
+      "arquetipo_primario": "AMA",
+      "arquetipos_secundarios": [
+        "FOR",
+        "CRE"
+      ],
+      "titular": "La que se construyó una máscara de los años sesenta para poder cantar la verdad de los dos mil.",
+      "estilo_visual": "Retro sesentero mezclado con chica de barrio del norte de Londres. Vestidos ceñidos de tubo, tops cortos, vaqueros pitillo, bailarinas planas, tacón de gatito. Tatuajes visibles en los brazos, pin-up de los cincuenta. Sujetador visible bajo la camiseta. Es un revival de las girl groups de Motown filtrado por el mercadillo de Camden. Su silueta es pequeña, muy femenina y descuidada a propósito en los bordes.",
+      "cabello": "El beehive: un moño colmena cardado altísimo, cada vez más alto y más desgarbado con el paso de los años, hasta que se convirtió en el barómetro visual de su deterioro. Con un lazo negro o un pañuelo. Y el delineado de ojos: una raya negra de gato, gruesa, exagerada, dibujada con pulso de tatuadora.",
+      "paleta": [
+        {
+          "hex": "#000000",
+          "nombre": "Negro delineador"
+        },
+        {
+          "hex": "#B01030",
+          "nombre": "Rojo labio"
+        },
+        {
+          "hex": "#F2D7B6",
+          "nombre": "Piel pin-up"
+        },
+        {
+          "hex": "#2A2A2A",
+          "nombre": "Gris colmena"
+        },
+        {
+          "hex": "#6E1E3C",
+          "nombre": "Vino"
+        }
+      ],
+      "prendas_firma": [
+        "Moño colmena (beehive) altísimo",
+        "Delineado de ojos negro exagerado",
+        "Bailarinas planas",
+        "Tatuajes de pin-up en el antebrazo",
+        "Top corto ceñido",
+        "Aros de oro"
+      ],
+      "tono_comunicacion": "Brutalmente franca, graciosa y grosera. Cantaba y hablaba en el mismo idioma: sin metáforas, contando exactamente lo que le pasaba, con nombres propios y detalles vergonzosos. Su honestidad era tan literal que resultaba incómoda de escuchar.",
+      "gesto_diferenciador": "El beehive más el delineador de gato: dos elementos prestados de 1962 que, juntos y llevados al exceso, crearon la cara más reconocible del pop británico del siglo XXI. Un peinado que puede dibujarse en dos trazos y unos ojos que se identifican sin el resto de la cara.",
+      "para_quien": "Este referente encaja si tú tomas prestado de una época anterior y lo llevas más lejos de lo que nadie se atrevió, si tu material es tu propia vida contada sin filtro y si tu voz es tan buena que puede sostener una imagen extrema.",
+      "riesgo": "El más grave del catálogo: la imagen que sobrevive a la persona y la enfermedad convertida en estética. La caricatura de Amy fue portada de tabloide mientras se moría. Su sombra: el mercado que consume la autodestrucción y la aplaude mientras dura.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/c/cf/Amy_Winehouse_f4962007_crop.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Amy_Winehouse_f4962007_crop.jpg",
+        "licencia": "CC BY-SA 2.0 fr",
+        "autor": "Rama",
+        "atribucion": "Foto: Rama — CC BY-SA 2.0 fr, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/amy-winehouse.jpg"
+      }
+    },
+    {
+      "id": "harry-styles",
+      "nombre": "Harry Styles",
+      "epoca": "2010-actualidad",
+      "campo": "Música / cine / moda",
+      "arquetipo_primario": "AMA",
+      "arquetipos_secundarios": [
+        "BUF",
+        "EXP"
+      ],
+      "titular": "El que desactivó la masculinidad de la boy band poniéndose un vestido.",
+      "estilo_visual": "Alegre, floral y sin género definido. Trajes de colores imposibles con estampado, pantalones de talle altísimo de pinzas anchas, camisas transparentes o abiertas hasta el ombligo, chalecos de punto de colores, perlas, plumas, boas. Homenajea abiertamente a Bowie, a Jagger y al glam de los setenta pero sin la agresividad: su versión es dulce, luminosa, casi doméstica. Silueta ancha arriba y ancha abajo, muy poco convencional en un hombre de su generación.",
+      "cabello": "Rizado castaño, largo y con volumen en su etapa más romántica, luego cortado corto. Un bigote fino intermitente. Anillos y esmalte de uñas de colores, un gesto que se ha vuelto una firma tan suya como la ropa.",
+      "paleta": [
+        {
+          "hex": "#F4A6C0",
+          "nombre": "Rosa Styles"
+        },
+        {
+          "hex": "#F5E663",
+          "nombre": "Amarillo margarita"
+        },
+        {
+          "hex": "#5AA9E6",
+          "nombre": "Azul cielo"
+        },
+        {
+          "hex": "#E8452C",
+          "nombre": "Rojo circo"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco perla"
+        }
+      ],
+      "prendas_firma": [
+        "Collar de perlas de un hombre",
+        "Chaleco de punto de colores",
+        "Pantalón de talle alto con pinzas",
+        "Uñas pintadas y anillos apilados",
+        "Traje de estampado floral",
+        "Camisa abierta hasta el ombligo"
+      ],
+      "tono_comunicacion": "Cálido, cortés, deliberadamente ambiguo. Se niega a etiquetar su sexualidad y ha convertido esa negativa en principio. Trata a su público con un respeto que no es habitual en su industria y evita cualquier comentario que humille a nadie. Simpático hasta lo desarmante.",
+      "gesto_diferenciador": "El collar de perlas. Una sola vuelta de perlas en el cuello de un hombre de veintitantos que llena estadios: un objeto que llevaban las abuelas convertido en símbolo de una masculinidad nueva. Es diminuto, es barato, es imitable, y significa exactamente lo que él quiere que signifique.",
+      "para_quien": "Este referente encaja si tú quieres ampliar lo que se considera aceptable en tu sector con gestos suaves en vez de con manifiestos, si tu amabilidad es un activo y si prefieres seducir a confrontar.",
+      "riesgo": "La transgresión amable puede ser exactamente la transgresión que el mercado aprueba: cómoda, guapa, rentable, sin coste real. Su sombra: la acusación de tomar prestada una estética queer sin asumir su precio, y una amabilidad tan pulida que parece un producto.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/b/b5/HarryStylesWembley170623_%2814_of_93%29_%2852982076132%29_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:HarryStylesWembley170623_(14_of_93)_(52982076132)_(cropped).jpg",
+        "licencia": "CC BY 2.0",
+        "autor": "Raph_PH",
+        "atribucion": "Foto: Raph_PH — CC BY 2.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/harry-styles.jpg"
+      }
+    },
+    {
+      "id": "patti-smith",
+      "nombre": "Patti Smith",
+      "epoca": "1975-actualidad",
+      "campo": "Música / poesía",
+      "arquetipo_primario": "FOR",
+      "arquetipos_secundarios": [
+        "CRE",
+        "SAB"
+      ],
+      "titular": "La que se puso la camisa blanca de un hombre y no se la quitó en cincuenta años.",
+      "estilo_visual": "Austeridad total, casi monacal. Camisa blanca de hombre, tirantes, chaqueta negra, pantalón negro o vaquero, corbata deshecha colgando, botas. Nada de maquillaje, nada de joyas, nada que suavice. Un guardarropa de poeta pobre que no ha cambiado en cinco décadas y que sigue siendo intocable. La portada de Horses (camisa blanca, chaqueta al hombro colgando de un dedo) es la imagen fundacional.",
+      "cabello": "Melena negra larga, lacia, sin cortar, sin peinar, con el gris tomándola libremente con los años. Nunca se lo ha teñido ni arreglado para el público. Es lo contrario de la construcción: es el rechazo explícito de la construcción.",
+      "paleta": [
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco camisa"
+        },
+        {
+          "hex": "#000000",
+          "nombre": "Negro chaqueta"
+        },
+        {
+          "hex": "#4B4B4B",
+          "nombre": "Gris ceniza"
+        },
+        {
+          "hex": "#2E4057",
+          "nombre": "Azul denim"
+        },
+        {
+          "hex": "#8C7B6B",
+          "nombre": "Sepia libro"
+        }
+      ],
+      "prendas_firma": [
+        "Camisa blanca de hombre",
+        "Chaqueta negra colgada de un dedo sobre el hombro",
+        "Tirantes negros",
+        "Corbata negra deshecha",
+        "Botas negras gastadas",
+        "Cero maquillaje"
+      ],
+      "tono_comunicacion": "Poética y directa a la vez. Habla como escribe: con referencias literarias, con una solemnidad sin pompa y con una convicción moral que no admite cinismo. Usa el 'nosotros' de una comunidad de artistas. Nunca ha sido irónica: cree en lo que dice.",
+      "gesto_diferenciador": "La chaqueta negra colgada de un solo dedo sobre el hombro, con la camisa blanca de hombre y el pelo sin arreglar, mirando a cámara sin sonreír. Esa sola imagen de 1975 reescribió lo que podía ser una mujer en una portada de disco: ni objeto, ni musa, ni sonrisa. Poeta.",
+      "para_quien": "Este referente encaja si tú tienes una obra que sostener y no un producto que vender, si tu credibilidad se acumula por décadas de coherencia y si estás dispuesto a no cambiar nada durante cincuenta años porque nunca fue una estrategia.",
+      "riesgo": "La autenticidad absoluta puede convertirse en rigidez y en una pose de pureza. Y la austeridad, cuando se sabe que es una elección, empieza a ser un estilo como cualquier otro. Su sombra: el juicio moral hacia todo lo que huela a comercial.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/a/a2/Patti_Smith_at_the_81st_Venice_International_Film_Festival_in_2024.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Patti_Smith_at_the_81st_Venice_International_Film_Festival_in_2024.jpg",
+        "licencia": "CC BY-SA 4.0",
+        "autor": "Harald Krichel",
+        "atribucion": "Foto: Harald Krichel — CC BY-SA 4.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/patti-smith.jpg"
+      }
+    },
+    {
+      "id": "andy-warhol",
+      "nombre": "Andy Warhol",
+      "epoca": "1962-1987",
+      "campo": "Arte / cultura pop",
+      "arquetipo_primario": "CRE",
+      "arquetipos_secundarios": [
+        "MAG",
+        "BUF"
+      ],
+      "titular": "El que se disfrazó de nadie para poder observarlo todo.",
+      "estilo_visual": "Uniforme deliberadamente plano y algo espectral. Jersey de cuello alto negro, americana o cazadora de cuero negra, camisa blanca, pantalón estrecho, mocasines. Gafas de pasta gruesas. La ropa es discreta hasta lo anodino; el impacto está en la cara y en la peluca. Su cuerpo es un maniquí neutro sobre el que ocurre un accidente cromático en la cabeza. Todo negro, salvo la cabeza.",
+      "cabello": "La peluca. Plateada, blanca, gris, deliberadamente falsa, a menudo mal colocada, nunca disimulada como pelo real. Se quedó calvo joven y en vez de esconderlo eligió una prótesis obviamente artificial. La piel pálida, casi de cera, completaba el efecto de aparición.",
+      "paleta": [
+        {
+          "hex": "#C0C0C0",
+          "nombre": "Plata peluca"
+        },
+        {
+          "hex": "#000000",
+          "nombre": "Negro cuello alto"
+        },
+        {
+          "hex": "#FF3EA5",
+          "nombre": "Rosa serigrafía"
+        },
+        {
+          "hex": "#F9E547",
+          "nombre": "Amarillo Marilyn"
+        },
+        {
+          "hex": "#00B2A9",
+          "nombre": "Turquesa pop"
+        }
+      ],
+      "prendas_firma": [
+        "Peluca plateada obviamente falsa",
+        "Jersey negro de cuello alto",
+        "Gafas de pasta gruesas",
+        "Cazadora de cuero negra",
+        "Cámara Polaroid colgada al cuello",
+        "Piel pálida sin sol"
+      ],
+      "tono_comunicacion": "Monosilábico y evasivo hasta la exasperación. Respondía 'sí', 'no', 'supongo', 'no lo sé' a preguntas complejas. Llegó a mandar a un actor a dar conferencias haciéndose pasar por él. El vacío era el mensaje: si no dices nada, todos proyectan lo que quieren.",
+      "gesto_diferenciador": "La peluca plateada que no engaña a nadie. No es un intento de disimular la calvicie: es una máscara declarada, un objeto visiblemente artificial colocado encima de la cabeza. Convirtió su propia cara en una obra de arte pop: reproducible, plana, sin interior. Y la Polaroid siempre colgada al cuello.",
+      "para_quien": "Este referente encaja si tú prefieres observar a ser observado, si tu obra habla y tú no tienes por qué, y si entiendes que la ambigüedad calculada hace que cada público te interprete como le conviene.",
+      "riesgo": "El vacío como estrategia acaba vaciándote de verdad. La superficie perfecta no deja nada a lo que agarrarse. Su sombra: la frialdad depredadora con la gente de su entorno, a la que usaba como material, y una obra que celebra el consumo sin criticarlo nunca del todo.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/5/5b/Andy_Warhol_at_the_Jewish_Museum_%28by_Bernard_Gotfryd%29_%E2%80%93_LOC.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Andy_Warhol_at_the_Jewish_Museum_(by_Bernard_Gotfryd)_%E2%80%93_LOC.jpg",
+        "licencia": "Public domain",
+        "autor": "Bernard Gotfryd",
+        "atribucion": "Foto: Bernard Gotfryd — Public domain, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/andy-warhol.jpg"
+      }
+    },
+    {
+      "id": "yayoi-kusama",
+      "nombre": "Yayoi Kusama",
+      "epoca": "1957-actualidad",
+      "campo": "Arte contemporáneo",
+      "arquetipo_primario": "CRE",
+      "arquetipos_secundarios": [
+        "MAG",
+        "INO"
+      ],
+      "titular": "La que convirtió su alucinación en un patrón y su patrón en un imperio.",
+      "estilo_visual": "Fusión total entre artista y obra. Vestidos amplios de lunares, del mismo estampado que la sala que los rodea, hasta el punto de camuflarse en su propia instalación. Rojo, blanco, negro, amarillo. Formas de calabaza, redondeadas. Se viste literalmente con su lenguaje visual: no lleva ropa que combine con su obra, lleva su obra puesta. Es el caso más extremo de coherencia visual entre persona y producto que existe.",
+      "cabello": "Peluca de bob rojo fuego con flequillo recto, llevada a diario durante décadas. Un rojo artificial, intenso, que funciona como el punto de color más saturado de cualquier fotografía en la que aparece. Es a la vez pelo, logo y señal.",
+      "paleta": [
+        {
+          "hex": "#E4002B",
+          "nombre": "Rojo Kusama"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco lunar"
+        },
+        {
+          "hex": "#000000",
+          "nombre": "Negro punto"
+        },
+        {
+          "hex": "#FFD700",
+          "nombre": "Amarillo calabaza"
+        },
+        {
+          "hex": "#F5A9D0",
+          "nombre": "Rosa infinito"
+        }
+      ],
+      "prendas_firma": [
+        "Peluca roja de bob con flequillo recto",
+        "Vestido de lunares a juego con la instalación",
+        "Estampado de puntos sobre todo el cuerpo",
+        "Motivo de calabaza amarilla y negra",
+        "Túnicas amplias sin cintura",
+        "Rojo saturado como color base"
+      ],
+      "tono_comunicacion": "Poética, obsesiva y sin distancia. Habla del infinito, de la autoaniquilación y del amor con una intensidad que no se ajusta al registro de una entrevista. Ha hablado abiertamente de su enfermedad mental y de que el arte es lo que la mantiene viva, literalmente.",
+      "gesto_diferenciador": "Vestirse con su propia obra hasta desaparecer dentro de ella. Ponerse un vestido de lunares idéntico a la sala de lunares y fotografiarse camuflada: la artista literalmente absorbida por su patrón. Con la peluca roja como único punto que sobresale. Es marca personal llevada a su conclusión lógica: ser el producto.",
+      "para_quien": "Este referente encaja si tú tienes un único lenguaje visual y la disciplina de repetirlo durante sesenta años sin aburrirte, si tu obsesión es tu material y si crees que la marca más fuerte es la que se puede reconocer en un solo punto de color.",
+      "riesgo": "La repetición de un motivo hasta convertirlo en mercancía: los lunares están hoy en bolsos, coches y tiendas de aeropuerto. Su sombra: el sufrimiento psíquico real transformado en experiencia de consumo instagrameable.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/f/f5/20130918Yayoi_Kusama1.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:20130918Yayoi_Kusama1.jpg",
+        "licencia": "CC BY 4.0",
+        "autor": "内閣官房内閣広報室",
+        "atribucion": "Foto: 内閣官房内閣広報室 — CC BY 4.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/yayoi-kusama.jpg"
+      }
+    },
+    {
+      "id": "virgil-abloh",
+      "nombre": "Virgil Abloh",
+      "epoca": "2012-2021",
+      "campo": "Moda / diseño / arquitectura",
+      "arquetipo_primario": "CRE",
+      "arquetipos_secundarios": [
+        "EXP",
+        "FOR"
+      ],
+      "titular": "El que entró en la sala más cerrada del lujo con una sudadera y unas comillas.",
+      "estilo_visual": "Streetwear elevado y desmontado. Sudadera con capucha bajo americana, zapatilla deportiva con traje, camiseta gráfica, gorra, riñonera cruzada, gafas de sol de diseño. Su lenguaje de diseño es la cita: comillas tipográficas sobre las prendas, cinturones industriales, tipografía Helvetica, bridas de plástico, franjas de señalización de obra. Trata la ropa como diseño gráfico aplicado. Su propio vestuario personal es sencillo: es el marco, no el cuadro.",
+      "cabello": "Rapado corto, con barba recortada, casi siempre bajo una gorra. Su aspecto personal era intencionadamente ordinario: quería parecer alguien que podía estar en la calle, no en la primera fila.",
+      "paleta": [
+        {
+          "hex": "#FF8A00",
+          "nombre": "Naranja señalización"
+        },
+        {
+          "hex": "#000000",
+          "nombre": "Negro Helvetica"
+        },
+        {
+          "hex": "#FFFFFF",
+          "nombre": "Blanco off"
+        },
+        {
+          "hex": "#F2E205",
+          "nombre": "Amarillo obra"
+        },
+        {
+          "hex": "#4D4D4D",
+          "nombre": "Gris hormigón"
+        }
+      ],
+      "prendas_firma": [
+        "Comillas tipográficas impresas sobre la prenda",
+        "Cinturón industrial naranja de obra",
+        "Brida de plástico en la zapatilla",
+        "Rayas diagonales de señalización",
+        "Sudadera con capucha bajo americana",
+        "Zapatilla deportiva con traje de sastre"
+      ],
+      "tono_comunicacion": "Pedagógico y generoso. Explicaba su método en público, daba clases, publicaba sus reglas de diseño, respondía a estudiantes. Su famosa 'regla del 3%': coger un objeto existente y cambiarlo un tres por ciento. Democratizaba el acceso a la información que su industria guardaba con celo.",
+      "gesto_diferenciador": "Las comillas. Escribir la palabra literal entre comillas sobre el objeto: poner 'ZAPATILLA' en una zapatilla. Un gesto tipográfico irónico, gratuito y clonable al instante, que se convirtió en una firma reconocible en cualquier tienda del mundo. Y la brida de plástico naranja colgando de la zapatilla nueva.",
+      "para_quien": "Este referente encaja si tú vienes de fuera del sector y quieres entrar sin adoptar sus códigos, si crees que compartir el método multiplica tu influencia en vez de restarla, y si tu diseño consiste en resignificar lo existente más que en inventar de cero.",
+      "riesgo": "La regla del 3% también es la puerta al plagio y se le acusó de ello repetidamente. La cita irónica se agota rápido y deja al descubierto si había concepto. Su sombra: la sobreexposición, la aceleración destructiva del ritmo de trabajo y el precio físico de abrir esa puerta.",
+      "imagen": {
+        "url": "https://upload.wikimedia.org/wikipedia/commons/3/31/Virgil_Abloh_Paris_Fashion_Week_Autumn_Winter_2019_%28cropped%29.jpg",
+        "pagina_fuente": "https://commons.wikimedia.org/wiki/File:Virgil_Abloh_Paris_Fashion_Week_Autumn_Winter_2019_(cropped).jpg",
+        "licencia": "CC BY-SA 4.0",
+        "autor": "Myles Kalus Anak Jihem",
+        "atribucion": "Foto: Myles Kalus Anak Jihem — CC BY-SA 4.0, vía Wikimedia Commons",
+        "verificada": true,
+        "local": "refs/virgil-abloh.jpg"
+      }
+    }
+  ]
+}

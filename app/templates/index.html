@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Generador de Branding</title>
+  <link rel="stylesheet" href="/static/css/app.css">
+  {# El script de Google solo se carga si hay client id. Sin él no se contacta
+     con ningún tercero: quien despliegue esto sin GOOGLE_CLIENT_ID no manda ni
+     una petición a accounts.google.com, y eso es lo que promete /privacidad. #}
+  {% if google_activo %}
+  <script src="https://accounts.google.com/gsi/client" async defer></script>
+  {% endif %}
+</head>
+<body class="modo-tarjeta" data-google="{{ 1 if google_activo else 0 }}">
+
+<header class="cabecera-progreso">
+  <div class="barra-fondo"><div class="barra" id="barra"></div></div>
+  <div class="meta-progreso">
+    <span id="etiqueta-seccion"></span>
+    <span id="contador"></span>
+    <span id="estado-guardado" class="estado-guardado" aria-live="polite"></span>
+  </div>
+</header>
+
+{# Configuración de GIS. Va oculta y fuera de la escena porque form.js repinta
+   #escena entero en cada paso: dentro, la librería perdería su anclaje al
+   volver atrás. auto_prompt="false" para que el «One Tap» no aparezca solo
+   encima del cuestionario a mitad de la pregunta 40. #}
+{% if google_activo %}
+<div id="g_id_onload" data-client_id="{{ google_client_id }}"
+     data-callback="alEntrarConGoogle" data-auto_prompt="false"
+     data-context="signin" data-itp_support="true" hidden></div>
+{% endif %}
+
+<main id="escena" aria-live="polite"></main>
+
+<footer class="pie-nav" id="pie">
+  <button class="btn-atras" id="btn-atras" aria-label="Anterior">
+    <svg viewBox="0 0 24 24" width="18" height="18" fill="none" stroke="currentColor" stroke-width="2">
+      <path d="M15 18l-6-6 6-6"/>
+    </svg>
+    Atrás
+  </button>
+  <div class="pista-teclado" id="pista-teclado"></div>
+  <button class="btn-primario" id="btn-siguiente">Continuar</button>
+</footer>
+
+<script src="/static/js/form.js"></script>
+</body>
+</html>

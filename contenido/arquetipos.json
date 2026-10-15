@@ -1,0 +1,1388 @@
+{
+  "familias": {
+    "independencia": {
+      "nombre": "Independencia / Realización",
+      "motivacion": "Alcanzar el paraíso: comprender el mundo, ser fiel a uno mismo y vivir sin ataduras impuestas por otros.",
+      "miedo": "Quedar atrapado en la conformidad, la ignorancia o una vida que no se ha elegido.",
+      "arquetipos": [
+        "INO",
+        "SAB",
+        "EXP"
+      ]
+    },
+    "maestria": {
+      "nombre": "Maestría / Riesgo",
+      "motivacion": "Dejar huella en el mundo: cambiar las reglas, demostrar valor y transformar la realidad.",
+      "miedo": "Ser irrelevante, débil o incapaz de provocar ningún efecto.",
+      "arquetipos": [
+        "FOR",
+        "MAG",
+        "HER"
+      ]
+    },
+    "pertenencia": {
+      "nombre": "Pertenencia / Conexión",
+      "motivacion": "Conectar con los demás: ser querido, aceptado y disfrutar de la vida en compañía.",
+      "miedo": "El rechazo, la soledad y quedar fuera del grupo.",
+      "arquetipos": [
+        "AMA",
+        "BUF",
+        "COM"
+      ]
+    },
+    "estabilidad": {
+      "nombre": "Estabilidad / Control",
+      "motivacion": "Dar estructura al mundo: proteger, ordenar y construir algo que perdure.",
+      "miedo": "El caos, la pérdida de control y que todo se derrumbe.",
+      "arquetipos": [
+        "CUI",
+        "GOB",
+        "CRE"
+      ]
+    }
+  },
+  "arquetipos": [
+    {
+      "id": "INO",
+      "nombre": "El Inocente",
+      "nombre_en": "The Innocent",
+      "alias": [
+        "El Optimista",
+        "El Puro"
+      ],
+      "familia": "independencia",
+      "opuesto": "BUF",
+      "deseo": "Vivir en un mundo simple, bueno y sin complicaciones.",
+      "meta": "Ser feliz de una manera honesta y hacer las cosas bien desde el principio.",
+      "miedo": "Hacer algo mal, ser castigado o descubrir que el mundo no es como creía.",
+      "estrategia": "Hacer las cosas correctamente, con transparencia total y sin letra pequeña.",
+      "talento": "Transmitir confianza inmediata, fe y una sensación de limpieza y calma.",
+      "sombra": "La negación: idealizar tanto que se ignoran los problemas reales y se cae en la ingenuidad o el paternalismo moral.",
+      "evolucion": "Pasar del optimismo ciego a una confianza consciente: seguir eligiendo la bondad sabiendo que el mundo es complejo.",
+      "resumen": "Tu marca vende tranquilidad: la promesa de que aquí las cosas son sencillas, honestas y no esconden trampa. Tu poder está en ser el sitio donde la gente puede bajar la guardia, y tu riesgo es parecer ingenua o irrelevante si evitas hablar de los problemas de verdad.",
+      "comunicacion": {
+        "tono": "Cálido, sencillo, luminoso y directo. Frases cortas, sin jerga, sin dobles sentidos. Habla como quien no tiene nada que ocultar.",
+        "vocabulario": [
+          "sencillo",
+          "honesto",
+          "natural",
+          "limpio",
+          "claro",
+          "de verdad",
+          "cuidado",
+          "origen",
+          "sin artificios",
+          "confianza",
+          "empezar de cero",
+          "tranquilidad",
+          "puro",
+          "bien hecho"
+        ],
+        "estructura_mensaje": "Promesa clara y humana → prueba concreta y verificable (origen, ingredientes, proceso) → invitación amable, sin presión ni urgencia artificial.",
+        "evitar": "El cinismo, el sarcasmo, el miedo como palanca, las condiciones ocultas, la sofisticación excesiva y cualquier cosa que suene a truco de marketing.",
+        "ejemplo_tagline": "Nada que esconder. Todo por disfrutar."
+      },
+      "visual": {
+        "paleta": [
+          {
+            "hex": "#FDFCF7",
+            "nombre": "Blanco lino",
+            "rol": "dominante"
+          },
+          {
+            "hex": "#A8D5E2",
+            "nombre": "Azul cielo suave",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#F6C445",
+            "nombre": "Amarillo sol",
+            "rol": "acento"
+          },
+          {
+            "hex": "#C9E4C5",
+            "nombre": "Verde brote",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#8A8578",
+            "nombre": "Gris piedra cálido",
+            "rol": "neutro"
+          }
+        ],
+        "tipografia": {
+          "titular": [
+            "Quicksand",
+            "Nunito"
+          ],
+          "cuerpo": [
+            "Nunito"
+          ],
+          "razon": "Terminaciones redondeadas y contadores abiertos que transmiten amabilidad y accesibilidad sin infantilizar. Ambas tienen juego completo de acentos y ñ, y funcionan bien en tamaños grandes con mucho aire."
+        },
+        "estetica": "Mucho espacio en blanco, luz natural, fotografía diurna sin filtros agresivos, composiciones centradas y respirables, ilustración simple de trazo suave.",
+        "texturas": [
+          "papel sin blanquear",
+          "algodón",
+          "acuarela clara",
+          "luz difusa",
+          "trazo a mano suave"
+        ],
+        "evitar": "Negros dominantes, alto contraste dramático, tipografías condensadas agresivas, imágenes nocturnas, estética industrial o de lujo frío."
+      },
+      "acciones": [
+        "Publicar una 'etiqueta abierta': lista íntegra de ingredientes, proveedores o costes, incluyendo lo que no queda bien.",
+        "Eliminar toda la letra pequeña de tus condiciones y reescribirlas en lenguaje que entienda un niño de 12 años.",
+        "Ofrecer devolución sin preguntas y contarlo como argumento central, no como nota al pie.",
+        "Grabar visitas al origen (huerta, taller, fábrica) sin guion ni maquillaje y publicarlas en bruto.",
+        "Sustituir la urgencia y los descuentos por un precio único, estable y explicado.",
+        "Crear un 'diario de errores' público donde cuentas lo que salió mal y cómo lo arreglaste.",
+        "Rechazar públicamente una práctica habitual de tu sector (tarifas ocultas, dark patterns) y explicar por qué."
+      ],
+      "marcas": [
+        "Dove",
+        "Innocent Drinks",
+        "Aveeno",
+        "Coca-Cola (era clásica)",
+        "Ikea Family"
+      ],
+      "iconos": [
+        "Forrest Gump",
+        "Los Teleñecos",
+        "Audrey Hepburn"
+      ]
+    },
+    {
+      "id": "SAB",
+      "nombre": "El Sabio",
+      "nombre_en": "The Sage",
+      "alias": [
+        "El Experto",
+        "El Mentor"
+      ],
+      "familia": "independencia",
+      "opuesto": "AMA",
+      "deseo": "Encontrar la verdad y entender cómo funciona realmente el mundo.",
+      "meta": "Usar la inteligencia y el análisis para comprender y ayudar a otros a comprender.",
+      "miedo": "Ser engañado, equivocarse en público o quedar como ignorante.",
+      "estrategia": "Investigar, analizar, contrastar y compartir conocimiento riguroso.",
+      "talento": "Convertir complejidad en criterio: dar a la gente herramientas para decidir mejor.",
+      "sombra": "La parálisis por análisis y la arrogancia intelectual: estudiar eternamente sin actuar, o despreciar a quien no sabe.",
+      "evolucion": "Pasar del conocimiento acumulado a la sabiduría aplicada: enseñar con humildad y atreverse a concluir.",
+      "resumen": "Tu marca no vende un producto, vende criterio: la gente acude a ti para entender antes de decidir. Tu autoridad se construye con rigor y honestidad intelectual, y se destruye en cuanto exageras un dato o hablas por encima de tu audiencia.",
+      "comunicacion": {
+        "tono": "Sereno, preciso, argumentado. Afirma con matices y cita sus fuentes. Prefiere una verdad incómoda a un titular fácil.",
+        "vocabulario": [
+          "evidencia",
+          "criterio",
+          "porqué",
+          "análisis",
+          "método",
+          "matiz",
+          "contrastar",
+          "aprender",
+          "datos",
+          "comprender",
+          "rigor",
+          "fundamento",
+          "según los estudios",
+          "sesgo"
+        ],
+        "estructura_mensaje": "Pregunta relevante → contexto y datos → análisis con sus límites → conclusión aplicable y honesta sobre lo que aún no se sabe.",
+        "evitar": "Las promesas grandilocuentes, los atajos, el hype, los datos sin fuente, hablar de lo que no dominas y el tono condescendiente.",
+        "ejemplo_tagline": "Antes de elegir, entiende."
+      },
+      "visual": {
+        "paleta": [
+          {
+            "hex": "#1B2A41",
+            "nombre": "Azul noche académico",
+            "rol": "dominante"
+          },
+          {
+            "hex": "#5C7A99",
+            "nombre": "Azul pizarra",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#B08D57",
+            "nombre": "Oro viejo",
+            "rol": "acento"
+          },
+          {
+            "hex": "#EDE9E1",
+            "nombre": "Marfil manuscrito",
+            "rol": "neutro"
+          },
+          {
+            "hex": "#3F4A45",
+            "nombre": "Verde tinta",
+            "rol": "secundario"
+          }
+        ],
+        "tipografia": {
+          "titular": [
+            "EB Garamond",
+            "Libre Baskerville"
+          ],
+          "cuerpo": [
+            "IBM Plex Sans"
+          ],
+          "razon": "La serif de tradición editorial señala pensamiento largo y fuentes fiables; la sans neutra y muy legible sostiene textos densos, tablas y notas al pie. Ambas cubren el español completo, incluidas versalitas y acentos."
+        },
+        "estetica": "Rejilla editorial estricta, jerarquía tipográfica clara, gráficos y diagramas como protagonistas, mucho texto bien compuesto, imágenes documentales.",
+        "texturas": [
+          "papel de libro",
+          "grafito",
+          "líneas de esquema",
+          "trama de gráfico",
+          "microtipografía"
+        ],
+        "evitar": "Emojis, exclamaciones, degradados llamativos, stock photos sonrientes, tipografías decorativas y cualquier recurso que parezca vender en lugar de explicar."
+      },
+      "acciones": [
+        "Publicar un informe anual con datos propios, metodología abierta y los resultados que no te favorecen.",
+        "Crear una guía de compra que recomiende no comprarte a ti cuando no seas la mejor opción.",
+        "Abrir una newsletter que desmonte un mito de tu sector al mes, con fuentes citadas.",
+        "Grabar formación gratuita en profundidad (no teasers) y liberarla sin muro de registro.",
+        "Publicar una fe de erratas cuando te equivoques, explicando qué aprendiste.",
+        "Someter tu producto a un test independiente y publicar el resultado íntegro.",
+        "Mantener un glosario público que traduzca la jerga de tu sector a lenguaje llano."
+      ],
+      "marcas": [
+        "Google",
+        "BBC",
+        "The Economist",
+        "Audible",
+        "Philips"
+      ],
+      "iconos": [
+        "Carl Sagan",
+        "Marie Curie",
+        "Yoda"
+      ]
+    },
+    {
+      "id": "EXP",
+      "nombre": "El Explorador",
+      "nombre_en": "The Explorer",
+      "alias": [
+        "El Aventurero",
+        "El Nómada"
+      ],
+      "familia": "independencia",
+      "opuesto": "COM",
+      "deseo": "Libertad para descubrir el mundo y descubrirse a sí mismo en el camino.",
+      "meta": "Vivir una vida auténtica y plena, sin encajar en moldes ajenos.",
+      "miedo": "Quedar atrapado, encerrado en una rutina o en el conformismo.",
+      "estrategia": "Salir, probar, viajar, experimentar y no echar raíces demasiado pronto.",
+      "talento": "Autonomía, resistencia y capacidad de encontrar caminos donde otros ven muros.",
+      "sombra": "La huida perpetua: la incapacidad de comprometerse, el desarraigo y el vagabundeo sin propósito.",
+      "evolucion": "Pasar de escapar de algo a caminar hacia algo: convertir la exploración en un propósito con dirección.",
+      "resumen": "Tu marca es un permiso para salir: le da a la gente el equipo, la excusa o el valor para dejar lo cómodo. Funciona cuando ofreces libertad real y experiencias exigentes, y se apaga cuando te vuelves predecible o hablas de aventura desde el sofá.",
+      "comunicacion": {
+        "tono": "Directo, sobrio y físico. Poco adorno, mucho terreno. Habla de lo que cuesta, no solo de lo que se disfruta.",
+        "vocabulario": [
+          "camino",
+          "libertad",
+          "terreno",
+          "descubrir",
+          "salir",
+          "horizonte",
+          "mochila",
+          "sin mapa",
+          "resistir",
+          "ruta",
+          "afuera",
+          "propio ritmo",
+          "límite",
+          "brújula"
+        ],
+        "estructura_mensaje": "Una realidad que aprieta (rutina, oficina, ciudad) → la salida posible → lo que hace falta para dar el paso → invitación a irte, con el producto como medio, nunca como fin.",
+        "evitar": "El lujo blando, las promesas de comodidad, el lenguaje corporativo, la pertenencia a un grupo y presentar la aventura como algo fácil o sin riesgo.",
+        "ejemplo_tagline": "El mapa se acaba donde empieza lo bueno."
+      },
+      "visual": {
+        "paleta": [
+          {
+            "hex": "#3B4A3F",
+            "nombre": "Verde militar",
+            "rol": "dominante"
+          },
+          {
+            "hex": "#C1874B",
+            "nombre": "Ocre polvo",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#D9481F",
+            "nombre": "Naranja bengala",
+            "rol": "acento"
+          },
+          {
+            "hex": "#8FA3A8",
+            "nombre": "Gris niebla",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#E5E0D5",
+            "nombre": "Arena",
+            "rol": "neutro"
+          },
+          {
+            "hex": "#2A2723",
+            "nombre": "Marrón carbón",
+            "rol": "neutro"
+          }
+        ],
+        "tipografia": {
+          "titular": [
+            "Archivo Black",
+            "Bebas Neue"
+          ],
+          "cuerpo": [
+            "Work Sans"
+          ],
+          "razon": "Titulares de peso alto y trazo condensado que aguantan sobre fotografía y transmiten esfuerzo físico; una sans de cuerpo robusta y legible incluso en formatos pequeños o impresos en condiciones malas. Cobertura completa de acentos y ñ."
+        },
+        "estetica": "Fotografía documental a la intemperie, grano visible, horizontes amplios, tipografía sobre imagen, mapas, coordenadas y elementos de equipo real.",
+        "texturas": [
+          "lona",
+          "polvo",
+          "mapa topográfico",
+          "grano fotográfico",
+          "cuero desgastado",
+          "barro"
+        ],
+        "evitar": "Fondos de estudio impolutos, brillos de lujo, pasteles, composiciones simétricas perfectas y modelos que claramente no han pisado el terreno."
+      },
+      "acciones": [
+        "Diseñar el producto para condiciones extremas y publicar el vídeo del test donde falla.",
+        "Financiar una expedición real y contarla en directo, incluyendo lo que sale mal.",
+        "Publicar rutas, coordenadas y guías gratuitas para que la gente salga sin necesitar comprarte.",
+        "Ofrecer reparación de por vida en lugar de reposición, para que el equipo envejezca contigo.",
+        "Montar un programa de segunda mano y contar la historia de cada pieza usada.",
+        "Cerrar la tienda un día al año e invitar a todo el equipo y a los clientes a salir al campo.",
+        "Rechazar patrocinios que domestiquen la marca aunque sean rentables, y explicarlo."
+      ],
+      "marcas": [
+        "Patagonia",
+        "The North Face",
+        "Jeep",
+        "Land Rover",
+        "Red Bull"
+      ],
+      "iconos": [
+        "Amelia Earhart",
+        "Indiana Jones",
+        "Ernest Shackleton"
+      ]
+    },
+    {
+      "id": "FOR",
+      "nombre": "El Forajido",
+      "nombre_en": "The Outlaw",
+      "alias": [
+        "El Rebelde",
+        "El Disruptor"
+      ],
+      "familia": "maestria",
+      "opuesto": "GOB",
+      "deseo": "Venganza o revolución: romper lo que ya no funciona.",
+      "meta": "Destruir las estructuras injustas u obsoletas para abrir espacio a algo nuevo.",
+      "miedo": "Ser impotente, irrelevante o quedar absorbido por el sistema que critica.",
+      "estrategia": "Alterar, escandalizar, romper las reglas y señalar al enemigo.",
+      "talento": "Radicalidad, valentía y capacidad de dar voz a los que están hartos.",
+      "sombra": "La destrucción por la destrucción: la crueldad, el nihilismo y el vandalismo sin propuesta.",
+      "evolucion": "Pasar de romper por rabia a romper por causa: convertirse en revolucionario con proyecto, no solo con enemigo.",
+      "resumen": "Tu marca existe contra algo: representa a quien no se traga las normas de tu sector. Su fuerza es la valentía y su límite es la coherencia, porque un rebelde que nunca paga un precio por su rebeldía deja de ser creíble en cuanto alguien mira de cerca.",
+      "comunicacion": {
+        "tono": "Crudo, tajante, con filo. Frases cortas y afirmativas. Nombra al enemigo. Prefiere la incomodidad al aplauso general.",
+        "vocabulario": [
+          "romper",
+          "basta",
+          "reglas",
+          "sistema",
+          "nadie te lo va a dar",
+          "harto",
+          "en contra",
+          "libertad",
+          "arder",
+          "sin permiso",
+          "cambiar el juego",
+          "los de siempre",
+          "verdad incómoda",
+          "resistencia"
+        ],
+        "estructura_mensaje": "Señalar la injusticia o la norma absurda → nombrar a quién beneficia → declarar la ruptura → llamar a los que ya estaban hartos.",
+        "evitar": "Los eufemismos, el lenguaje corporativo, pedir permiso, la neutralidad, intentar gustar a todo el mundo y el rebeldismo estético sin ningún acto real detrás.",
+        "ejemplo_tagline": "Las reglas las escribieron ellos. Nosotros no firmamos."
+      },
+      "visual": {
+        "paleta": [
+          {
+            "hex": "#0D0D0D",
+            "nombre": "Negro absoluto",
+            "rol": "dominante"
+          },
+          {
+            "hex": "#C1121F",
+            "nombre": "Rojo sangre",
+            "rol": "acento"
+          },
+          {
+            "hex": "#6E6E6E",
+            "nombre": "Gris asfalto",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#E8E4DC",
+            "nombre": "Hueso sucio",
+            "rol": "neutro"
+          },
+          {
+            "hex": "#8B5E3C",
+            "nombre": "Cuero curtido",
+            "rol": "secundario"
+          }
+        ],
+        "tipografia": {
+          "titular": [
+            "Anton",
+            "Special Elite"
+          ],
+          "cuerpo": [
+            "Space Grotesk"
+          ],
+          "razon": "Titulares de máxima presencia (condensados, casi de cartel de protesta) y una alternativa de máquina de escribir para el registro panfletario; el cuerpo tiene un carácter técnico y algo cortante que evita el tono corporativo. Todas soportan acentos y ñ."
+        },
+        "estetica": "Alto contraste, blanco y negro con un rojo, fotografía cruda y flash directo, collage, tachones, fanzine, estética de cartel pegado en la calle.",
+        "texturas": [
+          "fotocopia",
+          "esténcil",
+          "papel rasgado",
+          "cinta americana",
+          "óxido",
+          "pintada"
+        ],
+        "evitar": "Degradados suaves, pasteles, simetría pulcra, sonrisas de stock, jerga de recursos humanos y cualquier cosa que parezca aprobada por un comité."
+      },
+      "acciones": [
+        "Publicar una campaña que ataque frontalmente una práctica abusiva de tu propio sector, con nombres.",
+        "Renunciar públicamente a un canal, cliente o ingreso que contradiga lo que defiendes.",
+        "Sacar el producto sin pedir permiso al gremio y documentar la reacción de la industria.",
+        "Dar micrófono a los clientes que el sector ignora o desprecia, sin suavizar su discurso.",
+        "Filtrar tus propios márgenes o costes para exponer lo que cobran los demás.",
+        "Hacer un anti-manifiesto: lo que tu marca nunca hará, aunque cueste dinero.",
+        "Fabricar una edición limitada deliberadamente incómoda para el establishment y agotarla."
+      ],
+      "marcas": [
+        "Harley-Davidson",
+        "Diesel",
+        "Virgin",
+        "Liquid Death",
+        "BrewDog"
+      ],
+      "iconos": [
+        "Che Guevara",
+        "Malcolm X",
+        "Johnny Rotten"
+      ]
+    },
+    {
+      "id": "MAG",
+      "nombre": "El Mago",
+      "nombre_en": "The Magician",
+      "alias": [
+        "El Visionario",
+        "El Catalizador"
+      ],
+      "familia": "maestria",
+      "opuesto": "CRE",
+      "deseo": "Comprender las leyes profundas del universo para poder transformarlo.",
+      "meta": "Hacer que ocurra lo que parecía imposible: convertir A en B.",
+      "miedo": "Que sus consecuencias sean negativas, o que la magia se revele como truco vacío.",
+      "estrategia": "Desarrollar una visión y vivirla; crear procesos que transformen a la gente.",
+      "talento": "Encontrar soluciones donde otros ven callejones sin salida; provocar cambio real.",
+      "sombra": "La manipulación: usar el poder para embaucar, prometer transformaciones que no puede sostener.",
+      "evolucion": "Pasar del truco al método: transformar de verdad y dar a otros el poder en lugar de retenerlo.",
+      "resumen": "Tu marca promete transformación: la gente no compra tu producto, compra en quién se convierte al usarlo. Es el arquetipo con más poder de fascinación y también el más frágil, porque si el cambio prometido no ocurre, la magia se lee como estafa.",
+      "comunicacion": {
+        "tono": "Evocador, seguro, ligeramente misterioso. Habla del antes y el después. Usa metáforas, pero sostiene cada promesa con un mecanismo.",
+        "vocabulario": [
+          "transformar",
+          "imagina",
+          "posible",
+          "revelar",
+          "umbral",
+          "visión",
+          "convertir",
+          "despertar",
+          "catalizador",
+          "otro nivel",
+          "lo invisible",
+          "ritual",
+          "reinventar",
+          "momento"
+        ],
+        "estructura_mensaje": "El mundo tal y como lo conoces → la grieta que casi nadie ve → la visión de lo que puede ser → el mecanismo real que lo hace posible → invitación a cruzar.",
+        "evitar": "La literalidad, las listas de características, el lenguaje puramente técnico, el humor autoparódico y prometer transformaciones que no puedes demostrar.",
+        "ejemplo_tagline": "Lo imposible solo lo es hasta que alguien cruza."
+      },
+      "visual": {
+        "paleta": [
+          {
+            "hex": "#2E1A47",
+            "nombre": "Púrpura profundo",
+            "rol": "dominante"
+          },
+          {
+            "hex": "#0B1026",
+            "nombre": "Azul cosmos",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#7B4BC9",
+            "nombre": "Violeta eléctrico",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#D4AF37",
+            "nombre": "Oro alquímico",
+            "rol": "acento"
+          },
+          {
+            "hex": "#EDE7F6",
+            "nombre": "Lavanda pálida",
+            "rol": "neutro"
+          }
+        ],
+        "tipografia": {
+          "titular": [
+            "Syne",
+            "Cormorant Garamond"
+          ],
+          "cuerpo": [
+            "Inter"
+          ],
+          "razon": "Syne aporta formas inesperadas y algo mutantes, coherentes con la idea de transformación; Cormorant ofrece la vía mística y ceremonial. Inter mantiene el cuerpo impecablemente legible para que la promesa se sostenga sobre información clara. Todas cubren el español."
+        },
+        "estetica": "Fondos oscuros con luz emergente, degradados profundos, simetría ritual, partículas, reflejos, antes/después, transiciones y aparición gradual.",
+        "texturas": [
+          "degradados",
+          "partículas",
+          "humo",
+          "cristal",
+          "aurora",
+          "geometría sagrada"
+        ],
+        "evitar": "Fondos blancos planos, retículas rígidas, estética de manual técnico, colores primarios básicos y explicarlo todo hasta matar el asombro."
+      },
+      "acciones": [
+        "Diseñar un ritual de entrada al producto (un onboarding con umbral, no un formulario).",
+        "Documentar transformaciones reales de clientes con métricas de antes y después, no con testimonios vagos.",
+        "Publicar el mecanismo que hay detrás de la 'magia' para demostrar que no es humo.",
+        "Crear una experiencia presencial con un momento de revelación diseñado al segundo.",
+        "Guardar deliberadamente un elemento del proceso en secreto y explicar por qué no se enseña.",
+        "Anunciar una visión a diez años y publicar cada año el avance real, incluidos los fallos.",
+        "Rediseñar el packaging como una apertura por fases, no como una caja que se abre."
+      ],
+      "marcas": [
+        "Disney",
+        "Apple",
+        "Tesla",
+        "Mastercard",
+        "Dyson"
+      ],
+      "iconos": [
+        "Steve Jobs",
+        "David Bowie",
+        "Nikola Tesla"
+      ]
+    },
+    {
+      "id": "HER",
+      "nombre": "El Héroe",
+      "nombre_en": "The Hero",
+      "alias": [
+        "El Guerrero",
+        "El Campeón"
+      ],
+      "familia": "maestria",
+      "opuesto": "CUI",
+      "deseo": "Demostrar su valor mediante actos difíciles y valientes.",
+      "meta": "Mejorar el mundo con esfuerzo, disciplina y coraje; ganar.",
+      "miedo": "La debilidad, la cobardía y no dar la talla cuando importa.",
+      "estrategia": "Entrenar, competir, superarse y enfrentarse al reto de frente.",
+      "talento": "Determinación, competencia y capacidad de movilizar a otros para que se superen.",
+      "sombra": "La arrogancia y la necesidad de un enemigo permanente: convertir todo en batalla y pisar a los demás por ganar.",
+      "evolucion": "Pasar de vencer a servir: usar la fuerza para levantar a otros, no para demostrar superioridad.",
+      "resumen": "Tu marca desafía a la gente a ser mejor y le da las herramientas para lograrlo. Conecta con quien quiere superarse y se apoya en el rendimiento demostrable, pero cansa y excluye si solo habla de ganar y nunca reconoce el fracaso ni el descanso.",
+      "comunicacion": {
+        "tono": "Enérgico, directo, exigente y motivador. Verbos en imperativo. Reconoce el esfuerzo y no maquilla lo que cuesta.",
+        "vocabulario": [
+          "supera",
+          "esfuerzo",
+          "reto",
+          "disciplina",
+          "hazlo",
+          "entrenar",
+          "límite",
+          "ganar",
+          "no rendirse",
+          "coraje",
+          "otra vez",
+          "rendimiento",
+          "mereces",
+          "levántate"
+        ],
+        "estructura_mensaje": "El reto que tienes delante → por qué la mayoría no lo intenta → lo que hace falta → la herramienta que te da ventaja → llamada a la acción sin excusas.",
+        "evitar": "El victimismo, la queja, el tono blando, la promesa de resultados sin esfuerzo y ridiculizar a quien está empezando.",
+        "ejemplo_tagline": "Nadie recuerda el día que no fuiste."
+      },
+      "visual": {
+        "paleta": [
+          {
+            "hex": "#111418",
+            "nombre": "Negro grafito",
+            "rol": "dominante"
+          },
+          {
+            "hex": "#D7261E",
+            "nombre": "Rojo victoria",
+            "rol": "acento"
+          },
+          {
+            "hex": "#1F4FD8",
+            "nombre": "Azul competición",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#C9CDD2",
+            "nombre": "Gris acero",
+            "rol": "neutro"
+          },
+          {
+            "hex": "#F2A104",
+            "nombre": "Ámbar medalla",
+            "rol": "acento"
+          }
+        ],
+        "tipografia": {
+          "titular": [
+            "Anton",
+            "Archivo Black"
+          ],
+          "cuerpo": [
+            "Roboto"
+          ],
+          "razon": "Titulares de gran peso e impacto inmediato, pensados para leerse a distancia y en movimiento; un cuerpo neutro, denso y muy funcional para datos de rendimiento. Soporte completo de acentos y ñ."
+        },
+        "estetica": "Fotografía de acción congelada, sudor, contrapicados, alto contraste, datos y cronómetros sobre imagen, composición diagonal y dinámica.",
+        "texturas": [
+          "asfalto",
+          "metal cepillado",
+          "malla técnica",
+          "barrido de movimiento",
+          "líneas de velocidad"
+        ],
+        "evitar": "Pasteles, tipografías finas y delicadas, imágenes estáticas de estudio, tono contemplativo y estética de bienestar pasivo."
+      },
+      "acciones": [
+        "Crear un reto público con métrica verificable y publicar el ranking, incluidos los que abandonan.",
+        "Patrocinar a un deportista o profesional en su etapa dura, no solo cuando gana.",
+        "Publicar datos de rendimiento comparados con la competencia y aceptar las réplicas.",
+        "Montar un programa de entrenamiento gratuito y exigente, con seguimiento real.",
+        "Contar públicamente un fracaso de la marca y qué se hizo para corregirlo.",
+        "Garantizar el producto bajo condiciones de uso extremas y sustituirlo sin discusión si falla.",
+        "Convertir a tus clientes en protagonistas de la campaña por lo que han conseguido, no por su aspecto."
+      ],
+      "marcas": [
+        "Nike",
+        "Adidas",
+        "Duracell",
+        "FedEx",
+        "Gatorade"
+      ],
+      "iconos": [
+        "Rafa Nadal",
+        "Serena Williams",
+        "Wonder Woman"
+      ]
+    },
+    {
+      "id": "AMA",
+      "nombre": "El Amante",
+      "nombre_en": "The Lover",
+      "alias": [
+        "El Seductor",
+        "El Esteta"
+      ],
+      "familia": "pertenencia",
+      "opuesto": "SAB",
+      "deseo": "Intimidad, placer y conexión profunda con lo que ama.",
+      "meta": "Vivir experiencias intensas y hacer que quien está a su lado se sienta especial.",
+      "miedo": "No ser deseado, no ser querido, quedarse solo.",
+      "estrategia": "Volverse cada vez más atractivo, cuidar el detalle y crear deseo.",
+      "talento": "Sensualidad, gusto, empatía y capacidad de hacer que todo se sienta más.",
+      "sombra": "La dependencia y la superficialidad: perderse en el otro, complacer sin límite o reducirlo todo a apariencia.",
+      "evolucion": "Pasar de buscar ser deseado a amar de verdad: comprometerse con lo que ama aunque no le devuelva el brillo.",
+      "resumen": "Tu marca trabaja con el deseo y el detalle: hace que la gente se sienta vista, elegida y algo más viva. Su poder está en la belleza y la intimidad, y su peligro es quedarse solo en la superficie o volverse complaciente por miedo a no gustar.",
+      "comunicacion": {
+        "tono": "Sensorial, cercano, cuidado. Habla de texturas, olores y momentos. Tutea, susurra, no grita. Nunca vende con datos.",
+        "vocabulario": [
+          "deseo",
+          "piel",
+          "detalle",
+          "para ti",
+          "íntimo",
+          "placer",
+          "seducir",
+          "textura",
+          "cuidar",
+          "elegido",
+          "belleza",
+          "sentir",
+          "cerca",
+          "irresistible"
+        ],
+        "estructura_mensaje": "Escena sensorial concreta → la emoción que despierta → el detalle que la hace posible → invitación a entregarse, dirigida a una sola persona.",
+        "evitar": "Las tablas comparativas, la jerga técnica, el tono corporativo, la agresividad, el humor grueso y hablarle a 'el público' en lugar de a alguien.",
+        "ejemplo_tagline": "Lo que se recuerda no es el producto, es cómo te miraron."
+      },
+      "visual": {
+        "paleta": [
+          {
+            "hex": "#7B1F32",
+            "nombre": "Burdeos",
+            "rol": "dominante"
+          },
+          {
+            "hex": "#E8C4C4",
+            "nombre": "Rosa carne",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#C9A227",
+            "nombre": "Oro cálido",
+            "rol": "acento"
+          },
+          {
+            "hex": "#3A2C2A",
+            "nombre": "Marrón cacao",
+            "rol": "neutro"
+          },
+          {
+            "hex": "#F4EBE4",
+            "nombre": "Nude claro",
+            "rol": "neutro"
+          }
+        ],
+        "tipografia": {
+          "titular": [
+            "Playfair Display",
+            "Bodoni Moda"
+          ],
+          "cuerpo": [
+            "Lora"
+          ],
+          "razon": "Serifas de alto contraste y remates finos que evocan moda, perfumería y elegancia sensual; una serif de cuerpo cálida y de lectura fluida para textos íntimos. Todas incluyen acentos y ñ con excelente kerning."
+        },
+        "estetica": "Luz cálida y baja, piel, primeros planos, profundidad de campo corta, materiales nobles, composiciones asimétricas y con mucho aire.",
+        "texturas": [
+          "seda",
+          "terciopelo",
+          "mármol",
+          "brillo húmedo",
+          "grano de piel",
+          "reflejo dorado"
+        ],
+        "evitar": "Luz de fluorescente, colores primarios saturados, tipografías geométricas frías, gráficos de barras y cualquier imagen que parezca de catálogo."
+      },
+      "acciones": [
+        "Diseñar el desempaquetado como una experiencia sensorial: peso, olor, sonido, tiempo.",
+        "Escribir a mano una nota personalizada real en los pedidos, con el nombre y el motivo de compra.",
+        "Crear una línea íntima y limitada, solo para clientes que ya te conocen, sin publicidad.",
+        "Colaborar con un perfumista o un artista para dar a la marca una firma sensorial propia.",
+        "Sustituir las fichas de producto por relatos en primera persona sobre cómo se usa.",
+        "Organizar una cena o encuentro pequeño donde el producto sea el pretexto y la conexión el fin.",
+        "Cuidar obsesivamente el detalle que nadie mira (el interior de la caja, el reverso de la etiqueta)."
+      ],
+      "marcas": [
+        "Chanel",
+        "Victoria's Secret",
+        "Häagen-Dazs",
+        "Alfa Romeo",
+        "Godiva"
+      ],
+      "iconos": [
+        "Marilyn Monroe",
+        "Sofía Loren",
+        "Casanova"
+      ]
+    },
+    {
+      "id": "BUF",
+      "nombre": "El Bufón",
+      "nombre_en": "The Jester",
+      "alias": [
+        "El Cómico",
+        "El Gamberro"
+      ],
+      "familia": "pertenencia",
+      "opuesto": "INO",
+      "deseo": "Vivir el momento y disfrutarlo a fondo.",
+      "meta": "Pasarlo bien y alegrar el mundo, aunque sea a costa de la solemnidad ajena.",
+      "miedo": "Aburrir, aburrirse y ser un plomo del que nadie quiere estar cerca.",
+      "estrategia": "Jugar, hacer bromas, ser ingenioso y desmontar lo pomposo con humor.",
+      "talento": "Alegría, ingenio y la libertad de decir verdades que nadie más se atreve a decir.",
+      "sombra": "La frivolidad y la crueldad: usar el humor para no comprometerse con nada o para hacer daño gratis.",
+      "evolucion": "Pasar de la broma por la broma al humor con verdad: hacer reír y, de paso, señalar lo que nadie quiere mirar.",
+      "resumen": "Tu marca da permiso para no tomarse la vida tan en serio, y eso genera un cariño que el dinero no compra. Funciona cuando el humor es inteligente y tiene algo detrás; fracasa cuando se vuelve chiste vacío o cuando se ríe de la gente en lugar de reírse con ella.",
+      "comunicacion": {
+        "tono": "Desenfadado, rápido, ingenioso, algo gamberro. Se ríe de sí misma antes que de nadie. Rompe el cuarto muro sin pedir perdón.",
+        "vocabulario": [
+          "venga",
+          "en serio",
+          "ridículo",
+          "juego",
+          "risa",
+          "sin postureo",
+          "spoiler",
+          "qué locura",
+          "no pasa nada",
+          "disfrutar",
+          "ligero",
+          "gamberrada",
+          "ups",
+          "hoy toca"
+        ],
+        "estructura_mensaje": "Verdad incómoda o tópico absurdo → giro cómico inesperado → guiño cómplice al que lo pilla → producto colado con naturalidad, nunca solemne.",
+        "evitar": "La solemnidad, el tono épico, los eslóganes grandilocuentes, el humor a costa de los vulnerables y explicar el chiste.",
+        "ejemplo_tagline": "Llevamos años haciendo el ridículo. Ya casi nos sale bien."
+      },
+      "visual": {
+        "paleta": [
+          {
+            "hex": "#FFC300",
+            "nombre": "Amarillo chillón",
+            "rol": "dominante"
+          },
+          {
+            "hex": "#FF5A5F",
+            "nombre": "Coral vivo",
+            "rol": "acento"
+          },
+          {
+            "hex": "#00A6A6",
+            "nombre": "Turquesa pop",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#1A1A1A",
+            "nombre": "Negro tinta",
+            "rol": "neutro"
+          },
+          {
+            "hex": "#F5F0E6",
+            "nombre": "Crema",
+            "rol": "neutro"
+          },
+          {
+            "hex": "#8C52FF",
+            "nombre": "Morado fiesta",
+            "rol": "secundario"
+          }
+        ],
+        "tipografia": {
+          "titular": [
+            "Fraunces",
+            "Caveat"
+          ],
+          "cuerpo": [
+            "Poppins"
+          ],
+          "razon": "Fraunces tiene una personalidad juguetona y algo torcida que se aleja de lo corporativo; Caveat aporta el registro manuscrito y espontáneo. Poppins mantiene todo amable y legible. Cobertura completa de acentos y ñ."
+        },
+        "estetica": "Color saturado, composiciones desordenadas a propósito, tipografía rota o girada, memes, collage, elementos que se salen del marco.",
+        "texturas": [
+          "confeti",
+          "recorte de revista",
+          "rotulador",
+          "trazos torcidos",
+          "sticker",
+          "pixelado irónico"
+        ],
+        "evitar": "Minimalismo serio, negro sobre blanco elegante, fotografía de estudio impecable, tono aspiracional y cualquier cosa que parezca una junta de accionistas."
+      },
+      "acciones": [
+        "Responder a los comentarios y quejas con humor propio, incluso a los críticos, sin borrar nada.",
+        "Reírte públicamente de un error de la marca antes de que lo haga la competencia.",
+        "Lanzar un producto absurdo de edición limitada solo porque tiene gracia, y agotarlo.",
+        "Convertir el texto legal, el 404 o el ticket de compra en un sitio donde pasan cosas divertidas.",
+        "Trolear con cariño a un competidor solemne en una campaña de exterior.",
+        "Dejar que la comunidad decida algo ridículo por votación y cumplirlo de verdad.",
+        "Publicar el detrás de cámaras con todas las tomas falsas, sin editar los fallos."
+      ],
+      "marcas": [
+        "Ben & Jerry's",
+        "M&M's",
+        "Old Spice",
+        "Skittles",
+        "Aperol Spritz"
+      ],
+      "iconos": [
+        "Charlie Chaplin",
+        "Robin Williams",
+        "Jim Carrey"
+      ]
+    },
+    {
+      "id": "COM",
+      "nombre": "El Hombre Común",
+      "nombre_en": "The Everyman",
+      "alias": [
+        "El Buen Vecino",
+        "El Realista"
+      ],
+      "familia": "pertenencia",
+      "opuesto": "EXP",
+      "deseo": "Pertenecer, formar parte, ser uno más.",
+      "meta": "Conectar con los demás desde la igualdad y llevar una vida digna y sin pretensiones.",
+      "miedo": "Destacar de forma negativa, ser excluido o parecer que se cree superior.",
+      "estrategia": "Ser cercano, honesto y de fiar; hablar el idioma de la gente normal.",
+      "talento": "Empatía, realismo, sentido común y capacidad de hacer que cualquiera se sienta cómodo.",
+      "sombra": "La mediocridad y el conformismo: renunciar a lo propio por miedo a destacar y aceptar lo peor con tal de encajar.",
+      "evolucion": "Pasar del deseo de encajar a la pertenencia con criterio: ser de los tuyos sin dejar de ser tú.",
+      "resumen": "Tu marca es de fiar porque no promete la luna: da lo que dice, al precio que dice, sin humos. Su fuerza es la cercanía y la ausencia de pose, y su riesgo es volverse invisible o gris si nunca se atreve a tener carácter propio.",
+      "comunicacion": {
+        "tono": "Llano, honesto, de tú a tú. Como quien te habla en el bar o en el rellano. Cero pomposidad, cero jerga, cero postureo.",
+        "vocabulario": [
+          "de siempre",
+          "normal",
+          "de verdad",
+          "sin florituras",
+          "para todos",
+          "gente como tú",
+          "de fiar",
+          "de andar por casa",
+          "sin postureo",
+          "lo justo",
+          "día a día",
+          "cerca",
+          "echar una mano",
+          "sencillo"
+        ],
+        "estructura_mensaje": "Situación cotidiana reconocible → 'a nosotros también nos pasa' → la solución práctica, sin exagerar → precio o condición clara, dicha sin rodeos.",
+        "evitar": "El lujo, la exclusividad, la jerga técnica, el tono aspiracional, prometer transformaciones vitales y hablar por encima de la gente.",
+        "ejemplo_tagline": "Sin milagros. Funciona y ya está."
+      },
+      "visual": {
+        "paleta": [
+          {
+            "hex": "#2F5D8C",
+            "nombre": "Azul vaquero",
+            "rol": "dominante"
+          },
+          {
+            "hex": "#D9A441",
+            "nombre": "Mostaza cálida",
+            "rol": "acento"
+          },
+          {
+            "hex": "#7A8B6F",
+            "nombre": "Verde huerto",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#F1EDE4",
+            "nombre": "Beige cocina",
+            "rol": "neutro"
+          },
+          {
+            "hex": "#4A4744",
+            "nombre": "Gris tierra",
+            "rol": "neutro"
+          }
+        ],
+        "tipografia": {
+          "titular": [
+            "Rubik",
+            "Karla"
+          ],
+          "cuerpo": [
+            "Public Sans"
+          ],
+          "razon": "Sans de formas amables y ligeramente redondeadas, sin pretensión ni frialdad corporativa; Public Sans está diseñada para máxima claridad y accesibilidad, que es exactamente la promesa de este arquetipo. Todas con acentos y ñ."
+        },
+        "estetica": "Fotografía de gente real en casas reales, luz natural, escenas cotidianas, manos, mesas, ropa normal. Diseño claro, ordenado y sin alardes.",
+        "texturas": [
+          "madera",
+          "algodón vaquero",
+          "cerámica",
+          "papel kraft",
+          "punto de lana"
+        ],
+        "evitar": "Modelos irreales, oro, mármol, fondos negros de lujo, tipografías caligráficas y toda estética que diga 'esto no es para ti'."
+      },
+      "acciones": [
+        "Poner el precio final, con impuestos y envío, visible desde el primer momento y sin sorpresas.",
+        "Sacar en la comunicación a empleados y clientes reales, con su nombre y su acento.",
+        "Ofrecer una atención al cliente con personas, teléfono visible y sin laberinto de menús.",
+        "Explicar por qué algo cuesta lo que cuesta, desglosando el coste de forma honesta.",
+        "Patrocinar al equipo, la fiesta o la asociación del barrio donde estás, no un gran evento.",
+        "Diseñar el producto para que dure y sea fácil de arreglar, y vender los recambios baratos.",
+        "Renunciar a la versión premium innecesaria y dejar una sola gama buena para todos."
+      ],
+      "marcas": [
+        "IKEA",
+        "Lidl",
+        "Levi's",
+        "Volkswagen",
+        "Mercadona"
+      ],
+      "iconos": [
+        "Tom Hanks",
+        "Penélope de barrio",
+        "Homer Simpson"
+      ]
+    },
+    {
+      "id": "CUI",
+      "nombre": "El Cuidador",
+      "nombre_en": "The Caregiver",
+      "alias": [
+        "El Protector",
+        "El Guardián"
+      ],
+      "familia": "estabilidad",
+      "opuesto": "HER",
+      "deseo": "Proteger a los demás y evitar que sufran daño.",
+      "meta": "Ayudar de forma real y sostenida a quien lo necesita.",
+      "miedo": "El egoísmo, la ingratitud y no llegar a tiempo cuando alguien depende de él.",
+      "estrategia": "Hacer cosas por los demás; anticiparse a la necesidad antes de que se exprese.",
+      "talento": "Compasión, generosidad y una fiabilidad que se nota en los momentos difíciles.",
+      "sombra": "El martirio y la culpa: dar para retener, quejarse del sacrificio o infantilizar a quien cuida.",
+      "evolucion": "Pasar del sacrificio al cuidado sano: cuidar sin anularse y ayudar a que el otro no necesite ayuda.",
+      "resumen": "Tu marca protege: la gente confía en ti porque sabe que estarás cuando las cosas se pongan feas. Tu fuerza es la fiabilidad y la generosidad, y tu trampa es el chantaje emocional o el paternalismo que trata al cliente como si no supiera cuidarse solo.",
+      "comunicacion": {
+        "tono": "Cálido, sereno, protector y muy claro. Habla despacio, tranquiliza y da instrucciones que se entienden a la primera. Nunca usa el miedo para vender.",
+        "vocabulario": [
+          "cuidar",
+          "proteger",
+          "acompañar",
+          "estamos aquí",
+          "seguro",
+          "descansa",
+          "no estás solo",
+          "apoyo",
+          "confía",
+          "de tu parte",
+          "atender",
+          "cerca de ti",
+          "sin prisa",
+          "te ayudamos"
+        ],
+        "estructura_mensaje": "Reconocer la situación difícil sin dramatizar → estar del lado de la persona → explicar exactamente qué vas a hacer por ella → dejar claro que puede contar contigo después.",
+        "evitar": "El miedo como palanca de venta, la culpabilización, el paternalismo, la urgencia agresiva y prometer un cuidado que luego no puedes sostener.",
+        "ejemplo_tagline": "Tú ocúpate de lo importante. De lo demás, nosotros."
+      },
+      "visual": {
+        "paleta": [
+          {
+            "hex": "#2E6F6A",
+            "nombre": "Verde bálsamo",
+            "rol": "dominante"
+          },
+          {
+            "hex": "#8FC7C1",
+            "nombre": "Aguamarina suave",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#E4B7A0",
+            "nombre": "Terracota clara",
+            "rol": "acento"
+          },
+          {
+            "hex": "#F7F4EF",
+            "nombre": "Blanco cálido",
+            "rol": "neutro"
+          },
+          {
+            "hex": "#4B4F52",
+            "nombre": "Gris sosegado",
+            "rol": "neutro"
+          }
+        ],
+        "tipografia": {
+          "titular": [
+            "Merriweather",
+            "Alegreya"
+          ],
+          "cuerpo": [
+            "Nunito"
+          ],
+          "razon": "Serifas cálidas, de gran legibilidad incluso en condiciones de lectura difíciles (pantallas pequeñas, cansancio, edad), unidas a una sans redondeada y amable. Ambas con excelente soporte de acentos y ñ."
+        },
+        "estetica": "Formas redondeadas, mucho aire, contraste suficiente para accesibilidad real, manos que sostienen, gestos de apoyo, luz cálida e imágenes sin dramatismo.",
+        "texturas": [
+          "tejido suave",
+          "cerámica esmaltada",
+          "acuarela cálida",
+          "papel reciclado",
+          "manta de punto"
+        ],
+        "evitar": "Imágenes de enfermedad explotadas, urgencia en rojo, tipografías cortantes, negro dominante y cualquier recurso que asuste para vender."
+      },
+      "acciones": [
+        "Publicar un protocolo claro de qué hacer si algo va mal, con nombres y teléfonos reales.",
+        "Formar gratis a los cuidadores y familiares de tus clientes, aunque no compren nada.",
+        "Destinar un porcentaje fijo y auditado a un programa de ayuda, y publicar en qué se gasta.",
+        "Rediseñar tus productos para que los pueda usar quien tiene menos capacidad o menos tiempo.",
+        "Ofrecer una pausa de pagos o servicio a quien atraviesa una situación difícil, sin papeleo.",
+        "Cuidar primero a tu propio equipo y hacer públicas las condiciones laborales.",
+        "Llamar por teléfono después de la compra, no para vender, sino para comprobar que todo va bien."
+      ],
+      "marcas": [
+        "Johnson & Johnson",
+        "Volvo",
+        "UNICEF",
+        "Cruz Roja",
+        "Nivea"
+      ],
+      "iconos": [
+        "Madre Teresa",
+        "Florence Nightingale",
+        "Mister Rogers"
+      ]
+    },
+    {
+      "id": "GOB",
+      "nombre": "El Gobernante",
+      "nombre_en": "The Ruler",
+      "alias": [
+        "El Líder",
+        "El Soberano"
+      ],
+      "familia": "estabilidad",
+      "opuesto": "FOR",
+      "deseo": "Control: crear una comunidad o sistema próspero y ordenado.",
+      "meta": "Construir algo que funcione, que dure y que sea referencia para los demás.",
+      "miedo": "El caos, ser derrocado y perder el control de lo que ha construido.",
+      "estrategia": "Ejercer el poder con responsabilidad; establecer normas, estándares y estructura.",
+      "talento": "Liderazgo, criterio, capacidad de organizar y de asumir la responsabilidad final.",
+      "sombra": "El autoritarismo y la rigidez: controlar por miedo, aplastar la disidencia y confundir orden con obediencia.",
+      "evolucion": "Pasar del control al servicio: gobernar para que el sistema prospere sin depender de uno mismo.",
+      "resumen": "Tu marca representa el estándar: se compra por seguridad, por estatus y porque nadie duda de que va a cumplir. Su autoridad se sostiene en la excelencia y la responsabilidad, y se pierde si se vuelve arrogante, cerrada o incapaz de reconocer un fallo.",
+      "comunicacion": {
+        "tono": "Sobrio, seguro, afirmativo. Habla poco y con peso. Establece criterios en lugar de opinar. No compite: define la referencia.",
+        "vocabulario": [
+          "referencia",
+          "estándar",
+          "excelencia",
+          "responsabilidad",
+          "legado",
+          "criterio",
+          "liderar",
+          "garantía",
+          "rigor",
+          "definir",
+          "primer nivel",
+          "confianza",
+          "duradero",
+          "compromiso"
+        ],
+        "estructura_mensaje": "Definir el estándar del sector → demostrar que tú lo cumples desde hace tiempo → asumir la responsabilidad que conlleva → invitar a quien quiera lo mejor, sin rebajarse a comparar.",
+        "evitar": "La informalidad excesiva, los memes, el descuento agresivo, el victimismo, el tono suplicante y prometer más de lo que puedes garantizar.",
+        "ejemplo_tagline": "El estándar no se discute. Se sostiene."
+      },
+      "visual": {
+        "paleta": [
+          {
+            "hex": "#12212E",
+            "nombre": "Azul medianoche",
+            "rol": "dominante"
+          },
+          {
+            "hex": "#1F3D2B",
+            "nombre": "Verde imperial",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#B99A5B",
+            "nombre": "Dorado sobrio",
+            "rol": "acento"
+          },
+          {
+            "hex": "#8E1B2C",
+            "nombre": "Granate",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#EAE7E1",
+            "nombre": "Piedra clara",
+            "rol": "neutro"
+          },
+          {
+            "hex": "#2B2B2B",
+            "nombre": "Grafito",
+            "rol": "neutro"
+          }
+        ],
+        "tipografia": {
+          "titular": [
+            "Marcellus",
+            "Cormorant Garamond"
+          ],
+          "cuerpo": [
+            "Jost"
+          ],
+          "razon": "Una serif de raíz clásica y capitalar (con aire de inscripción romana) da autoridad y legado; Jost aporta un cuerpo geométrico, ordenado y contemporáneo que evita el tono anticuado. Ambas cubren acentos y ñ."
+        },
+        "estetica": "Simetría, márgenes generosos, jerarquías claras, materiales nobles, fotografía de arquitectura y detalle de calidad, escudos y monogramas.",
+        "texturas": [
+          "mármol",
+          "cuero fino",
+          "lino grueso",
+          "estampado en seco",
+          "madera noble",
+          "metal cepillado"
+        ],
+        "evitar": "Desorden, tipografías informales, color chillón, collage, urgencia comercial y todo lo que sugiera improvisación."
+      },
+      "acciones": [
+        "Publicar un estándar de calidad propio, abrirlo al sector y aceptar auditoría externa.",
+        "Ofrecer una garantía muy por encima de la legal y cumplirla sin discutir.",
+        "Formar y certificar a profesionales, creando escuela alrededor de tu método.",
+        "Renunciar a promociones agresivas y sostener un precio estable a lo largo del año.",
+        "Asumir públicamente la responsabilidad de un fallo, con reparación concreta y plazo.",
+        "Publicar tu gobernanza: quién decide qué, y ante quién responde.",
+        "Invertir en durabilidad y ofrecer servicio de mantenimiento a treinta años vista."
+      ],
+      "marcas": [
+        "Rolex",
+        "Mercedes-Benz",
+        "American Express",
+        "Rolls-Royce",
+        "Microsoft"
+      ],
+      "iconos": [
+        "Isabel II",
+        "Nelson Mandela",
+        "Angela Merkel"
+      ]
+    },
+    {
+      "id": "CRE",
+      "nombre": "El Creador",
+      "nombre_en": "The Creator",
+      "alias": [
+        "El Artista",
+        "El Artesano"
+      ],
+      "familia": "estabilidad",
+      "opuesto": "MAG",
+      "deseo": "Crear algo de valor duradero que antes no existía.",
+      "meta": "Dar forma a una visión y ejecutarla con maestría hasta el último detalle.",
+      "miedo": "La mediocridad: hacer algo insulso, mal ejecutado o irrelevante.",
+      "estrategia": "Desarrollar el oficio, la técnica y la imaginación; iterar hasta que esté bien.",
+      "talento": "Imaginación, criterio estético y una exigencia de calidad que se ve en el resultado.",
+      "sombra": "El perfeccionismo paralizante y el ego del autor: no lanzar nunca, o crear para lucirse en vez de para servir.",
+      "evolucion": "Pasar de crear para demostrar valía a crear para expresar y aportar: terminar, publicar y dejar que la obra viva.",
+      "resumen": "Tu marca vende obra: lo que haces lleva una firma y una manera de hacer que nadie más tiene. Su fuerza está en el oficio y la originalidad, y su riesgo es el perfeccionismo que no entrega o un exceso de autoría que deja fuera al cliente.",
+      "comunicacion": {
+        "tono": "Cuidado, expresivo, con criterio propio. Habla de proceso, materiales y decisiones. Muestra el taller, no solo el resultado.",
+        "vocabulario": [
+          "crear",
+          "oficio",
+          "proceso",
+          "materia",
+          "diseñar",
+          "detalle",
+          "original",
+          "hecho a mano",
+          "iteración",
+          "boceto",
+          "autoría",
+          "artesanía",
+          "imaginar",
+          "obra"
+        ],
+        "estructura_mensaje": "La idea de partida → los materiales y las restricciones → las decisiones y descartes del proceso → la obra terminada → invitación a crear también, no solo a comprar.",
+        "evitar": "El lenguaje de producción en masa, el 'nuevo y mejorado', la copia de tendencias, el descuento como argumento y ocultar el proceso.",
+        "ejemplo_tagline": "No lo fabricamos. Lo hacemos."
+      },
+      "visual": {
+        "paleta": [
+          {
+            "hex": "#1E1B18",
+            "nombre": "Negro tinta china",
+            "rol": "dominante"
+          },
+          {
+            "hex": "#E8E2D6",
+            "nombre": "Papel crudo",
+            "rol": "neutro"
+          },
+          {
+            "hex": "#C4552B",
+            "nombre": "Naranja ladrillo",
+            "rol": "acento"
+          },
+          {
+            "hex": "#3E6B8C",
+            "nombre": "Azul cobalto apagado",
+            "rol": "secundario"
+          },
+          {
+            "hex": "#A79B84",
+            "nombre": "Beige taller",
+            "rol": "secundario"
+          }
+        ],
+        "tipografia": {
+          "titular": [
+            "Space Grotesk",
+            "Fraunces"
+          ],
+          "cuerpo": [
+            "DM Sans"
+          ],
+          "razon": "Space Grotesk tiene carácter de diseño de autor sin perder claridad; Fraunces aporta el registro editorial y expresivo cuando el proyecto pide más alma. DM Sans mantiene el cuerpo limpio para que respire la obra. Todas con acentos y ñ."
+        },
+        "estetica": "Rejilla visible, mucho blanco, materiales en primer plano, bocetos y planos, fotografía de proceso, imperfección deliberada y firmada.",
+        "texturas": [
+          "papel de acuarela",
+          "serigrafía",
+          "madera lijada",
+          "arcilla",
+          "trazo de lápiz",
+          "tinta"
+        ],
+        "evitar": "Plantillas evidentes, stock genérico, degradados de moda sin sentido, estética 'startup' y esconder que detrás hay una persona."
+      },
+      "acciones": [
+        "Publicar el proceso completo de una pieza, incluidos los descartes y los prototipos fallidos.",
+        "Firmar y numerar cada unidad, con el nombre de quien la ha hecho.",
+        "Abrir el taller al público un día al mes y dejar que la gente trabaje con tus materiales.",
+        "Liberar plantillas, patrones o herramientas para que otros creen con tu método.",
+        "Colaborar con un artista de otra disciplina y publicar la pieza resultante sin fines comerciales.",
+        "Retirar del catálogo lo que ya no cumple tu estándar, aunque siga vendiéndose bien.",
+        "Fijar una fecha de publicación pública para vencer el perfeccionismo y entregar sí o sí."
+      ],
+      "marcas": [
+        "LEGO",
+        "Adobe",
+        "Moleskine",
+        "Canon",
+        "Etsy"
+      ],
+      "iconos": [
+        "Frida Kahlo",
+        "Coco Chanel",
+        "Antoni Gaudí"
+      ]
+    }
+  ]
+}

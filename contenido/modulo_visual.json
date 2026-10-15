@@ -1,0 +1,1169 @@
+{
+  "_nota": "Regla de contenido: toda ayuda de un ítem que alimente indice_audacia, indice_consistencia o afinidad_por_modulo tiene que nombrar el precio del sí, y ninguna puede decir cuál es la respuesta correcta.",
+  "id": "visual",
+  "nombre": "Tu imagen",
+  "subtitulo": "Cómo se te ve",
+  "descripcion": "Aquí decides cómo quieres verte: qué colores te favorecen, qué harías (y qué no) con tu pelo, qué ropa te pondrías y cuál no, qué sensación quieres dar y dónde están tus límites. La imagen no te hace mejor en tu trabajo, pero la gente decide en menos de un segundo si le encajas o no. La idea no es 'arreglarte': es que lo que se ve de ti diga lo mismo que dices tú. Nada de esto es obligatorio. Salen propuestas, no órdenes.",
+  "bloques": [
+    {
+      "id": "coloracion",
+      "nombre": "Qué colores te favorecen",
+      "descripcion": "Dos preguntas, no un diagnóstico: el contraste entre tu pelo, tu piel y tus ojos, y si te sienta mejor el oro o la plata. Con eso elegimos el neutro de tus paletas. Nada más. El color que llevas junto a la cara cambia cómo se ve tu piel: puede sacarte rojeces y ojeras, o hacer que parezcas descansado. Tómalo como un punto de partida, no como una etiqueta. Si te encanta un color que «no te toca», llévalo igual.",
+      "preguntas": [
+        {
+          "id": "VIS-CO-4",
+          "tipo": "unica",
+          "texto": "Si te pones una joya junto a la cara, ¿cuál te sienta mejor: el oro o la plata?",
+          "ayuda": "Es la forma más fácil de saber si tu piel tira a cálida (le va el oro) o a fría (le va la plata). Hazlo de verdad: ponte al lado de una ventana, sin maquillaje, y compara las dos junto a tu cara. Si no ves diferencia, elige 'los dos': es lo más normal y significa que puedes llevar ambos. No es una prueba científica, pero acierta bastante.",
+          "opciones": [
+            {
+              "valor": "oro",
+              "etiqueta": "El oro: me ilumina la cara",
+              "descripcion": "Tu piel tira a cálida. Te propondremos marrones, oliva, coral, crema y azules cálidos."
+            },
+            {
+              "valor": "plata",
+              "etiqueta": "La plata: con oro parezco amarillento",
+              "descripcion": "Tu piel tira a fría. Te propondremos azules, grises, granate, verde esmeralda y blancos limpios."
+            },
+            {
+              "valor": "ambos",
+              "etiqueta": "Los dos me quedan bien",
+              "descripcion": "Ni cálida ni fría: lo más común. Tienes libertad total, así que elegiremos los colores por la sensación que quieras dar, no por tu piel."
+            },
+            {
+              "valor": "no_se",
+              "etiqueta": "No noto ninguna diferencia",
+              "descripcion": "Es totalmente normal. Elegiremos los colores por la sensación que quieras dar y por el contraste de tu cara."
+            }
+          ]
+        },
+        {
+          "id": "VIS-CO-6",
+          "tipo": "bipolar",
+          "texto": "¿Se diferencian mucho tu pelo, tu piel y tus ojos entre sí?",
+          "ayuda": "Truco: mira una foto tuya en blanco y negro. Si el pelo, la piel y los ojos se distinguen claramente, tienes mucho contraste. Si todo queda parecido, tienes poco. Esta es la parte más fiable del bloque, porque es física pura: la ropa suele quedar mejor cuando tiene el mismo contraste que tú. Con mucho contraste te piden combinaciones fuertes (negro con blanco). Con poco, combinaciones suaves (grises y beige juntos).",
+          "polo_izq": "Poco: todo en tonos parecidos",
+          "polo_der": "Mucho: por ejemplo pelo oscuro y piel clara, o rasgos muy marcados",
+          "desc_izq": "Ejemplo: rubio de piel clara y ojos claros. Te favorecen las combinaciones suaves; el negro puro puede comerte.",
+          "desc_der": "Ejemplo: pelo negro con piel clara. Te sientan bien los colores fuertes y las combinaciones marcadas; los pastel se te pierden.",
+          "dimension": "contraste_personal",
+          "escala": 7
+        }
+      ]
+    },
+    {
+      "id": "cabello",
+      "nombre": "Tu pelo: qué estás dispuesto a cambiar",
+      "descripcion": "AVISO IMPORTANTE: aquí NO hay peinados 'más profesionales' que otros. El pelo afro, las trenzas, los locs, los rizos y el pelo muy ensortijado son opciones totalmente profesionales, y este programa no las penaliza ni las pone por debajo de ninguna otra. Sí es cierto que hay estudios (de la Universidad de Duke y del Perception Institute) que demuestran que mucha gente juzga peor el pelo afro en el trabajo. Pero eso es un prejuicio de quien mira, no un defecto de tu pelo. Lo contamos solo para que sepas cómo está el mundo, nunca para pedirte que cambies. Te preguntamos primero por tu pelo natural para no proponerte cosas imposibles, dañinas o que te obliguen a un cuidado que no quieres.",
+      "preguntas": [
+        {
+          "id": "VIS-CA-2",
+          "tipo": "unica",
+          "texto": "¿Qué estarías dispuesto a hacer con el LARGO de tu pelo?",
+          "ayuda": "El largo del pelo es el cambio más rápido y más barato que existe: cambia tu forma vista desde lejos, incluso antes de que se te vea la cara. Marca solo lo que aceptarías de verdad. Si no quieres cambiar nada, dilo: trabajaremos con lo que ya tienes.",
+          "opciones": [
+            {
+              "valor": "nada",
+              "etiqueta": "Nada, quiero seguir con el largo que tengo",
+              "descripcion": "Perfectamente válido. Buscaremos tu sello en la ropa, el color o los complementos.",
+              "arquetipos": [
+                "COM"
+              ]
+            },
+            {
+              "valor": "cortar_poco",
+              "etiqueta": "Un cambio pequeño: recortar, definir la forma",
+              "descripcion": "Cambio sin riesgo: te ves más cuidado sin dejar de parecerte a ti.",
+              "arquetipos": [
+                "GOB"
+              ]
+            },
+            {
+              "valor": "cortar_mucho",
+              "etiqueta": "Un corte corto y marcado",
+              "descripcion": "Cambio muy visible. Un corte corto y bien hecho transmite decisión y control.",
+              "arquetipos": [
+                "GOB",
+                "HER"
+              ]
+            },
+            {
+              "valor": "dejar_largo",
+              "etiqueta": "Dejármelo largo",
+              "descripcion": "Necesita paciencia (meses) y cuidar las puntas, pero el pelo largo es un sello potente y poco común en muchos trabajos.",
+              "arquetipos": [
+                "CRE",
+                "AMA",
+                "EXP"
+              ]
+            },
+            {
+              "valor": "rapar",
+              "etiqueta": "Raparme del todo",
+              "descripcion": "Máximo impacto y cero cuidados. Ojo: no hay marcha atrás rápida, tardarás meses en recuperarlo.",
+              "arquetipos": [
+                "FOR",
+                "HER"
+              ]
+            },
+            {
+              "valor": "abierto",
+              "etiqueta": "Me da igual, acepto cualquier propuesta",
+              "descripcion": "Nos dejas margen para proponerte el cambio que más impacto tenga.",
+              "evasiva": true
+            }
+          ]
+        },
+        {
+          "id": "VIS-CA-3",
+          "tipo": "multiple",
+          "texto": "¿Qué estarías dispuesto a hacer con el COLOR de tu pelo?",
+          "ayuda": "El color del pelo es lo que más se nota en una foto pequeña (la del perfil, un avatar). Un color raro convierte tu cabeza en un logotipo. Un color natural te da libertad y no te obliga a mantener nada. Marca todo lo que aceptarías.",
+          "min": 1,
+          "max": 3,
+          "opciones": [
+            {
+              "valor": "natural",
+              "etiqueta": "Quedarme con mi color natural",
+              "descripcion": "Sin cuidados, sin riesgo y totalmente auténtico. Buscaremos que destaques por otra cosa.",
+              "arquetipos": [
+                "COM",
+                "INO"
+              ]
+            },
+            {
+              "valor": "matiz",
+              "etiqueta": "Solo un tono o unos reflejos suaves",
+              "descripcion": "Te da más luz en la cámara sin que nadie note que te has hecho nada. Hay que retocarlo de vez en cuando.",
+              "arquetipos": [
+                "AMA"
+              ]
+            },
+            {
+              "valor": "rubio",
+              "etiqueta": "Rubio",
+              "descripcion": "Da mucha luz en foto, pero si tu pelo es oscuro te obliga a decolorarlo (daña el pelo) y a retocar la raíz cada 3-5 semanas.",
+              "arquetipos": [
+                "AMA",
+                "INO"
+              ]
+            },
+            {
+              "valor": "negro",
+              "etiqueta": "Negro",
+              "descripcion": "Máximo contraste, se lee como contundencia. Cuesta mucho volver atrás: quitar un tinte negro es largo y agresivo.",
+              "arquetipos": [
+                "FOR",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "pelirrojo",
+              "etiqueta": "Pelirrojo o cobrizo",
+              "descripcion": "Se reconoce al instante y lo lleva poca gente: gran ventaja para que te recuerden. Eso sí, el rojo se va rápido y hay que retocarlo a menudo.",
+              "arquetipos": [
+                "CRE",
+                "EXP"
+              ]
+            },
+            {
+              "valor": "fantasia",
+              "etiqueta": "Color de fantasía: azul, rosa, verde, plata...",
+              "descripcion": "Te vuelve reconocible al instante. Hay que decolorar antes (daña el pelo), retocarlo mucho, y te cierra puertas en trabajos conservadores. A cambio, te abre otras de par en par.",
+              "arquetipos": [
+                "FOR",
+                "CRE",
+                "MAG"
+              ]
+            },
+            {
+              "valor": "canas",
+              "etiqueta": "Dejar mis canas a la vista",
+              "descripcion": "Cero cuidados y transmite autoridad, madurez y seguridad. Cada vez más gente lo elige a propósito, no por rendirse.",
+              "arquetipos": [
+                "SAB",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "nunca_tinte",
+              "etiqueta": "No me teñiría por nada del mundo",
+              "descripcion": "Olvidamos el color como opción. Trabajaremos la forma, la ropa y los complementos.",
+              "arquetipos": [
+                "COM"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "VIS-CA-5",
+          "tipo": "unica",
+          "texto": "¿Qué harías con la barba o el bigote?",
+          "ayuda": "Si esto no va contigo, elige 'no me aplica' y seguimos. Si te afecta: la barba es el cambio de imagen más rápido que existe (en una semana lo cambia todo) y el que más altera la edad que aparentas y lo duros que se ven tus rasgos.",
+          "opciones": [
+            {
+              "valor": "no_aplica",
+              "etiqueta": "No me aplica",
+              "descripcion": "Nos saltamos esta parte."
+            },
+            {
+              "valor": "afeitado",
+              "etiqueta": "Bien afeitado, sin nada",
+              "descripcion": "Se lee como limpieza y control. Suele rejuvenecer, y es lo normal en las empresas clásicas.",
+              "arquetipos": [
+                "GOB",
+                "INO"
+              ]
+            },
+            {
+              "valor": "barba_corta",
+              "etiqueta": "Barba corta o de tres días",
+              "descripcion": "El punto medio de siempre: marca la mandíbula sin saltarse ninguna norma del trabajo.",
+              "arquetipos": [
+                "COM",
+                "HER"
+              ]
+            },
+            {
+              "valor": "barba_larga",
+              "etiqueta": "Barba larga y cuidada",
+              "descripcion": "Se lee como carácter, oficio y madurez. Pero hay que cuidarla de verdad (recortarla, usar aceites) o parecerás descuidado.",
+              "arquetipos": [
+                "SAB",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "bigote",
+              "etiqueta": "Bigote como sello personal",
+              "descripcion": "Muy llamativo y arriesgado: o te hace inolvidable o pareces un dibujo. Casi nunca queda a medias.",
+              "arquetipos": [
+                "BUF",
+                "FOR"
+              ]
+            },
+            {
+              "valor": "indiferente_vello",
+              "etiqueta": "Acepto lo que me propongáis",
+              "descripcion": "Lo ajustaremos a la sensación que quieras dar y a cuánto quieras arriesgar.",
+              "arquetipos": [
+                "EXP"
+              ],
+              "evasiva": true
+            }
+          ]
+        },
+        {
+          "id": "VIS-CA-6",
+          "tipo": "unica",
+          "texto": "¿Cuánto tiempo y dinero estás dispuesto a dedicarle a tu pelo?",
+          "ayuda": "Esta es la pregunta más importante del bloque y la que casi todo el mundo se salta. Un peinado precioso que no puedes mantener se convierte en un peinado descuidado en tres semanas, y eso es peor que no cambiar nada. Sé realista con tu tiempo, tu dinero y tus ganas.",
+          "opciones": [
+            {
+              "valor": "bajo",
+              "etiqueta": "Poco: peluquería cada 2-3 meses y ningún producto",
+              "descripcion": "Descartamos el rubio si tu pelo es oscuro, los colores de fantasía, los flequillos exigentes y los cortes que hay que peinar cada día. Aún te quedan muchísimas opciones.",
+              "arquetipos": [
+                "COM",
+                "SAB"
+              ]
+            },
+            {
+              "valor": "medio",
+              "etiqueta": "Lo normal: peluquería cada mes o mes y medio y 5 minutos al día",
+              "descripcion": "Aquí entra casi todo lo razonable: cortes definidos, reflejos de color, barba recortada.",
+              "arquetipos": [
+                "GOB",
+                "HER"
+              ]
+            },
+            {
+              "valor": "alto",
+              "etiqueta": "Todo lo que haga falta: esto es parte de mi trabajo",
+              "descripcion": "Se abren los colores complicados, los cortes de precisión y los cambios de gran impacto. Eso sí, cuestan dinero y tiempo de verdad: tenlo en cuenta.",
+              "arquetipos": [
+                "AMA",
+                "MAG",
+                "CRE"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "VIS-CA-7",
+          "tipo": "likert5",
+          "texto": "Quiero que la gente me reconozca por mi peinado.",
+          "ayuda": "Llevar siempre el mismo peinado ayuda mucho a que te recuerden. Piensa en cualquier persona famosa que puedas dibujar de memoria: seguro que empiezas por el pelo. El precio es no poder cambiar: un peinado que se convierte en tu firma deja de ser una decisión tuya y pasa a ser una obligación con la gente que te reconoce por él.",
+          "dimension": "firma_visual",
+          "arquetipos": [
+            "MAG",
+            "CRE"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "ropa_tipos",
+      "nombre": "Ropa: qué te pondrías y cómo",
+      "descripcion": "La ropa habla por ti antes de que abras la boca. No se trata de gastar más, sino de repetir mejor: la gente con una imagen sólida suele tener poca ropa y muy reconocible. Marca lo que te pondrías de verdad y, sobre todo, lo que no te pondrías jamás.",
+      "preguntas": [
+        {
+          "id": "VIS-RO-1",
+          "tipo": "multiple",
+          "texto": "¿Qué tipo de ropa te pondrías sin sentirte disfrazado?",
+          "ayuda": "Elige entre 2 y 4. Si eliges muchas, tu imagen será un lío y nadie podrá 'dibujarte' de memoria. Es mejor repetir siempre lo mismo que variar mucho: la gente necesita verte varias veces igual para acordarse de ti.",
+          "min": 1,
+          "max": 3,
+          "opciones": [
+            {
+              "valor": "sastreria",
+              "etiqueta": "Traje, americana, ropa de corte marcado",
+              "descripcion": "Transmite autoridad, control y seriedad. Es el uniforme del poder: funciona, pero también crea distancia.",
+              "arquetipos": [
+                "GOB",
+                "SAB"
+              ]
+            },
+            {
+              "valor": "minimalista",
+              "etiqueta": "Poca ropa y de un solo color",
+              "descripcion": "Transmite foco, criterio y modernidad. Es lo más práctico: no tienes que decidir cada mañana y se te reconoce al instante.",
+              "arquetipos": [
+                "SAB",
+                "CRE",
+                "MAG"
+              ]
+            },
+            {
+              "valor": "oversize",
+              "etiqueta": "Ropa ancha y suelta",
+              "descripcion": "Se ve moderna y creativa. Transmite comodidad y un pequeño desafío a las normas.",
+              "arquetipos": [
+                "CRE",
+                "FOR"
+              ]
+            },
+            {
+              "valor": "casual",
+              "etiqueta": "Ropa de calle clásica: vaqueros, camisa, jersey",
+              "descripcion": "Transmite cercanía y normalidad. Nunca falla y nunca llama la atención: necesitarás un detalle que te distinga.",
+              "arquetipos": [
+                "COM"
+              ]
+            },
+            {
+              "valor": "streetwear",
+              "etiqueta": "Estilo urbano: zapatillas, sudaderas, gorra",
+              "descripcion": "Se ve joven y de tribu. Muy potente en el mundo creativo y tecnológico; mal visto en el mundo más clásico.",
+              "arquetipos": [
+                "FOR",
+                "BUF",
+                "EXP"
+              ]
+            },
+            {
+              "valor": "cuero",
+              "etiqueta": "Cuero, cazadora, botas",
+              "descripcion": "Transmite rebeldía y actitud. Es una declaración: hará que te recuerden y que algunos te descarten al momento.",
+              "arquetipos": [
+                "FOR"
+              ]
+            },
+            {
+              "valor": "vintage",
+              "etiqueta": "Ropa antigua o de segunda mano",
+              "descripcion": "Transmite buen gusto y personalidad. Difícil de copiar y muy reconocible.",
+              "arquetipos": [
+                "CRE",
+                "AMA"
+              ]
+            },
+            {
+              "valor": "fluidas",
+              "etiqueta": "Ropa que cae suelta y con buenas telas: lino, seda, punto",
+              "descripcion": "Transmite calma, elegancia y confianza. Necesita telas buenas: si la tela es barata, se nota.",
+              "arquetipos": [
+                "AMA",
+                "SAB",
+                "CUI"
+              ]
+            },
+            {
+              "valor": "estampados",
+              "etiqueta": "Dibujos, estampados y mucho color",
+              "descripcion": "Transmite energía y alegría. Se ve genial en foto y en un escenario; puede restarte confianza en ambientes muy serios.",
+              "arquetipos": [
+                "BUF",
+                "CRE",
+                "AMA"
+              ]
+            },
+            {
+              "valor": "tecnica",
+              "etiqueta": "Ropa de montaña o deportiva y práctica",
+              "descripcion": "Transmite acción y aventura. Encaja muy bien si tu historia va de explorar o de trabajar al aire libre.",
+              "arquetipos": [
+                "EXP",
+                "HER"
+              ]
+            },
+            {
+              "valor": "artesanal",
+              "etiqueta": "Estilo bohemio o artesano: telas naturales, piezas únicas",
+              "descripcion": "Transmite autenticidad, cercanía y valores. Encaja con causas, bienestar o artesanía.",
+              "arquetipos": [
+                "INO",
+                "CUI",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "lujo",
+              "etiqueta": "Lujo discreto: se nota la calidad, pero sin logos",
+              "descripcion": "Transmite estatus sin presumir. Es la señal de dinero más difícil de fingir y la más cara.",
+              "arquetipos": [
+                "GOB",
+                "AMA"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "VIS-RO-2",
+          "tipo": "multiple",
+          "texto": "¿Qué NO te pondrías nunca?",
+          "ayuda": "Decir lo que NUNCA te pondrías sirve más que decir lo que sí: así no te proponemos algo que no vas a llevar y que, por tanto, no vas a mantener. Sé sincero, no digas lo que te gustaría ser.",
+          "min": 1,
+          "max": 4,
+          "opciones": [
+            {
+              "valor": "no_traje",
+              "etiqueta": "Traje o corbata",
+              "descripcion": "Olvidamos el estilo de oficina clásico. Buscaremos autoridad por otro camino: calidad, color o corte."
+            },
+            {
+              "valor": "no_estampados",
+              "etiqueta": "Estampados llamativos",
+              "descripcion": "Trabajaremos con colores lisos y telas con textura."
+            },
+            {
+              "valor": "no_ajustado",
+              "etiqueta": "Ropa muy ceñida",
+              "descripcion": "Trabajaremos con cortes rectos o anchos."
+            },
+            {
+              "valor": "no_oversize",
+              "etiqueta": "Ropa muy ancha o muy suelta",
+              "descripcion": "Trabajaremos con cortes ajustados al cuerpo y bien proporcionados."
+            },
+            {
+              "valor": "no_joyas",
+              "etiqueta": "Joyas o complementos llamativos",
+              "descripcion": "Tu sello tendrá que estar en la ropa, el color o el pelo."
+            },
+            {
+              "valor": "no_tacon",
+              "etiqueta": "Tacones o calzado incómodo",
+              "descripcion": "Totalmente razonable: nadie parece seguro con los pies doliéndole."
+            },
+            {
+              "valor": "no_colores",
+              "etiqueta": "Colores vivos",
+              "descripcion": "Trabajaremos con colores neutros y un único toque de color controlado."
+            },
+            {
+              "valor": "no_negro",
+              "etiqueta": "Ir todo de negro",
+              "descripcion": "Descartamos el recurso más fácil de todos: buscaremos otro color de base."
+            },
+            {
+              "valor": "no_marcas",
+              "etiqueta": "Logos y marcas a la vista",
+              "descripcion": "Encaja con alguien que tiene criterio propio y no necesita el prestigio de otros."
+            },
+            {
+              "valor": "ninguno",
+              "etiqueta": "Ninguna: acepto cualquier cosa",
+              "descripcion": "Libertad total para proponerte.",
+              "evasiva": true
+            }
+          ]
+        },
+        {
+          "id": "VIS-RO-3",
+          "tipo": "bipolar",
+          "texto": "¿Cómo prefieres que te quede la ropa?",
+          "ayuda": "La forma de tu ropa es lo único que se ve de ti desde diez metros o en una miniatura de vídeo. Una ropa ceñida y marcada se lee como control; una ancha y suelta, como creatividad y comodidad. Las dos valen: lo que no funciona es ir cambiando al azar.",
+          "polo_izq": "Ceñida y marcada",
+          "polo_der": "Ancha y suelta",
+          "desc_izq": "Ropa que sigue la línea del cuerpo, hombros marcados, cintura definida. Da autoridad y precisión.",
+          "desc_der": "Ropa que cae, con volumen y telas que se mueven. Da creatividad y desenfado.",
+          "dimension": "silueta",
+          "escala": 7
+        },
+        {
+          "id": "VIS-RO-4",
+          "tipo": "bipolar",
+          "texto": "¿Cómo de arreglado quieres ir en tu trabajo?",
+          "ayuda": "Truco útil: ir un punto más arreglado que la gente a la que te diriges da autoridad; ir un punto menos arreglado da cercanía y confianza (pero solo funciona si ya te respetan). Piensa en quién te va a ver.",
+          "polo_izq": "Muy arreglado",
+          "polo_der": "Muy informal",
+          "desc_izq": "Traje, camisa, zapato de vestir. Lo típico de los bancos y las instituciones.",
+          "desc_der": "Camiseta y zapatillas. Lo típico del mundo de la tecnología y lo creativo.",
+          "dimension": "formalidad_visual",
+          "escala": 7
+        },
+        {
+          "id": "VIS-RO-5",
+          "tipo": "multiple",
+          "texto": "¿Qué detalle podría convertirse en tu SELLO personal?",
+          "ayuda": "Un sello personal es algo que llevas siempre y que hace que te reconozcan incluso en una foto diminuta o en una forma. No es un capricho: es un atajo para que la gente te recuerde. Elige dos como mucho, y comprométete a repetirlos.",
+          "min": 1,
+          "max": 2,
+          "opciones": [
+            {
+              "valor": "gafas",
+              "etiqueta": "Unas gafas muy reconocibles",
+              "descripcion": "El sello que mejor funciona y menos riesgo tiene: barato, se puede quitar y se ve hasta en una foto de perfil minúscula.",
+              "arquetipos": [
+                "SAB",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "gafas_sol",
+              "etiqueta": "Gafas de sol, incluso en interiores",
+              "descripcion": "Da aire de estrella y de distancia. Muy potente y muy arriesgado: puede parecer chulería.",
+              "arquetipos": [
+                "FOR",
+                "MAG"
+              ]
+            },
+            {
+              "valor": "color_firma",
+              "etiqueta": "Un color que llevo siempre",
+              "descripcion": "Hace que la gente te asocie a ese color. Funciona en foto, en vídeo y en un escenario. Muy recomendable.",
+              "arquetipos": [
+                "CRE",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "sombrero",
+              "etiqueta": "Un sombrero o una gorra",
+              "descripcion": "Sello muy fuerte, pero te encasilla. Cuesta mucho dejarlo una vez que lo adoptas.",
+              "arquetipos": [
+                "EXP",
+                "BUF"
+              ]
+            },
+            {
+              "valor": "joya",
+              "etiqueta": "Una joya o pieza que llevo siempre",
+              "descripcion": "Discreto, personal y con una historia detrás. Da conversación y te hace más humano.",
+              "arquetipos": [
+                "AMA",
+                "CUI"
+              ]
+            },
+            {
+              "valor": "prenda",
+              "etiqueta": "Una prenda concreta siempre igual: chaqueta, jersey, camisa",
+              "descripcion": "Es tu 'uniforme': te quita decisiones y hace que te reconozcan al momento.",
+              "arquetipos": [
+                "SAB",
+                "GOB",
+                "MAG"
+              ]
+            },
+            {
+              "valor": "calzado",
+              "etiqueta": "Unos zapatos inconfundibles",
+              "descripcion": "Un detalle que luce mucho en fotos de cuerpo entero y encima de un escenario.",
+              "arquetipos": [
+                "FOR",
+                "AMA"
+              ]
+            },
+            {
+              "valor": "ninguna_firma",
+              "etiqueta": "Prefiero no tener ningún sello",
+              "descripcion": "Vale: te reconocerán por lo que haces y por tu constancia, no por tu imagen. Tardarás más.",
+              "arquetipos": [
+                "COM"
+              ],
+              "evasiva": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "colores_ropa",
+      "nombre": "Los colores de tu ropa",
+      "descripcion": "Tus colores funcionan igual que los de una empresa: 2 o 3 colores neutros que son el 80% de lo que llevas, y 1 color especial que aparece siempre y que la gente acaba asociando contigo. Aquí decides qué colores aceptas y cuáles no quieres ni ver.",
+      "preguntas": [
+        {
+          "id": "VIS-CR-1",
+          "tipo": "multiple",
+          "texto": "¿Qué colores estarías dispuesto a llevar?",
+          "ayuda": "Piensa en lo que te pondrías de verdad un martes cualquiera, no en lo que admiras cuando lo lleva otro. Un color que no te atreves a llevar se queda colgado en el armario.",
+          "min": 1,
+          "max": 3,
+          "opciones": [
+            {
+              "valor": "negro",
+              "etiqueta": "Negro de arriba abajo",
+              "descripcion": "Da autoridad y distancia. Es el atajo fácil: elegante, eficaz y un poco frío. Endurece los rasgos si tienes la piel muy clara.",
+              "arquetipos": [
+                "FOR",
+                "MAG",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "blanco",
+              "etiqueta": "Blancos y colores hueso",
+              "descripcion": "Dan claridad y limpieza. Van muy bien en vídeo porque la luz rebota en tu cara. Poco prácticos si viajas o comes fuera.",
+              "arquetipos": [
+                "INO",
+                "SAB"
+              ]
+            },
+            {
+              "valor": "grises_azules",
+              "etiqueta": "Grises y azul marino",
+              "descripcion": "Los colores de la confianza: por algo son los de casi todos los uniformes oficiales. Seguros, serios y un poco previsibles.",
+              "arquetipos": [
+                "GOB",
+                "SAB"
+              ]
+            },
+            {
+              "valor": "tierras",
+              "etiqueta": "Colores tierra: beige, camel, terracota, verde oliva",
+              "descripcion": "Dan calidez y cercanía. Suavizan la autoridad y quedan muy bien si tu piel tira a cálida.",
+              "arquetipos": [
+                "CUI",
+                "EXP",
+                "COM"
+              ]
+            },
+            {
+              "valor": "joya",
+              "etiqueta": "Colores profundos: verde esmeralda, granate, azul zafiro, ciruela",
+              "descripcion": "Dan riqueza y elegancia. Aportan color sin quitarte seriedad: es la mejor forma de empezar a usar color si eres de estilo sobrio.",
+              "arquetipos": [
+                "AMA",
+                "GOB",
+                "MAG"
+              ]
+            },
+            {
+              "valor": "pasteles",
+              "etiqueta": "Colores pastel: rosa palo, azul cielo, verde menta",
+              "descripcion": "Dan suavidad y hacen que se te vea accesible. Te hacen parecer menos duro, aunque en ambientes muy competitivos pueden restarte autoridad.",
+              "arquetipos": [
+                "INO",
+                "CUI",
+                "AMA"
+              ]
+            },
+            {
+              "valor": "vivos",
+              "etiqueta": "Colores vivos: rojo, amarillo, naranja, verde intenso",
+              "descripcion": "Dan energía y te hacen visible. Repetir siempre un mismo color vivo es la forma más rápida de que te asocien a él.",
+              "arquetipos": [
+                "BUF",
+                "HER",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "neon",
+              "etiqueta": "Colores flúor",
+              "descripcion": "Lo más rompedor que hay. Solo funciona si toda tu imagen es rompedora; si no, parece un error.",
+              "arquetipos": [
+                "FOR",
+                "BUF"
+              ]
+            },
+            {
+              "valor": "metalicos",
+              "etiqueta": "Plata, oro y brillos",
+              "descripcion": "Dan espectáculo y magnetismo. Perfectos para un escenario o una pasarela; en una reunión, sobran.",
+              "arquetipos": [
+                "MAG",
+                "AMA"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "VIS-CR-3",
+          "tipo": "unica",
+          "texto": "Si tuvieras que elegir UN color para que la gente lo asocie contigo, ¿cuál sería?",
+          "ayuda": "Este color aparecerá en tu ropa, tu web, el fondo de tus vídeos y tus presentaciones. Solo se asocia a ti si lo repites: no vale usarlo de vez en cuando. Piensa en cualquier marca famosa y verás que sabes decir su color.",
+          "opciones": [
+            {
+              "valor": "rojo",
+              "etiqueta": "Rojo",
+              "descripcion": "Urgencia, pasión, poder. El que más atención capta, pero cansa si abusas de él.",
+              "arquetipos": [
+                "HER",
+                "AMA",
+                "FOR"
+              ]
+            },
+            {
+              "valor": "azul",
+              "etiqueta": "Azul",
+              "descripcion": "Confianza, calma y saber hacer. Es el más usado en el mundo profesional, así que es seguro pero no te distingue mucho.",
+              "arquetipos": [
+                "SAB",
+                "GOB",
+                "CUI"
+              ]
+            },
+            {
+              "valor": "verde",
+              "etiqueta": "Verde",
+              "descripcion": "Crecimiento, naturaleza y equilibrio. Se asocia bien a la salud, el medio ambiente y el bienestar.",
+              "arquetipos": [
+                "INO",
+                "CUI",
+                "EXP"
+              ]
+            },
+            {
+              "valor": "amarillo",
+              "etiqueta": "Amarillo o mostaza",
+              "descripcion": "Optimismo y energía. Se ve mucho y casi nadie lo usa en el trabajo: gran oportunidad para destacar.",
+              "arquetipos": [
+                "BUF",
+                "INO",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "naranja",
+              "etiqueta": "Naranja o terracota",
+              "descripcion": "Cercanía y calidez sin perder energía. Un punto medio excelente.",
+              "arquetipos": [
+                "COM",
+                "EXP",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "morado",
+              "etiqueta": "Morado o violeta",
+              "descripcion": "Creatividad, misterio y cambio. Lo usa muy poca gente: te distingue enseguida.",
+              "arquetipos": [
+                "MAG",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "rosa",
+              "etiqueta": "Rosa o fucsia",
+              "descripcion": "Rompe las normas y llama la atención. En ambientes formales es una elección hecha a propósito para ir a contracorriente.",
+              "arquetipos": [
+                "AMA",
+                "FOR",
+                "BUF"
+              ]
+            },
+            {
+              "valor": "negro_blanco",
+              "etiqueta": "Ninguno: solo blanco y negro",
+              "descripcion": "No usar color también es una decisión. Máxima sobriedad y foco; te obliga a que todo lo que valga sea lo que dices.",
+              "arquetipos": [
+                "MAG",
+                "SAB",
+                "FOR"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "VIS-CR-2",
+          "tipo": "multiple",
+          "texto": "¿Qué colores NO te pondrías nunca?",
+          "ayuda": "Descartar también es decidir. Cada color que quitas hace que tu estilo se vea más claro y que elegir ropa por la mañana te cueste menos.",
+          "min": 2,
+          "max": 4,
+          "opciones": [
+            {
+              "valor": "no_negro",
+              "etiqueta": "Negro",
+              "descripcion": "Buscaremos otro color de base: azul marino, gris oscuro o chocolate."
+            },
+            {
+              "valor": "no_blanco",
+              "etiqueta": "Blanco",
+              "descripcion": "Usaremos hueso, gris claro o beige como color que da luz."
+            },
+            {
+              "valor": "no_pasteles",
+              "etiqueta": "Colores pastel",
+              "descripcion": "Nos quedaremos con los colores medios y los más fuertes."
+            },
+            {
+              "valor": "no_vivos",
+              "etiqueta": "Colores vivos",
+              "descripcion": "Estilo contenido: neutros más un solo color profundo."
+            },
+            {
+              "valor": "no_neon",
+              "etiqueta": "Colores flúor",
+              "descripcion": "Casi todo el mundo los descarta, y con razón."
+            },
+            {
+              "valor": "no_metalicos",
+              "etiqueta": "Plata, oro y brillos",
+              "descripcion": "Trabajaremos con acabados mate y telas con textura."
+            },
+            {
+              "valor": "no_tierras",
+              "etiqueta": "Colores tierra y beige",
+              "descripcion": "Iremos a colores fríos: grises, azules y blancos."
+            },
+            {
+              "valor": "ninguno_veto",
+              "etiqueta": "Ninguno, no descarto nada",
+              "descripcion": "Libertad total con el color.",
+              "evasiva": true
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "vibra",
+      "nombre": "La sensación que quieres dar",
+      "descripcion": "Es la impresión que se lleva alguien de ti antes de saber nada. No la controlas del todo, pero puedes empujarla hacia donde quieras. Elige lo que quieres provocar, no lo que ya provocas.",
+      "preguntas": [
+        {
+          "id": "VIS-VI-1",
+          "tipo": "reparto100",
+          "texto": "Reparte 100 puntos entre estas ocho sensaciones. Lo que sumes en una lo restas de otra.",
+          "ayuda": "No puedes darles 12 a todas: eso es exactamente lo que hace hoy tu competencia. Si una no llega a 30, no se va a notar en ninguna foto. Máximo tres sensaciones con puntos; las otras cinco a cero, y a cero se quedan durante un año.",
+          "paso": 5,
+          "suma": 100,
+          "min_dominante": 30,
+          "max_con_puntos": 3,
+          "opciones": [
+            {
+              "valor": "corporativo",
+              "etiqueta": "Serio, de empresa",
+              "descripcion": "'Sabe lo que hace y no me va a fallar'. Colores: azul marino, gris, blanco. Ropa: de corte marcado y sobria.",
+              "arquetipos": [
+                "GOB",
+                "SAB"
+              ]
+            },
+            {
+              "valor": "lujo",
+              "etiqueta": "Elegante, de lujo",
+              "descripcion": "'Este está en otro nivel'. Colores: negro, camel, tonos profundos. Ropa: telas buenas, sin logos, líneas limpias.",
+              "arquetipos": [
+                "AMA",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "rockstar",
+              "etiqueta": "Rebelde, tipo estrella de rock",
+              "descripcion": "'Este no sigue las reglas'. Colores: negro con un toque agresivo. Ropa: cuero, botas, formas duras.",
+              "arquetipos": [
+                "FOR"
+              ]
+            },
+            {
+              "valor": "creativo",
+              "etiqueta": "Creativo, artista",
+              "descripcion": "'Ve cosas que yo no veo'. Colores: color usado con criterio, mezclas inesperadas. Ropa: de segunda mano, ancha, piezas con historia.",
+              "arquetipos": [
+                "CRE",
+                "MAG"
+              ]
+            },
+            {
+              "valor": "cercano",
+              "etiqueta": "Cercano, buena gente",
+              "descripcion": "'Con este me tomaría un café'. Colores: tierra, azules medios, tonos cálidos. Ropa: de calle, telas suaves.",
+              "arquetipos": [
+                "COM",
+                "CUI"
+              ]
+            },
+            {
+              "valor": "minimalista",
+              "etiqueta": "Sencillo, sin adornos",
+              "descripcion": "'Tiene las ideas clarísimas'. Colores: dos como mucho. Ropa: siempre igual, sin ningún adorno.",
+              "arquetipos": [
+                "SAB",
+                "MAG"
+              ]
+            },
+            {
+              "valor": "bohemio",
+              "etiqueta": "Natural, con espíritu libre",
+              "descripcion": "'Es auténtico y libre'. Colores: tierra, verdes, hueso. Ropa: telas naturales, piezas hechas a mano.",
+              "arquetipos": [
+                "INO",
+                "EXP",
+                "CUI"
+              ]
+            },
+            {
+              "valor": "futurista",
+              "etiqueta": "Futurista, tecnológico",
+              "descripcion": "'Va por delante de todos'. Colores: negro, blanco puro y un toque eléctrico o metálico. Ropa: deportiva-técnica, geométrica, nada antiguo.",
+              "arquetipos": [
+                "MAG",
+                "EXP",
+                "CRE"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "duelos",
+      "nombre": "A quién te quieres parecer y a quién no",
+      "descripcion": "Tres parejas. En cada una, los dos son buenísimos y son incompatibles: no se puede ir de Steve Jobs y de Iris Apfel a la vez. Elige uno y escribe qué NO le copiarías. Lo que no le copias es la mitad de tu marca.",
+      "preguntas": [
+        {
+          "id": "VIS-DU-1",
+          "tipo": "duelo",
+          "texto": "De estos dos, ¿a quién preferirías parecerte en cómo te ves?",
+          "ayuda": "Lee el estilo de los dos antes de elegir. Y luego, en sesenta caracteres, di qué de esa persona no quieres que se te pegue: ahí es donde apareces tú.",
+          "referentes": [
+            "steve-jobs",
+            "iris-apfel"
+          ],
+          "campos_ficha": [
+            "titular",
+            "estilo_visual",
+            "prendas_firma"
+          ],
+          "no_copio": {
+            "etiqueta": "Lo que NO le copiaría:",
+            "max_chars": 60,
+            "min_chars": 20,
+            "placeholder": "Ej.: la sensación de que todo está calculado."
+          },
+          "opcional": false
+        },
+        {
+          "id": "VIS-DU-2",
+          "tipo": "duelo",
+          "texto": "Segunda pareja. Elige uno.",
+          "ayuda": "Misma regla: uno de los dos y qué no le copiarías.",
+          "referentes": [
+            "anna-wintour",
+            "bad-bunny"
+          ],
+          "campos_ficha": [
+            "titular",
+            "estilo_visual",
+            "prendas_firma"
+          ],
+          "no_copio": {
+            "etiqueta": "Lo que NO le copiaría:",
+            "max_chars": 60,
+            "min_chars": 20,
+            "placeholder": "Ej.: la distancia con la gente."
+          },
+          "opcional": false
+        },
+        {
+          "id": "VIS-DU-3",
+          "tipo": "duelo",
+          "texto": "Última pareja. Elige uno.",
+          "ayuda": "Y si te cuesta, fíjate en cuál de los dos te daría vergüenza que te compararan: eso ya es una respuesta.",
+          "referentes": [
+            "coco-chanel",
+            "frida-kahlo"
+          ],
+          "campos_ficha": [
+            "titular",
+            "estilo_visual",
+            "prendas_firma"
+          ],
+          "no_copio": {
+            "etiqueta": "Lo que NO le copiaría:",
+            "max_chars": 60,
+            "min_chars": 20,
+            "placeholder": "Ej.: convertir el dolor en decoración."
+          },
+          "opcional": false
+        }
+      ]
+    },
+    {
+      "id": "audacia",
+      "nombre": "Cuánto quieres llamar la atención",
+      "descripcion": "Aquí medimos cuánto riesgo estás dispuesto a correr con tu imagen. Es una decisión de estrategia, no de gusto: que te vean tiene un precio, y no todo el mundo quiere pagarlo. Tampoco hace falta.",
+      "preguntas": [
+        {
+          "id": "VIS-AU-1",
+          "tipo": "bipolar",
+          "texto": "Cuando entras en una sala, ¿qué quieres que pase?",
+          "ayuda": "Pasar desapercibido no es fracasar: en muchos trabajos (abogacía, terapia, consultoría de alto nivel) la discreción es justo lo que te hace valer, y llamar la atención te resta confianza. En otros (escenario, medios, mundo creativo), si no destacas es como si no existieras. Elige según tu trabajo, no según tu ego ni tu timidez.",
+          "polo_izq": "Que nadie se fije en mí",
+          "polo_der": "Que me miren",
+          "desc_izq": "Que la atención esté en lo que digo, no en cómo voy vestido. Imagen impecable pero que no se note.",
+          "desc_der": "Que tu sola presencia ya diga algo. Aceptas destacar y que la gente te mire.",
+          "dimension": "audacia_visual",
+          "escala": 7
+        },
+        {
+          "id": "VIS-AU-2",
+          "tipo": "texto",
+          "texto": "Escribe la palabra con la que quieres que te describan cuando no estás delante. Una sola, y que no sea un adjetivo de catálogo.",
+          "ayuda": "Nada de «profesional», «cercano» o «creativo»: esas ya las usa tu competencia entera y no dicen nada. Busca una palabra que a alguien de tu sector le sorprendería oír. Ochenta caracteres para la palabra y, si quieres, para explicarla.",
+          "placeholder": "Ej.: Cabezota. / Quirúrgico. / El que se lee los contratos.",
+          "max_chars": 80,
+          "min_chars": 4,
+          "opcional": false
+        },
+        {
+          "id": "VIS-AU-3",
+          "tipo": "likert5",
+          "texto": "Estaría dispuesto a llevar casi lo mismo todos los días, como si fuera un uniforme.",
+          "ayuda": "Llevar siempre lo mismo es el truco de imagen que mejor funciona: te quita decisiones, te hace coherente y hace que te reconozcan en cualquier foto. El precio es la monotonía y esa sensación de ir 'disfrazado de ti mismo'. Si dices que no, tendremos que hacer que te reconozcan por unos colores fijos en vez de por unas prendas fijas.",
+          "dimension": "uniforme",
+          "arquetipos": [
+            "MAG",
+            "SAB",
+            "GOB"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limites_corporales",
+      "nombre": "Tus límites: lo que NO vas a hacer",
+      "descripcion": "Tu cuerpo no es una herramienta de trabajo: es tu cuerpo. Este bloque existe solo para saber qué NO debemos proponerte jamás. Todo lo que marques aquí como 'no' no volverá a aparecer en ninguna recomendación. Ninguna respuesta es mejor que otra y ninguna suma ni resta puntos.",
+      "preguntas": [
+        {
+          "id": "VIS-LM-1",
+          "tipo": "unica",
+          "texto": "Tatuajes: ¿qué opinas?",
+          "ayuda": "Te lo preguntamos solo para no proponerte algo que no quieres y para saber si un tatuaje que se ve ya forma parte de tu imagen (en ese caso lo aprovechamos en vez de esconderlo). En algunos sectores todavía hay prejuicios contra los tatuajes visibles: eso dice cosas de quien mira, no de ti.",
+          "opciones": [
+            {
+              "valor": "tengo_visibles",
+              "etiqueta": "Ya tengo tatuajes que se ven",
+              "descripcion": "Los usaremos como parte de tu imagen, no como algo que tapar."
+            },
+            {
+              "valor": "tengo_ocultos",
+              "etiqueta": "Tengo tatuajes, pero no se ven",
+              "descripcion": "No cambia nada de lo que te propondremos. Tú decides si algún día los enseñas."
+            },
+            {
+              "valor": "me_haria",
+              "etiqueta": "No tengo, pero me haría uno",
+              "descripcion": "Queda como posibilidad, aunque nunca te lo propondremos nosotros: es para siempre y es demasiado personal."
+            },
+            {
+              "valor": "nunca",
+              "etiqueta": "No, y nunca",
+              "descripcion": "Descartado del todo."
+            }
+          ]
+        },
+        {
+          "id": "VIS-LM-2",
+          "tipo": "unica",
+          "texto": "Piercings y pendientes: ¿qué opinas?",
+          "ayuda": "Igual que antes: solo para saber dónde está tu límite. Un piercing a la vista puede ser un sello personal muy barato y muy eficaz, pero es una decisión que solo te toca a ti.",
+          "opciones": [
+            {
+              "valor": "tengo",
+              "etiqueta": "Ya llevo alguno",
+              "descripcion": "Lo usaremos como parte de tu sello."
+            },
+            {
+              "valor": "me_pondria",
+              "etiqueta": "Me pondría alguno discreto",
+              "descripcion": "Queda como posibilidad, como detalle de tu sello personal."
+            },
+            {
+              "valor": "no",
+              "etiqueta": "No, gracias",
+              "descripcion": "Descartado."
+            }
+          ]
+        },
+        {
+          "id": "VIS-LM-3",
+          "tipo": "unica",
+          "texto": "Maquillaje: ¿qué opinas?",
+          "ayuda": "Es una pregunta práctica, no de hombres ni de mujeres: en foto y en vídeo, una base sin brillo evita que la cara reluzca, y taparse las ojeras mejora muchísimo cómo te ve la cámara. Es una herramienta técnica, como una lámpara. Si no quieres usarlo, lo arreglamos con luz y con el color de la ropa.",
+          "opciones": [
+            {
+              "valor": "habitual",
+              "etiqueta": "Lo uso a diario",
+              "descripcion": "Lo tendremos en cuenta: los tonos tendrán que pegar con tu color principal."
+            },
+            {
+              "valor": "solo_camara",
+              "etiqueta": "Solo lo usaría para cámara o escenario",
+              "descripcion": "Lo más habitual. Con lo mínimo basta: quitar brillos e igualar el tono."
+            },
+            {
+              "valor": "minimo",
+              "etiqueta": "Solo lo justo para no brillar en vídeo",
+              "descripcion": "El resto lo arreglaremos con la luz y con el color de la ropa."
+            },
+            {
+              "valor": "nunca_maq",
+              "etiqueta": "No lo usaría nunca",
+              "descripcion": "Descartado del todo. Trabajaremos la luz, el fondo y el color de la ropa."
+            }
+          ]
+        },
+        {
+          "id": "VIS-LM-4",
+          "tipo": "unica",
+          "texto": "Operaciones o tratamientos de estética: ¿qué opinas?",
+          "ayuda": "Este programa NUNCA te va a recomendar una operación ni un tratamiento de estética. Te lo preguntamos solo para dejar tu límite por escrito y no acercarnos a él. Tu cara y tu cuerpo no son un problema que haya que arreglar.",
+          "opciones": [
+            {
+              "valor": "abierto",
+              "etiqueta": "Estoy abierto, pero es cosa mía y de nadie más",
+              "descripcion": "Tomamos nota, y aun así no te lo propondremos: esto no es asunto de un programa de imagen."
+            },
+            {
+              "valor": "no_cirugia",
+              "etiqueta": "No, en ningún caso",
+              "descripcion": "Descartado del todo, como debe ser."
+            },
+            {
+              "valor": "prefiero_no",
+              "etiqueta": "Prefiero no contestar",
+              "descripcion": "Totalmente legítimo. No cambia nada de lo que te propondremos."
+            }
+          ]
+        },
+        {
+          "id": "VIS-LM-5",
+          "tipo": "texto_largo",
+          "texto": "¿Hay algo más que NO quieras que te propongamos jamás?",
+          "ayuda": "Escribe aquí cualquier límite tuyo: personal, cultural, religioso, médico o simplemente de gusto (alergias a telas, ropa que no puedes llevar por movilidad, prendas o colores que te traen malos recuerdos, normas de vestuario de tu trabajo...). Todo lo que pongas aquí lo respetaremos sin excepción.",
+          "placeholder": "Por ejemplo: No puedo llevar lana porque soy alérgico. No me quito nunca el anillo. Trabajo en sanidad y no puedo llevar anillos ni pulseras.",
+          "max_chars": 500,
+          "opcional": true
+        }
+      ],
+      "protegida": true
+    }
+  ]
+}

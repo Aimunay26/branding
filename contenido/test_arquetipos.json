@@ -1,0 +1,570 @@
+{
+  "instrucciones": "Vas a leer 48 frases sobre tu marca (o sobre ti, si tu marca eres tú) y luego 8 preguntas de elegir una opción. No hay respuestas buenas ni malas. Importante: no contestes pensando en cómo eres hoy, sino en cómo QUIERES que te vea la gente. Es decir, en la marca que quieres construir. Usa toda la escala, del 1 al 5. Si lo pones casi todo alto, el resultado no sirve de nada: todos los caminos saldrán iguales y no sabremos cuál es el tuyo. Así que atrévete a poner 1 y 2 en lo que de verdad no va contigo. Verás que muchas frases tienen truco: al decir que sí, renuncias a algo (a dinero, a gustar a todos, a ir rápido). Eso es a propósito. Ahí está lo interesante. Tardarás unos 8-10 minutos. Ve rápido y fíate de lo primero que pienses.",
+  "escala": {
+    "tipo": "likert5",
+    "etiquetas": [
+      {
+        "valor": 1,
+        "texto": "Nada, no va conmigo",
+        "texto_corto": "Nada"
+      },
+      {
+        "valor": 2,
+        "texto": "Poco",
+        "texto_corto": "Poco"
+      },
+      {
+        "valor": 3,
+        "texto": "A veces",
+        "texto_corto": "A veces"
+      },
+      {
+        "valor": 4,
+        "texto": "Bastante",
+        "texto_corto": "Bastante"
+      },
+      {
+        "valor": 5,
+        "texto": "Sí, totalmente",
+        "texto_corto": "Del todo"
+      }
+    ]
+  },
+  "items": [
+    {
+      "id": "CUI-2",
+      "texto": "Sigo ayudando al cliente después de la venta, aunque no gane nada más con eso.",
+      "arquetipo": "CUI",
+      "inverso": false
+    },
+    {
+      "id": "HER-2",
+      "texto": "Compito de frente y comparo mis resultados con los de otros.",
+      "arquetipo": "HER",
+      "inverso": false
+    },
+    {
+      "id": "FOR-4",
+      "texto": "Saco cosas nuevas sin pedir permiso ni esperar el visto bueno de mi profesión.",
+      "arquetipo": "FOR",
+      "inverso": false
+    },
+    {
+      "id": "CRE-1",
+      "texto": "Retraso un lanzamiento hasta que el resultado queda como yo quiero.",
+      "arquetipo": "CRE",
+      "inverso": false
+    },
+    {
+      "id": "COM-1",
+      "texto": "Enseño el precio final y las condiciones desde el principio, sin sorpresas.",
+      "arquetipo": "COM",
+      "inverso": false
+    },
+    {
+      "id": "COM-3",
+      "texto": "No me vendo como algo exclusivo o de lujo, aunque así podría cobrar más.",
+      "arquetipo": "COM",
+      "inverso": false
+    },
+    {
+      "id": "EXP-1",
+      "texto": "He dejado formatos o canales que me funcionaban bien porque ya me aburrían.",
+      "arquetipo": "EXP",
+      "inverso": false
+    },
+    {
+      "id": "AMA-1",
+      "texto": "Cuido detalles bonitos que casi nadie va a notar, aunque encarezcan el producto.",
+      "arquetipo": "AMA",
+      "inverso": false
+    },
+    {
+      "id": "MAG-2",
+      "texto": "Quiero que quien me compra viva un antes y un después, no solo una compra.",
+      "arquetipo": "MAG",
+      "inverso": false
+    },
+    {
+      "id": "SAB-1",
+      "texto": "Publico datos y estudios hechos por mí, aunque me lleven semanas de trabajo.",
+      "arquetipo": "SAB",
+      "inverso": false
+    },
+    {
+      "id": "CUI-1",
+      "texto": "Dedico tiempo a ayudar a gente que no me va a comprar nada.",
+      "arquetipo": "CUI",
+      "inverso": false
+    },
+    {
+      "id": "INO-2",
+      "texto": "No uso prisas ni descuentos agresivos para vender, aunque hoy venda menos.",
+      "arquetipo": "INO",
+      "inverso": false
+    },
+    {
+      "id": "BUF-2",
+      "texto": "Me río de mis propios fallos en público antes de que se ría otro.",
+      "arquetipo": "BUF",
+      "inverso": false
+    },
+    {
+      "id": "FOR-3",
+      "texto": "He dicho que no a dinero o a acuerdos que iban contra lo que defiendo.",
+      "arquetipo": "FOR",
+      "inverso": false
+    },
+    {
+      "id": "AMA-2",
+      "texto": "Cuando hablo, busco que la gente sienta algo antes que darle razones.",
+      "arquetipo": "AMA",
+      "inverso": false
+    },
+    {
+      "id": "CRE-4",
+      "texto": "Prefiero inventar algo mío antes que copiar lo que ya le funciona a otros.",
+      "arquetipo": "CRE",
+      "inverso": false
+    },
+    {
+      "id": "EXP-2",
+      "texto": "Pruebo cosas nuevas sin plan cerrado, sabiendo que algunas saldrán mal.",
+      "arquetipo": "EXP",
+      "inverso": false
+    },
+    {
+      "id": "SAB-2",
+      "texto": "Digo de dónde saco la información y admito en voz alta lo que aún no sé.",
+      "arquetipo": "SAB",
+      "inverso": false
+    },
+    {
+      "id": "INO-1",
+      "texto": "Enseño mis costes, materiales o proveedores, aunque me dejen en mal lugar.",
+      "arquetipo": "INO",
+      "inverso": false
+    },
+    {
+      "id": "BUF-1",
+      "texto": "Uso el humor hasta en momentos serios, aunque alguien me vea poco formal.",
+      "arquetipo": "BUF",
+      "inverso": false
+    },
+    {
+      "id": "BUF-4",
+      "texto": "Cuido mucho mi imagen y evito cualquier cosa que me haga parecer poco serio.",
+      "arquetipo": "BUF",
+      "inverso": true
+    },
+    {
+      "id": "EXP-3",
+      "texto": "Rechazo clientes o acuerdos que me obligarían a encajar en un molde ajeno.",
+      "arquetipo": "EXP",
+      "inverso": false
+    },
+    {
+      "id": "HER-1",
+      "texto": "Le pido esfuerzo a mi público, aunque espante a quien busca lo cómodo.",
+      "arquetipo": "HER",
+      "inverso": false
+    },
+    {
+      "id": "HER-3",
+      "texto": "Me pongo metas difíciles y cuento los resultados, gane o pierda.",
+      "arquetipo": "HER",
+      "inverso": false
+    },
+    {
+      "id": "MAG-1",
+      "texto": "Prometo a la gente un cambio de verdad en su vida, y me comprometo a demostrarlo.",
+      "arquetipo": "MAG",
+      "inverso": false
+    },
+    {
+      "id": "FOR-2",
+      "texto": "Prefiero incomodar a parte de mi público antes que callarme lo que creo.",
+      "arquetipo": "FOR",
+      "inverso": false
+    },
+    {
+      "id": "INO-3",
+      "texto": "Escribo mis condiciones sin letra pequeña, aunque así me proteja menos.",
+      "arquetipo": "INO",
+      "inverso": false
+    },
+    {
+      "id": "MAG-3",
+      "texto": "Trabajo por una idea a largo plazo que hoy casi nadie entiende.",
+      "arquetipo": "MAG",
+      "inverso": false
+    },
+    {
+      "id": "CRE-2",
+      "texto": "Enseño cómo lo hago: los borradores, las pruebas y lo que tiro a la basura.",
+      "arquetipo": "CRE",
+      "inverso": false
+    },
+    {
+      "id": "GOB-3",
+      "texto": "Cuando algo sale mal, doy la cara en público y lo arreglo de forma concreta.",
+      "arquetipo": "GOB",
+      "inverso": false
+    },
+    {
+      "id": "GOB-2",
+      "texto": "Mantengo un precio alto y estable en vez de bajarlo para vender a más gente.",
+      "arquetipo": "GOB",
+      "inverso": false
+    },
+    {
+      "id": "CUI-4",
+      "texto": "Pongo el bienestar de mi equipo o de mis clientes por delante de ganar dinero rápido.",
+      "arquetipo": "CUI",
+      "inverso": false
+    },
+    {
+      "id": "MAG-4",
+      "texto": "Me guardo una parte de mi método sin contar, para que no pierda su efecto.",
+      "arquetipo": "MAG",
+      "inverso": false
+    },
+    {
+      "id": "COM-4",
+      "texto": "Enseño a personas reales, con sus defectos, en vez de fotos perfectas.",
+      "arquetipo": "COM",
+      "inverso": false
+    },
+    {
+      "id": "EXP-4",
+      "texto": "Estoy a gusto repitiendo la misma rutina y el mismo plan durante años.",
+      "arquetipo": "EXP",
+      "inverso": true
+    },
+    {
+      "id": "INO-4",
+      "texto": "Prefiero un mensaje con ironía o doble sentido antes que uno claro y directo.",
+      "arquetipo": "INO",
+      "inverso": true
+    },
+    {
+      "id": "SAB-3",
+      "texto": "Si me equivoco en un dato, lo corrijo por escrito aunque nadie me lo pida.",
+      "arquetipo": "SAB",
+      "inverso": false
+    },
+    {
+      "id": "GOB-1",
+      "texto": "Pongo mis propias normas y las hago cumplir, aunque pierda libertad para moverme.",
+      "arquetipo": "GOB",
+      "inverso": false
+    },
+    {
+      "id": "CRE-3",
+      "texto": "Retiro o rehago algo que se vende bien porque ya no me parece lo bastante bueno.",
+      "arquetipo": "CRE",
+      "inverso": false
+    },
+    {
+      "id": "HER-4",
+      "texto": "Prefiero contar lo que cuesta conseguirlo antes que decir lo fácil que es.",
+      "arquetipo": "HER",
+      "inverso": false
+    },
+    {
+      "id": "FOR-1",
+      "texto": "Critico en voz alta cómo se hacen las cosas de siempre en mi sector, y me gano enemigos.",
+      "arquetipo": "FOR",
+      "inverso": false
+    },
+    {
+      "id": "CUI-3",
+      "texto": "No uso el miedo para vender, aunque sé que me funcionaría.",
+      "arquetipo": "CUI",
+      "inverso": false
+    },
+    {
+      "id": "AMA-4",
+      "texto": "Prefiero gustar mucho a unos pocos que gustar un poco a todos.",
+      "arquetipo": "AMA",
+      "inverso": false
+    },
+    {
+      "id": "BUF-3",
+      "texto": "Hago cosas absurdas o gamberras solo porque tienen gracia, sin esperar nada a cambio.",
+      "arquetipo": "BUF",
+      "inverso": false
+    },
+    {
+      "id": "SAB-4",
+      "texto": "Prefiero explicar algo difícil bien, aunque así se comparta menos que si lo simplifico.",
+      "arquetipo": "SAB",
+      "inverso": false
+    },
+    {
+      "id": "COM-2",
+      "texto": "Hablo con palabras normales y no intento parecer más listo de lo que soy.",
+      "arquetipo": "COM",
+      "inverso": false
+    },
+    {
+      "id": "AMA-3",
+      "texto": "Trato a cada cliente uno a uno, aunque así no pueda atender a mucha gente.",
+      "arquetipo": "AMA",
+      "inverso": false
+    },
+    {
+      "id": "GOB-4",
+      "texto": "Improviso sobre la marcha y prefiero no atarme a normas ni a procesos fijos.",
+      "arquetipo": "GOB",
+      "inverso": true
+    }
+  ],
+  "control": [
+    {
+      "id": "CTRL-1",
+      "texto": "Esta frase solo sirve para ver si estás leyendo. Marca el 2 (Poco).",
+      "valor_esperado": 2
+    },
+    {
+      "id": "CTRL-2",
+      "texto": "Esta frase también es de control. Marca el 5 (Sí, totalmente).",
+      "valor_esperado": 5
+    },
+    {
+      "id": "CTRL-3",
+      "texto": "Cuando lo que pienso puede molestar a parte de mi público, me lo callo.",
+      "tipo_control": "consistencia",
+      "pareja": "FOR-2",
+      "suma_esperada": 6,
+      "tolerancia": 2
+    }
+  ],
+  "eleccion_forzada": [
+    {
+      "id": "FC-1",
+      "enunciado": "Solo tienes dinero para hacer UNA cosa este trimestre. ¿Cuál eliges?",
+      "opciones": [
+        {
+          "texto": "Publicar un estudio propio, con datos de verdad, sobre mi sector.",
+          "arquetipo": "SAB",
+          "puntos": 2
+        },
+        {
+          "texto": "Lanzar un reto público que empuje a la gente a superarse.",
+          "arquetipo": "HER",
+          "puntos": 2
+        },
+        {
+          "texto": "Crear algo precioso, cuidado hasta el último detalle.",
+          "arquetipo": "AMA",
+          "puntos": 2
+        },
+        {
+          "texto": "Abrir las puertas y enseñar cómo hago mi trabajo por dentro.",
+          "arquetipo": "CRE",
+          "puntos": 2
+        }
+      ]
+    },
+    {
+      "id": "FC-2",
+      "enunciado": "Un cliente importante te pide algo que no encaja con tu forma de trabajar. ¿Qué haces?",
+      "opciones": [
+        {
+          "texto": "Le digo que no y cuento en público por qué eso me parece mal.",
+          "arquetipo": "FOR",
+          "puntos": 2
+        },
+        {
+          "texto": "Le ofrezco mi forma de hacerlo, que es la que garantiza el resultado.",
+          "arquetipo": "GOB",
+          "puntos": 2
+        },
+        {
+          "texto": "Escucho qué necesita de verdad y me adapto para ayudarle.",
+          "arquetipo": "CUI",
+          "puntos": 2
+        },
+        {
+          "texto": "Le propongo una salida que ninguno de los dos habíamos imaginado.",
+          "arquetipo": "MAG",
+          "puntos": 2
+        }
+      ]
+    },
+    {
+      "id": "FC-3",
+      "enunciado": "Tu marca solo puede ser famosa por UNA de estas cuatro cosas, y las otras tres se las lleva alguien de tu sector. ¿Cuál te quedas?",
+      "opciones": [
+        {
+          "texto": "Ser la de fiar: sin letra pequeña ni sorpresas. Y no sorprender a nadie nunca.",
+          "arquetipo": "INO",
+          "puntos": 2
+        },
+        {
+          "texto": "Hablar como habla la gente, sin pose. Y que nadie me coloque nunca por encima.",
+          "arquetipo": "COM",
+          "puntos": 2
+        },
+        {
+          "texto": "Empujar a la gente a salir de donde está. Y no dar tranquilidad a nadie.",
+          "arquetipo": "EXP",
+          "puntos": 2
+        },
+        {
+          "texto": "Hacer reír con lo que todos sufrimos. Y que cueste que me tomen en serio.",
+          "arquetipo": "BUF",
+          "puntos": 2
+        }
+      ]
+    },
+    {
+      "id": "FC-4",
+      "enunciado": "¿Qué te dolería más que dijeran de tu marca?",
+      "opciones": [
+        {
+          "texto": "Que es de listillos, que habla por encima de la gente.",
+          "arquetipo": "COM",
+          "puntos": 2
+        },
+        {
+          "texto": "Que es blanda, que se rinde a la primera.",
+          "arquetipo": "HER",
+          "puntos": 2
+        },
+        {
+          "texto": "Que es fría, que le da igual la gente.",
+          "arquetipo": "CUI",
+          "puntos": 2
+        },
+        {
+          "texto": "Que no tiene ni idea de lo que habla.",
+          "arquetipo": "SAB",
+          "puntos": 2
+        }
+      ]
+    },
+    {
+      "id": "FC-5",
+      "enunciado": "Este año solo tienes energía para molestar a un grupo de gente. ¿A cuál?",
+      "opciones": [
+        {
+          "texto": "A los que llevan quince años haciéndolo igual y no piensan moverse.",
+          "arquetipo": "EXP",
+          "puntos": 2
+        },
+        {
+          "texto": "A los que meten letra pequeña y cobran por sorpresa.",
+          "arquetipo": "INO",
+          "puntos": 2
+        },
+        {
+          "texto": "A los que hacen chapuzas y bajan el nivel del gremio.",
+          "arquetipo": "GOB",
+          "puntos": 2
+        },
+        {
+          "texto": "A los que despachan rápido y mal, sin mirar a quién tienen delante.",
+          "arquetipo": "AMA",
+          "puntos": 2
+        }
+      ]
+    },
+    {
+      "id": "FC-6",
+      "enunciado": "Tienes que elegir la frase grande de tu próxima campaña. ¿Con cuál te quedas?",
+      "opciones": [
+        {
+          "texto": "Las reglas de este sector no las escribimos nosotros. Y no las firmamos.",
+          "arquetipo": "FOR",
+          "puntos": 2
+        },
+        {
+          "texto": "Lo que parecía imposible empieza aquí.",
+          "arquetipo": "MAG",
+          "puntos": 2
+        },
+        {
+          "texto": "Sin milagros. Funciona y ya está.",
+          "arquetipo": "COM",
+          "puntos": 2
+        },
+        {
+          "texto": "Llevamos años haciendo el ridículo. Ya casi nos sale bien.",
+          "arquetipo": "BUF",
+          "puntos": 2
+        }
+      ]
+    },
+    {
+      "id": "FC-7",
+      "enunciado": "Si tuvieras que renunciar a cosas para sobrevivir, ¿a qué NO renunciarías jamás?",
+      "opciones": [
+        {
+          "texto": "A decir la verdad, aunque duela y me cueste clientes.",
+          "arquetipo": "SAB",
+          "puntos": 2
+        },
+        {
+          "texto": "A estar al lado de quien me necesita, aunque no me dé dinero.",
+          "arquetipo": "CUI",
+          "puntos": 2
+        },
+        {
+          "texto": "A jugar limpio y con las cartas boca arriba, aunque venda menos.",
+          "arquetipo": "INO",
+          "puntos": 2
+        },
+        {
+          "texto": "A que lo que hago esté bien hecho, aunque tarde más y gane menos.",
+          "arquetipo": "CRE",
+          "puntos": 2
+        }
+      ]
+    },
+    {
+      "id": "FC-8",
+      "enunciado": "Dentro de cinco años, ¿qué sitio te gustaría ocupar en tu sector?",
+      "opciones": [
+        {
+          "texto": "El que marca el nivel y al que los demás copian.",
+          "arquetipo": "GOB",
+          "puntos": 2
+        },
+        {
+          "texto": "El que cambió las reglas del juego y ya no hay vuelta atrás.",
+          "arquetipo": "MAG",
+          "puntos": 2
+        },
+        {
+          "texto": "El que ganó a pulso, compitiendo de frente.",
+          "arquetipo": "HER",
+          "puntos": 2
+        },
+        {
+          "texto": "El incómodo que dijo en voz alta lo que todos callaban.",
+          "arquetipo": "FOR",
+          "puntos": 2
+        }
+      ]
+    }
+  ],
+  "scoring": {
+    "formula_inverso": "6 - x",
+    "correccion_aquiescencia": true,
+    "umbral_empate": 5,
+    "umbral_sobreexpresion": 85,
+    "umbral_punto_ciego": 20,
+    "umbral_tibieza_test": 15,
+    "umbral_tibieza_modulo": 22,
+    "sigma_plano": 8.5,
+    "sigma_definido": 12,
+    "hueco_plano": 6,
+    "hueco_definido": 12,
+    "umbral_secundario_abs": 60,
+    "umbral_terciario_abs": 55,
+    "margen_tension_familia": 5,
+    "_nota": "Copia documental de las constantes de app/scoring.py. El codigo NO lee de aqui: si cambias una, cambia las dos. Los antiguos umbral_secundario/terciario relativos (0.8/0.7) se retiraron al pasar a los absolutos umbral_secundario_abs/terciario_abs, porque castigaban definirse."
+  }
+}

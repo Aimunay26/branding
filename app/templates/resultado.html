@@ -1,0 +1,756 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Tu informe de branding — {{ informe.nombre or "Sin nombre" }}</title>
+  <link rel="stylesheet" href="/static/css/app.css">
+
+  {#- Luminancia relativa del color de marca (WCAG 2.1, 1.4.3). La cabecera
+      pintaba el color elegido por la persona con el texto en blanco fijo: quien
+      elegía amarillo recibía un informe a 2,1:1, es decir, ilegible. El umbral
+      0.1833 es exactamente donde el blanco deja de dar 4,5:1 sobre el fondo, así
+      que por encima de él se cambia a tinta oscura. Se calcula aquí y no en
+      Python porque el color es lo único de este informe que decide el usuario y
+      el CSS es lo único que hay que cambiar. -#}
+  {% set _hex = (r.color_marca or '#c1440e')|string|trim|replace('#', '') %}
+  {% if _hex|length != 6 %}{% set _hex = 'c1440e' %}{% endif %}
+  {% set _r8 = _hex[0:2]|int(base=16) %}
+  {% set _g8 = _hex[2:4]|int(base=16) %}
+  {% set _b8 = _hex[4:6]|int(base=16) %}
+  {% set _cr = _r8 / 255 %}
+  {% set _cg = _g8 / 255 %}
+  {% set _cb = _b8 / 255 %}
+  {% set _lr = (_cr / 12.92) if _cr <= 0.03928 else (((_cr + 0.055) / 1.055) ** 2.4) %}
+  {% set _lg = (_cg / 12.92) if _cg <= 0.03928 else (((_cg + 0.055) / 1.055) ** 2.4) %}
+  {% set _lb = (_cb / 12.92) if _cb <= 0.03928 else (((_cb + 0.055) / 1.055) ** 2.4) %}
+  {% set _lum = 0.2126 * _lr + 0.7152 * _lg + 0.0722 * _lb %}
+  {% set cabecera_clara = _lum > 0.1833 %}
+
+  <style>
+    :root {
+      --marca: {{ r.color_marca }};
+      {#- --marca-suave venía cableado en terracota, así que los avisos y los
+          riesgos salían con el tinte de otra marca. Derivado del color real, el
+          10 % basta para separar el bloque del papel sin tocar el contraste del
+          texto, que sigue siendo --tinta-suave sobre casi blanco. -#}
+      --marca-suave: rgba({{ _r8 }}, {{ _g8 }}, {{ _b8 }}, 0.10);
+    }
+    .cabecera {
+      background: var(--marca);
+      color: #fff;
+      padding: 64px 24px 56px;
+      text-align: center;
+    }
+    .cabecera .sello {
+      font-size: 11px; letter-spacing: .3em; text-transform: uppercase;
+      opacity: .75; margin-bottom: 16px;
+    }
+    .cabecera h1 { color: inherit; margin-bottom: 10px; }
+    .cabecera .arq { font-size: 17px; opacity: .92; }
+
+    /* Color de marca claro: tinta oscura. Con el blanco fijo, un amarillo daba
+       2,1:1 y la cabecera no se leía ni con buena luz. */
+    .cabecera.clara { color: #1a1815; }
+    .cabecera.clara .veredicto-duro { background: rgba(255, 255, 255, .45); }
+    .cabecera.clara .barra-acciones a,
+    .cabecera.clara .barra-acciones button { color: #1a1815; }
+    .cabecera.clara .barra-acciones .fantasma {
+      color: #1a1815; box-shadow: inset 0 0 0 1.5px rgba(0, 0, 0, .35);
+    }
+
+    .barra-acciones {
+      display: flex; gap: 10px; justify-content: center; margin-top: 28px;
+      flex-wrap: wrap;
+    }
+    .barra-acciones a, .barra-acciones button {
+      background: #fff; color: var(--marca); border: none;
+      padding: 12px 24px; border-radius: 10px; font-weight: 600;
+      text-decoration: none; font-size: 15px; cursor: pointer;
+    }
+    .barra-acciones .fantasma {
+      background: transparent; color: #fff;
+      box-shadow: inset 0 0 0 1px rgba(255,255,255,.45);
+    }
+    .grafico { text-align: center; margin: 24px 0; }
+    .grafico svg { max-width: 100%; height: auto; }
+    .aviso {
+      border-left: 4px solid var(--marca); background: var(--marca-suave);
+      padding: 16px 20px; border-radius: 0 10px 10px 0; margin-bottom: 16px;
+    }
+    .aviso .titulo { font-weight: 600; margin-bottom: 4px; }
+    .aviso p { margin: 0; font-size: 14.5px; color: var(--tinta-suave); }
+    .paleta { display: flex; gap: 10px; margin: 16px 0; }
+    .muestra { flex: 1; }
+    .muestra .color { height: 64px; border-radius: 8px; border: 1px solid rgba(0,0,0,.08); }
+    .muestra .hex { font-size: 11px; color: var(--tenue); font-family: monospace; margin-top: 5px; }
+    .muestra .nombre { font-size: 12px; }
+    .tarjeta {
+      border: 1px solid var(--linea); border-radius: 12px;
+      padding: 22px 24px; margin-bottom: 16px; background: #fff;
+    }
+    .dato {
+      font-size: 11px; letter-spacing: .14em; text-transform: uppercase;
+      color: var(--tenue); margin-bottom: 4px;
+    }
+    .ref { display: flex; gap: 18px; padding: 18px 0; border-bottom: 1px solid var(--linea); }
+    .ref img { width: 84px; height: 104px; object-fit: cover; border-radius: 8px; }
+    .ref .mood {
+      width: 84px; height: 104px; border-radius: 8px; display: flex;
+      flex-direction: column; overflow: hidden; border: 1px solid var(--linea);
+    }
+    .ref .mood span { flex: 1; }
+    .ref h4 { margin: 0 0 2px; font-size: 17px; }
+    .ref .meta { font-size: 12px; color: var(--tenue); margin-bottom: 8px; }
+    .ref .gesto {
+      border-left: 3px solid var(--marca); padding-left: 12px;
+      font-size: 14px; color: var(--tinta-suave); margin-top: 8px;
+    }
+    .credito { font-size: 10px; color: var(--tenue); margin-top: 6px; }
+    .rec { border-top: 3px solid var(--marca); padding-top: 20px; margin-bottom: 40px; }
+    .rec .num { font-size: 40px; font-weight: 700; color: var(--marca); opacity: .22; line-height: 1; }
+    .rec h3 { font-size: 24px; margin: 4px 0 12px; }
+    .rec.recomendada { border-top-width: 6px; }
+    .sello-recomendada {
+      display: inline-block; font-size: 11px; letter-spacing: .14em;
+      text-transform: uppercase; font-weight: 700; color: var(--marca);
+      margin-bottom: 6px;
+    }
+    .riesgo {
+      background: var(--marca-suave); border-radius: 10px;
+      padding: 14px 18px; font-size: 14.5px; margin-top: 16px;
+    }
+    .cita-bar {
+      font-family: var(--serif); font-size: 22px; line-height: 1.35;
+      margin: 6px 0 16px;
+    }
+    .sin-ia {
+      border: 1px dashed var(--linea); border-radius: 12px;
+      padding: 32px; text-align: center; color: var(--tinta-suave);
+    }
+  </style>
+</head>
+<body>
+
+{% set p = r.perfil %}
+{% set f1 = r.ficha_primaria %}
+{% set resp_com = informe.respuestas.get('comunicacion') or {} %}
+{% set resp_acc = informe.respuestas.get('acciones') or {} %}
+
+<div class="cabecera{{ ' clara' if cabecera_clara else '' }}">
+  <div class="sello">Informe de Branding</div>
+  <h1>{{ informe.respuestas.identidad.artistico or informe.nombre or "Tu marca" }}</h1>
+  <div class="arq">
+    {{ f1.nombre }}{% if r.ficha_secundaria %} · {{ r.ficha_secundaria.nombre }}{% endif %}{% if r.ficha_terciaria %} · {{ r.ficha_terciaria.nombre }}{% endif %}
+  </div>
+  {#- El aviso de portada dispara con los TRES estados que emiten un informe sin
+      definir, no solo con la tibieza persistente: un perfil plano en la ronda
+      tope se imprimía con su arquetipo en grande y ni una línea que dijera que
+      los doce empataban. Y el texto lo escribe scoring, que tiene una redacción
+      por motivo; la que estaba aquí a mano acusaba de esconderse en el punto
+      medio a quien había contestado a todo y siempre lo mismo. -#}
+  {% set veredicto_duro = r.veredicto and r.veredicto.estado in ("tibio_persistente", "plano_sin_tibieza", "sin_validez") %}
+  {% set invisible_alto = r.invisibilidad and r.invisibilidad.nivel == "riesgo alto" %}
+  {% if veredicto_duro or invisible_alto %}
+  <div class="veredicto-duro">
+    {% if veredicto_duro %}
+    {{ r.veredicto.texto }} Este informe es un punto de partida, no un veredicto.
+    {% else %}
+    {{ r.invisibilidad.lectura }}
+    {% endif %}
+  </div>
+  {% endif %}
+  <div class="barra-acciones">
+    <a href="/informe/{{ informe.id }}/pdf">Descargar PDF</a>
+    {% if not recomendaciones %}
+    <button class="fantasma" id="btn-ia">Generar recomendaciones con IA</button>
+    {% endif %}
+  </div>
+</div>
+
+<main>
+
+  {#- A) Va lo primero porque es la conclusión del informe, no un anexo: si
+      alguien lee una sola tarjeta, que sea esta. -#}
+  {% if r.reconocimiento_3s or r.identificabilidad or r.una_sola_cosa_borrador %}
+  <div class="recordabilidad">
+    <div class="dato">Por lo que te van a recordar</div>
+
+    {% if recomendaciones and recomendaciones.una_sola_cosa_recomendada %}
+      <p class="una-sola-cosa">{{ recomendaciones.una_sola_cosa_recomendada }}</p>
+    {% elif r.una_sola_cosa_borrador %}
+      <p class="una-sola-cosa">{{ r.una_sola_cosa_borrador }}</p>
+      <div class="dato">Borrador: la IA lo afina</div>
+    {% else %}
+      <p class="una-sola-cosa-vacia">
+        Todavía no hay ni una cosa. No es un hueco de la plantilla: es el
+        resultado.
+      </p>
+    {% endif %}
+
+    {% if r.reconocimiento_3s %}
+    <div class="marcador">
+      <span>{{ r.reconocimiento_3s.puntos }}</span>
+      <span class="de">de 4 en el reconocimiento a 3 segundos</span>
+    </div>
+    <ul class="comprobaciones">
+      {% for c in r.reconocimiento_3s.comprobaciones %}
+      <li>
+        <span class="{{ 'marca-si' if c.pasa else 'marca-no' }}">{{ '✓' if c.pasa else '✕' }}</span>
+        <span class="{{ '' if c.pasa else 'falla' }}">
+          {{ c.texto }} <span class="fuente">{{ c.fuente }}</span>
+        </span>
+      </li>
+      {% endfor %}
+    </ul>
+    <p style="margin:10px 0 0">{{ r.reconocimiento_3s.lectura }}</p>
+    {% endif %}
+
+    {% if r.identificabilidad %}
+    <div class="marcador">
+      <span>{{ r.identificabilidad.indice|round|int }}</span>
+      <span class="de">de 100 — {{ r.identificabilidad.nivel }}</span>
+    </div>
+    <p style="margin:6px 0 0">{{ r.identificabilidad.lectura }}</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <div class="grafico">{{ r.graficos.radar|safe }}</div>
+  <p style="text-align:center;color:var(--tenue);font-size:13px;margin-top:-8px">
+    La línea discontinua es la media. Por encima, te define; por debajo, no va contigo.
+  </p>
+
+  <div class="tarjeta">
+    <div class="dato">Arquetipo primario</div>
+    <h2 style="margin:2px 0 10px">{{ f1.nombre }}</h2>
+    <p>{{ f1.resumen }}</p>
+    <p style="margin-bottom:0;color:var(--tinta-suave)"><strong>Su trampa:</strong> {{ f1.sombra }}</p>
+  </div>
+
+  <div class="tarjeta">
+    <div class="dato">Índice de coherencia — {{ p.sigma }}</div>
+    <p style="margin-bottom:0">{{ p.lectura_coherencia }}</p>
+  </div>
+
+  {% if r.tibieza and r.tibieza.total %}
+  <div class="tarjeta">
+    <div class="dato">Índice de definición</div>
+    <p style="margin-bottom:0">
+      {% if r.tibieza.indice > 30 %}
+        Te escondiste en el punto medio en {{ r.tibieza.tibias }} de {{ r.tibieza.total }}
+        respuestas ({{ r.tibieza.indice }}%). Una marca no se construye desde el «a veces».
+      {% else %}
+        Solo {{ r.tibieza.tibias }} de {{ r.tibieza.total }} respuestas quedaron en el
+        punto medio ({{ r.tibieza.indice }}%). Te has mojado: eso es lo que hace una marca reconocible.
+      {% endif %}
+    </p>
+  </div>
+  {% endif %}
+
+  <div class="grafico">{{ r.graficos.familias|safe }}</div>
+  <p style="text-align:center;color:var(--tenue);font-size:13px;margin-top:-8px">
+    Las cuatro motivaciones cardinales. Más estables que el arquetipo suelto.
+  </p>
+
+  {% if r.audacia.indice is not none %}
+  <div class="tarjeta">
+    <div class="dato">Índice de audacia — {{ r.audacia.nivel }} ({{ r.audacia.indice }}/100)</div>
+    <p style="margin-bottom:0">{{ r.audacia.lectura }}</p>
+  </div>
+  {% endif %}
+
+  {# Los cuatro números que contestan «¿me van a recordar?». Se calculaban desde
+     el principio y solo los veía la IA; quien paga el informe no los veía. #}
+  {% if r.invisibilidad or r.distincion or r.consistencia or r.calidad_textos %}
+  <h2 style="margin-top:48px">¿Te van a recordar?</h2>
+  <p class="entradilla">
+    Cuatro medidas sobre las mismas respuestas. La primera las resume; las otras
+    tres dicen de dónde sale el número, y por dónde se arregla si no te gusta.
+  </p>
+
+  {% if r.invisibilidad %}
+  <div class="tarjeta">
+    <div class="dato">Riesgo de invisibilidad — {{ r.invisibilidad.nivel }}</div>
+    <div class="marcador">
+      <span>{{ r.invisibilidad.indice|round|int }}</span>
+      <span class="de">de 100 · te ven {{ r.invisibilidad.visibilidad|round|int }} de 100</span>
+    </div>
+    <p style="margin:6px 0 0">{{ r.invisibilidad.lectura }}</p>
+    {% if r.invisibilidad.peor %}
+    <p style="margin:10px 0 0;color:var(--tinta-suave);font-size:14.5px">
+      <strong>Por dónde empezar:</strong> lo que más te resta ahora mismo es
+      <em>{{ r.invisibilidad.peor }}</em>.
+    </p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% for bloque in [r.distincion, r.consistencia] if bloque and bloque.indice is not none %}
+  <div class="tarjeta">
+    <div class="dato">
+      {% if loop.first %}Distinción frente a tu categoría{% else %}Consistencia{% endif %}
+      — {{ bloque.nivel }} ({{ bloque.indice }}/100)
+    </div>
+    <p style="margin-bottom:0">{{ bloque.lectura }}</p>
+    {% if bloque.componentes %}
+    <details style="margin-top:10px">
+      <summary style="cursor:pointer;font-size:13.5px;color:var(--tenue)">De dónde sale este número</summary>
+      <ul style="margin:10px 0 0;font-size:14px;color:var(--tinta-suave)">
+        {% for clave, c in bloque.componentes.items() %}
+        <li>
+          <strong>{{ clave }}</strong> ({{ c.valor }}, peso {{ c.peso }})
+          {%- if c.detalle %} — {{ c.detalle }}{% endif %}
+        </li>
+        {% endfor %}
+      </ul>
+    </details>
+    {% endif %}
+  </div>
+  {% endfor %}
+
+  {% if r.calidad_textos and r.calidad_textos.pedidas %}
+  <div class="tarjeta">
+    <div class="dato">
+      Lo que has escrito tú — {{ r.calidad_textos.nivel }} ({{ r.calidad_textos.indice }}/100)
+    </div>
+    <p style="margin-bottom:0">{{ r.calidad_textos.lectura }}</p>
+    {% if r.calidad_textos.pobres %}
+    <p style="margin:10px 0 0;font-size:14px;color:var(--tinta-suave)">
+      Las que no dicen nada todavía:
+      {% for t in r.calidad_textos.pobres %}<code>{{ t.id }}</code>{% if not loop.last %}, {% endif %}{% endfor %}.
+    </p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if r.atencion and r.atencion.estado and r.atencion.estado != 'ok' %}
+  <div class="aviso">
+    <div class="titulo">Control de atención: {{ r.atencion.pasados }} de {{ r.atencion.de }}</div>
+    <p>
+      {{ r.atencion.aviso or 'Has fallado alguna de las preguntas que solo comprueban que estabas leyendo. El informe sale igual, pero fíate de él con reservas.' }}
+    </p>
+  </div>
+  {% endif %}
+  {% endif %}
+
+  {% if r.avisos %}
+  <h2 style="margin-top:48px">Lo que deberías vigilar</h2>
+  <p class="entradilla">La parte que un test complaciente se saltaría.</p>
+  {% for aviso in r.avisos %}
+  <div class="aviso">
+    <div class="titulo">{{ aviso.titulo }}</div>
+    <p>{{ aviso.texto }}</p>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {% if r.triangulacion %}
+  <h2 style="margin-top:48px">Lo que dices ser frente a lo que eliges hacer</h2>
+  <div class="grafico">{{ r.graficos.triangulacion|safe }}</div>
+  {% for t in r.triangulacion %}
+  <div class="aviso">
+    <div class="titulo">{{ t.titulo }}</div>
+    <p>{{ t.texto }}</p>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {#- B) Antes de las paletas: el color es un activo más, y se entiende mejor
+      cuando ya se ha visto de qué lista sale. -#}
+  {% if r.activos is defined and r.activos %}
+  <h2 style="margin-top:48px">Tu sistema de activos</h2>
+  <p class="entradilla">
+    Esto es por lo que te van a reconocer antes de leer tu nombre. Cada línea
+    sale de una respuesta tuya, y viene con la regla de uso: no es una
+    sugerencia, es una condición.
+  </p>
+
+  {% if (r.activos_fuertes or 0) < 2 %}
+    {#- Con menos de dos activos fuertes, imprimir la lista sería disfrazar el
+        problema de inventario. Se pinta el diagnóstico y nada más. -#}
+    {% set aviso_sin = (r.avisos | selectattr('tipo', 'equalto', 'sin_activos') | list | first) %}
+    <div class="aviso">
+      <div class="titulo">{{ aviso_sin.titulo if aviso_sin else "No tienes con qué te reconozcan" }}</div>
+      <p>
+        {% if aviso_sin %}{{ aviso_sin.texto }}{% else %}
+        De todo el cuestionario no sale ni una sola cosa que alguien pueda
+        describir de memoria: ni un color, ni un objeto, ni un formato fijo.
+        Vuelve a VIS-RO-5, ACC-CT-2 y ACC-RI-2 y elige algo.
+        {% endif %}
+      </p>
+    </div>
+  {% else %}
+    {% set _declarados = r.activos | selectattr('declarado') | list | sort(attribute='fuerza', reverse=true) %}
+    {% set _prestados = r.activos | rejectattr('declarado') | list | sort(attribute='fuerza', reverse=true) %}
+    {% for a in _declarados + _prestados %}
+    <div class="tarjeta{{ ' prestado' if not a.declarado else '' }}">
+      {% if not a.declarado %}
+      <div class="etiqueta-prestado">Prestado de tu arquetipo</div>
+      {% endif %}
+      <div class="activo">
+        {% if a.tipo == 'color' and a.valor and a.valor.startswith('#') %}
+        <div class="muestra-color" style="background: {{ a.valor }}"></div>
+        {% endif %}
+        <div class="cuerpo">
+          <div class="etiqueta">{{ a.etiqueta }}</div>
+          {% if a.valor %}<div class="valor">{{ a.valor }}</div>{% endif %}
+          <p class="regla">{{ a.regla_de_uso }}</p>
+          {% if a.fuente_ids %}
+          <div class="origen">De tu respuesta {{ a.fuente_ids|join(', ') }}</div>
+          {% endif %}
+        </div>
+        <div class="fuerza" aria-label="Fuerza {{ a.fuerza }} de 3">
+          {% for n in range(3) %}<span class="{{ 'lleno' if n < a.fuerza else '' }}"></span>{% endfor %}
+        </div>
+      </div>
+      {% if a.conflicto %}
+      <div class="aviso" style="margin:14px 0 0">
+        <div class="titulo">Choca con lo que tú mismo vetaste</div>
+        <p>{{ a.conflicto }}</p>
+      </div>
+      {% endif %}
+    </div>
+    {% endfor %}
+  {% endif %}
+  {% endif %}
+
+  <h2 style="margin-top:48px">Tus paletas</h2>
+  <p class="entradilla">
+    Tres caminos, todos fieles a lo que elegiste. Tu color declarado manda, y lo
+    que vetaste no aparece en ninguno.
+  </p>
+  {% for pal in r.paletas %}
+  <div class="paleta-bloque">
+    <div class="paleta-cab">
+      <strong>{{ pal.nombre }}</strong>
+      <span>{{ pal.subtitulo }}</span>
+    </div>
+    <div class="paleta">
+      {% for c in pal.colores %}
+      <div class="muestra">
+        <div class="color" style="background: {{ c.hex }}"></div>
+        <div class="nombre">{{ c.nombre }}</div>
+        <div class="hex">{{ c.hex }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% if recomendaciones and recomendaciones.justificacion_paletas %}
+      {% for j in recomendaciones.justificacion_paletas if j.paleta_id == pal.id %}
+      <p class="paleta-just">{{ j.texto }}</p>
+      {% endfor %}
+    {% endif %}
+  </div>
+  {% endfor %}
+  <p style="color:var(--tinta-suave);font-size:14.5px">{{ f1.visual.estetica }}</p>
+
+  <h2 style="margin-top:48px">Referentes</h2>
+  <p class="entradilla">No para copiarlos: para robarles el gesto.</p>
+  {% for ref in r.referentes %}
+  <div class="ref">
+    {% if ref.imagen and ref.imagen.local %}
+      <img src="/static/{{ ref.imagen.local }}" alt="{{ ref.nombre }}" loading="lazy">
+    {% else %}
+      <div class="mood">
+        {% for c in ref.paleta %}<span style="background: {{ c.hex }}"></span>{% endfor %}
+      </div>
+    {% endif %}
+    <div>
+      <h4>{{ ref.nombre }}</h4>
+      <div class="meta">{{ ref.campo }} · {{ ref.epoca }}</div>
+      <p style="font-size:14.5px;margin:0">{{ ref.estilo_visual }}</p>
+      <p class="gesto"><strong>El gesto:</strong> {{ ref.gesto_diferenciador }}</p>
+      {% if ref.imagen and ref.imagen.local and ref.imagen.atribucion %}
+      <div class="credito">{{ ref.imagen.atribucion }}</div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+
+  {#- C) La regla de repetición. Va antes de las tres direcciones a propósito:
+      elegir dirección sin saber cuántas piezas al mes se sostienen es elegir a
+      ciegas. -#}
+  {% if r.regla_repeticion is defined and r.regla_repeticion and r.regla_repeticion.meses %}
+  <h2 style="margin-top:48px">Tu regla de repetición (12 meses)</h2>
+  <p class="entradilla">{{ r.regla_repeticion.cabecera }}</p>
+
+  {% if r.regla_repeticion.cadencia and r.regla_repeticion.cadencia.etiqueta %}
+  <p style="color:var(--tinta-suave);font-size:14.5px">
+    Tu cadencia: {{ r.regla_repeticion.cadencia.etiqueta }} —
+    {{ r.regla_repeticion.cadencia.piezas_mes }} piezas al mes{% if r.regla_repeticion.cadencia.horas_semana %},
+    con {{ r.regla_repeticion.cadencia.horas_semana }} horas a la semana{% endif %}.
+  </p>
+  {% endif %}
+
+  {#- En 375 px la tabla no cabe y no debe encogerse hasta ser ilegible: se
+      desplaza dentro de su caja y el resto de la página no se mueve. -#}
+  <div class="calendario-caja">
+    <table class="calendario">
+      <thead>
+        <tr>
+          <th>Mes</th>
+          <th>Piezas</th>
+          <th>Tu ancla</th>
+          <th>Rituales</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for m in r.regla_repeticion.meses %}
+        <tr class="{{ 'revision' if m.revision else '' }}">
+          <td class="mes">{{ m.mes }}</td>
+          <td class="mes">{{ m.piezas }}</td>
+          <td>{{ m.ancla or "—" }}</td>
+          <td>{{ m.rituales|join(' · ') if m.rituales else "—" }}</td>
+        </tr>
+        {% if m.revision %}
+        <tr class="revision">
+          <td>☐</td>
+          <td colspan="3" class="criterio"><strong>Revisión:</strong> {{ m.revision }}</td>
+        </tr>
+        {% endif %}
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+
+  {% for c in r.regla_repeticion.contradicciones %}
+  <div class="aviso">
+    <div class="titulo">{{ c.ids|join(' vs ') if c.ids else "Contradicción" }}</div>
+    <p>{{ c.texto }}</p>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  {#- D) Tus palabras. -#}
+  {% if (r.identidad_verbal is defined and r.identidad_verbal) or resp_com.get('COM-PA-2') or resp_com.get('COM-PA-3') or resp_com.get('COM-NA-4') or resp_acc.get('ACC-RI-2') %}
+  <h2 style="margin-top:48px">Tus palabras</h2>
+
+  {% if r.identidad_verbal is defined and r.identidad_verbal %}
+  <div class="tarjeta">
+    <div class="verbal">
+      <div>
+        <div class="dato">Las que dices</div>
+        <ul>
+          {% for w in r.identidad_verbal.propias %}
+          <li class="{{ 'tuya' if w.origen == 'tuya' else 'prestada' }}">
+            {{ w.palabra }}<span class="origen">{{ 'tuya' if w.origen == 'tuya' else 'prestada' }}</span>
+          </li>
+          {% endfor %}
+        </ul>
+        <p class="ganadas">
+          {{ r.identidad_verbal.ganadas }} de 5 te las has ganado: salen de lo que
+          escribiste, no del catálogo de tu arquetipo.
+        </p>
+      </div>
+      <div>
+        <div class="dato">Las que no vuelves a decir</div>
+        <ul>
+          {% for w in r.identidad_verbal.prohibidas %}
+          <li>{{ w.palabra }}<span class="origen">{{ w.origen }}</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  {% if resp_com.get('COM-PA-2') or resp_com.get('COM-PA-3') or resp_com.get('COM-NA-4') or resp_acc.get('ACC-RI-2') %}
+  <p class="entradilla" style="margin-top:24px">
+    Esto lo has escrito tú. Es la única parte del informe que no ha calculado nadie.
+  </p>
+  <div class="palabras-usuario">
+    {% if resp_com.get('COM-PA-2') %}
+    <div class="dato">COM-PA-2</div>
+    <blockquote>{{ resp_com.get('COM-PA-2') }}</blockquote>
+    {% endif %}
+    {% if resp_com.get('COM-PA-3') %}
+    <div class="dato">COM-PA-3</div>
+    <blockquote>{{ resp_com.get('COM-PA-3') }}</blockquote>
+    {% endif %}
+    {% if resp_com.get('COM-NA-4') %}
+    <div class="dato">COM-NA-4</div>
+    <blockquote>{{ resp_com.get('COM-NA-4') }}</blockquote>
+    {% endif %}
+    {% if resp_acc.get('ACC-RI-2') %}
+    <div class="dato">ACC-RI-2</div>
+    <blockquote>{{ resp_acc.get('ACC-RI-2') }}</blockquote>
+    {% endif %}
+  </div>
+  {% endif %}
+  {% endif %}
+
+  <h2 style="margin-top:48px">Las tres direcciones</h2>
+  {% if recomendaciones %}
+    {% set paletas_por_id = {} %}
+    {% for pal in r.paletas %}{% set _ = paletas_por_id.update({pal.id: pal}) %}{% endfor %}
+    <p class="entradilla">{{ recomendaciones.lectura_general }}</p>
+
+    {% if recomendaciones.direccion_recomendada %}
+    <div class="tarjeta">
+      <div class="dato">La que hay que tomar: la {{ recomendaciones.direccion_recomendada }}</div>
+      {% if recomendaciones.por_que_esa %}<p>{{ recomendaciones.por_que_esa }}</p>{% endif %}
+    </div>
+    {% endif %}
+
+    {% if recomendaciones.la_verdad_incomoda or recomendaciones.coste_de_no_elegir %}
+    <div class="aviso">
+      <div class="titulo">Lo que no quieres leer</div>
+      {% if recomendaciones.la_verdad_incomoda %}<p>{{ recomendaciones.la_verdad_incomoda }}</p>{% endif %}
+      {% if recomendaciones.coste_de_no_elegir %}
+      <p style="margin-top:8px"><strong>Si no eliges:</strong> {{ recomendaciones.coste_de_no_elegir }}</p>
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {% for rec in recomendaciones.recomendaciones %}
+    {% set pal = paletas_por_id.get(rec.paleta_id) %}
+    <div class="rec{{ ' recomendada' if recomendaciones.direccion_recomendada == loop.index else '' }}">
+      <div class="num">{{ "%02d"|format(loop.index) }}</div>
+      {% if recomendaciones.direccion_recomendada == loop.index %}
+      <div class="sello-recomendada">La que hay que tomar</div>
+      {% endif %}
+      <h3>{{ rec.titulo }}</h3>
+
+      {% if rec.una_sola_cosa %}
+      <div class="dato">Una sola cosa</div>
+      <p class="una-sola-cosa">{{ rec.una_sola_cosa }}</p>
+      {% endif %}
+
+      {% if rec.eslogan_candidatos %}
+      <div class="dato">Eslogan — tres candidatos</div>
+      <ul>{% for e in rec.eslogan_candidatos %}<li>«{{ e }}»</li>{% endfor %}</ul>
+      {% endif %}
+
+      <p>{{ rec.concepto }}</p>
+
+      {% if rec.postura %}
+      <div class="riesgo" style="background:var(--marca-suave)">
+        <strong>Su postura:</strong> {{ rec.postura }}
+      </div>
+      {% endif %}
+
+      {% if rec.enemigo %}
+      <div class="dato" style="margin-top:16px">Contra quién</div>
+      <p>{{ rec.enemigo }}</p>
+      {% endif %}
+
+      {% if rec.a_quien_molesta %}
+      <div class="dato">A quién le va a caer mal</div>
+      <p>{{ rec.a_quien_molesta }}</p>
+      {% endif %}
+
+      {% if rec.activos_elegidos %}
+      <div class="dato">Tus activos en esta dirección</div>
+      <ul>
+        {% for act in rec.activos_elegidos %}
+        <li>{{ act.clave }} → aparece en: {{ act.donde_aparece|join('; ') }}</li>
+        {% endfor %}
+      </ul>
+      {% endif %}
+
+      {% if rec.prueba_del_bar %}
+      <div class="dato">La prueba del bar</div>
+      <p class="cita-bar">«{{ rec.prueba_del_bar }}»</p>
+      {% endif %}
+
+      {% if rec.prueba_3_segundos %}
+      <div class="dato">En tres segundos</div>
+      <p>{{ rec.prueba_3_segundos }}</p>
+      {% endif %}
+
+      <div class="dato" style="margin-top:16px">Por qué a ti</div>
+      <p>{{ rec.por_que_a_ti }}</p>
+
+      {% if pal %}
+      <div class="dato">Paleta — {{ pal.nombre }}</div>
+      <div class="paleta">
+        {% for c in pal.colores %}
+        <div class="muestra">
+          <div class="color" style="background: {{ c.hex }}"></div>
+          <div class="hex">{{ c.hex }}</div>
+        </div>
+        {% endfor %}
+      </div>
+      {% endif %}
+
+      <div class="dato">Tipografía</div>
+      <p>{{ rec.tipografia }}</p>
+
+      <div class="dato">Estilo visual</div>
+      <p>{{ rec.estilo_visual }}</p>
+
+      <div class="dato">Tono</div>
+      <p>{{ rec.tono_comunicacion }}</p>
+
+      {% if rec.identidad_verbal %}
+      <div class="dato">Cómo suena</div>
+      <p>
+        <strong>Abre:</strong> «{{ rec.identidad_verbal.frase_de_apertura }}»<br>
+        <strong>Cierra:</strong> «{{ rec.identidad_verbal.frase_de_cierre }}»
+      </p>
+      {% if rec.identidad_verbal.palabras_prohibidas_extra %}
+      <p style="color:var(--tinta-suave);font-size:14.5px">
+        No dice nunca: {{ rec.identidad_verbal.palabras_prohibidas_extra|join(' · ') }}
+      </p>
+      {% endif %}
+      {% endif %}
+
+      <div class="dato">Qué hacer en 90 días</div>
+      <ul>{% for a in rec.acciones %}<li>{{ a }}</li>{% endfor %}</ul>
+
+      {% if rec.que_deja_de_hacer %}
+      <div class="dato">Qué dejas de hacer</div>
+      <p>{{ rec.que_deja_de_hacer }}</p>
+      {% endif %}
+
+      {% if rec.criterio_revision_90_dias %}
+      <div class="dato">Cómo se revisa a los 90 días</div>
+      <p>{{ rec.criterio_revision_90_dias }}</p>
+      {% endif %}
+
+      {% if rec.referentes %}
+      <div class="dato">Referentes</div>
+      <p>{{ rec.referentes|join(" · ") }}</p>
+      {% endif %}
+
+      <div class="riesgo"><strong>El riesgo:</strong> {{ rec.riesgo }}</div>
+    </div>
+    {% endfor %}
+  {% else %}
+    <div class="sin-ia" id="zona-ia">
+      <p>Todavía no has generado las recomendaciones con IA.</p>
+      <button class="btn-primario" id="btn-ia-2">Generar ahora</button>
+      <p style="font-size:13px;margin-top:12px">Tarda unos segundos y cuesta unos céntimos.</p>
+    </div>
+  {% endif %}
+
+  <p style="margin-top:64px;font-size:13px;color:var(--tenue);border-top:1px solid var(--linea);padding-top:20px">
+    Las tipologías de estilo (estaciones cromáticas, Kibbe) son heurísticas de la
+    industria de la imagen, no diagnósticos científicos. Lo que sí es real: los
+    colores junto a tu cara cambian cómo se percibe tu piel. Úsalo como punto de
+    partida, no como veredicto. El PDF incluye la nota metodológica completa.
+  </p>
+
+</main>
+
+<script>
+  const generarIA = async (boton) => {
+    boton.disabled = true;
+    boton.textContent = 'Pensando…';
+    try {
+      const r = await fetch('/api/informe/{{ informe.id }}/ia', { method: 'POST' });
+      if (!r.ok) throw new Error((await r.json()).detail || 'Error');
+      location.reload();
+    } catch (e) {
+      boton.disabled = false;
+      boton.textContent = 'Reintentar';
+      alert('No se pudo generar: ' + e.message);
+    }
+  };
+  document.querySelectorAll('#btn-ia, #btn-ia-2').forEach((b) =>
+    b.addEventListener('click', () => generarIA(b)),
+  );
+</script>
+
+</body>
+</html>

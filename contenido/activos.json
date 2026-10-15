@@ -1,0 +1,162 @@
+{
+  "_nota": "Pesos, reglas y mapeos del sistema de activos distintivos (app/activos.py). Vive aparte de modulo_*.json a propósito: aquí se decide QUÉ es un activo fuerte, y esa decisión no debe pelearse con las ediciones de preguntas. REGLA ÉTICA: ninguna opción del bloque `limites_corporales` (VIS-LM-1 a VIS-LM-5) genera activo ni veto de activo. Ese bloque promete que ninguna respuesta suma ni resta puntos y aquí se cumple.",
+
+  "peso_activo": {
+    "_nota": "Los números traducen la prosa que ya está escrita en las `descripcion` de cada opción. Los tres de VIS-RO-5 que valen 3 son los que el propio contenido recomienda: gafas («el sello que mejor funciona y menos riesgo tiene»), color_firma («funciona en foto, en vídeo y en un escenario») y prenda («es tu uniforme: te quita decisiones»). Los que valen 1 son los que el contenido desaconseja: sombrero («te encasilla») y gafas_sol («puede parecer chulería»).",
+    "VIS-RO-5": {
+      "gafas": 3,
+      "color_firma": 3,
+      "prenda": 3,
+      "joya": 2,
+      "calzado": 2,
+      "gafas_sol": 1,
+      "sombrero": 1,
+      "ninguna_firma": 0
+    },
+    "ACC-RI-1": {
+      "formato_fijo": 3,
+      "seccion": 2,
+      "color": 3,
+      "objeto": 2,
+      "gesto": 2,
+      "saludo": 2,
+      "gracias": 1,
+      "regalo": 1
+    },
+    "ACC-CT-2": {
+      "post_semanal": 3,
+      "newsletter": 3,
+      "video_semanal": 3,
+      "podcast_ancla": 3,
+      "directo_ancla": 3,
+      "informe": 3
+    }
+  },
+
+  "reglas_de_uso": {
+    "_nota": "Una plantilla por tipo de activo. {etiqueta} es el sujeto en singular que sale de `etiquetas_activo`; {valor} es el texto literal de la persona o el valor calculado. Se escriben aquí y no en el Python para poder cambiar el tono sin tocar código.",
+    "color": "{etiqueta} va en el 100 % de tus piezas: fondo, ropa en cámara y portadas. Si una pieza no lleva ese color, no es tuya.",
+    "sello": "{etiqueta} aparece en la foto de perfil, en todos los vídeos y en cualquier escenario. Sin excepciones y sin descansos.",
+    "formato": "{etiqueta}, el mismo día de la semana, los doce meses. El día no se negocia; el contenido sí.",
+    "gesto": "{valor}. Se repite igual aunque te aburra: el aburrimiento del dueño llega en el mes tres y el reconocimiento del público en el mes nueve.",
+    "silueta": "{etiqueta} en todas las fotos de trabajo. Una silueta reconocible se ve a veinte metros; una cara, no.",
+    "peinado": "El mismo peinado durante doce meses. Cambiarlo a los cuatro es empezar de cero.",
+    "peinado_con_color": "El mismo peinado y el mismo color de pelo durante doce meses. Cambiarlo a los cuatro es empezar de cero.",
+    "uniforme": "La misma combinación de prendas siempre. Te quita treinta decisiones al mes y te da una silueta.",
+    "palabra": "{valor} entra en cada texto que firmes, al menos una vez.",
+    "encuadre": "{valor}. El mismo encuadre en todas las fotos y todos los vídeos.",
+    "tipografia": "{valor} en todos los titulares. No es tuya: es la que pide tu arquetipo, así que es la primera que puedes cambiar sin perder nada."
+  },
+
+  "etiquetas_activo": {
+    "_nota": "Dos rótulos por opción. `sujeto` va en la regla de uso y por eso es SIEMPRE singular: las plantillas conjugan en singular («{etiqueta} aparece...») y «Las gafas aparece» no es español. `nombre` es el sintagma corto que usa una_sola_cosa_borrador («El oficio de las gafas»).",
+    "VIS-RO-5": {
+      "gafas": {"sujeto": "Tu montura de siempre", "nombre": "las gafas"},
+      "gafas_sol": {"sujeto": "Tu gafa de sol", "nombre": "las gafas de sol"},
+      "color_firma": {"sujeto": "Tu color de firma", "nombre": "el color"},
+      "sombrero": {"sujeto": "Tu sombrero", "nombre": "el sombrero"},
+      "joya": {"sujeto": "Tu joya", "nombre": "la joya"},
+      "prenda": {"sujeto": "Tu prenda de siempre", "nombre": "la prenda"},
+      "calzado": {"sujeto": "Tu calzado inconfundible", "nombre": "los zapatos"}
+    },
+    "ACC-CT-2": {
+      "post_semanal": {"sujeto": "Una publicación cada semana", "nombre": "la publicación semanal"},
+      "newsletter": {"sujeto": "Tu boletín", "nombre": "el boletín"},
+      "video_semanal": {"sujeto": "Un vídeo cada semana", "nombre": "el vídeo semanal"},
+      "podcast_ancla": {"sujeto": "Tu podcast", "nombre": "el podcast"},
+      "directo_ancla": {"sujeto": "Tu directo fijo", "nombre": "el directo"},
+      "informe": {"sujeto": "Tu informe", "nombre": "el informe"}
+    },
+    "ACC-RI-1": {
+      "formato_fijo": {"sujeto": "Tu formato fijo", "nombre": "el formato fijo"},
+      "seccion": {"sujeto": "Tu sección fija", "nombre": "la sección fija"},
+      "color": {"sujeto": "Tu color de siempre", "nombre": "el color de siempre"},
+      "objeto": {"sujeto": "Tu objeto de siempre", "nombre": "el objeto"},
+      "gesto": {"sujeto": "Tu gesto reconocible", "nombre": "el gesto"},
+      "saludo": {"sujeto": "Tu saludo de siempre", "nombre": "el saludo"},
+      "gracias": {"sujeto": "Dar las gracias por su nombre", "nombre": "las gracias"},
+      "regalo": {"sujeto": "Tu regalo útil de siempre", "nombre": "el regalo"}
+    }
+  },
+
+  "encuadre_por_audacia": {
+    "_nota": "VIS-AU-1 es bipolar 1-7. El 4 es null a propósito: es el punto muerto que form.js escribe solo al pintar el deslizador, así que no es una postura y no genera activo.",
+    "1": "plano medio, mirada fuera de cámara, fondo liso y neutro",
+    "2": "plano medio, mirada fuera de cámara, fondo liso y neutro",
+    "3": "plano medio corto, mirada a cámara, fondo neutro",
+    "4": null,
+    "5": "plano medio corto, mirada a cámara, fondo del color dominante",
+    "6": "primer plano, mirada a cámara, fondo del color dominante",
+    "7": "primer plano, mirada a cámara, fondo del color dominante al 100 %"
+  },
+
+  "vetos_de_activo": {
+    "_nota": "Qué respuesta tumba qué activo. Una clave literal («sello:joya») elimina ese activo. Los marcadores que empiezan por @ no eliminan: @conflicto_color y @conflicto_color_monocromo declaran el choque y bajan la fuerza (el color declarado es soberano), y @prohibe_palabra:x elimina cualquier activo cuyo texto contenga esa palabra.",
+    "VIS-RO-2": {
+      "no_joyas": ["sello:joya"],
+      "no_marcas": [],
+      "no_colores": ["@conflicto_color"],
+      "no_negro": [],
+      "no_traje": ["@prohibe_palabra:traje"]
+    },
+    "VIS-CR-2": {
+      "no_vivos": ["@conflicto_color"],
+      "no_neon": ["@conflicto_color"],
+      "no_negro": ["@conflicto_color_monocromo"]
+    }
+  },
+
+  "conflicto_color": {
+    "_nota": "El conflicto solo se declara si el color declarado pertenece de verdad a la familia vetada; si no, el veto y el color conviven y no hay nada que decir. Aquí se DECLARA el choque, no se arregla: arreglar la paleta es de app/paletas.py y no es de este módulo.",
+    "familias": {
+      "no_vivos": ["vivo", "neon"],
+      "no_neon": ["neon"],
+      "no_negro": ["negro"],
+      "no_colores": ["vivo", "neon"]
+    },
+    "etiquetas": {
+      "no_vivos": "colores vivos",
+      "no_neon": "colores flúor",
+      "no_negro": "negros",
+      "no_colores": "colores vivos"
+    },
+    "texto": "Declaraste {color} y vetaste los {familia}: tu color se queda, pero bajado de intensidad. Si querías el {color} señal, quita el veto."
+  },
+
+  "topicos_prohibidos": {
+    "_nota": "Listas normalizadas (minúsculas, sin tildes) que consume app/ia/validacion.py. Viven aquí para no tenerlas dispersas por el código y para poder ampliarlas sin desplegar Python.",
+    "enemigos": [
+      "la mediocridad",
+      "lo generico",
+      "el status quo",
+      "la superficialidad",
+      "el ruido",
+      "la falta de autenticidad",
+      "la zona de confort"
+    ],
+    "consultoria": [
+      "se autentico",
+      "cuenta tu historia",
+      "aporta valor",
+      "aportar valor",
+      "conecta con tu audiencia",
+      "zona de confort",
+      "storytelling",
+      "marca personal",
+      "posicionamiento estrategico",
+      "propuesta de valor",
+      "soluciones a medida",
+      "tu socio estrategico"
+    ],
+    "marcadores_oposicion": [
+      "contra",
+      "frente a",
+      "en contra de",
+      "basta de",
+      "al reves de",
+      "harto",
+      "rechaza",
+      "no "
+    ]
+  }
+}

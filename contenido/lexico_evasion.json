@@ -1,0 +1,207 @@
+{
+  "_nota": "Lo lee scoring.calidad_textos y form.js (vía /api/contenido). Todas las comparaciones se hacen sobre el texto NORMALIZADO.",
+  "version": 1,
+  "normalizacion": "minusculas + unicodedata.normalize('NFD') quitando categoria Mn + todo signo de puntuacion a espacio + espacios colapsados + strip",
+  "frases_vacias": [
+    "no se",
+    "no lo se",
+    "ni idea",
+    "depende",
+    "de todo un poco",
+    "un poco de todo",
+    "todo el mundo",
+    "a todos",
+    "a todo el mundo",
+    "cualquiera",
+    "cualquier persona",
+    "a cualquiera",
+    "todavia no lo tengo claro",
+    "aun no lo se",
+    "lo estoy pensando",
+    "buena pregunta",
+    "supongo",
+    "en general",
+    "nada en concreto",
+    "no me lo he planteado",
+    "ns nc",
+    "na",
+    "x",
+    "asdf",
+    "aaa",
+    "prueba",
+    "test",
+    "lo mismo que todos"
+  ],
+  "muletillas_de_relleno": [
+    "pasion por lo que hago",
+    "calidad y confianza",
+    "soluciones a medida",
+    "tu socio estrategico",
+    "aporto valor",
+    "aportar valor",
+    "valor anadido",
+    "innovacion",
+    "cercania",
+    "anos de experiencia",
+    "orientado a resultados",
+    "profesionalidad",
+    "compromiso",
+    "trato personalizado",
+    "excelencia",
+    "sinergias",
+    "storytelling",
+    "marca personal",
+    "propuesta de valor",
+    "salir de la zona de confort",
+    "se autentico",
+    "cuenta tu historia",
+    "conecta con tu audiencia",
+    "reinventarse",
+    "mejora continua",
+    "ayudo a empresas a crecer"
+  ],
+  "enemigos_topico": [
+    "la mediocridad",
+    "lo generico",
+    "el status quo",
+    "la superficialidad",
+    "el ruido",
+    "la falta de autenticidad",
+    "la desinformacion",
+    "el postureo",
+    "la procrastinacion",
+    "las prisas",
+    "el cortoplacismo",
+    "el sindrome del impostor",
+    "las reuniones que podrian ser un email",
+    "la cultura del ajetreo",
+    "estar siempre ocupado",
+    "los vendedores de humo"
+  ],
+  "similitud_placeholder_max": 0.6,
+  "minimos": {
+    "COM-CX-1": {
+      "min_chars": 40,
+      "min_palabras": 6
+    },
+    "COM-CX-2": {
+      "min_chars": 140,
+      "min_palabras": 20,
+      "min_lineas_utiles": 3
+    },
+    "COM-CX-6": {
+      "min_chars": 12,
+      "min_nombres": 2
+    },
+    "COM-PA-1": {
+      "min_chars": 120,
+      "min_palabras": 18
+    },
+    "COM-PA-2": {
+      "min_chars": 60,
+      "plantilla": [
+        "ayudo a",
+        "a conseguir",
+        "incluso si"
+      ]
+    },
+    "COM-PA-3": {
+      "min_chars": 80,
+      "min_palabras": 12,
+      "exige_nombre_propio": true
+    },
+    "COM-PA-3b": {
+      "min_chars": 25,
+      "exige_comillas": true
+    },
+    "COM-PA-4": {
+      "min_chars": 100,
+      "min_digitos": 1
+    },
+    "COM-NA-1b": {
+      "min_chars": 120,
+      "min_digitos": 1
+    },
+    "COM-NA-4": {
+      "min_chars": 60,
+      "min_frases": 2
+    },
+    "COM-PO-1": {
+      "min_chars": 90,
+      "min_palabras": 14
+    },
+    "COM-PO-2": {
+      "min_chars": 25
+    },
+    "COM-PO-3": {
+      "min_chars": 40
+    },
+    "COM-PO-4": {
+      "min_chars": 60,
+      "atajos_validos": [
+        "me costo dinero",
+        "me costo clientes",
+        "me costo gente",
+        "todavia no me ha costado nada"
+      ]
+    },
+    "COM-PO-5": {
+      "min_chars": 60
+    },
+    "COM-PO-6": {
+      "min_chars": 30
+    },
+    "VIS-AU-2": {
+      "min_chars": 4,
+      "max_palabras": 12,
+      "prohibe_muletillas": true
+    },
+    "VIS-DU-1.no_copio": {
+      "min_chars": 20
+    },
+    "VIS-DU-2.no_copio": {
+      "min_chars": 20
+    },
+    "VIS-DU-3.no_copio": {
+      "min_chars": 20
+    },
+    "ACC-RI-2": {
+      "min_chars": 30,
+      "exige_patron": "(?i)\\bcada\\b"
+    },
+    "ACC-RI-3": {
+      "min_chars": 15
+    },
+    "ACC-CA-3": {
+      "min_chars": 60
+    }
+  },
+  "obligatorias_para_el_muro": [
+    "COM-CX-1",
+    "COM-CX-2",
+    "COM-CX-6",
+    "COM-PA-1",
+    "COM-PA-2",
+    "COM-PA-3",
+    "COM-PA-3b",
+    "COM-PA-4",
+    "COM-NA-1b",
+    "COM-NA-4",
+    "COM-PO-1",
+    "COM-PO-2",
+    "COM-PO-3",
+    "COM-PO-4",
+    "COM-PO-5",
+    "COM-PO-6",
+    "VIS-AU-2",
+    "ACC-RI-2",
+    "ACC-RI-3"
+  ],
+  "nunca_al_muro": [
+    "COM-PO-1",
+    "COM-PO-3",
+    "COM-PO-4",
+    "VIS-LM-5",
+    "ACC-CA-3"
+  ]
+}

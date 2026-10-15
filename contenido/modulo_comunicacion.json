@@ -1,0 +1,802 @@
+{
+  "_nota": "Regla de contenido: toda ayuda de un ítem que alimente indice_audacia, indice_consistencia o afinidad_por_modulo tiene que nombrar el precio del sí, y ninguna puede decir cuál es la respuesta correcta.",
+  "id": "comunicacion",
+  "nombre": "Comunicación",
+  "subtitulo": "Cómo suena tu marca",
+  "descripcion": "Aquí decides cómo hablas: con qué palabras, a quién, qué le prometes, qué te da rabia de tu profesión y en qué sitios vas a publicar. No se trata de inventarte un personaje. Se trata de elegir a propósito qué parte de tu forma de hablar quieres que se note más. Al terminar tendrás: cómo suenas (4 respuestas), qué prometes en una frase, contra qué estás, las pruebas de que sabes de esto y una lista corta de sitios donde publicar.",
+  "bloques": [
+    {
+      "id": "categoria",
+      "nombre": "El fondo contra el que destacas",
+      "descripcion": "Antes de decidir cómo destacas hay que saber sobre qué fondo. Estas seis preguntas son las más aburridas del cuestionario y las que más sirven: sin ellas te propondríamos justo lo que ya hace tu competencia. Cada cosa que apuntes aquí es una casilla que tú puedes dejar vacía a propósito.",
+      "preguntas": [
+        {
+          "id": "COM-CX-1",
+          "tipo": "texto",
+          "texto": "¿A qué te dedicas exactamente? Dilo como se lo dirías a un vecino en el ascensor.",
+          "ayuda": "Sin adjetivos y sin la palabra «estratégico». Si tardas más de una frase, es que estás vendiendo en vez de contestando.",
+          "placeholder": "Ej.: Arreglo instalaciones eléctricas antiguas en pisos del centro.",
+          "max_chars": 120,
+          "min_chars": 40,
+          "opcional": false
+        },
+        {
+          "id": "COM-CX-2",
+          "tipo": "texto_largo",
+          "texto": "¿Qué hacen TODOS en tu sector? Nombra tres cosas que se repiten en la web, el discurso o la imagen de casi toda tu competencia.",
+          "ayuda": "Esta es la pregunta que hace posible todo lo demás. El color que usan todos, la foto de brazos cruzados, la palabra que sale en todas las webs, la promesa de siempre. Una por línea, las tres. Si solo se te ocurre una, mira cinco webs de tu competencia antes de seguir.",
+          "placeholder": "Ej.:\nTodos usamos azul y gris.\nTodos ponemos «soluciones a medida».\nTodos salimos con el portátil y la camisa remangada.",
+          "max_chars": 400,
+          "min_chars": 140,
+          "min_lineas_utiles": 3,
+          "opcional": false
+        },
+        {
+          "id": "COM-CX-3",
+          "tipo": "multiple",
+          "texto": "¿Qué colores usa TODO EL MUNDO en tu sector?",
+          "ayuda": "Mira cinco webs de tu competencia y cuenta. No lo que te gusta: lo que ya está ocupado. Si tu color favorito sale aquí, tienes un problema y conviene saberlo antes de imprimir nada.",
+          "min": 1,
+          "max": 3,
+          "opciones": [
+            {
+              "valor": "rojo",
+              "etiqueta": "Rojo",
+              "descripcion": "Urgencia, comida rápida, deporte, ofertas."
+            },
+            {
+              "valor": "azul",
+              "etiqueta": "Azul",
+              "descripcion": "El color por defecto de casi cualquier sector serio: banca, salud, tecnología, consultoría, ingeniería."
+            },
+            {
+              "valor": "verde",
+              "etiqueta": "Verde",
+              "descripcion": "Salud, medio ambiente, alimentación, finanzas personales."
+            },
+            {
+              "valor": "amarillo",
+              "etiqueta": "Amarillo o mostaza",
+              "descripcion": "Casi nadie lo usa en entornos profesionales. Si sale aquí, tu sector es poco convencional."
+            },
+            {
+              "valor": "naranja",
+              "etiqueta": "Naranja o terracota",
+              "descripcion": "Formación, hostelería, servicios de barrio."
+            },
+            {
+              "valor": "morado",
+              "etiqueta": "Morado o violeta",
+              "descripcion": "Poco frecuente: belleza, esoterismo, alguna marca de tecnología."
+            },
+            {
+              "valor": "rosa",
+              "etiqueta": "Rosa o fucsia",
+              "descripcion": "Belleza, moda, salud, ocio nocturno."
+            },
+            {
+              "valor": "negro_blanco",
+              "etiqueta": "Solo blanco y negro",
+              "descripcion": "Arquitectura, moda, diseño, fotografía, lujo. Ahí el «no color» es la norma, no la excepción."
+            }
+          ],
+          "opcional": false
+        },
+        {
+          "id": "COM-CX-4",
+          "tipo": "unica",
+          "texto": "¿Qué publica todo el mundo en tu sector?",
+          "ayuda": "El formato que se da por hecho. Si eliges el mismo que vas a usar tú, no estás compitiendo: estás haciendo cola.",
+          "opciones": [
+            {
+              "valor": "post_semanal",
+              "etiqueta": "Publicaciones sueltas en redes"
+            },
+            {
+              "valor": "newsletter",
+              "etiqueta": "Boletines por correo"
+            },
+            {
+              "valor": "video_semanal",
+              "etiqueta": "Vídeos"
+            },
+            {
+              "valor": "podcast_ancla",
+              "etiqueta": "Podcasts"
+            },
+            {
+              "valor": "directo_ancla",
+              "etiqueta": "Directos y seminarios en línea"
+            },
+            {
+              "valor": "informe",
+              "etiqueta": "Informes y estudios"
+            },
+            {
+              "valor": "nada",
+              "etiqueta": "Nada: en mi sector no se publica",
+              "descripcion": "La mejor noticia de todo el cuestionario: la casilla está vacía entera."
+            }
+          ],
+          "opcional": false
+        },
+        {
+          "id": "COM-CX-5",
+          "tipo": "unica",
+          "texto": "¿Cómo habla todo el mundo en tu sector?",
+          "ayuda": "El tono de fondo, el que oyes en cualquier feria y lees en cualquier web del gremio. Lo apuntamos para poder medir después si tú suenas distinto o suenas igual.",
+          "opciones": [
+            {
+              "valor": "formal_tecnico",
+              "etiqueta": "Formal y técnico",
+              "descripcion": "Usted, datos, siglas, cero bromas."
+            },
+            {
+              "valor": "motivacional",
+              "etiqueta": "Motivacional",
+              "descripcion": "Frases de superación, entusiasmo, mucho «nosotros»."
+            },
+            {
+              "valor": "colega_cercano",
+              "etiqueta": "De colega",
+              "descripcion": "Tuteo, emojis, «te cuento», confianza inmediata."
+            },
+            {
+              "valor": "activista_critico",
+              "etiqueta": "Crítico o de denuncia",
+              "descripcion": "Se ataca al gremio, a la administración o a la competencia."
+            },
+            {
+              "valor": "humor",
+              "etiqueta": "Con humor",
+              "descripcion": "Memes, ironía, autoparodia del oficio."
+            },
+            {
+              "valor": "no_hay_patron",
+              "etiqueta": "No hay un patrón claro",
+              "descripcion": "Válido, pero piénsalo dos veces: casi siempre hay uno y no se ve desde dentro."
+            }
+          ],
+          "opcional": false
+        },
+        {
+          "id": "COM-CX-6",
+          "tipo": "texto",
+          "texto": "Nombra a los dos competidores con los que más te confunden.",
+          "ayuda": "Nombres reales, aunque sea el despacho de al lado. Si te confunden con ellos, hoy tu marca no existe: existe la categoría, y tú estás dentro. Estos dos nombres son la vara de medir de todo lo que salga en tu informe. Sepáralos con una coma.",
+          "placeholder": "Ej.: Instalaciones Ruiz, el taller de Paco Mena",
+          "max_chars": 100,
+          "min_chars": 12,
+          "min_nombres": 2,
+          "opcional": false
+        }
+      ]
+    },
+    {
+      "id": "tono_voz",
+      "nombre": "Cómo hablas",
+      "descripcion": "«Somos cercanos» no dice nada. Vamos a concretarlo con cuatro preguntas: si hablas de forma seria o relajada, si haces bromas o no, si respetas las costumbres de tu profesión o las cuestionas, y si te emocionas o vas al grano. Responde pensando en cómo puedes sonar todos los días, no en tu mejor día. Si te pones en el extremo de las cuatro, al final no suenas a nada.",
+      "preguntas": [
+        {
+          "id": "COM-TV-1",
+          "tipo": "bipolar",
+          "texto": "¿Hablas de forma seria y cuidada, o como le hablarías a un amigo?",
+          "ayuda": "Ninguna es mejor. Hablar cuidado da respeto y distancia. Hablar como a un amigo da confianza y hace que te respondan. Piensa en la gente a la que te diriges: no le hablas igual a un jefe que a una comunidad de gente joven. Si dudas, ponte en el medio y ya lo cambiarás.",
+          "polo_izq": "Cuidado",
+          "polo_der": "Como a un amigo",
+          "desc_izq": "Escribes frases completas y bien puestas, sin palabrotas ni expresiones de la calle. Suena a: «Le comparto los resultados del trimestre».",
+          "desc_der": "Escribes como hablas, con frases cortas y palabras del día a día. Suena a: «Mira, esto es lo que ha pasado este mes».",
+          "dimension": "formalidad",
+          "escala": 7
+        },
+        {
+          "id": "COM-TV-2",
+          "tipo": "bipolar",
+          "texto": "¿Haces bromas o eres de los que no bromea?",
+          "ayuda": "Las bromas hacen que te recuerden, pero te quitan peso cuando el tema es delicado (salud, dinero, temas legales). Ir en serio da seguridad, pero aburre si no cuentas nada nuevo. Elige qué precio prefieres pagar.",
+          "polo_izq": "Nunca bromeo",
+          "polo_der": "Bromeo mucho",
+          "desc_izq": "Vas al grano, sin chistes. Si hay gracia, está en decir las cosas muy claras. Suena a: «Tres errores que te cuestan clientes».",
+          "desc_der": "Usas chistes, memes y te ríes de ti mismo. Prefieres divertir a parecer importante. Suena a: «Llevo 3 años haciendo esto mal. Aprende de mi desastre».",
+          "dimension": "humor",
+          "escala": 7
+        },
+        {
+          "id": "COM-TV-3",
+          "tipo": "bipolar",
+          "texto": "¿Respetas cómo se hacen las cosas en tu profesión o las cuestionas?",
+          "ayuda": "Cuestionar no es ser maleducado: es decir en voz alta que algo de tu profesión está mal hecho, aunque todos lo den por bueno. Eso te trae fans y también gente que te odia. Respetar significa jugar con las reglas de siempre: menos líos, pero también menos ruido y menos gente que te note.",
+          "polo_izq": "Respeto las normas",
+          "polo_der": "Cuestiono las normas",
+          "desc_izq": "Cuidas las formas, no señalas a nadie y no discutes lo que la gente de tu profesión da por bueno.",
+          "desc_der": "Dices en voz alta lo que otros callan y no te importa molestar. Suena a: «Esto que todos hacéis no funciona, y os lo voy a demostrar».",
+          "dimension": "respeto",
+          "escala": 7
+        },
+        {
+          "id": "COM-TV-4",
+          "tipo": "bipolar",
+          "texto": "¿Vas al grano o te emocionas?",
+          "ayuda": "Emocionarse contagia, pero si te pasas suenas a vendedor de humo. Ir al grano suena honesto y tranquilo, pero puede sonar frío. Es la diferencia entre «¡Esto lo cambia TODO!» y «Esto mejora el proceso un 12%».",
+          "polo_izq": "Vas al grano",
+          "polo_der": "Te emocionas",
+          "desc_izq": "Datos, hechos y frases tranquilas. Casi no usas exclamaciones. Suena a: «Esto mejora el proceso un 12%».",
+          "desc_der": "Mucha energía, exclamaciones y palabras grandes. Suena a: «¡Esto lo cambia TODO! ¡No te lo pierdas!».",
+          "dimension": "entusiasmo",
+          "escala": 7
+        }
+      ]
+    },
+    {
+      "id": "promesa_audiencia",
+      "nombre": "A quién ayudas y qué le prometes",
+      "descripcion": "Tu marca no es lo que dices de ti: es lo que otra persona espera de ti. Aquí decides a quién ayudas, qué le prometes, qué te da rabia de tu profesión y por qué deberían creerte. Sé concreto. «Ayudo a empresas a crecer» no promete nada.",
+      "preguntas": [
+        {
+          "id": "COM-PA-1",
+          "tipo": "texto_largo",
+          "texto": "¿A quién ayudas? Descríbelo como si fuera UNA sola persona.",
+          "ayuda": "Si tu respuesta vale para todo el mundo, no vale para nadie. Piensa en alguien de verdad: en qué trabaja, en qué momento está y qué problema le quita el sueño de madrugada. Cuanto más concreto seas, más gente pensará «esto habla de mí». Siempre podrás ampliar más adelante.",
+          "placeholder": "Ej.: Mujeres que han montado una empresa de tecnología, que saben mucho de su producto pero se bloquean cuando tienen que explicarlo delante de gente.",
+          "max_chars": 600,
+          "opcional": false
+        },
+        {
+          "id": "COM-PA-2",
+          "tipo": "texto",
+          "texto": "Completa esta frase: «Ayudo a ___ a conseguir ___, incluso si ___».",
+          "ayuda": "Esta es tu promesa en una frase. Lo importante es el «incluso si»: ahí pones la pega que casi todos tienen. Es lo que hace que alguien piense «esto va por mí». Si no te cabe en una frase, es que aún no lo tienes claro.",
+          "placeholder": "Ayudo a fundadoras de empresas técnicas a contar su idea encima de un escenario, incluso si les da pánico hablar en público.",
+          "max_chars": 220,
+          "opcional": false
+        },
+        {
+          "id": "COM-PA-3",
+          "tipo": "texto_largo",
+          "texto": "¿Contra qué estás? Nómbralo: la práctica, y quién la hace.",
+          "ayuda": "Dos cosas, no una. Primero la práctica concreta que te parece dañina. Y después el nombre: una empresa, un tipo de profesional, un gurú, un método con marca registrada, un premio, un formato. Sin nombre no hay enemigo, y sin enemigo eres simpático e invisible. No es odio, es tomar partido a la vista de todos: si no te atreves a escribirlo aquí, tampoco lo vas a defender en público, y conviene saberlo hoy.",
+          "placeholder": "Ej.: Contra las agencias que cobran 8.000 € por un manual de marca de 90 páginas que el cliente no abre nunca. Contra los cursos de «marca personal en 7 días».",
+          "max_chars": 300,
+          "min_chars": 80,
+          "opcional": false
+        },
+        {
+          "id": "COM-PA-3b",
+          "tipo": "texto",
+          "texto": "Escribe entre comillas la frase exacta que oyes en tu profesión y te hace apretar los dientes.",
+          "ayuda": "Tal como la dice la gente, con sus palabras, no con las tuyas. Ciento veinte caracteres. Esa frase es tu enemigo en una línea y probablemente sea el titular de tu marca: nadie más de tu sector la ha elegido, porque a nadie más le duele lo mismo.",
+          "placeholder": "Ej.: «Es que esto lo hace mi sobrino con el Canva».",
+          "max_chars": 120,
+          "min_chars": 25,
+          "opcional": false
+        },
+        {
+          "id": "COM-PA-4",
+          "tipo": "texto_largo",
+          "texto": "¿Por qué deberían creerte? Escribe SOLO cosas que se puedan comprobar.",
+          "ayuda": "Nada de adjetivos («apasionado», «experto», «el mejor»). Escribe pruebas: cuántos años llevas, cuántos clientes o proyectos, resultados con números, cosas que has construido, sitios donde te han invitado, premios. Que confíen en ti se demuestra, no se dice. Si te cuesta rellenar esto, ya has descubierto algo: no tienes un problema de cómo lo cuentas, tienes un problema de pruebas.",
+          "placeholder": "Ej.: 11 años programando. Hice crecer un sistema de 5.000 a 400.000 usuarios. He dado 3 charlas en congresos. Mi programa gratuito lo usan 2.100 personas.",
+          "max_chars": 700,
+          "opcional": false
+        }
+      ]
+    },
+    {
+      "id": "postura",
+      "nombre": "Contra qué estás y qué te obsesiona",
+      "descripcion": "Este bloque es el que duele. Son seis preguntas de escribir, no de marcar, y son las que van a hacer que tu informe no se parezca al de nadie. Si contestas de forma prudente, saldrá un informe prudente: el programa no puede inventarse una postura que tú no le has dado.",
+      "preguntas": [
+        {
+          "id": "COM-PO-1",
+          "tipo": "texto_largo",
+          "texto": "Escribe una opinión sobre tu profesión con la que la mayoría de tus colegas NO estaría de acuerdo.",
+          "ayuda": "Tiene que cumplir dos cosas: que la defiendas de verdad y que te la puedan discutir. Si nadie te la puede discutir, no es una opinión, es un tópico. Si al escribirla te da un poco de miedo, vas bien.",
+          "placeholder": "Ej.: Los briefings de cliente no sirven para nada. El 90% de los rediseños de marca son un capricho del director de marketing nuevo.",
+          "max_chars": 300,
+          "min_chars": 90,
+          "opcional": false
+        },
+        {
+          "id": "COM-PO-2",
+          "tipo": "texto",
+          "texto": "¿De qué tema podrías hablar tres horas sin preparar nada?",
+          "ayuda": "Que sea concreto de verdad: no «marketing», sino «por qué los formularios de alta piden el segundo apellido». Ese tema es tu obsesión, y las obsesiones son lo único de este cuestionario que nadie te puede copiar.",
+          "placeholder": "Ej.: Por qué las cajas de registro de los años 70 siguen siendo mejores que las de ahora.",
+          "max_chars": 120,
+          "min_chars": 25,
+          "opcional": false
+        },
+        {
+          "id": "COM-PO-3",
+          "tipo": "texto",
+          "texto": "¿Qué elogio te molesta cuando te lo hacen?",
+          "ayuda": "Hay halagos que dejan mal cuerpo porque describen a alguien que no quieres ser: «qué barato me lo has dejado», «eres muy trabajador», «se te da bien todo». Ese elogio te dice con precisión dónde NO quieres que te coloquen, y eso vale más que diez adjetivos de los que sí quieres.",
+          "placeholder": "Ej.: «Qué apañado eres». Me coloca de manitas cuando lo que hago es un proyecto de ingeniería.",
+          "max_chars": 140,
+          "min_chars": 40,
+          "opcional": false
+        },
+        {
+          "id": "COM-PO-4",
+          "tipo": "texto_largo",
+          "texto": "¿Qué te ha costado ya, en dinero, en clientes o en gente, defender lo que piensas?",
+          "ayuda": "Con una cifra o un caso concreto si lo tienes. Si el detalle es tuyo y no quieres escribirlo, pulsa uno de los tres botones de abajo y seguimos: con saber en qué moneda pagaste ya tenemos bastante para el informe. Si nunca te ha costado nada, dilo: significa que tu postura todavía no ha salido a la calle, y eso también es un diagnóstico.",
+          "placeholder": "Ej.: Perdí un cliente de 18.000 € al negarme a firmar un informe que no me creía.",
+          "max_chars": 250,
+          "min_chars": 60,
+          "atajos": [
+            {
+              "valor": "Me costó dinero",
+              "etiqueta": "Me costó dinero"
+            },
+            {
+              "valor": "Me costó clientes",
+              "etiqueta": "Me costó clientes"
+            },
+            {
+              "valor": "Me costó gente",
+              "etiqueta": "Me costó gente"
+            },
+            {
+              "valor": "Todavía no me ha costado nada",
+              "etiqueta": "Todavía no me ha costado nada"
+            }
+          ],
+          "opcional": false
+        },
+        {
+          "id": "COM-PO-5",
+          "tipo": "texto_largo",
+          "texto": "¿Qué sabes hacer que casi nadie de tu profesión sabe hacer?",
+          "ayuda": "Algo que se demuestre, no un adjetivo. Una técnica, un idioma, un programa, una manía metodológica, un contacto, el oficio que tenías antes de este. Si tu respuesta es «tratar bien a la gente», no vale: eso lo pone todo el mundo en su web.",
+          "placeholder": "Ej.: Sé leer planos de instalaciones de los años 60 escritos a mano, porque me enseñó mi suegro.",
+          "max_chars": 300,
+          "min_chars": 60,
+          "opcional": false
+        },
+        {
+          "id": "COM-PO-6",
+          "tipo": "texto",
+          "texto": "¿Qué afición tuya no tiene nada que ver con tu trabajo y aun así sale en todas tus conversaciones?",
+          "ayuda": "La afición rara es material de marca de primera, porque es lo único que seguro que no tiene nadie más de tu sector: los trenes en miniatura, las setas, el kickboxing, los pájaros. De ahí salen las metáforas que la gente recuerda.",
+          "placeholder": "Ej.: Buscar setas. Llevo veinte años y sé distinguir cuarenta especies.",
+          "max_chars": 140,
+          "min_chars": 30,
+          "opcional": false
+        }
+      ]
+    },
+    {
+      "id": "narrativa",
+      "nombre": "Tu historia",
+      "descripcion": "La gente no recuerda argumentos: recuerda historias. Aquí eliges cómo cuentas la tuya, cuánto enseñas de tu vida y, sobre todo, qué NO quieres que digan de ti. Decidir lo que rechazas es tan útil como decidir lo que buscas.",
+      "preguntas": [
+        {
+          "id": "COM-NA-1",
+          "tipo": "unica",
+          "texto": "¿Cómo empieza tu historia?",
+          "ayuda": "Elige la que más se parezca a lo que te ha pasado DE VERDAD. Si te la inventas, se nota y se te cae. Esta respuesta te dirá cómo empezar tus charlas, tus publicaciones y tu web.",
+          "opciones": [
+            {
+              "valor": "renacimiento",
+              "etiqueta": "Me caí y me levanté",
+              "descripcion": "Te salió mal, aprendiste y volviste. Es la historia con la que más gente conecta y también la más repetida: para que funcione necesita detalles reales y una lección que no sea una frase de calendario.",
+              "arquetipos": [
+                "HER",
+                "COM"
+              ]
+            },
+            {
+              "valor": "descubrimiento",
+              "etiqueta": "Encontré algo que nadie estaba mirando",
+              "descripcion": "Descubriste algo o te obsesionaste con un tema. Funciona muy bien si tienes datos o experiencia propia que lo respalden.",
+              "arquetipos": [
+                "SAB",
+                "EXP"
+              ]
+            },
+            {
+              "valor": "rebeldia",
+              "etiqueta": "Me harté de cómo se hacían las cosas",
+              "descripcion": "Rompiste con la forma de trabajar de tu profesión. La gente se une a ti muy rápido, pero te obliga a ser coherente: no puedes criticar el sistema y luego pedirle un premio.",
+              "arquetipos": [
+                "FOR"
+              ]
+            },
+            {
+              "valor": "construccion",
+              "etiqueta": "Construí algo desde cero, poco a poco",
+              "descripcion": "Historia de trabajo y constancia. No es espectacular, pero se cree fácil. Ideal si lo que te hace fuerte es hacer las cosas bien.",
+              "arquetipos": [
+                "CRE",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "servicio",
+              "etiqueta": "Alguien me necesitaba y me quedé a ayudarle",
+              "descripcion": "Historia de vocación y de cuidar a la gente. Genera mucha confianza y clientes que se quedan años. Ojo con parecer alguien sin ambición.",
+              "arquetipos": [
+                "CUI"
+              ]
+            },
+            {
+              "valor": "curiosidad",
+              "etiqueta": "Nunca he dejado de probar cosas nuevas",
+              "descripcion": "Historia de curiosidad y cambios. Muy libre, pero puedes parecer alguien que va dando tumbos: necesitarás explicar qué une todo lo que haces.",
+              "arquetipos": [
+                "EXP",
+                "INO"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "COM-NA-1b",
+          "tipo": "texto_largo",
+          "texto": "Cuenta el momento exacto. Un día, un sitio, y algo que se pueda medir.",
+          "ayuda": "Trescientos caracteres, ni uno más: si no te caben es porque estás explicando el contexto en vez de contando el momento. Tiene que llevar al menos un dato duro: una fecha, una cantidad, una hora, el nombre de un sitio. Sin el dato es una moraleja; con el dato es una historia, y las historias se repiten solas.",
+          "placeholder": "Ej.: Marzo de 2019, en un polígono de Getafe, presupuestando por decimoquinta vez una obra que ya sabía que no me iban a dar. Me fui a comer y no volví.",
+          "max_chars": 300,
+          "min_chars": 120,
+          "opcional": false
+        },
+        {
+          "id": "COM-NA-3",
+          "tipo": "ranking",
+          "texto": "Ordena los tres temas por los que quieres que te conozcan. El primero es el que vas a repetir hasta hartarte.",
+          "ayuda": "Tres, en orden, y los otros siete se quedan fuera a la vista para que veas lo que estás soltando. Repartir la señal entre muchos temas es la forma más común de no ser recordado por ninguno.",
+          "exactamente": 3,
+          "rotulo_descartes": "Renuncias a:",
+          "opciones": [
+            {
+              "valor": "tecnica",
+              "etiqueta": "Saber mucho de lo mío",
+              "descripcion": "Contenido difícil y profundo. Poca gente te sigue, pero es justo la que te interesa.",
+              "arquetipos": [
+                "SAB"
+              ]
+            },
+            {
+              "valor": "liderazgo",
+              "etiqueta": "Dirigir equipos y personas",
+              "descripcion": "Hay muchísima gente hablando de esto: necesitarás historias tuyas de verdad para destacar.",
+              "arquetipos": [
+                "GOB",
+                "HER"
+              ]
+            },
+            {
+              "valor": "innovacion",
+              "etiqueta": "Novedades y hacia dónde va mi profesión",
+              "descripcion": "Te ve mucha gente, pero es fácil equivocarte delante de todos.",
+              "arquetipos": [
+                "MAG",
+                "EXP"
+              ]
+            },
+            {
+              "valor": "oficio",
+              "etiqueta": "El oficio: cómo se hace bien mi trabajo",
+              "descripcion": "Enseñas cómo trabajas, paso a paso. Se cree fácil y es difícil de discutir.",
+              "arquetipos": [
+                "CRE"
+              ]
+            },
+            {
+              "valor": "critica",
+              "etiqueta": "Criticar lo que se hace mal en mi profesión",
+              "descripcion": "Llama mucho la atención y trae broncas. Te hará enemigos, pero enemigos que te vienen bien.",
+              "arquetipos": [
+                "FOR"
+              ]
+            },
+            {
+              "valor": "personas",
+              "etiqueta": "Las personas: carrera, salud mental, bienestar",
+              "descripcion": "Llega a mucha gente y emociona. Te obliga a vivir como dices que hay que vivir.",
+              "arquetipos": [
+                "CUI"
+              ]
+            },
+            {
+              "valor": "datos",
+              "etiqueta": "Datos y estudios hechos por mí",
+              "descripcion": "Lo más caro de producir y lo más difícil de copiar.",
+              "arquetipos": [
+                "SAB",
+                "MAG"
+              ]
+            },
+            {
+              "valor": "negocio",
+              "etiqueta": "Negocio, ventas y dinero",
+              "descripcion": "Mucha gente lo busca, pero está lleno de vendedores de humo: si hablas sin exagerar, destacarás.",
+              "arquetipos": [
+                "GOB",
+                "HER"
+              ]
+            },
+            {
+              "valor": "cultura",
+              "etiqueta": "Cultura, estética y creatividad",
+              "descripcion": "Aquí destacas por tu buen gusto más que por tus argumentos.",
+              "arquetipos": [
+                "CRE",
+                "AMA"
+              ]
+            },
+            {
+              "valor": "humor",
+              "etiqueta": "Humor: criticar riéndose de las cosas",
+              "descripcion": "Llega a muchísima gente, pero es difícil ganar dinero con ello. Y te encasilla rápido.",
+              "arquetipos": [
+                "BUF"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "COM-NA-4",
+          "tipo": "texto_largo",
+          "texto": "¿Qué NO quieres que digan nunca de ti?",
+          "ayuda": "Este es tu límite. Escribe las 2 o 3 frases que te dolerían de verdad si alguien las dijera de ti («es un vendedor de humo», «es un creído», «no dice nada nuevo»). Antes de publicar cualquier cosa, comprueba que no te acerca a esas frases. Es lo más útil de todo este cuestionario.",
+          "placeholder": "Ej.: Que soy un vendedor de humo. Que copio a otros. Que solo hablo, pero nunca he hecho nada de lo que cuento.",
+          "max_chars": 400,
+          "opcional": false
+        }
+      ]
+    },
+    {
+      "id": "canales",
+      "nombre": "Dónde publicas",
+      "descripcion": "El sitio bueno no es el que te gustaría, es aquel en el que puedes publicar dos años seguidos sin acabar odiándolo. Casi todas las marcas personales mueren por elegir demasiados sitios, no por elegir el sitio equivocado.",
+      "preguntas": [
+        {
+          "id": "COM-CA-1",
+          "tipo": "multiple",
+          "texto": "¿Dónde vas a publicar?",
+          "ayuda": "Elige solo donde puedas aguantar el ritmo DE VERDAD. Cuatro como mucho, y ya son muchos. Cada sitio tiene su forma de hablar y su formato: copiar y pegar lo mismo en todos es la forma más rápida de que no te funcione ninguno.",
+          "min": 1,
+          "max": 4,
+          "opciones": [
+            {
+              "valor": "linkedin",
+              "etiqueta": "LinkedIn",
+              "descripcion": "Para que te tomen en serio en tu trabajo y para vender a otras empresas. Sobre todo texto. Premia publicar mucho y opinar sin gritar. Cuesta poco esfuerzo, pero no te ve tantísima gente.",
+              "arquetipos": [
+                "SAB",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "instagram",
+              "etiqueta": "Instagram",
+              "descripcion": "Todo entra por los ojos. Tienes que cuidar las imágenes y dar la cara. Genial si lo tuyo se ve; malo si vendes algo complicado a empresas.",
+              "arquetipos": [
+                "AMA",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "tiktok",
+              "etiqueta": "TikTok",
+              "descripcion": "Te puede ver muchísima gente. Vídeos cortos y rápidos. Da igual que estén poco cuidados, pero tienen que enganchar en los primeros segundos. Cansa mucho.",
+              "arquetipos": [
+                "BUF",
+                "EXP"
+              ]
+            },
+            {
+              "valor": "youtube",
+              "etiqueta": "YouTube",
+              "descripcion": "Lo que subes dura años: un vídeo puede traerte clientes mucho tiempo después. También es lo que más horas te come por cada pieza.",
+              "arquetipos": [
+                "SAB",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "newsletter",
+              "etiqueta": "Correo a tus suscriptores (newsletter)",
+              "descripcion": "Lo único que es tuyo de verdad: nadie puede cambiarte las reglas ni esconderte. Crece despacio, pero la relación es muy fuerte.",
+              "arquetipos": [
+                "SAB",
+                "CUI"
+              ]
+            },
+            {
+              "valor": "podcast",
+              "etiqueta": "Podcast",
+              "descripcion": "Te escuchan al oído mientras hacen otras cosas. Poca gente, pero muy enganchada. Además, invitar a alguien es una gran excusa para conocerlo.",
+              "arquetipos": [
+                "SAB",
+                "COM"
+              ]
+            },
+            {
+              "valor": "blog",
+              "etiqueta": "Blog o web propia",
+              "descripcion": "Tu casa en internet. Sirve para que te encuentren en Google y para que otros te citen. Pero si no lo mueves, no lo lee nadie.",
+              "arquetipos": [
+                "SAB",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "prensa",
+              "etiqueta": "Prensa y medios",
+              "descripcion": "Que te crean porque lo dice un periódico. No lo controlas tú: necesitas tener algo que sea noticia o conocer a alguien.",
+              "arquetipos": [
+                "GOB",
+                "HER"
+              ]
+            },
+            {
+              "valor": "escenario",
+              "etiqueta": "Dar charlas en directo",
+              "descripcion": "Lo que más convence a cada persona: quien te ve en directo te recuerda. Pero hay que perder el miedo al escenario y prepararlo mucho.",
+              "arquetipos": [
+                "HER",
+                "MAG"
+              ]
+            },
+            {
+              "valor": "x",
+              "etiqueta": "X (antes Twitter)",
+              "descripcion": "Rapidez, ingenio y charla con gente de tu profesión. Genial para meterte en los debates del momento; muy tóxico si te enganchas a las broncas.",
+              "arquetipos": [
+                "FOR",
+                "BUF"
+              ]
+            },
+            {
+              "valor": "twitch",
+              "etiqueta": "Directos en Twitch",
+              "descripcion": "Gente que te acompaña en tiempo real y no te deja nunca. Pero pide muchísimas horas y soltura, y no puedes pedirle a nadie que lo haga por ti.",
+              "arquetipos": [
+                "BUF",
+                "COM"
+              ]
+            },
+            {
+              "valor": "presencial",
+              "etiqueta": "Ver a gente en persona",
+              "descripcion": "Lento y no llega a muchos, pero es lo que más oportunidades reales trae. Aquí no hay algoritmo: eres tú y ya está.",
+              "arquetipos": [
+                "COM",
+                "GOB"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "COM-CA-2",
+          "tipo": "unica",
+          "texto": "De los sitios que has elegido, ¿cuál será tu casa principal?",
+          "ayuda": "Tu sitio principal es donde publicas primero, donde pones lo mejor y adonde mandas a la gente desde los demás. Sin un sitio principal, te dispersas. Los otros existen para traer gente hasta este. Si eliges mal, trabajas el doble.",
+          "opciones_de": "COM-CA-1"
+        },
+        {
+          "id": "COM-CA-3",
+          "tipo": "unica",
+          "texto": "¿Cada cuánto puedes publicar sin fallar durante un año entero?",
+          "ayuda": "Sé sincero, aunque duela. Es mejor publicar una vez por semana durante dos años que cinco veces por semana durante un mes y luego desaparecer. Aparecer siempre importa más que aparecer mucho.",
+          "opciones": [
+            {
+              "valor": "diario",
+              "etiqueta": "Casi todos los días",
+              "descripcion": "Solo si lo que publicas es corto o si alguien te ayuda. Es muy fácil abandonar al tercer mes.",
+              "arquetipos": [
+                "HER"
+              ]
+            },
+            {
+              "valor": "semanal_3",
+              "etiqueta": "2 o 3 veces por semana",
+              "descripcion": "Ambicioso, pero se puede si preparas varias cosas de golpe en un mismo día.",
+              "arquetipos": [
+                "CRE"
+              ]
+            },
+            {
+              "valor": "semanal_1",
+              "etiqueta": "Una vez por semana",
+              "descripcion": "El punto justo para casi todo el mundo que además tiene un trabajo a jornada completa.",
+              "arquetipos": [
+                "SAB",
+                "COM"
+              ]
+            },
+            {
+              "valor": "quincenal",
+              "etiqueta": "Cada dos semanas o menos",
+              "descripcion": "Solo vale si cada cosa que publicas es muy potente (un estudio, un vídeo largo, una investigación).",
+              "arquetipos": [
+                "SAB"
+              ]
+            },
+            {
+              "valor": "campanas",
+              "etiqueta": "A rachas, cuando lanzo algo",
+              "descripcion": "Publicas muchísimo unas semanas y luego paras. Sirve para vender algo puntual, no para que te conozcan poco a poco.",
+              "arquetipos": [
+                "MAG"
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "limites",
+      "nombre": "Lo que NO harías",
+      "descripcion": "Lo que no estás dispuesto a hacer define tu marca más que tus sueños. Aquí marcas tus límites. Contesta la verdad: esto no lo va a leer nadie, y un límite fingido se rompe solo en cuanto aparezca la primera tentación. Escala: 1 = de ninguna manera, 5 = sin ningún problema.",
+      "preguntas": [
+        {
+          "id": "COM-LI-1",
+          "tipo": "likert5",
+          "texto": "Estoy dispuesto a que me critiquen en público y a meterme en polémicas.",
+          "ayuda": "La polémica hace que te vea mucha más gente, pero desgasta. Si tu respuesta es baja, tendrás que crecer aportando cosas útiles en lugar de montando debates. Es igual de válido, solo que más lento.",
+          "dimension": "tolerancia_conflicto",
+          "arquetipos": [
+            "FOR"
+          ]
+        },
+        {
+          "id": "COM-LI-2",
+          "tipo": "likert5",
+          "texto": "Hablaría de mi vida privada: familia, salud, dinero o pareja.",
+          "ayuda": "Es una puerta que solo se abre en un sentido: cuando la gente conozca a tu familia, querrá seguir viéndola. Piensa también en las personas que saldrían ahí sin haberlo pedido.",
+          "dimension": "exposicion_personal",
+          "arquetipos": [
+            "COM",
+            "AMA"
+          ]
+        },
+        {
+          "id": "COM-LI-3",
+          "tipo": "likert5",
+          "texto": "Contaría mis fracasos con nombres y cifras reales.",
+          "ayuda": "Contar lo que te salió mal, con detalles, hace que te crean muchísimo más. Pero también le da munición a quien quiera usarla contra ti. La versión suave («fracasé, aprendí, ahora todo va bien») ya no se la cree nadie.",
+          "dimension": "vulnerabilidad",
+          "arquetipos": [
+            "COM",
+            "HER"
+          ]
+        },
+        {
+          "id": "COM-LI-4",
+          "tipo": "likert5",
+          "texto": "Criticaría en público a empresas o personas concretas, con nombre y apellidos.",
+          "ayuda": "Señalar a alguien por su nombre es la forma más rápida de que se te una gente y también de cerrarte puertas para trabajar. Mucha gente lo hace a los 25 y se arrepiente a los 40. Otros construyen su carrera entera con eso.",
+          "dimension": "confrontacion_directa",
+          "arquetipos": [
+            "FOR"
+          ]
+        },
+        {
+          "id": "COM-LI-5",
+          "tipo": "likert5",
+          "texto": "Usaría el humor y me reiría de mí mismo aunque me tomen menos en serio.",
+          "ayuda": "El humor hace que te recuerden y que pareces humano, pero puede costarte clientes en sitios muy serios. Si tu cliente es un banco o un hospital, calcula el precio. Si tu cliente es una agencia creativa, no tener humor también te penaliza.",
+          "dimension": "humor",
+          "arquetipos": [
+            "BUF"
+          ]
+        },
+        {
+          "id": "COM-LI-6",
+          "tipo": "likert5",
+          "texto": "Llevas dos años diciendo el mismo mensaje y ya te da vergüenza repetirlo. Este mes lo dices otras cuatro veces, igual. ¿Lo haces?",
+          "ayuda": "Cuando tú ya estés harto de repetirte, la gente estará oyéndote por primera vez. El precio es real: aburrimiento propio y la sensación de no aportar nada nuevo. Si tu respuesta es baja, tu plan tendrá que renovar el envoltorio cada trimestre sin cambiar el mensaje, y eso cuesta más trabajo.",
+          "dimension": "constancia",
+          "arquetipos": [
+            "GOB",
+            "CRE"
+          ]
+        }
+      ]
+    }
+  ]
+}

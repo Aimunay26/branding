@@ -1,0 +1,43 @@
+{
+  "_nota": "Esta lista sirve para AVISAR, no para prohibir. Un apellido común no descalifica un nombre: solo obliga a que el resto del nombre haga más trabajo.",
+
+  "apellidos_comunes": [
+    "garcia", "rodriguez", "gonzalez", "fernandez", "lopez",
+    "martinez", "sanchez", "perez", "gomez", "martin",
+    "jimenez", "ruiz", "hernandez", "diaz", "moreno",
+    "muñoz", "alvarez", "romero", "alonso", "gutierrez",
+    "navarro", "torres", "dominguez", "vazquez", "ramos",
+    "gil", "ramirez", "serrano", "blanco", "molina",
+    "morales", "suarez", "ortega", "delgado", "castro",
+    "ortiz", "rubio", "marin", "sanz", "nuñez",
+    "iglesias", "medina", "garrido", "cortes", "castillo",
+    "santos", "lozano", "guerrero", "cano", "prieto"
+  ],
+
+  "territorios": {
+    "tecnica": "Oficio",
+    "oficio": "Oficio",
+    "critica": "Crítica",
+    "datos": "Datos",
+    "personas": "Personas",
+    "innovacion": "Frontera",
+    "liderazgo": "Mando",
+    "negocio": "Cuenta",
+    "cultura": "Cultura",
+    "humor": "Guasa"
+  },
+
+  "articulos_territorio": {
+    "_nota": "El género del sustantivo no se puede adivinar por la terminación sin equivocarse (la frontera / el mando). Se escribe. Lo usa una_sola_cosa_borrador para construir «El oficio de las gafas»; form.js solo necesita `territorios`.",
+    "tecnica": "el",
+    "oficio": "el",
+    "critica": "la",
+    "datos": "los",
+    "personas": "las",
+    "innovacion": "la",
+    "liderazgo": "el",
+    "negocio": "la",
+    "cultura": "la",
+    "humor": "la"
+  }
+}

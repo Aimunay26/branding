@@ -1,0 +1,876 @@
+{
+  "_nota": "Regla de contenido: toda ayuda de un ítem que alimente indice_audacia, indice_consistencia o afinidad_por_modulo tiene que nombrar el precio del sí, y ninguna puede decir cuál es la respuesta correcta.",
+  "id": "acciones",
+  "nombre": "Acciones",
+  "subtitulo": "Qué estás dispuesto a hacer",
+  "descripcion": "Este es el módulo de la verdad. Tu marca no se construye con colores bonitos: se construye con lo que haces, a la vista de todos, una y otra vez, durante años. Aquí decides qué vas a hacer de verdad, cuánto tiempo y cuánto dinero puedes poner, qué vas a publicar, hasta dónde estás dispuesto a llegar y qué quieres conseguir. Responde con total sinceridad: un plan que no vas a cumplir es peor que no tener plan, porque acabarás creyendo que has fracasado cuando lo único que pasó es que te pediste demasiado.",
+  "bloques": [
+    {
+      "id": "disposicion",
+      "nombre": "Hasta dónde estás dispuesto a llegar",
+      "descripcion": "Puntúa del 1 al 5: 1 = ni loco, 5 = lo hago sin problema. No hay respuestas correctas, solo respuestas sinceras. Si aquí no dices la verdad, te haremos un plan precioso que no vas a cumplir.",
+      "preguntas": [
+        {
+          "id": "ACC-DI-1",
+          "tipo": "likert5",
+          "texto": "¿Te parece bien que mucha gente sepa quién eres y qué haces?",
+          "ayuda": "Dejarte ver tiene premio y tiene precio. El premio: te llegan oportunidades. El precio: gente que no conoces opina sobre ti, te compara con otros y pierdes intimidad para siempre. Si esto te incomoda, no pasa nada: también se puede construir una marca sin dar la cara (escribiendo, colaborando, dejando que te recomienden). Va más despacio, pero funciona.",
+          "dimension": "exposicion",
+          "arquetipos": [
+            "HER",
+            "MAG"
+          ]
+        },
+        {
+          "id": "ACC-DI-2",
+          "tipo": "likert5",
+          "texto": "Tienes una charla ante 300 personas dentro de un mes. Prepararla se lleva dos fines de semana enteros y hay que ensayarla en voz alta delante de alguien que te corrija. ¿La das?",
+          "ayuda": "No preguntamos si te gustaría dar charlas: eso lo firma todo el mundo. Preguntamos si pagas el precio. Si tu respuesta es baja, no pasa nada: hay marcas muy grandes que nunca se han subido a un escenario, y tu plan se hará sin escenarios.",
+          "dimension": "escenario",
+          "arquetipos": [
+            "HER",
+            "MAG",
+            "GOB"
+          ]
+        },
+        {
+          "id": "ACC-DI-3",
+          "tipo": "likert5",
+          "texto": "¿Dirías en público lo que piensas sobre los temas que enfadan a la gente de tu profesión?",
+          "ayuda": "Mojarte es lo que hace que alguien pase de mirarte a seguirte. También es lo que te cierra puertas: habrá trabajos que no te lleguen nunca porque alguien leyó algo que dijiste. Las dos cosas son verdad a la vez. Tú eliges qué precio prefieres pagar.",
+          "dimension": "opinion_publica",
+          "arquetipos": [
+            "FOR",
+            "SAB"
+          ]
+        },
+        {
+          "id": "ACC-DI-4",
+          "tipo": "likert5",
+          "texto": "¿Contarías en público tus errores y lo que ganas de verdad, no solo lo bueno?",
+          "ayuda": "Contar la verdad, incluida la fea, genera una confianza que no se compra con publicidad. Lo que cuesta: le das munición a quien quiera atacarte y dejas de parecer alguien que nunca falla. Hay quien ha construido toda su comunidad así, y hay quien se arrepintió.",
+          "dimension": "vulnerabilidad",
+          "arquetipos": [
+            "COM",
+            "INO"
+          ]
+        },
+        {
+          "id": "ACC-DI-5",
+          "tipo": "likert5",
+          "texto": "Un vídeo tuyo hablando a cámara cada semana durante seis meses: veinticuatro vídeos, y los cuatro primeros te van a dar vergüenza al verte. ¿Los publicas igual?",
+          "ayuda": "Grabar, verte, volver a grabar. La mitad de la gente lo deja en el vídeo cuatro. Si tu respuesta es baja, tu plan será por escrito y funcionará igual: más despacio y con menos desgaste.",
+          "dimension": "video",
+          "arquetipos": [
+            "HER",
+            "BUF",
+            "COM"
+          ]
+        },
+        {
+          "id": "ACC-DI-6",
+          "tipo": "likert5",
+          "texto": "¿Dirías en público que algo que hace la gente de tu profesión está mal hecho?",
+          "ayuda": "Esto es más fuerte que dar tu opinión: aquí señalas prácticas concretas y las llamas por su nombre. Es la vía rápida para que se sepa quién eres y para tener seguidores fieles. También para hacerte enemigos que no lo olvidan. Si dices que sí, tu marca tendrá filo. Si dices que no, tendrá que ganarse el sitio siendo útil y buena.",
+          "dimension": "confrontacion",
+          "arquetipos": [
+            "FOR"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "dilemas",
+      "nombre": "Dos preguntas sin respuesta cómoda",
+      "descripcion": "Aquí no hay escala y no hay punto medio. Las dos opciones son defendibles y las dos cuestan algo. Elige la que elegirías de verdad, no la que queda mejor.",
+      "preguntas": [
+        {
+          "id": "ACC-DL-1",
+          "tipo": "unica",
+          "texto": "Te llega el cliente más grande que has tenido nunca y te pide que no publiques nada del proyecto. ¿Cobras y callas, o lo rechazas y lo cuentas?",
+          "ayuda": "No hay respuesta buena. La primera te paga el año y te deja sin caso que enseñar. La segunda te da material y te deja sin el año. Elige.",
+          "opciones": [
+            {
+              "valor": "cobro_callo",
+              "etiqueta": "Cobro y callo",
+              "descripcion": "El negocio manda. Tendrás caja y ninguna prueba pública de tu mejor trabajo.",
+              "arquetipos": [
+                "GOB",
+                "CUI"
+              ]
+            },
+            {
+              "valor": "rechazo_cuento",
+              "etiqueta": "Lo rechazo y lo cuento",
+              "descripcion": "La marca manda. Tendrás el caso y no tendrás el dinero.",
+              "arquetipos": [
+                "FOR",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "negocio_clausula",
+              "etiqueta": "Negocio una cláusula: cobro y publico dentro de un año",
+              "descripcion": "La respuesta de quien ya ha pasado por esto. Funciona menos veces de las que crees, y hay que pedirlo antes de firmar.",
+              "arquetipos": [
+                "SAB",
+                "GOB"
+              ]
+            }
+          ],
+          "opcional": false
+        },
+        {
+          "id": "ACC-DL-2",
+          "tipo": "unica",
+          "texto": "Puedes tener 500 personas que te conocen por tu nombre o 50.000 que no distinguen tu cara de otras tres. Elige.",
+          "ayuda": "Las 500 te compran y te defienden. Las 50.000 te dan números que quedan muy bien y no te llaman nunca. Casi todo el mundo dice 500 y luego se comporta como si quisiera 50.000.",
+          "opciones": [
+            {
+              "valor": "quinientos",
+              "etiqueta": "500 que me conocen por mi nombre",
+              "descripcion": "Marca estrecha y profunda. Crece despacio y aguanta cualquier cambio de plataforma.",
+              "arquetipos": [
+                "SAB",
+                "CUI",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "cincuenta_mil",
+              "etiqueta": "50.000 que no me distinguen",
+              "descripcion": "Alcance grande y sin cara. Sirve para vender productos baratos y se cae con el siguiente cambio del algoritmo.",
+              "arquetipos": [
+                "BUF",
+                "HER"
+              ]
+            }
+          ],
+          "opcional": false
+        }
+      ]
+    },
+    {
+      "id": "tiempo_recursos",
+      "nombre": "Tiempo y dinero",
+      "descripcion": "Aquí es donde se mueren casi todos los planes: no por falta de ideas, sino por falta de horas. Haz las cuentas pensando en tu mes más liado del año, no en el más tranquilo.",
+      "preguntas": [
+        {
+          "id": "ACC-TR-1",
+          "tipo": "unica",
+          "texto": "¿Cuántas horas a la semana puedes dedicarle de verdad?",
+          "ayuda": "Cuenta TODO: pensar, escribir, grabar, editar, publicar, contestar comentarios y conocer gente de tu profesión. Casi todo el mundo se queda corto en el cálculo (por tres). Si dices 10 horas, haremos un plan de 10 horas. Sé prudente: cumplir un plan pequeño es mucho mejor que abandonar uno grande.",
+          "opciones": [
+            {
+              "valor": "menos_2",
+              "etiqueta": "Menos de 2 horas",
+              "descripcion": "Da para un sitio y una cosa sencilla (por ejemplo, una publicación a la semana). Se puede, pero los resultados tardarán bastante más.",
+              "arquetipos": [
+                "COM"
+              ]
+            },
+            {
+              "valor": "2_5",
+              "etiqueta": "Entre 2 y 5 horas",
+              "descripcion": "Lo normal si tienes un trabajo a jornada completa. Da para hacer bien una cosa y asomar un poco la cabeza en otra.",
+              "arquetipos": [
+                "SAB",
+                "COM"
+              ]
+            },
+            {
+              "valor": "5_10",
+              "etiqueta": "Entre 5 y 10 horas",
+              "descripcion": "Ya puedes hacer cosas serias: vídeo, un boletín por correo bien trabajado o un podcast. Tendrás que reservar huecos fijos en tu agenda y respetarlos.",
+              "arquetipos": [
+                "CRE",
+                "HER"
+              ]
+            },
+            {
+              "valor": "10_20",
+              "etiqueta": "Entre 10 y 20 horas",
+              "descripcion": "Casi media jornada. Solo tiene sentido si esperas ganar dinero con ello, no si es un pasatiempo.",
+              "arquetipos": [
+                "HER",
+                "MAG"
+              ]
+            },
+            {
+              "valor": "mas_20",
+              "etiqueta": "Más de 20 horas: esto ES mi trabajo",
+              "descripcion": "Te dedicas a esto. Necesitarás organizarte muy bien, tener un calendario de publicaciones y, casi seguro, que alguien te ayude.",
+              "arquetipos": [
+                "MAG",
+                "GOB"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ACC-TR-2",
+          "tipo": "unica",
+          "texto": "¿Cuánto dinero puedes gastarte al mes en esto?",
+          "ayuda": "No hace falta dinero para tener una marca, pero el dinero te compra tiempo (que otro edite o diseñe) y calidad (buen sonido, buena luz). Si tienes poco, gástalo en este orden: primero el sonido, luego la luz y, al final del todo, la cámara. Un vídeo que se oye mal no lo ve nadie.",
+          "opciones": [
+            {
+              "valor": "cero",
+              "etiqueta": "0 €: solo pongo mi tiempo",
+              "descripcion": "Se puede perfectamente. Cosas que salen gratis: escribir, ir de invitado a podcasts de otros, conocer gente de tu profesión y comentar el trabajo de los demás.",
+              "arquetipos": [
+                "COM"
+              ]
+            },
+            {
+              "valor": "bajo",
+              "etiqueta": "Hasta 100 € al mes",
+              "descripcion": "Te da para programas básicos, un micrófono decente y unas fotos una vez al año. Suficiente en el 90% de los casos.",
+              "arquetipos": [
+                "SAB",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "medio",
+              "etiqueta": "Entre 100 y 500 € al mes",
+              "descripcion": "Puedes pagar a alguien para que edite o diseñe, que es en lo que se te va casi todo el tiempo. Es el dinero que más horas te devuelve.",
+              "arquetipos": [
+                "CRE",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "alto",
+              "etiqueta": "Más de 500 € al mes",
+              "descripcion": "Te da para un equipo pequeño: edición, diseño, alguien que atienda a tu gente y quizá anuncios. Tendrás que mirar si te sale a cuenta o será un pozo sin fondo.",
+              "arquetipos": [
+                "GOB",
+                "MAG"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ACC-TR-3",
+          "tipo": "bipolar",
+          "texto": "¿Prefieres hacerlo todo tú o que otros te ayuden con parte del trabajo?",
+          "ayuda": "Hacerlo todo tú suena auténtico, pero te pone un techo: solo puedes hacer lo que te dé el tiempo, y muchos acaban dejándolo. Que otros te ayuden te permite hacer mucho más, pero si dejas que alguien escriba POR TI, se nota y pierdes lo único que nadie puede copiarte. Regla sencilla: que te ayuden a editar y a producir; lo que dices y lo que piensas, siempre tuyo.",
+          "polo_izq": "Lo hago todo yo",
+          "polo_der": "Que me ayuden en todo lo posible",
+          "desc_izq": "Mandas tú, no gastas nada, pero llegas hasta donde llegan tus horas libres.",
+          "desc_der": "Haces más cosas y quedan mejor, pero cuesta dinero y corres el riesgo de sonar como todo el mundo.",
+          "dimension": "delegacion",
+          "escala": 7
+        }
+      ]
+    },
+    {
+      "id": "contenido",
+      "nombre": "Qué vas a publicar",
+      "descripcion": "Elige lo que se te da bien de forma natural, no lo que crees que 'hay que hacer'. Quien odia el vídeo y se obliga a grabar, hace vídeos malos y lo deja a los dos meses.",
+      "preguntas": [
+        {
+          "id": "ACC-CT-1",
+          "tipo": "multiple",
+          "texto": "¿Qué te ves capaz de hacer una y otra vez, cada semana?",
+          "ayuda": "Marca solo lo que harías un domingo por la tarde sin que te dé una pereza tremenda. Cada cosa cuesta un tiempo muy distinto: escribir una publicación son 30 minutos; un vídeo editado de 10 minutos pueden ser 6 horas.",
+          "min": 1,
+          "max": 4,
+          "opciones": [
+            {
+              "valor": "escribir",
+              "etiqueta": "Escribir (publicaciones, artículos, un boletín por correo)",
+              "descripcion": "Lo más barato, lo más rápido y lo que mejor demuestra que sabes pensar. No se hace viral casi nunca, pero llega hondo.",
+              "arquetipos": [
+                "SAB",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "video_corto",
+              "etiqueta": "Vídeo corto (reels, shorts, TikTok)",
+              "descripcion": "Lo que más gente puede ver y lo que más te desgasta. Hay que publicar mucho y enganchar en los dos primeros segundos. Cada vídeo dura vivo unos días.",
+              "arquetipos": [
+                "BUF",
+                "HER"
+              ]
+            },
+            {
+              "valor": "video_largo",
+              "etiqueta": "Vídeo largo (YouTube, formación)",
+              "descripcion": "Lo que más dura: un buen vídeo te trae clientes durante años. También lo que más horas te come por pieza.",
+              "arquetipos": [
+                "SAB",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "audio",
+              "etiqueta": "Audio (tu propio podcast o ir de invitado)",
+              "descripcion": "Crea una relación muy cercana y duradera con quien te escucha. Ir de invitado al podcast de otro es lo que menos esfuerzo cuesta y más resultado da.",
+              "arquetipos": [
+                "SAB",
+                "COM"
+              ]
+            },
+            {
+              "valor": "directo",
+              "etiqueta": "Directos (hablar en vivo, sin edición)",
+              "descripcion": "Auténtico del todo y sin retoques. Hay que tener soltura y aguante: en directo no hay red.",
+              "arquetipos": [
+                "BUF",
+                "COM",
+                "HER"
+              ]
+            },
+            {
+              "valor": "foto",
+              "etiqueta": "Fotos e imágenes",
+              "descripcion": "Perfecto si tu trabajo se ve (diseño, arquitectura, cocina, moda). Sirve de poco para explicar ideas difíciles.",
+              "arquetipos": [
+                "AMA",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "datos",
+              "etiqueta": "Investigar por tu cuenta (informes, estudios, encuestas)",
+              "descripcion": "Lo más difícil de hacer y lo único que casi nadie te puede copiar. Consigue que te citen, que te llame la prensa y que te tomen en serio.",
+              "arquetipos": [
+                "SAB",
+                "MAG"
+              ]
+            },
+            {
+              "valor": "producto",
+              "etiqueta": "Regalar herramientas, plantillas o recursos",
+              "descripcion": "Lo que más comparte la gente y lo que mejor demuestra que sabes: en vez de contar lo que sabes, lo entregas hecho.",
+              "arquetipos": [
+                "CRE",
+                "CUI",
+                "HER"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ACC-CT-2",
+          "tipo": "unica",
+          "texto": "¿Qué es lo único que vas a publicar SIEMPRE, pase lo que pase?",
+          "ayuda": "Es tu cita fija con tu público: lo mismo, el mismo día, siempre. Es lo que hace que se acostumbren a ti. Todo lo demás puede fallar una semana; esto no. Elige lo que te resulte más fácil de mantener, no lo que más admiras en otros.",
+          "opciones": [
+            {
+              "valor": "post_semanal",
+              "etiqueta": "Una publicación o un artículo cada semana",
+              "descripcion": "Lo más fácil de mantener. Cuesta poco y se puede cumplir mucho tiempo.",
+              "arquetipos": [
+                "SAB"
+              ]
+            },
+            {
+              "valor": "newsletter",
+              "etiqueta": "Un boletín por correo cada cierto tiempo",
+              "descripcion": "Es tuyo: nadie te lo puede quitar ni esconder. Crece despacio, pero la relación es fortísima.",
+              "arquetipos": [
+                "SAB",
+                "CUI"
+              ]
+            },
+            {
+              "valor": "video_semanal",
+              "etiqueta": "Un vídeo cada semana",
+              "descripcion": "Exige mucho, pero si aguantas el primer año da muchísimo.",
+              "arquetipos": [
+                "HER",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "podcast_ancla",
+              "etiqueta": "Un episodio de podcast cada cierto tiempo",
+              "descripcion": "Cómodo si hablas mejor de lo que escribes. Además te abre la puerta a invitar a gente importante.",
+              "arquetipos": [
+                "COM",
+                "SAB"
+              ]
+            },
+            {
+              "valor": "directo_ancla",
+              "etiqueta": "Un directo fijo (mismo día y misma hora)",
+              "descripcion": "Convierte a los que te siguen en gente que aparece. Difícil de mantener si viajas y no puedes pasárselo a nadie.",
+              "arquetipos": [
+                "BUF",
+                "COM"
+              ]
+            },
+            {
+              "valor": "informe",
+              "etiqueta": "Un informe a fondo cada mes o cada tres meses",
+              "descripcion": "Poca cantidad, mucho prestigio. Ideal si tienes poco tiempo pero sabes mucho.",
+              "arquetipos": [
+                "SAB",
+                "MAG"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ACC-CT-3",
+          "tipo": "likert5",
+          "texto": "Es viernes por la tarde. Tienes el artículo escrito, pero hay un párrafo que no te gusta y no te da tiempo a arreglarlo. ¿Lo publicas tal cual?",
+          "ayuda": "El precio del sí es publicar algo que sabes que no está a tu nivel y cargar con esa sensación toda la semana. Si aquí puntúas bajo, tu plan tendrá que ser publicar poco y muy cuidado: también vale, pero conviene elegirlo a propósito, no sufrirlo.",
+          "dimension": "perfeccionismo",
+          "arquetipos": [
+            "HER",
+            "EXP"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "red",
+      "nombre": "Gente y comunidad",
+      "descripcion": "Lo que publicas hace que te vean; la gente que conoces es lo que te trae oportunidades. Casi todo lo bueno que le pasa a una marca (una invitación, un cliente grande, un puesto de trabajo) llega por una persona, no por una aplicación.",
+      "preguntas": [
+        {
+          "id": "ACC-RC-1",
+          "tipo": "multiple",
+          "texto": "¿Qué estás dispuesto a hacer para conocer gente de tu profesión?",
+          "ayuda": "Marca lo que harías una y otra vez sin fallar. Ojo: lo que más resultado da de esta lista suele ser lo que más corta (escribirle a alguien importante que no te conoce de nada). Casi nadie lo hace, y por eso funciona.",
+          "min": 1,
+          "max": 3,
+          "opciones": [
+            {
+              "valor": "eventos",
+              "etiqueta": "Ir a eventos y congresos de tu profesión",
+              "descripcion": "Cuesta tiempo y dinero, y el resultado es grande pero impredecible. Ve con un objetivo claro o será turismo con acreditación.",
+              "arquetipos": [
+                "COM",
+                "EXP"
+              ]
+            },
+            {
+              "valor": "frio",
+              "etiqueta": "Escribirle a gente importante que no te conoce",
+              "descripcion": "Lo que más resultado da y menos cuesta. Hay que aguantar el silencio y algún no: te contestarán pocos, pero un solo sí puede cambiarlo todo.",
+              "arquetipos": [
+                "HER",
+                "EXP"
+              ]
+            },
+            {
+              "valor": "colaborar",
+              "etiqueta": "Hacer cosas junto a otros profesionales",
+              "descripcion": "La forma más rápida de crecer: te prestan su público y su confianza de golpe. Tienes que llevar algo que ofrecer a cambio.",
+              "arquetipos": [
+                "COM",
+                "CRE"
+              ]
+            },
+            {
+              "valor": "mentor",
+              "etiqueta": "Buscar a alguien con experiencia que te oriente",
+              "descripcion": "Te ahorra años de errores. Hay que tener humildad y ser muy concreto: nadie contesta a un '¿te puedo hacer unas preguntas?'.",
+              "arquetipos": [
+                "INO",
+                "SAB"
+              ]
+            },
+            {
+              "valor": "mentorizar",
+              "etiqueta": "Ayudar a otros gratis y sin pedir nada",
+              "descripcion": "Construye tu buena fama despacio, sin ruido y para siempre. A quien ayudas hoy te recomienda durante décadas.",
+              "arquetipos": [
+                "CUI",
+                "SAB"
+              ]
+            },
+            {
+              "valor": "comunidad",
+              "etiqueta": "Montar tu propio grupo o comunidad",
+              "descripcion": "Lo más valioso que puedes tener y lo más caro de cuidar: un grupo abandonado es peor que no tenerlo.",
+              "arquetipos": [
+                "CUI",
+                "GOB",
+                "COM"
+              ]
+            },
+            {
+              "valor": "organizar",
+              "etiqueta": "Organizar tú los eventos o las quedadas",
+              "descripcion": "Te pone en el centro de tu profesión: quien invita, manda. Es trabajo duro y no te lo agradece nadie al principio.",
+              "arquetipos": [
+                "GOB",
+                "HER"
+              ]
+            },
+            {
+              "valor": "comentar",
+              "etiqueta": "Comentar y aportar cosas útiles en lo que publican otros",
+              "descripcion": "Lo más barato y lo más ignorado: un buen comentario en el sitio adecuado te presenta gratis a todo el público de otra persona.",
+              "arquetipos": [
+                "COM",
+                "SAB"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ACC-RC-2",
+          "tipo": "likert5",
+          "texto": "Le escribes a alguien importante pidiéndole que te presente a un cliente. Te deja en visto. Dos meses después, se lo vuelves a pedir. ¿Lo haces?",
+          "ayuda": "Pedir se aprende, y también cuesta: gastas capital con esa persona y te expones a un no delante de alguien que te importa. Si tu respuesta es baja, tu plan tirará de contenido y no de favores.",
+          "dimension": "pedir",
+          "arquetipos": [
+            "HER",
+            "COM"
+          ]
+        }
+      ]
+    },
+    {
+      "id": "causas",
+      "nombre": "Causas y posturas",
+      "descripcion": "Meterte en temas sociales o políticos es la decisión que más puede darte y más puede quitarte. Parte de tu público se irá; la mitad que se queda se quedará para siempre. No hay forma de escaparse: callarse también es una postura, y cada vez más gente lo entiende así.",
+      "preguntas": [
+        {
+          "id": "ACC-CA-1",
+          "tipo": "likert5",
+          "texto": "¿Defenderías en público una causa aunque perdieras parte de tu público?",
+          "ayuda": "Antes de contestar, imagina lo peor: pierdes un cliente importante y te atacan durante una semana. Si aun así lo harías, entonces sí, tu puntuación es alta de verdad. Si no, es totalmente legítimo hablar solo de tu trabajo: no todo el mundo tiene que ser un activista.",
+          "dimension": "activismo",
+          "arquetipos": [
+            "FOR",
+            "HER",
+            "CUI"
+          ]
+        },
+        {
+          "id": "ACC-CA-2",
+          "tipo": "multiple",
+          "texto": "Si te mojas, ¿por qué causas?",
+          "ayuda": "Elige solo aquellas en las que tengas algo real que aportar: has vivido el problema, tienes datos o has hecho algo al respecto. Apuntarse a una causa porque está de moda se nota al momento y hace más daño que callarse. Si no piensas mojarte por ninguna, marca la última opción.",
+          "min": 1,
+          "max": 3,
+          "opciones": [
+            {
+              "valor": "sostenibilidad",
+              "etiqueta": "El medio ambiente y el clima",
+              "descripcion": "Te van a mirar con lupa: revisarán lo que haces tú y hasta los aviones que coges.",
+              "arquetipos": [
+                "CUI",
+                "INO"
+              ]
+            },
+            {
+              "valor": "igualdad",
+              "etiqueta": "La igualdad y que nadie quede fuera",
+              "descripcion": "Levanta pasiones a favor y en contra. Hay que demostrarlo con hechos: a quién contratas, a quién nombras, a quién das voz.",
+              "arquetipos": [
+                "CUI",
+                "HER"
+              ]
+            },
+            {
+              "valor": "salud_mental",
+              "etiqueta": "La salud mental y trabajar sin quemarse",
+              "descripcion": "Casi todo el mundo está de acuerdo y despierta mucha empatía. Eso sí: tu forma de trabajar no puede contradecir lo que predicas.",
+              "arquetipos": [
+                "CUI",
+                "COM"
+              ]
+            },
+            {
+              "valor": "etica_tech",
+              "etiqueta": "Hacer las cosas bien en tu profesión",
+              "descripcion": "La causa más segura y muchas veces la más útil: juegas en tu campo, donde sabes de lo que hablas.",
+              "arquetipos": [
+                "SAB",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "educacion",
+              "etiqueta": "Que todo el mundo pueda aprender",
+              "descripcion": "Poco riesgo y mucha buena fama. Se demuestra regalando lo que otros cobran.",
+              "arquetipos": [
+                "SAB",
+                "CUI"
+              ]
+            },
+            {
+              "valor": "consumo",
+              "etiqueta": "Denunciar las malas prácticas de las empresas",
+              "descripcion": "Te da seguidores muy fieles y también enemigos con dinero y ganas de devolvértela.",
+              "arquetipos": [
+                "FOR"
+              ]
+            },
+            {
+              "valor": "local",
+              "etiqueta": "El comercio y la vida de tu barrio o tu ciudad",
+              "descripcion": "Concreta, se puede comprobar y casi no genera peleas. Excelente si trabajas cerca de casa.",
+              "arquetipos": [
+                "COM",
+                "CUI"
+              ]
+            },
+            {
+              "valor": "ninguna_causa",
+              "etiqueta": "Ninguna: yo hablo solo de mi trabajo",
+              "descripcion": "Es lo que hace la mayoría y es perfectamente válido. Corres menos riesgo, pero la gente también te querrá menos.",
+              "arquetipos": [
+                "GOB",
+                "SAB"
+              ],
+              "evasiva": true
+            }
+          ]
+        },
+        {
+          "id": "ACC-CA-3",
+          "tipo": "texto_largo",
+          "texto": "¿Dónde está tu límite? ¿Qué no harías nunca por defender lo que piensas?",
+          "ayuda": "Escríbelo ahora, con la cabeza fría, porque cuando te hierva la sangre no vas a pensar. ¿Rechazarías a un cliente que va contra lo que tú crees? ¿Dirías que no a que te patrocinen? Si te atacan en público, ¿contestarías o lo dejarías pasar? Tenerlo escrito de antemano es lo que separa a alguien con criterio de alguien que improvisa y se contradice.",
+          "placeholder": "Ej.: Diría lo que pienso, pero no me metería a discutir en los comentarios. No trabajaría para empresas de apuestas. No contesto a los insultos, solo a las críticas con argumentos.",
+          "max_chars": 500,
+          "opcional": true
+        }
+      ]
+    },
+    {
+      "id": "rituales",
+      "nombre": "Gestos que te hacen reconocible",
+      "descripcion": "Un gesto que repites siempre es lo que hace que te reconozcan sin ver tu nombre. No hace falta que sea genial: basta con repetirlo tanto que acabe siendo tuyo. Piensa en las gafas redondas de John Lennon, en girar la galleta Oreo antes de comértela o en ese amigo que siempre saluda igual. Ejemplos para una marca: terminar todos tus vídeos con la misma frase, publicar un resumen cada viernes, empezar toda charla con la misma pregunta, llevar siempre el mismo color o mandar una nota escrita a mano a cada cliente nuevo.",
+      "preguntas": [
+        {
+          "id": "ACC-RI-1",
+          "tipo": "multiple",
+          "texto": "¿Qué gesto te comprometes a repetir siempre?",
+          "ayuda": "Lo importante no es que sea original, sino que lo hagas SIEMPRE. Un gesto que dejas de hacer es peor que no haberlo hecho nunca, porque la gente ya lo estaba esperando. Elige pocos y cúmplelos.",
+          "min": 1,
+          "max": 3,
+          "opciones": [
+            {
+              "valor": "formato_fijo",
+              "etiqueta": "Publicar siempre lo mismo, el mismo día",
+              "descripcion": "Ej.: 'Los martes, un error típico de mi profesión explicado en 3 párrafos'. La gente se acostumbra y tú te ahorras decidir qué publicar.",
+              "arquetipos": [
+                "GOB",
+                "SAB"
+              ]
+            },
+            {
+              "valor": "saludo",
+              "etiqueta": "Un saludo o una frase de despedida siempre iguales",
+              "descripcion": "Ej.: empezar o terminar siempre con la misma frase. No cuesta nada y es lo primero que la gente acaba copiándote.",
+              "arquetipos": [
+                "BUF",
+                "COM"
+              ]
+            },
+            {
+              "valor": "color",
+              "etiqueta": "Un color que siempre llevas",
+              "descripcion": "En tu ropa, en el fondo, en tus presentaciones y en tu web. La firma más barata y la que más rinde.",
+              "arquetipos": [
+                "CRE",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "gesto",
+              "etiqueta": "Un gesto o una manía tuya que se reconoce",
+              "descripcion": "Ej.: cómo te colocas al hablar, cómo coges el micro. Solo funciona si es de verdad tuyo: si lo finges, cantas.",
+              "arquetipos": [
+                "BUF",
+                "MAG"
+              ]
+            },
+            {
+              "valor": "objeto",
+              "etiqueta": "Un objeto que siempre sale contigo",
+              "descripcion": "Ej.: una taza, una libreta, una guitarra al fondo. La gente se fija y lo comenta antes de lo que crees.",
+              "arquetipos": [
+                "CRE",
+                "EXP"
+              ]
+            },
+            {
+              "valor": "seccion",
+              "etiqueta": "Una sección fija dentro de lo que publicas",
+              "descripcion": "Ej.: 'la pregunta incómoda del mes'. Le das a la gente algo que esperar y te montas un formato que es solo tuyo.",
+              "arquetipos": [
+                "SAB",
+                "BUF"
+              ]
+            },
+            {
+              "valor": "gracias",
+              "etiqueta": "Dar las gracias, por su nombre, a quien te escribe",
+              "descripcion": "Ej.: contestar a todos los comentarios la primera semana. Es lento, no sirve si tienes miles de seguidores, y crea una fidelidad enorme.",
+              "arquetipos": [
+                "CUI",
+                "COM"
+              ]
+            },
+            {
+              "valor": "regalo",
+              "etiqueta": "Regalar siempre algo útil (una plantilla, una guía, un informe)",
+              "descripcion": "Hace que la gente vuelva a ti. Es la mejor forma de demostrar que sabes lo que haces.",
+              "arquetipos": [
+                "CUI",
+                "HER",
+                "CRE"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ACC-RI-2",
+          "tipo": "texto",
+          "texto": "Escribe tu gesto en este formato exacto: «Cada ___, yo ___».",
+          "ayuda": "Ciento cuarenta caracteres. Si no te cabe, no es un gesto: es una intención, y las intenciones no construyen marcas. Tiene que ser algo que puedas hacer la semana que viene sin permiso de nadie y sin gastarte un euro. Y tiene que empezar por «Cada».",
+          "placeholder": "Ej.: Cada viernes cuento un fallo que he cometido esta semana y qué he aprendido.",
+          "max_chars": 140,
+          "min_chars": 30,
+          "opcional": false
+        },
+        {
+          "id": "ACC-RI-3",
+          "tipo": "texto",
+          "texto": "De lo que has marcado arriba, escribe el cuál: qué color, qué objeto, qué frase.",
+          "ayuda": "Marcar la categoría no vale: «un objeto que siempre sale contigo» lo puede decir cualquiera. Lo que hace que te reconozcan es el termo verde, la libreta de cuadros, la frase de tu abuela. Los objetos se recuerdan mucho mejor que los adjetivos: nadie dibuja de memoria «cercano», pero todo el mundo dibuja unas gafas.",
+          "placeholder": "Ej.: El termo verde del Athletic. Y la frase: «vamos a mirarlo por dentro».",
+          "max_chars": 160,
+          "min_chars": 15,
+          "opcional": false
+        }
+      ]
+    },
+    {
+      "id": "horizonte",
+      "nombre": "Cuánto vas a esperar",
+      "descripcion": "AVISO: esto no da resultados en unas semanas. Lo normal es trabajar entre 2 y 3 años sin parar hasta que las oportunidades empiecen a llegarte solas. Y los primeros 6 o 12 meses casi siempre son puro silencio: publicas y no te contesta nadie. Quien te prometa lo contrario te está vendiendo humo. Si solo puedes esperar 3 meses, lo que necesitas no es una marca: es publicidad o salir a vender, que son cosas distintas.",
+      "preguntas": [
+        {
+          "id": "ACC-HO-1",
+          "tipo": "unica",
+          "texto": "¿Qué quieres conseguir con esto?",
+          "ayuda": "Elige una sola cosa. Cada objetivo lleva a un camino distinto: quien busca trabajo tiene que salir en las búsquedas de quien contrata; quien busca clientes tiene que demostrar que sabe hacer el trabajo; quien busca influencia tiene que llegar a mucha gente. Ir a por los cuatro a la vez es la manera más segura de no conseguir ninguno.",
+          "opciones": [
+            {
+              "valor": "clientes",
+              "etiqueta": "Conseguir clientes para mi negocio o mis servicios",
+              "descripcion": "Camino: enseñar trabajos reales y demostrar que sabes hacerlo. Lo que hay que mirar: cuánta gente te pide presupuesto, no cuántos seguidores tienes.",
+              "arquetipos": [
+                "HER",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "empleo",
+              "etiqueta": "Que me busquen para trabajar o mejorar mi puesto",
+              "descripcion": "Camino: que te vea el puñado de personas concretas que pueden contratarte. No necesitas gustar a millones, necesitas llegar a los que deciden.",
+              "arquetipos": [
+                "SAB",
+                "COM"
+              ]
+            },
+            {
+              "valor": "autoridad",
+              "etiqueta": "Que me consideren de los mejores en lo mío",
+              "descripcion": "Camino: profundidad, publicar, subirte a escenarios y sacar datos propios. El camino más lento y el que más dura.",
+              "arquetipos": [
+                "SAB",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "audiencia_obj",
+              "etiqueta": "Reunir a mucha gente y ganar dinero con ello",
+              "descripcion": "Camino: publicar mucho y llegar lejos. Es un trabajo a jornada completa, no un extra.",
+              "arquetipos": [
+                "MAG",
+                "BUF"
+              ]
+            },
+            {
+              "valor": "cambio",
+              "etiqueta": "Cambiar algo de mi profesión o de la sociedad",
+              "descripcion": "Camino: postura clara, tener claro contra qué luchas y reunir gente que luche contigo. Muchas peleas, mucho sentido.",
+              "arquetipos": [
+                "FOR",
+                "HER",
+                "CUI"
+              ]
+            },
+            {
+              "valor": "libertad",
+              "etiqueta": "Tener opciones y no depender de un solo jefe",
+              "descripcion": "Camino: la gente que conoces y tu buena fama importan más que lo que publicas. El objetivo que más se ignora y probablemente el más sensato.",
+              "arquetipos": [
+                "EXP",
+                "COM"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ACC-HO-2",
+          "tipo": "unica",
+          "texto": "¿Cuánto tiempo crees que tardarás en ver resultados?",
+          "ayuda": "Contesta lo que esperas de verdad, no lo que sabes que 'deberías' contestar. Tu respuesta nos dice qué probabilidad hay de que lo dejes: la razón número uno del fracaso no es hacerlo mal, es rendirse justo antes de que empiece a funcionar.",
+          "opciones": [
+            {
+              "valor": "meses_3",
+              "etiqueta": "En 3 meses",
+              "descripcion": "No va a pasar. En 3 meses puedes tener las primeras señales (algún mensaje, algún contacto), pero no clientes ni dinero. Te lo recordaremos en el plan.",
+              "arquetipos": [
+                "HER"
+              ]
+            },
+            {
+              "valor": "meses_6_12",
+              "etiqueta": "Entre 6 meses y un año",
+              "descripcion": "Realista para notar que algo se mueve: empiezan a reconocerte y llega alguna oportunidad suelta.",
+              "arquetipos": [
+                "COM"
+              ]
+            },
+            {
+              "valor": "anios_2_3",
+              "etiqueta": "Entre 2 y 3 años",
+              "descripcion": "Esta es la respuesta correcta. Es el tiempo que tarda una marca constante en empezar a traerte oportunidades sola.",
+              "arquetipos": [
+                "SAB",
+                "GOB"
+              ]
+            },
+            {
+              "valor": "largo",
+              "etiqueta": "Más de 3 años: esto es una carrera de fondo",
+              "descripcion": "Así piensa quien construye marcas que duran décadas. Menos agobio y mejores decisiones.",
+              "arquetipos": [
+                "SAB",
+                "CRE"
+              ]
+            }
+          ]
+        },
+        {
+          "id": "ACC-HO-3",
+          "tipo": "likert5",
+          "texto": "Llevas ocho meses publicando cada semana. Cero comentarios, cero clientes por esta vía, y un conocido te ha preguntado si sigues «con eso de las publicaciones». ¿Sigues?",
+          "ayuda": "Casi todo el mundo lo deja en esa temporada en la que trabajas y nadie responde: publicas y hay silencio. Si aquí puntúas bajo, no eres débil: solo necesitas un plan con pequeñas victorias por el camino, y lo prepararemos así.",
+          "dimension": "constancia",
+          "arquetipos": [
+            "SAB",
+            "GOB",
+            "CRE"
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,523 @@
+/* Hoja de estilos exclusiva del PDF: papel A4, no pantalla.
+   El color de marca llega desde la plantilla como --marca. */
+
+/* Sin esto, el padding de la portada se SUMA a su altura de 297mm y se desborda
+   a una segunda página en blanco. WeasyPrint no trae reset propio. */
+* { box-sizing: border-box; }
+
+@page {
+  size: A4;
+  margin: 20mm 18mm 20mm 18mm;
+  @bottom-center {
+    content: counter(page) " / " counter(pages);
+    font-family: "DejaVu Sans", sans-serif;
+    font-size: 8pt;
+    color: #9a948c;
+  }
+  @top-right {
+    content: string(seccion);
+    font-family: "DejaVu Sans", sans-serif;
+    font-size: 7.5pt;
+    letter-spacing: 0.12em;
+    text-transform: uppercase;
+    color: #b5afa6;
+  }
+}
+
+/* La portada va a sangre y sin cabecera ni paginación. */
+@page portada {
+  margin: 0;
+  @bottom-center { content: none; }
+  @top-right { content: none; }
+}
+
+html {
+  font-family: "DejaVu Serif", Georgia, serif;
+  font-size: 10.5pt;
+  line-height: 1.55;
+  color: #22201d;
+}
+
+/* ---------- Portada ---------- */
+
+.portada {
+  page: portada;
+  height: 297mm;
+  padding: 30mm 22mm;
+  background: var(--marca);
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  break-after: page;
+}
+
+.portada .sello {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 8pt;
+  letter-spacing: 0.3em;
+  text-transform: uppercase;
+  opacity: 0.75;
+}
+
+.portada h1 {
+  font-size: 40pt;
+  line-height: 1.05;
+  margin: 0 0 6mm 0;
+  font-weight: normal;
+}
+
+.portada .arquetipo {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 13pt;
+  letter-spacing: 0.06em;
+  opacity: 0.9;
+  margin-bottom: 3mm;
+}
+
+.portada .resumen {
+  font-size: 12pt;
+  line-height: 1.6;
+  max-width: 130mm;
+  opacity: 0.95;
+}
+
+.portada .veredicto-duro {
+  margin-top: 8mm;
+  padding: 4mm 5mm;
+  background: rgba(0, 0, 0, 0.25);
+  border-radius: 2mm;
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 10pt;
+  line-height: 1.5;
+  max-width: 130mm;
+}
+
+.portada .pie {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 8.5pt;
+  opacity: 0.7;
+}
+
+/* ---------- Paletas múltiples ---------- */
+
+.paleta-bloque {
+  margin: 4mm 0;
+  break-inside: avoid;
+}
+
+.paleta-cab {
+  font-size: 10.5pt;
+  margin-bottom: 2mm;
+}
+
+.paleta-just {
+  font-size: 9.5pt;
+  color: #4a4744;
+  margin: 2mm 0 0;
+  border-left: 0.8mm solid var(--marca);
+  padding-left: 3mm;
+}
+
+/* ---------- Estructura ---------- */
+
+h2 {
+  string-set: seccion content();
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 17pt;
+  font-weight: bold;
+  color: var(--marca);
+  margin: 0 0 4mm 0;
+  padding-bottom: 2mm;
+  border-bottom: 2px solid var(--marca);
+  break-after: avoid;
+}
+
+h3 {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 11.5pt;
+  margin: 6mm 0 2mm 0;
+  break-after: avoid;
+}
+
+section { break-before: page; }
+section.continua { break-before: auto; }
+
+p { margin: 0 0 3mm 0; }
+
+.entradilla {
+  font-size: 12pt;
+  line-height: 1.6;
+  color: #4a453e;
+  margin-bottom: 6mm;
+}
+
+/* ---------- Tarjetas y avisos ---------- */
+
+.tarjeta {
+  break-inside: avoid;
+  border: 1px solid #e2ddd5;
+  border-radius: 3mm;
+  padding: 5mm 6mm;
+  margin-bottom: 4mm;
+  background: #fbfaf8;
+}
+
+.aviso {
+  break-inside: avoid;
+  border-left: 3.5mm solid var(--marca);
+  background: #faf6f2;
+  padding: 4mm 5mm;
+  margin-bottom: 4mm;
+}
+
+.aviso .titulo {
+  font-family: "DejaVu Sans", sans-serif;
+  font-weight: bold;
+  font-size: 10pt;
+  margin-bottom: 1.5mm;
+}
+
+.aviso p { margin: 0; font-size: 10pt; }
+
+.dato {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 8pt;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  color: #8d8780;
+  margin-bottom: 1mm;
+}
+
+/* ---------- Paleta de color ---------- */
+
+.paleta {
+  display: flex;
+  gap: 3mm;
+  margin: 3mm 0 4mm 0;
+  break-inside: avoid;
+}
+
+.muestra {
+  flex: 1;
+  break-inside: avoid;
+}
+
+.muestra .color {
+  height: 22mm;
+  border-radius: 2mm;
+  border: 0.3mm solid rgba(0, 0, 0, 0.12);
+}
+
+.muestra .hex {
+  font-family: "DejaVu Sans Mono", monospace;
+  font-size: 7.5pt;
+  color: #6b665f;
+  margin-top: 1.5mm;
+}
+
+.muestra .nombre {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 8pt;
+  color: #22201d;
+}
+
+/* ---------- Gráficos ---------- */
+
+.grafico {
+  break-inside: avoid;
+  text-align: center;
+  margin: 4mm 0 6mm 0;
+}
+
+.grafico svg { max-width: 100%; height: auto; }
+
+.pie-grafico {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 8.5pt;
+  color: #8d8780;
+  text-align: center;
+  margin-top: -2mm;
+}
+
+/* ---------- Referentes ---------- */
+
+.referente {
+  break-inside: avoid;
+  display: flex;
+  gap: 5mm;
+  padding: 4mm 0;
+  border-bottom: 0.3mm solid #eae5dd;
+}
+
+.referente .foto {
+  width: 28mm;
+  height: 34mm;
+  object-fit: cover;
+  border-radius: 2mm;
+  flex-shrink: 0;
+}
+
+.referente .moodboard {
+  width: 28mm;
+  height: 34mm;
+  border-radius: 2mm;
+  flex-shrink: 0;
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  border: 0.3mm solid #e2ddd5;
+}
+
+.referente .moodboard span { flex: 1; }
+
+.referente h3 { margin-top: 0; }
+
+.referente .meta {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 8pt;
+  color: #8d8780;
+  margin-bottom: 2mm;
+}
+
+.referente .gesto {
+  font-size: 9.5pt;
+  color: #4a453e;
+  border-left: 0.8mm solid var(--marca);
+  padding-left: 3mm;
+  margin-top: 2mm;
+}
+
+.credito {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 6.5pt;
+  color: #b5afa6;
+  margin-top: 1mm;
+}
+
+/* ---------- Recomendaciones de la IA ---------- */
+
+.recomendacion {
+  /* Ya no cabe en una página: cada dirección pasó de once campos a veintiuno.
+     Con break-inside: avoid, un bloque más alto que la caja de página no se
+     evita, se desborda y se pierde texto por abajo. Se parte por campos, que
+     sí llevan avoid y son la unidad que tiene sentido no cortar. */
+  break-inside: auto;
+  break-before: page;
+  padding-top: 2mm;
+}
+
+.recomendacion:first-of-type { break-before: auto; }
+
+.recomendacion .numero {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 30pt;
+  font-weight: bold;
+  color: var(--marca);
+  opacity: 0.22;
+  line-height: 1;
+}
+
+.recomendacion h3 {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 16pt;
+  margin: 1mm 0 3mm 0;
+  color: #22201d;
+}
+
+.campo { margin-bottom: 3.5mm; break-inside: avoid; }
+
+.acciones { margin: 0; padding-left: 5mm; }
+.acciones li { margin-bottom: 2mm; }
+
+.riesgo {
+  background: #fdf4f0;
+  border: 0.3mm solid #f0dcd2;
+  border-radius: 2mm;
+  padding: 3.5mm 4mm;
+  font-size: 9.5pt;
+}
+
+/* ---------- Nota metodológica ---------- */
+
+.metodologia {
+  font-size: 8.5pt;
+  line-height: 1.5;
+  color: #6b665f;
+}
+
+.metodologia h3 { font-size: 10pt; }
+
+/* ---------- Portada sobre color claro ---------- */
+
+/* Un amarillo o un beige de marca con texto blanco encima da 2:1 y no se lee
+   en pantalla ni impreso. La plantilla calcula la luminancia y añade .clara. */
+.portada.clara { color: #1a1815; }
+.portada.clara .veredicto-duro { background: rgba(255, 255, 255, 0.42); }
+
+/* ---------- Recordabilidad en portada ---------- */
+
+.portada .una-sola-cosa {
+  font-size: 22pt;
+  line-height: 1.15;
+  margin: 8mm 0 2mm 0;
+  max-width: 130mm;
+}
+
+.portada .marcador-3s {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 9.5pt;
+  opacity: 0.9;
+}
+
+/* ---------- Sistema de activos ---------- */
+
+/* Dos columnas: a la izquierda qué es y de dónde sale, a la derecha la regla.
+   break-inside para que un activo no se parta entre dos páginas: partido, la
+   regla de uso aparece sin el activo al que obliga y se lee como un consejo. */
+.activo {
+  break-inside: avoid;
+  display: flex;
+  gap: 5mm;
+  padding: 3.5mm 0;
+  border-bottom: 0.3mm solid #eae5dd;
+}
+
+.activo .izq { width: 62mm; flex-shrink: 0; }
+.activo .der { flex: 1; }
+
+.activo .etiqueta {
+  font-family: "DejaVu Sans", sans-serif;
+  font-weight: bold;
+  font-size: 10.5pt;
+}
+
+.activo .valor { font-size: 9.5pt; color: #4a453e; }
+
+.activo .regla { font-size: 9.5pt; margin: 0; }
+
+.activo .origen {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 8pt;
+  color: #8d8780;
+  margin-top: 1.5mm;
+}
+
+.activo .muestra-color {
+  width: 10mm;
+  height: 10mm;
+  border-radius: 2mm;
+  border: 0.3mm solid rgba(0, 0, 0, 0.12);
+  margin: 1.5mm 0;
+}
+
+/* Tres puntos, los rellenos en el color de marca. */
+.activo .fuerza { display: flex; gap: 1mm; margin: 1.5mm 0; }
+.activo .fuerza span {
+  width: 2mm;
+  height: 2mm;
+  border-radius: 50%;
+  background: #ded8cf;
+}
+.activo .fuerza span.lleno { background: var(--marca); }
+
+/* Discontinuo: de un golpe se ve qué no ha elegido la persona. */
+.activo.prestado {
+  border: 0.4mm dashed #d5cfc6;
+  border-radius: 2mm;
+  padding: 3.5mm 4mm;
+  margin-bottom: 2mm;
+}
+
+.activo.prestado .etiqueta-prestado {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 7.5pt;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: #8d8780;
+}
+
+/* ---------- Calendario de 12 meses ---------- */
+
+.calendario {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 9pt;
+  margin: 3mm 0 4mm 0;
+}
+
+.calendario th {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 7.5pt;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: #8d8780;
+  text-align: left;
+  border-bottom: 0.4mm solid #e2ddd5;
+  padding: 1.5mm 2mm;
+}
+
+.calendario td {
+  border-bottom: 0.3mm solid #eae5dd;
+  padding: 1.5mm 2mm;
+  vertical-align: top;
+}
+
+/* Por bloques de cuatro filas: doce filas enteras no caben siempre en lo que
+   queda de página, y forzar la tabla completa abriría una página en blanco. */
+.calendario tbody { break-inside: auto; }
+.calendario .bloque { break-inside: avoid; }
+
+.calendario .mes { white-space: nowrap; }
+.calendario .revision td { background: #faf6f2; }
+.calendario .revision .criterio { font-size: 8.5pt; }
+
+/* ---------- Identidad verbal ---------- */
+
+.verbal {
+  break-inside: avoid;
+  display: flex;
+  gap: 6mm;
+  margin: 3mm 0;
+}
+
+.verbal > div { flex: 1; }
+.verbal ul { margin: 1.5mm 0 0; padding-left: 5mm; }
+.verbal li { margin-bottom: 1mm; font-size: 9.5pt; }
+.verbal .tuya { font-weight: bold; }
+.verbal .prestada { color: #8d8780; }
+
+.verbal .origen {
+  font-family: "DejaVu Sans", sans-serif;
+  font-size: 7.5pt;
+  color: #8d8780;
+}
+
+.verbal .ganadas { font-size: 9pt; color: #4a453e; margin-top: 2mm; }
+
+/* ---------- Lo que ha escrito la persona ---------- */
+
+.palabras-usuario blockquote {
+  break-inside: avoid;
+  margin: 0 0 4mm 0;
+  border-left: 1mm solid var(--marca);
+  padding-left: 4mm;
+  font-size: 10.5pt;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+
+/* ---------- Contraste de arquetipo (referencia, no plan) ---------- */
+
+/* Lo de la ficha baja de veredicto a contraste. Se conserva porque es el punto
+   de comparación que hace visible que lo de arriba sí es suyo, pero se lee en
+   gris y pequeño para que no se confunda con lo que ha decidido la persona. */
+.referencia-arquetipo {
+  break-inside: avoid;
+  border-left: 0.8mm solid #ded8cf;
+  padding-left: 4mm;
+  font-size: 9.5pt;
+  color: #6b665f;
+}
+
+.referencia-arquetipo h3 { font-size: 10pt; margin-top: 0; }

@@ -1,0 +1,63 @@
+{
+  "_nota": "Lo lee scoring.indice_distincion. 'izq' significa valor < centro de la bipolar; 'der', valor > centro. El centro se calcula como (escala+1)/2 por pregunta, nunca con la constante 7.",
+  "tono_categoria": {
+    "formal_tecnico": {
+      "COM-TV-1": "izq",
+      "COM-TV-2": "izq",
+      "COM-TV-3": "izq",
+      "COM-TV-4": "izq"
+    },
+    "motivacional": {
+      "COM-TV-1": "der",
+      "COM-TV-2": "izq",
+      "COM-TV-3": "izq",
+      "COM-TV-4": "der"
+    },
+    "colega_cercano": {
+      "COM-TV-1": "der",
+      "COM-TV-2": "der",
+      "COM-TV-3": "izq",
+      "COM-TV-4": "der"
+    },
+    "activista_critico": {
+      "COM-TV-1": "izq",
+      "COM-TV-2": "izq",
+      "COM-TV-3": "der",
+      "COM-TV-4": "der"
+    },
+    "humor": {
+      "COM-TV-1": "der",
+      "COM-TV-2": "der",
+      "COM-TV-3": "der",
+      "COM-TV-4": "der"
+    },
+    "no_hay_patron": {}
+  },
+  "color": {
+    "comparable_con": "VIS-CR-3",
+    "vocabulario": [
+      "rojo",
+      "azul",
+      "verde",
+      "amarillo",
+      "naranja",
+      "morado",
+      "rosa",
+      "negro_blanco"
+    ],
+    "nota": "COM-CX-3 usa exactamente los mismos ocho valores que VIS-CR-3: la comparación es igualdad de cadena, sin tabla intermedia"
+  },
+  "formato": {
+    "comparable_con": "ACC-CT-2",
+    "vocabulario": [
+      "post_semanal",
+      "newsletter",
+      "video_semanal",
+      "podcast_ancla",
+      "directo_ancla",
+      "informe",
+      "nada"
+    ],
+    "nota": "COM-CX-4 añade 'nada' (en mi sector no se publica), que ACC-CT-2 no tiene: 'nada' nunca coincide, así que d_formato = 100"
+  }
+}

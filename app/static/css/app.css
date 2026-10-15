@@ -1,0 +1,806 @@
+:root {
+  --tinta: #22201d;
+  --tinta-suave: #6b665f;
+  /* #9a948c sobre --papel daba 2,83:1 y fallaba AA. Con este gris el contador,
+     el indicador de guardado y el enlace de privacidad pasan de 4,5:1. */
+  --tenue: #6f6a62;
+  --papel: #faf8f5;
+  --linea: #e2ddd5;
+  --marca: #c1440e;
+  --marca-suave: #fdf1ec;
+  --radio: 12px;
+  --sans: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+  --serif: "Iowan Old Style", "Palatino Linotype", Palatino, Georgia, serif;
+}
+
+* { box-sizing: border-box; }
+
+/* El atributo hidden lo declara el user agent con display:none, y cualquier
+   display de autor lo gana: .pie-nav{display:flex} hacía que `pie.hidden = true`
+   no ocultara nada, así que en el paso final se podía pulsar Atrás mientras el
+   spinner giraba. Con el paso de acceso sería la misma puerta abierta. */
+[hidden] { display: none !important; }
+
+body {
+  margin: 0;
+  font-family: var(--sans);
+  background: var(--papel);
+  color: var(--tinta);
+  line-height: 1.6;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Página larga normal (el informe de resultado). El cuestionario la sobrescribe
+   más abajo con .modo-tarjeta main. */
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 48px 24px 100px;
+}
+
+h1 {
+  font-family: var(--serif);
+  font-size: 42px;
+  line-height: 1.12;
+  margin: 0 0 14px;
+  font-weight: 400;
+  letter-spacing: -0.01em;
+}
+
+h2 {
+  font-family: var(--serif);
+  font-size: 30px;
+  line-height: 1.25;
+  font-weight: 400;
+  margin: 0 0 10px;
+}
+
+.entradilla {
+  font-size: 17px;
+  color: var(--tinta-suave);
+  margin: 0 0 28px;
+  max-width: 58ch;
+}
+
+.nota {
+  background: #fff;
+  border-left: 3px solid var(--tenue);
+  border-radius: 0 10px 10px 0;
+  padding: 14px 18px;
+  font-size: 14px;
+  color: var(--tinta-suave);
+}
+.nota strong { color: var(--tinta); }
+
+button {
+  font-family: inherit;
+  font-size: 15px;
+  font-weight: 500;
+  padding: 13px 28px;
+  border-radius: 10px;
+  border: 1px solid transparent;
+  cursor: pointer;
+  transition: all 0.15s;
+}
+
+.btn-primario { background: var(--marca); color: #fff; }
+.btn-primario:hover { filter: brightness(0.92); }
+.btn-primario:disabled { opacity: 0.35; cursor: not-allowed; filter: none; }
+
+/* Secundario en jerarquía, no en accesibilidad: mismo tamaño de letra, mismo
+   alto y mismo ancho que el primario. Un enlace gris pequeño para «continuar
+   sin cuenta» sería decirle a la gente que esa puerta no cuenta. */
+.btn-secundario {
+  background: transparent;
+  color: var(--marca);
+  border: 1.5px solid var(--marca);
+  font-size: 15px;
+  /* 12.5 y no 13 a propósito: el borde es medio píxel más grueso por lado que
+     el del primario, y con el padding idéntico el botón saldría más alto. Con
+     esto se queda en 47 px frente a los 48 del primario (medido en Chrome a
+     375 px): el redondeo de subpíxel no da para clavarlo, y errar por debajo
+     es preferible a que el secundario sea el botón más grande de la pantalla. */
+  padding: 12.5px 27.5px;
+  border-radius: 10px;
+  width: 100%;
+  max-width: 320px;
+}
+.btn-secundario:hover { background: var(--marca-suave); }
+.btn-secundario:disabled { opacity: 0.35; cursor: not-allowed; }
+
+input[type="text"], input[type="email"], textarea {
+  width: 100%;
+  padding: 14px 16px;
+  border: 1px solid var(--linea);
+  border-radius: 10px;
+  background: #fff;
+  font-family: inherit;
+  font-size: 17px;
+  color: var(--tinta);
+  transition: border-color 0.15s, box-shadow 0.15s;
+}
+input:focus, textarea:focus {
+  outline: none;
+  border-color: var(--marca);
+  box-shadow: 0 0 0 3px var(--marca-suave);
+}
+textarea { resize: vertical; min-height: 110px; font-size: 16px; }
+
+.campo { margin-bottom: 18px; }
+.campo > label {
+  display: block;
+  font-size: 13px;
+  font-weight: 600;
+  color: var(--tinta-suave);
+  margin-bottom: 6px;
+}
+
+/* ==========================================================================
+   MODO TARJETA — una pregunta por pantalla
+   ========================================================================== */
+
+.modo-tarjeta {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+/* ---- Barra de progreso ---- */
+
+.cabecera-progreso {
+  position: sticky;
+  top: 0;
+  z-index: 20;
+  background: rgba(250, 248, 245, 0.94);
+  backdrop-filter: blur(10px);
+}
+
+.barra-fondo { height: 4px; background: var(--linea); }
+
+.barra {
+  height: 100%;
+  width: 0;
+  background: var(--marca);
+  transition: width 0.45s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.meta-progreso {
+  max-width: 680px;
+  margin: 0 auto;
+  padding: 12px 24px 0;
+  display: flex;
+  justify-content: space-between;
+  gap: 12px;
+  font-size: 12px;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--tenue);
+}
+
+/* La sección se come el hueco sobrante para que el contador y el indicador de
+   guardado sigan pegados a la derecha, como antes de que hubiera tres huecos.
+   En 375 px el nombre de la sección se corta antes que empujar al contador. */
+#etiqueta-seccion {
+  flex: 1;
+  min-width: 0;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+#contador, .estado-guardado { flex-shrink: 0; white-space: nowrap; }
+
+#contador { font-variant-numeric: tabular-nums; }
+
+/* Estado del autoguardado. Discreto a propósito: si el guardado fuera algo que
+   hay que mirar, el cuestionario ya estaría mal hecho. Solo grita cuando la red
+   se cae, que es lo único que la persona puede llegar a necesitar saber. */
+.estado-guardado {
+  font-size: 12px;
+  color: var(--tenue);
+  text-transform: none;
+  letter-spacing: 0;
+}
+.estado-guardado.sin-red { color: var(--marca); }
+
+/* ---- Escena ---- */
+
+.modo-tarjeta main {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  padding: 32px 24px 150px;
+  /* `safe center` centra la tarjeta cuando cabe, pero la alinea arriba cuando no.
+     Con `center` a secas, una pregunta con muchas opciones se desborda por igual
+     arriba y abajo, y la parte de arriba queda cortada y fuera del alcance del
+     scroll. Es el fallo clásico del centrado con flexbox. */
+  align-items: center;
+  align-items: safe center;
+}
+
+.tarjeta-paso {
+  width: 100%;
+  max-width: 680px;
+}
+
+#escena.entrando .tarjeta-paso {
+  opacity: 0;
+  transform: translateY(14px);
+}
+
+.tarjeta-paso {
+  opacity: 1;
+  transform: none;
+  transition: opacity 0.32s ease, transform 0.32s ease;
+}
+
+.tarjeta-paso.sacude { animation: sacude 0.35s; }
+
+@keyframes sacude {
+  0%, 100% { transform: translateX(0); }
+  25% { transform: translateX(-7px); }
+  75% { transform: translateX(7px); }
+}
+
+.texto-pregunta {
+  font-family: var(--serif);
+  font-size: 27px;
+  line-height: 1.3;
+  margin-bottom: 8px;
+}
+
+.ayuda-paso {
+  font-size: 15px;
+  color: var(--tinta-suave);
+  margin: 0 0 26px;
+  max-width: 56ch;
+}
+
+.limite {
+  font-size: 13px;
+  color: var(--tenue);
+  margin: 0 0 14px;
+}
+
+/* ---- Intersticiales e intro ---- */
+
+.interstitial .kicker {
+  font-size: 11px;
+  letter-spacing: 0.2em;
+  text-transform: uppercase;
+  color: var(--marca);
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+.interstitial h2 { font-size: 34px; }
+.interstitial.grande h2 { font-size: 44px; }
+.interstitial .entradilla { margin-bottom: 0; }
+
+.portada-intro .nota { margin-bottom: 28px; }
+
+.datos-intro {
+  display: flex;
+  gap: 32px;
+  font-size: 14px;
+  color: var(--tinta-suave);
+}
+.datos-intro strong {
+  display: block;
+  font-size: 22px;
+  font-family: var(--serif);
+  font-weight: 400;
+  color: var(--tinta);
+}
+
+/* ---- Likert ---- */
+
+.likert { display: flex; gap: 8px; }
+.likert input { position: absolute; opacity: 0; width: 0; height: 0; }
+
+.likert label {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4px;
+  padding: 18px 6px 14px;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.12s;
+  user-select: none;
+}
+
+.likert label:hover {
+  border-color: var(--marca);
+  transform: translateY(-2px);
+}
+
+.likert .n {
+  font-size: 20px;
+  font-weight: 600;
+  font-variant-numeric: tabular-nums;
+}
+.likert .t {
+  font-size: 11.5px;
+  color: var(--tinta-suave);
+  text-align: center;
+  line-height: 1.3;
+}
+
+.likert input:checked + label {
+  background: var(--marca);
+  border-color: var(--marca);
+  color: #fff;
+}
+.likert input:checked + label .t { color: rgba(255, 255, 255, 0.85); }
+
+/* ---- Opciones ---- */
+
+.opciones { display: grid; gap: 10px; }
+.opciones input { position: absolute; opacity: 0; width: 0; height: 0; }
+
+.opciones label {
+  display: flex;
+  align-items: flex-start;
+  gap: 14px;
+  padding: 16px 18px;
+  border: 1px solid var(--linea);
+  border-radius: var(--radio);
+  background: #fff;
+  cursor: pointer;
+  transition: all 0.12s;
+}
+
+.opciones label:hover {
+  border-color: var(--marca);
+  transform: translateY(-1px);
+}
+
+.opciones .tecla {
+  flex-shrink: 0;
+  width: 26px;
+  height: 26px;
+  display: grid;
+  place-items: center;
+  border: 1px solid var(--linea);
+  border-radius: 7px;
+  font-size: 12px;
+  font-weight: 600;
+  color: var(--tenue);
+  background: var(--papel);
+}
+
+.opciones .cuerpo { flex: 1; }
+.opciones .et { display: block; font-size: 16px; font-weight: 500; }
+.opciones .de {
+  display: block;
+  font-size: 13.5px;
+  color: var(--tinta-suave);
+  margin-top: 2px;
+}
+
+/* Listas largas (canales, tipos de ropa: hasta 12 opciones) en dos columnas
+   compactas, para que quepan sin scroll. */
+.opciones.densa {
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
+}
+.opciones.densa label { padding: 11px 13px; gap: 10px; }
+.opciones.densa .tecla { width: 22px; height: 22px; font-size: 11px; border-radius: 6px; }
+.opciones.densa .et { font-size: 14.5px; }
+.opciones.densa .de { font-size: 12px; line-height: 1.4; margin-top: 1px; }
+
+.opciones input:checked + label {
+  border-color: var(--marca);
+  background: var(--marca-suave);
+  box-shadow: inset 0 0 0 1px var(--marca);
+}
+.opciones input:checked + label .tecla {
+  background: var(--marca);
+  border-color: var(--marca);
+  color: #fff;
+}
+
+/* ---- Bipolar ---- */
+
+.bipolar .polos {
+  display: flex;
+  justify-content: space-between;
+  gap: 24px;
+  margin-bottom: 18px;
+}
+.bipolar .polo { flex: 1; font-size: 13px; color: var(--tenue); }
+.bipolar .polo.der { text-align: right; }
+.bipolar .polo strong {
+  display: block;
+  font-size: 16px;
+  color: var(--tinta);
+  margin-bottom: 2px;
+}
+
+.bipolar input[type="range"] {
+  width: 100%;
+  accent-color: var(--marca);
+  height: 28px;
+  cursor: pointer;
+}
+
+.bipolar .marcas {
+  display: flex;
+  justify-content: space-between;
+  padding: 0 2px;
+  font-size: 11px;
+  color: var(--tenue);
+  font-variant-numeric: tabular-nums;
+}
+
+/* ---- Sugerencias ---- */
+
+.sugerencias {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin-top: 4px;
+}
+
+.sugerencia {
+  padding: 8px 14px;
+  border: 1px dashed var(--linea);
+  border-radius: 100px;
+  background: #fff;
+  font-size: 14px;
+  color: var(--tinta-suave);
+  font-weight: 400;
+}
+.sugerencia:hover {
+  border-style: solid;
+  border-color: var(--marca);
+  color: var(--marca);
+}
+
+/* ---- Pie de navegación ---- */
+
+.pie-nav {
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  z-index: 20;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 24px;
+  background: linear-gradient(to top, var(--papel) 62%, rgba(250, 248, 245, 0));
+}
+
+.pie-nav > * { flex-shrink: 0; }
+
+.pie-nav .btn-atras {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background: transparent;
+  border-color: transparent;
+  color: var(--tenue);
+  padding: 10px 14px;
+}
+.pie-nav .btn-atras:hover { color: var(--tinta); }
+
+.pista-teclado {
+  flex: 1;
+  text-align: center;
+  font-size: 12.5px;
+  color: var(--tenue);
+}
+
+/* ---- Cargando ---- */
+
+.cargando { text-align: center; padding: 40px 0; }
+
+.cargando .pulso {
+  width: 34px;
+  height: 34px;
+  border: 3px solid var(--linea);
+  border-top-color: var(--marca);
+  border-radius: 50%;
+  margin: 0 auto 18px;
+  animation: gira 0.9s linear infinite;
+}
+
+@keyframes gira { to { transform: rotate(360deg); } }
+
+/* ---- Móvil ---- */
+
+@media (max-width: 640px) {
+  h1 { font-size: 31px; }
+  .texto-pregunta { font-size: 22px; }
+  .interstitial h2, .interstitial.grande h2 { font-size: 28px; }
+  .modo-tarjeta main { padding: 24px 18px 130px; }
+  .likert { gap: 5px; }
+  .likert label { padding: 14px 2px 10px; }
+  .likert .n { font-size: 17px; }
+  .likert .t { font-size: 9.5px; }
+  .opciones .tecla { display: none; }
+  .opciones.densa { grid-template-columns: 1fr; }
+  .datos-intro { gap: 20px; }
+  .pista-teclado { display: none; }
+  .pie-nav { gap: 8px; justify-content: space-between; }
+  .fila { display: block; }
+}
+
+.fila { display: flex; gap: 14px; }
+.fila > * { flex: 1; }
+
+/* ===== Muro de tibieza y ronda de desempate ===== */
+.tarjeta-paso.muro { text-align: center; }
+.muro-icono { font-size: 44px; line-height: 1; margin-bottom: 8px; }
+.tarjeta-paso.muro h1 { color: var(--marca); }
+.tarjeta-paso.muro .nota {
+  border-left-color: var(--marca);
+  background: var(--marca-suave);
+}
+.tarjeta-paso.desempate .texto-pregunta::before {
+  content: "Sin punto medio";
+  display: inline-block;
+  font-size: 11px; letter-spacing: .12em; text-transform: uppercase;
+  color: var(--marca); margin-bottom: 8px;
+}
+
+/* Bipolar de desempate: botones, hay que elegir un lado. */
+.bipolar-desempate .polos {
+  display: flex; justify-content: space-between; margin-bottom: 14px;
+}
+.bipolar-desempate .polo { flex: 1; font-size: 14px; color: var(--tinta); }
+.bipolar-desempate .polo.der { text-align: right; }
+.escala-botones {
+  display: grid; grid-auto-flow: column; grid-auto-columns: 1fr; gap: 8px;
+}
+.escala-botones input { position: absolute; opacity: 0; pointer-events: none; }
+.escala-botones label {
+  display: flex; align-items: center; justify-content: center;
+  height: 52px; border: 1px solid var(--linea); border-radius: 10px;
+  font-weight: 600; cursor: pointer; user-select: none;
+}
+.escala-botones label.izq { color: var(--tinta-suave); }
+.escala-botones label.der { color: var(--tinta-suave); }
+.escala-botones input:checked + label {
+  background: var(--marca); border-color: var(--marca); color: #fff;
+}
+
+/* ===== Veredicto duro en portada ===== */
+.veredicto-duro {
+  background: rgba(0, 0, 0, .22);
+  border-radius: 10px; padding: 14px 18px; margin: 20px auto 0;
+  max-width: 560px; font-size: 14.5px; line-height: 1.5;
+}
+
+/* ===== Paletas múltiples ===== */
+.paleta-bloque { margin: 18px 0 8px; }
+.paleta-cab { margin-bottom: 8px; }
+.paleta-cab strong { font-size: 16px; }
+.paleta-cab span { color: var(--tenue); font-size: 13.5px; margin-left: 6px; }
+.paleta-just {
+  font-size: 14px; color: var(--tinta-suave); margin: 6px 0 0;
+  border-left: 3px solid var(--marca-suave); padding-left: 12px;
+}
+
+/* ==========================================================================
+   PASO 0 — ACCESO
+   ========================================================================== */
+
+/* Los dos botones, misma columna y mismo ancho. El de Google arriba porque es
+   el que resuelve el problema real (retomar desde otro aparato), no porque el
+   otro estorbe: «Continuar sin cuenta» es un clic y del mismo tamaño. */
+.acceso-botones {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 14px;
+  margin: 24px 0 20px;
+}
+
+/* GIS pinta el botón con un iframe y tarda. Sin altura reservada, la pantalla
+   pega un salto justo cuando la persona va a pulsar. */
+#boton-google {
+  min-height: 44px;
+  display: flex;
+  justify-content: center;
+  width: 100%;
+}
+
+.acceso .ayuda-paso {
+  max-width: 52ch;
+  text-align: center;
+  margin: 0 auto 6px;
+}
+
+.acceso .nota { margin-top: 20px; }
+
+.enlace-privacidad {
+  display: inline-block;
+  margin-top: 14px;
+  font-size: 12.5px;
+  text-decoration: underline;
+  color: var(--tenue);
+}
+.enlace-privacidad:hover { color: var(--tinta); }
+
+/* ---- Tarjetas de decisión (fusionar borrador, empezar de cero…) ---- */
+
+/* Las dos salidas siempre visibles y con la misma letra. El sistema recomienda
+   una poniéndola de primaria, pero nunca decide en silencio: perder 90
+   respuestas por un botón que no se vio es un fallo que no se puede deshacer. */
+.tarjeta-paso.decision .decision-botones {
+  display: flex;
+  gap: 12px;
+  margin-top: 24px;
+}
+.tarjeta-paso.decision .decision-botones > * { flex: 1; max-width: none; }
+
+@media (max-width: 640px) {
+  .tarjeta-paso.decision .decision-botones { flex-direction: column; }
+}
+
+/* ==========================================================================
+   RECORDABILIDAD — espejo web de las clases del PDF (mismos nombres)
+   ========================================================================== */
+
+.recordabilidad {
+  border: 1px solid var(--linea);
+  border-left: 4px solid var(--marca);
+  border-radius: 0 12px 12px 0;
+  background: #fff;
+  padding: 24px 26px;
+  margin-bottom: 24px;
+}
+
+.una-sola-cosa {
+  font-family: var(--serif);
+  font-size: 30px;
+  line-height: 1.2;
+  margin: 4px 0 6px;
+}
+.una-sola-cosa-vacia { color: var(--tinta-suave); font-size: 16px; margin: 4px 0 6px; }
+
+.marcador {
+  display: flex;
+  align-items: baseline;
+  gap: 8px;
+  font-family: var(--serif);
+  font-size: 26px;
+  margin-top: 18px;
+}
+.marcador .de { font-size: 15px; color: var(--tenue); font-family: var(--sans); }
+
+.comprobaciones { list-style: none; padding: 0; margin: 10px 0 0; }
+.comprobaciones li {
+  display: flex;
+  gap: 10px;
+  align-items: baseline;
+  font-size: 14.5px;
+  padding: 4px 0;
+}
+.comprobaciones .marca-si { color: var(--marca); font-weight: 700; }
+.comprobaciones .marca-no { color: var(--tenue); font-weight: 700; }
+.comprobaciones .falla { color: var(--tinta-suave); }
+.comprobaciones .fuente {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--tenue);
+  font-family: monospace;
+}
+
+/* ---- Sistema de activos ---- */
+
+.activo {
+  display: flex;
+  gap: 18px;
+  align-items: flex-start;
+  break-inside: avoid;
+}
+.activo .cuerpo { flex: 1; min-width: 0; }
+.activo .etiqueta { font-weight: 600; font-size: 16.5px; }
+.activo .valor { font-size: 14.5px; color: var(--tinta-suave); }
+.activo .regla { margin: 8px 0 0; font-size: 14.5px; }
+.activo .origen {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tenue);
+  margin-top: 8px;
+}
+.activo .muestra-color {
+  width: 34px;
+  height: 34px;
+  border-radius: 8px;
+  border: 1px solid rgba(0, 0, 0, 0.12);
+  flex-shrink: 0;
+}
+
+/* Tres puntos: es la unidad de fuerza en todo el informe, y se lee de un golpe
+   sin tener que explicar una escala. */
+.fuerza { display: flex; gap: 4px; flex-shrink: 0; padding-top: 7px; }
+.fuerza span {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--linea);
+}
+.fuerza span.lleno { background: var(--marca); }
+
+/* Borde discontinuo: se ve de un golpe qué no ha elegido la persona. */
+.tarjeta.prestado { border-style: dashed; }
+.tarjeta.prestado .etiqueta-prestado {
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tenue);
+  margin-bottom: 4px;
+}
+
+/* ---- Calendario de 12 meses ---- */
+
+.calendario-caja { overflow-x: auto; margin: 18px 0; }
+
+.calendario {
+  width: 100%;
+  min-width: 460px;
+  border-collapse: collapse;
+  font-size: 14px;
+}
+.calendario th {
+  text-align: left;
+  font-size: 11px;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--tenue);
+  font-weight: 600;
+  border-bottom: 1px solid var(--linea);
+  padding: 8px 10px;
+}
+.calendario td {
+  border-bottom: 1px solid var(--linea);
+  padding: 9px 10px;
+  vertical-align: top;
+}
+.calendario .mes { font-variant-numeric: tabular-nums; white-space: nowrap; }
+.calendario .revision td { background: var(--marca-suave); }
+.calendario .revision .criterio { font-size: 13.5px; }
+
+/* ---- Identidad verbal ---- */
+
+.verbal { display: flex; gap: 24px; margin: 16px 0; }
+.verbal > div { flex: 1; min-width: 0; }
+.verbal ul { list-style: none; padding: 0; margin: 8px 0 0; }
+.verbal li { padding: 3px 0; font-size: 15px; }
+.verbal .tuya { font-weight: 700; }
+.verbal .prestada { color: var(--tinta-suave); }
+.verbal .origen {
+  font-size: 11px;
+  letter-spacing: 0.08em;
+  color: var(--tenue);
+  font-family: monospace;
+  margin-left: 6px;
+}
+.verbal .ganadas { font-size: 13.5px; color: var(--tinta-suave); margin-top: 10px; }
+
+@media (max-width: 640px) {
+  .verbal { flex-direction: column; gap: 18px; }
+  .una-sola-cosa { font-size: 24px; }
+  .activo { gap: 12px; }
+}
+
+/* ---- Lo que ha escrito la persona ---- */
+
+.palabras-usuario blockquote {
+  margin: 0 0 16px;
+  border-left: 4px solid var(--marca);
+  padding: 4px 0 4px 16px;
+  font-family: var(--serif);
+  font-size: 17px;
+  line-height: 1.5;
+  white-space: pre-wrap;
+}
+.palabras-usuario .dato { margin-bottom: 6px; }

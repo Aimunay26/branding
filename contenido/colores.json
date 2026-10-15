@@ -1,0 +1,28 @@
+{
+  "_nota": "Datos de color para el generador de paletas (app/paletas.py). 'colores_declarados' mapea la respuesta de VIS-CR-3 (el color con el que el usuario quiere que lo asocien) a su hex protagonista. 'vetos' mapea VIS-CR-2 (colores que NO se pondría) a las familias cromáticas que se eliminan de TODA paleta. Las familias las calcula app/paletas.py a partir del hex (clasificar), no se guardan aquí.",
+  "colores_declarados": {
+    "rojo":     { "hex": "#C1121F", "nombre": "Rojo", "hue": 355 },
+    "azul":     { "hex": "#1D4ED8", "nombre": "Azul", "hue": 222 },
+    "verde":    { "hex": "#2E7D46", "nombre": "Verde", "hue": 140 },
+    "amarillo": { "hex": "#E6A700", "nombre": "Amarillo", "hue": 43 },
+    "naranja":  { "hex": "#D9481F", "nombre": "Naranja", "hue": 16 },
+    "morado":   { "hex": "#6B2FB3", "nombre": "Morado", "hue": 268 },
+    "rosa":     { "hex": "#D6336C", "nombre": "Rosa", "hue": 338 },
+    "negro_blanco": { "hex": "#111111", "nombre": "Blanco y negro", "hue": null, "monocromo": true }
+  },
+  "vetos": {
+    "no_negro":     ["negro"],
+    "no_blanco":    ["blanco"],
+    "no_pasteles":  ["pastel"],
+    "no_vivos":     ["vivo", "neon"],
+    "no_neon":      ["neon"],
+    "no_metalicos": ["metalico"],
+    "no_tierras":   ["tierra"],
+    "ninguno_veto": []
+  },
+  "neutros_seguros": {
+    "claro": { "hex": "#EDEAE3", "nombre": "Piedra clara" },
+    "oscuro": { "hex": "#1A1A1A", "nombre": "Negro tinta" },
+    "medio": { "hex": "#8A8578", "nombre": "Gris cálido" }
+  }
+}

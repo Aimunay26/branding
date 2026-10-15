@@ -1,0 +1,764 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="utf-8">
+  <title>Informe de Branding — {{ informe.nombre or "Sin nombre" }}</title>
+  <style>:root { --marca: {{ r.color_marca }}; }</style>
+</head>
+<body>
+
+{% set p = r.perfil %}
+{% set f1 = r.ficha_primaria %}
+{% set resp_com = informe.respuestas.get('comunicacion') or {} %}
+{% set resp_acc = informe.respuestas.get('acciones') or {} %}
+
+{#- Mismo cálculo de luminancia que en resultado.html: la portada va a sangre
+    con el color que ha elegido la persona, y con el texto en blanco fijo un
+    amarillo salía a 2,1:1, ilegible en pantalla y peor impreso. -#}
+{% set _hex = (r.color_marca or '#c1440e')|string|trim|replace('#', '') %}
+{% if _hex|length != 6 %}{% set _hex = 'c1440e' %}{% endif %}
+{% set _cr = (_hex[0:2]|int(base=16)) / 255 %}
+{% set _cg = (_hex[2:4]|int(base=16)) / 255 %}
+{% set _cb = (_hex[4:6]|int(base=16)) / 255 %}
+{% set _lr = (_cr / 12.92) if _cr <= 0.03928 else (((_cr + 0.055) / 1.055) ** 2.4) %}
+{% set _lg = (_cg / 12.92) if _cg <= 0.03928 else (((_cg + 0.055) / 1.055) ** 2.4) %}
+{% set _lb = (_cb / 12.92) if _cb <= 0.03928 else (((_cb + 0.055) / 1.055) ** 2.4) %}
+{% set _lum = 0.2126 * _lr + 0.7152 * _lg + 0.0722 * _lb %}
+{% set portada_clara = _lum > 0.1833 %}
+
+<div class="portada{{ ' clara' if portada_clara else '' }}">
+  <div class="sello">Informe de Branding</div>
+  <div>
+    <h1>{{ informe.respuestas.identidad.artistico or informe.nombre or "Tu marca" }}</h1>
+    <div class="arquetipo">
+      {{ f1.nombre }}{% if r.ficha_secundaria %} · {{ r.ficha_secundaria.nombre }}{% endif %}{% if r.ficha_terciaria %} · {{ r.ficha_terciaria.nombre }}{% endif %}
+    </div>
+    <p class="resumen">{{ f1.resumen }}</p>
+    {#- Mismo disparador que resultado.html, y por el mismo motivo: el PDF no
+        puede ser más complaciente que la web con un informe que el veredicto
+        declara sin definir. El texto sale de scoring, que tiene una redacción
+        por motivo. -#}
+    {% set veredicto_duro = r.veredicto and r.veredicto.estado in ("tibio_persistente", "plano_sin_tibieza", "sin_validez") %}
+    {% set invisible_alto = r.invisibilidad and r.invisibilidad.nivel == "riesgo alto" %}
+    {% if veredicto_duro or invisible_alto %}
+    <div class="veredicto-duro">
+      {% if veredicto_duro %}
+      {{ r.veredicto.texto }} Esto es un punto de partida, no un veredicto.
+      {% else %}
+      {{ r.invisibilidad.lectura }}
+      {% endif %}
+    </div>
+    {% endif %}
+
+    {#- Lo único de la portada que no es ni el nombre ni el arquetipo: la cosa
+        por la que van a recordar a esta persona y cuánto se le reconoce. -#}
+    {% if recomendaciones and recomendaciones.una_sola_cosa_recomendada %}
+    <div class="una-sola-cosa">{{ recomendaciones.una_sola_cosa_recomendada }}</div>
+    {% elif r.una_sola_cosa_borrador %}
+    <div class="una-sola-cosa">{{ r.una_sola_cosa_borrador }}</div>
+    {% endif %}
+    {% if r.reconocimiento_3s %}
+    <div class="marcador-3s">
+      Reconocimiento a 3 segundos: {{ r.reconocimiento_3s.puntos }}/4{% if r.identificabilidad %}
+      · Identificabilidad {{ r.identificabilidad.indice|round|int }}/100 ({{ r.identificabilidad.nivel }}){% endif %}
+    </div>
+    {% endif %}
+  </div>
+  <div class="pie">
+    {{ "Marca personal" if informe.tipo_marca == "personal" else "Marca de empresa" }}
+    · Generado el {{ informe.creado_en[:10] }}
+  </div>
+</div>
+
+<section class="continua">
+  <h2>Tu arquetipo</h2>
+  <p class="entradilla">
+    Ningún arquetipo puro construye una marca interesante. Lo que te diferencia
+    es la combinación — y sobre todo, dónde no encajas.
+  </p>
+
+  <div class="grafico">{{ r.graficos.radar|safe }}</div>
+  <p class="pie-grafico">
+    La línea discontinua es la media. Por encima, te define; por debajo, no va contigo.
+  </p>
+
+  <div class="tarjeta">
+    <div class="dato">Arquetipo primario</div>
+    <h3 style="margin-top:0">{{ f1.nombre }}</h3>
+    <p>{{ f1.resumen }}</p>
+    <p><strong>Deseo central:</strong> {{ f1.deseo }}</p>
+    <p><strong>Miedo central:</strong> {{ f1.miedo }}</p>
+    {% if f1.talento %}<p><strong>Tu talento:</strong> {{ f1.talento }}</p>{% endif %}
+    <p style="margin-bottom:0"><strong>Su trampa:</strong> {{ f1.sombra }}</p>
+  </div>
+
+  {% if f1.evolucion %}
+  <div class="tarjeta">
+    <div class="dato">Hacia dónde evolucionar</div>
+    <p style="margin-bottom:0">{{ f1.evolucion }}</p>
+  </div>
+  {% endif %}
+
+  {% if r.ficha_secundaria %}
+  <div class="tarjeta">
+    <div class="dato">Arquetipo secundario</div>
+    <h3 style="margin-top:0">{{ r.ficha_secundaria.nombre }}</h3>
+    <p style="margin-bottom:0">{{ r.ficha_secundaria.resumen }}</p>
+  </div>
+  {% endif %}
+
+  <h3>Índice de coherencia: {{ p.sigma }}</h3>
+  <p>{{ p.lectura_coherencia }}</p>
+
+  {% if r.tibieza and r.tibieza.total %}
+  <div class="tarjeta">
+    <div class="dato">Índice de definición</div>
+    <p style="margin-bottom:0">
+      {% if r.tibieza.indice > 30 %}
+      Te escondiste en el punto medio en {{ r.tibieza.tibias }} de {{ r.tibieza.total }}
+      respuestas ({{ r.tibieza.indice }}%). Una marca no se construye desde el «a veces»:
+      cuanto más te definas, más se te recordará.
+      {% else %}
+      Solo {{ r.tibieza.tibias }} de {{ r.tibieza.total }} respuestas quedaron en el punto
+      medio ({{ r.tibieza.indice }}%). Te has mojado, y eso es justo lo que hace que una
+      marca se reconozca.
+      {% endif %}
+    </p>
+  </div>
+  {% endif %}
+
+  <div class="grafico">{{ r.graficos.familias|safe }}</div>
+  <p class="pie-grafico">Las cuatro motivaciones cardinales. Más estables que el arquetipo suelto.</p>
+</section>
+
+{% if r.avisos %}
+<section>
+  <h2>Lo que deberías vigilar</h2>
+  <p class="entradilla">
+    Esta es la parte que un test complaciente se saltaría. Léela dos veces.
+  </p>
+  {% for aviso in r.avisos %}
+  <div class="aviso">
+    <div class="titulo">{{ aviso.titulo }}</div>
+    <p>{{ aviso.texto }}</p>
+  </div>
+  {% endfor %}
+
+  {% if r.triangulacion %}
+  <h3>Lo que dices ser frente a lo que eliges hacer</h3>
+  <div class="grafico">{{ r.graficos.triangulacion|safe }}</div>
+  {% for t in r.triangulacion %}
+  <div class="aviso">
+    <div class="titulo">{{ t.titulo }}</div>
+    <p>{{ t.texto }}</p>
+  </div>
+  {% endfor %}
+  {% endif %}
+</section>
+{% endif %}
+
+<section>
+  <h2>Comunicación</h2>
+  <p class="entradilla">Cómo suena tu marca cuando no estás delante para explicarla.</p>
+
+  {#- El vocabulario de la ficha es idéntico para los doce que comparten
+      primario, así que primero va el que sale de lo que ha escrito esta
+      persona, y el del arquetipo baja a contraste. -#}
+  {% if r.identidad_verbal is defined and r.identidad_verbal %}
+  <div class="tarjeta">
+    <div class="dato">Tu vocabulario</div>
+    <div class="verbal">
+      <div>
+        <div class="dato">Las que dices</div>
+        <ul>
+          {% for w in r.identidad_verbal.propias %}
+          <li class="{{ 'tuya' if w.origen == 'tuya' else 'prestada' }}">
+            {{ w.palabra }} <span class="origen">({{ 'tuya' if w.origen == 'tuya' else 'prestada' }})</span>
+          </li>
+          {% endfor %}
+        </ul>
+        <p class="ganadas" style="margin-bottom:0">
+          {{ r.identidad_verbal.ganadas }} de 5 te las has ganado: salen de lo que
+          escribiste, no del catálogo de tu arquetipo.
+        </p>
+      </div>
+      <div>
+        <div class="dato">Las que no vuelves a decir</div>
+        <ul>
+          {% for w in r.identidad_verbal.prohibidas %}
+          <li>{{ w.palabra }} <span class="origen">({{ w.origen }})</span></li>
+          {% endfor %}
+        </ul>
+      </div>
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="tarjeta">
+    <div class="dato">Tono</div>
+    <p>{{ f1.comunicacion.tono }}</p>
+    <div class="dato">Estructura del mensaje</div>
+    <p>{{ f1.comunicacion.estructura_mensaje }}</p>
+    <div class="dato">Lo que pide tu arquetipo</div>
+    <p>{{ f1.comunicacion.vocabulario|join(" · ") }}</p>
+    <div class="dato">Evita</div>
+    <p style="margin-bottom:0">{{ f1.comunicacion.evitar }}</p>
+  </div>
+
+  {#- «Suena así» se lo queda lo que se ha escrito para esta persona. El tagline
+      de la ficha se queda como contraste, con su rótulo honesto: sale idéntico
+      para todo el que comparta primario. -#}
+  {% if recomendaciones and recomendaciones.recomendaciones %}
+    {% set _n = recomendaciones.direccion_recomendada or 1 %}
+    {% set _dir = recomendaciones.recomendaciones[_n - 1] if recomendaciones.recomendaciones|length >= _n else None %}
+    {% if _dir and _dir.eslogan_candidatos %}
+    <div class="tarjeta" style="background:#fff;border-left:3.5mm solid var(--marca)">
+      <div class="dato">Suena así</div>
+      {% for e in _dir.eslogan_candidatos %}
+      <p style="font-size:13pt;margin-bottom:1mm">«{{ e }}»</p>
+      {% endfor %}
+    </div>
+    {% endif %}
+  {% endif %}
+
+  {% if f1.comunicacion.ejemplo_tagline %}
+  <div class="referencia-arquetipo">
+    <div class="dato">Así suena tu arquetipo</div>
+    <p style="margin-bottom:0">«{{ f1.comunicacion.ejemplo_tagline }}»</p>
+  </div>
+  {% endif %}
+
+  {% if f1.marcas or f1.iconos %}
+  <div class="tarjeta">
+    {% if f1.marcas %}<div class="dato">Marcas de tu mismo arquetipo</div>
+    <p>{{ f1.marcas|join(" · ") }}</p>{% endif %}
+    {% if f1.iconos %}<div class="dato">Iconos de tu mismo arquetipo</div>
+    <p style="margin-bottom:0">{{ f1.iconos|join(" · ") }}</p>{% endif %}
+  </div>
+  {% endif %}
+</section>
+
+{% if r.activos is defined and r.activos %}
+<section>
+  <h2>Tu sistema de activos</h2>
+  <p class="entradilla">
+    Esto es por lo que te van a reconocer antes de leer tu nombre. Cada línea
+    sale de una respuesta tuya, y viene con la regla de uso: no es una
+    sugerencia, es una condición.
+  </p>
+
+  {% if (r.activos_fuertes or 0) < 2 %}
+    {% set aviso_sin = (r.avisos | selectattr('tipo', 'equalto', 'sin_activos') | list | first) %}
+    <div class="aviso">
+      <div class="titulo">{{ aviso_sin.titulo if aviso_sin else "No tienes con qué te reconozcan" }}</div>
+      <p>
+        {% if aviso_sin %}{{ aviso_sin.texto }}{% else %}
+        De todo el cuestionario no sale ni una sola cosa que alguien pueda
+        describir de memoria: ni un color, ni un objeto, ni un formato fijo.
+        Vuelve a VIS-RO-5, ACC-CT-2 y ACC-RI-2 y elige algo.
+        {% endif %}
+      </p>
+    </div>
+  {% else %}
+    {% set _declarados = r.activos | selectattr('declarado') | list | sort(attribute='fuerza', reverse=true) %}
+    {% set _prestados = r.activos | rejectattr('declarado') | list | sort(attribute='fuerza', reverse=true) %}
+    {% for a in _declarados + _prestados %}
+    <div class="activo{{ ' prestado' if not a.declarado else '' }}">
+      <div class="izq">
+        {% if not a.declarado %}
+        <div class="etiqueta-prestado">Prestado de tu arquetipo</div>
+        {% endif %}
+        <div class="etiqueta">{{ a.etiqueta }}</div>
+        {% if a.tipo == 'color' and a.valor and a.valor.startswith('#') %}
+        <div class="muestra-color" style="background: {{ a.valor }}"></div>
+        {% endif %}
+        {% if a.valor %}<div class="valor">{{ a.valor }}</div>{% endif %}
+        <div class="fuerza">
+          {% for n in range(3) %}<span class="{{ 'lleno' if n < a.fuerza else '' }}"></span>{% endfor %}
+        </div>
+        {% if a.fuente_ids %}
+        <div class="origen">De tu respuesta {{ a.fuente_ids|join(', ') }}</div>
+        {% endif %}
+      </div>
+      <div class="der">
+        <p class="regla">{{ a.regla_de_uso }}</p>
+        {% if a.conflicto %}
+        <p class="regla" style="margin-top:2mm"><strong>Choca con tu propio veto:</strong> {{ a.conflicto }}</p>
+        {% endif %}
+      </div>
+    </div>
+    {% endfor %}
+  {% endif %}
+</section>
+{% endif %}
+
+<section>
+  <h2>Visual</h2>
+  <p class="entradilla">
+    No existe "el azul transmite confianza". Existe la congruencia: estos colores
+    y estas tipografías son coherentes con lo que tu marca dice ser.
+  </p>
+
+  <h3>Tus paletas</h3>
+  <p>
+    Tres caminos, todos fieles a lo que elegiste. Tu color declarado manda, y lo
+    que vetaste no aparece en ninguno.
+  </p>
+  {% for pal in r.paletas %}
+  <div class="paleta-bloque">
+    <div class="paleta-cab"><strong>{{ pal.nombre }}</strong> — {{ pal.subtitulo }}</div>
+    <div class="paleta">
+      {% for c in pal.colores %}
+      <div class="muestra">
+        <div class="color" style="background: {{ c.hex }}"></div>
+        <div class="nombre">{{ c.nombre }}</div>
+        <div class="hex">{{ c.hex }}</div>
+      </div>
+      {% endfor %}
+    </div>
+    {% if recomendaciones and recomendaciones.justificacion_paletas %}
+      {% for j in recomendaciones.justificacion_paletas if j.paleta_id == pal.id %}
+      <p class="paleta-just">{{ j.texto }}</p>
+      {% endfor %}
+    {% endif %}
+  </div>
+  {% endfor %}
+
+  <h3>Tipografía</h3>
+  <p>
+    <strong>Titulares:</strong> {{ f1.visual.tipografia.titular|join(", ") }}<br>
+    <strong>Texto:</strong> {{ f1.visual.tipografia.cuerpo|join(", ") }}
+  </p>
+  <p>{{ f1.visual.tipografia.razon }}</p>
+
+  <h3>Estética</h3>
+  <p>{{ f1.visual.estetica }}</p>
+  <p><strong>Texturas:</strong> {{ f1.visual.texturas|join(" · ") }}</p>
+  <p><strong>Evita:</strong> {{ f1.visual.evitar }}</p>
+</section>
+
+<section>
+  <h2>Referentes</h2>
+  <p class="entradilla">
+    No para copiarlos: para robarles el gesto. Lo que hace reconocible a alguien
+    casi nunca es su cara — es una decisión concreta que repite siempre.
+  </p>
+
+  {% for ref in r.referentes %}
+  <div class="referente">
+    {# Ruta local, no la de Wikimedia: enlazar allí en caliente da 429 y el
+       informe sale con unas fotos sí y otras no. Ver scripts/descargar_imagenes.py #}
+    {% if ref.imagen and ref.imagen.local %}
+      <img class="foto" src="{{ ref.imagen.local }}" alt="{{ ref.nombre }}">
+    {% else %}
+      <div class="moodboard">
+        {% for c in ref.paleta %}<span style="background: {{ c.hex }}"></span>{% endfor %}
+      </div>
+    {% endif %}
+    <div>
+      <h3>{{ ref.nombre }}</h3>
+      <div class="meta">{{ ref.campo }} · {{ ref.epoca }}</div>
+      <p>{{ ref.estilo_visual }}</p>
+      <p class="gesto"><strong>El gesto:</strong> {{ ref.gesto_diferenciador }}</p>
+      <p style="font-size:9.5pt;color:#6b665f"><strong>Encaja contigo si:</strong> {{ ref.para_quien }}</p>
+      {% if ref.imagen and ref.imagen.local and ref.imagen.atribucion %}
+      <div class="credito">{{ ref.imagen.atribucion }}</div>
+      {% endif %}
+    </div>
+  </div>
+  {% endfor %}
+</section>
+
+<section>
+  <h2>Acciones</h2>
+  <p class="entradilla">
+    Una marca no es lo que dices que eres. Es lo que haces una y otra vez hasta
+    que la gente lo espera de ti.
+  </p>
+
+  {% if r.audacia.indice is not none %}
+  <div class="tarjeta">
+    <div class="dato">Índice de audacia — {{ r.audacia.nivel }} ({{ r.audacia.indice }}/100)</div>
+    <p style="margin-bottom:0">{{ r.audacia.lectura }}</p>
+  </div>
+  {% endif %}
+
+  {#- Las cuatro medidas de recordabilidad. Sin <details>: en papel no se
+      despliega nada, así que el desglose va como lista corta o no va. -#}
+  {% if r.invisibilidad or r.distincion or r.consistencia or r.calidad_textos %}
+  <h3>¿Te van a recordar?</h3>
+
+  {% if r.invisibilidad %}
+  <div class="tarjeta">
+    <div class="dato">
+      Riesgo de invisibilidad — {{ r.invisibilidad.nivel }}
+      ({{ r.invisibilidad.indice|round|int }}/100 · te ven {{ r.invisibilidad.visibilidad|round|int }} de 100)
+    </div>
+    <p style="margin-bottom:0">{{ r.invisibilidad.lectura }}</p>
+    {% if r.invisibilidad.peor %}
+    <p style="margin:8px 0 0"><strong>Por dónde empezar:</strong> lo que más te resta es {{ r.invisibilidad.peor }}.</p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  {% if r.distincion and r.distincion.indice is not none %}
+  <div class="tarjeta">
+    <div class="dato">Distinción frente a tu categoría — {{ r.distincion.nivel }} ({{ r.distincion.indice }}/100)</div>
+    <p style="margin-bottom:0">{{ r.distincion.lectura }}</p>
+  </div>
+  {% endif %}
+
+  {% if r.consistencia and r.consistencia.indice is not none %}
+  <div class="tarjeta">
+    <div class="dato">Consistencia — {{ r.consistencia.nivel }} ({{ r.consistencia.indice }}/100)</div>
+    <p style="margin-bottom:0">{{ r.consistencia.lectura }}</p>
+  </div>
+  {% endif %}
+
+  {% if r.calidad_textos and r.calidad_textos.pedidas %}
+  <div class="tarjeta">
+    <div class="dato">Lo que has escrito tú — {{ r.calidad_textos.nivel }} ({{ r.calidad_textos.indice }}/100)</div>
+    <p style="margin-bottom:0">{{ r.calidad_textos.lectura }}</p>
+  </div>
+  {% endif %}
+
+  {% if r.atencion and r.atencion.estado and r.atencion.estado != 'ok' %}
+  <div class="aviso">
+    <div class="titulo">Control de atención: {{ r.atencion.pasados }} de {{ r.atencion.de }}</div>
+    <p>{{ r.atencion.aviso or 'Has fallado alguna de las preguntas que solo comprobaban que estabas leyendo. El informe sale igual, pero fíate de él con reservas.' }}</p>
+  </div>
+  {% endif %}
+  {% endif %}
+
+  {#- El sitio principal lo ocupa el calendario calculado con SUS respuestas.
+      La lista de la ficha baja a referencia justo debajo: es la misma para los
+      doce que comparten primario y no es un plan de nadie. -#}
+  {% if r.regla_repeticion is defined and r.regla_repeticion and r.regla_repeticion.meses %}
+  <h3>Tu regla de repetición (12 meses)</h3>
+  <p>{{ r.regla_repeticion.cabecera }}</p>
+
+  {% if r.regla_repeticion.cadencia and r.regla_repeticion.cadencia.etiqueta %}
+  <p>
+    <strong>Tu cadencia:</strong> {{ r.regla_repeticion.cadencia.etiqueta }} —
+    {{ r.regla_repeticion.cadencia.piezas_mes }} piezas al mes{% if r.regla_repeticion.cadencia.horas_semana %},
+    con {{ r.regla_repeticion.cadencia.horas_semana }} horas a la semana{% endif %}.
+  </p>
+  {% endif %}
+
+  <table class="calendario">
+    <thead>
+      <tr>
+        <th>Mes</th>
+        <th>Piezas</th>
+        <th>Tu ancla</th>
+        <th>Rituales</th>
+      </tr>
+    </thead>
+    {#- Bloques de cuatro filas: doce filas enteras no caben siempre en lo que
+        queda de página, y forzar la tabla completa abriría una página en blanco. -#}
+    {% for m in r.regla_repeticion.meses %}
+    {% if loop.index0 % 4 == 0 %}<tbody class="bloque">{% endif %}
+      <tr class="{{ 'revision' if m.revision else '' }}">
+        <td class="mes">{{ m.mes }}</td>
+        <td class="mes">{{ m.piezas }}</td>
+        <td>{{ m.ancla or "—" }}</td>
+        <td>{{ m.rituales|join(' · ') if m.rituales else "—" }}</td>
+      </tr>
+      {% if m.revision %}
+      <tr class="revision">
+        <td>☐</td>
+        <td colspan="3" class="criterio"><strong>Revisión:</strong> {{ m.revision }}</td>
+      </tr>
+      {% endif %}
+    {% if loop.index % 4 == 0 or loop.last %}</tbody>{% endif %}
+    {% endfor %}
+  </table>
+
+  {% for c in r.regla_repeticion.contradicciones %}
+  <div class="aviso">
+    <div class="titulo">{{ c.ids|join(' vs ') if c.ids else "Contradicción" }}</div>
+    <p>{{ c.texto }}</p>
+  </div>
+  {% endfor %}
+  {% endif %}
+
+  <div class="referencia-arquetipo">
+    <h3>Lo que suele hacer tu arquetipo (referencia, no plan)</h3>
+    <ul class="acciones">
+      {% for a in f1.acciones %}<li>{{ a }}</li>{% endfor %}
+    </ul>
+  </div>
+</section>
+
+{% if resp_com.get('COM-PA-2') or resp_com.get('COM-PA-3') or resp_com.get('COM-NA-4') or resp_acc.get('ACC-RI-2') %}
+<section>
+  <h2>Tus palabras</h2>
+  <p class="entradilla">
+    Esto lo has escrito tú. Es la única parte del informe que no ha calculado nadie.
+  </p>
+  <div class="palabras-usuario">
+    {% if resp_com.get('COM-PA-2') %}
+    <div class="dato">COM-PA-2</div>
+    <blockquote>{{ resp_com.get('COM-PA-2') }}</blockquote>
+    {% endif %}
+    {% if resp_com.get('COM-PA-3') %}
+    <div class="dato">COM-PA-3</div>
+    <blockquote>{{ resp_com.get('COM-PA-3') }}</blockquote>
+    {% endif %}
+    {% if resp_com.get('COM-NA-4') %}
+    <div class="dato">COM-NA-4</div>
+    <blockquote>{{ resp_com.get('COM-NA-4') }}</blockquote>
+    {% endif %}
+    {% if resp_acc.get('ACC-RI-2') %}
+    <div class="dato">ACC-RI-2</div>
+    <blockquote>{{ resp_acc.get('ACC-RI-2') }}</blockquote>
+    {% endif %}
+  </div>
+</section>
+{% endif %}
+
+{% if recomendaciones %}
+{% set paletas_por_id = {} %}
+{% for pal in r.paletas %}{% set _ = paletas_por_id.update({pal.id: pal}) %}{% endfor %}
+<section>
+  <h2>Las tres direcciones</h2>
+  <p class="entradilla">{{ recomendaciones.lectura_general }}</p>
+
+  {% if recomendaciones.direccion_recomendada %}
+  <div class="tarjeta">
+    <div class="dato">La que hay que tomar: la {{ recomendaciones.direccion_recomendada }}</div>
+    {% if recomendaciones.por_que_esa %}<p style="margin-bottom:0">{{ recomendaciones.por_que_esa }}</p>{% endif %}
+  </div>
+  {% endif %}
+
+  {% if recomendaciones.la_verdad_incomoda or recomendaciones.coste_de_no_elegir %}
+  <div class="aviso">
+    <div class="titulo">Lo que no quieres leer</div>
+    {% if recomendaciones.la_verdad_incomoda %}<p>{{ recomendaciones.la_verdad_incomoda }}</p>{% endif %}
+    {% if recomendaciones.coste_de_no_elegir %}
+    <p style="margin-top:2mm"><strong>Si no eliges:</strong> {{ recomendaciones.coste_de_no_elegir }}</p>
+    {% endif %}
+  </div>
+  {% endif %}
+</section>
+
+{% for rec in recomendaciones.recomendaciones %}
+{% set pal = paletas_por_id.get(rec.paleta_id) %}
+<div class="recomendacion">
+  <div class="numero">{{ "%02d"|format(loop.index) }}</div>
+  <h3>{{ rec.titulo }}</h3>
+
+  {% if rec.una_sola_cosa %}
+  <div class="campo">
+    <div class="dato">Una sola cosa</div>
+    <p style="font-size:14pt;margin-bottom:0">{{ rec.una_sola_cosa }}</p>
+  </div>
+  {% endif %}
+
+  {% if rec.eslogan_candidatos %}
+  <div class="campo">
+    <div class="dato">Eslogan (tres candidatos)</div>
+    <ul class="acciones">
+      {% for e in rec.eslogan_candidatos %}<li>«{{ e }}»</li>{% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  <div class="campo">
+    <div class="dato">El concepto</div>
+    <p>{{ rec.concepto }}</p>
+  </div>
+
+  {% if rec.postura %}
+  <div class="campo">
+    <div class="dato">Su postura — contra qué se define</div>
+    <p>{{ rec.postura }}</p>
+  </div>
+  {% endif %}
+
+  {% if rec.enemigo %}
+  <div class="campo">
+    <div class="dato">Contra quién</div>
+    <p>{{ rec.enemigo }}</p>
+  </div>
+  {% endif %}
+
+  {% if rec.a_quien_molesta %}
+  <div class="campo">
+    <div class="dato">A quién le va a caer mal</div>
+    <p>{{ rec.a_quien_molesta }}</p>
+  </div>
+  {% endif %}
+
+  {% if rec.activos_elegidos %}
+  <div class="campo">
+    <div class="dato">Tus activos en esta dirección</div>
+    <ul class="acciones">
+      {% for act in rec.activos_elegidos %}
+      <li>{{ act.clave }} → aparece en: {{ act.donde_aparece|join('; ') }}</li>
+      {% endfor %}
+    </ul>
+  </div>
+  {% endif %}
+
+  {% if rec.prueba_del_bar %}
+  <div class="campo">
+    <div class="dato">La prueba del bar</div>
+    <p style="font-size:13pt;margin-bottom:0">«{{ rec.prueba_del_bar }}»</p>
+  </div>
+  {% endif %}
+
+  {% if rec.prueba_3_segundos %}
+  <div class="campo">
+    <div class="dato">En tres segundos</div>
+    <p>{{ rec.prueba_3_segundos }}</p>
+  </div>
+  {% endif %}
+
+  <div class="campo">
+    <div class="dato">Por qué a ti</div>
+    <p>{{ rec.por_que_a_ti }}</p>
+  </div>
+
+  {% if pal %}
+  <div class="campo">
+    <div class="dato">Paleta — {{ pal.nombre }}</div>
+    <div class="paleta">
+      {% for c in pal.colores %}
+      <div class="muestra">
+        <div class="color" style="background: {{ c.hex }}"></div>
+        <div class="hex">{{ c.hex }}</div>
+      </div>
+      {% endfor %}
+    </div>
+  </div>
+  {% endif %}
+
+  <div class="campo">
+    <div class="dato">Tipografía</div>
+    <p>{{ rec.tipografia }}</p>
+  </div>
+
+  <div class="campo">
+    <div class="dato">Estilo visual</div>
+    <p>{{ rec.estilo_visual }}</p>
+  </div>
+
+  <div class="campo">
+    <div class="dato">Tono</div>
+    <p>{{ rec.tono_comunicacion }}</p>
+  </div>
+
+  {% if rec.identidad_verbal %}
+  <div class="campo">
+    <div class="dato">Cómo suena</div>
+    <p>
+      <strong>Abre:</strong> «{{ rec.identidad_verbal.frase_de_apertura }}»<br>
+      <strong>Cierra:</strong> «{{ rec.identidad_verbal.frase_de_cierre }}»
+    </p>
+    {% if rec.identidad_verbal.palabras_prohibidas_extra %}
+    <p style="margin-bottom:0">
+      <strong>No dice nunca:</strong> {{ rec.identidad_verbal.palabras_prohibidas_extra|join(" · ") }}
+    </p>
+    {% endif %}
+  </div>
+  {% endif %}
+
+  <div class="campo">
+    <div class="dato">Qué hacer en 90 días</div>
+    <ul class="acciones">
+      {% for a in rec.acciones %}<li>{{ a }}</li>{% endfor %}
+    </ul>
+  </div>
+
+  {% if rec.que_deja_de_hacer %}
+  <div class="campo">
+    <div class="dato">Qué dejas de hacer</div>
+    <p>{{ rec.que_deja_de_hacer }}</p>
+  </div>
+  {% endif %}
+
+  {% if rec.criterio_revision_90_dias %}
+  <div class="campo">
+    <div class="dato">Cómo se revisa a los 90 días</div>
+    <p>{{ rec.criterio_revision_90_dias }}</p>
+  </div>
+  {% endif %}
+
+  <div class="campo">
+    <div class="dato">Referentes</div>
+    <p>{{ rec.referentes|join(" · ") }}</p>
+  </div>
+
+  <div class="riesgo">
+    <strong>El riesgo:</strong> {{ rec.riesgo }}
+  </div>
+</div>
+{% endfor %}
+{% endif %}
+
+<section>
+  <h2>Nota metodológica</h2>
+  <div class="metodologia">
+    <h3>Qué es sólido en este informe</h3>
+    <p>
+      El sistema de los 12 arquetipos procede de Mark y Pearson (<em>The Hero and
+      the Outlaw</em>, 2001), sobre la base junguiana. Tu puntuación aplica una
+      <strong>corrección de aquiescencia</strong>: se resta la media global de tus
+      respuestas, de modo que lo que ves no es cuánto te gusta cada arquetipo, sino
+      tu perfil relativo real. Sin esa corrección, un test de arquetipos mide sobre
+      todo deseabilidad social.
+    </p>
+    <p>
+      El efecto del color junto al rostro es física de la percepción, no
+      superstición: el <strong>contraste simultáneo</strong> (Chevreul, 1839) hace
+      que la ropa cercana a la cara desplace la apariencia de la piel. Y se sabe
+      que un rostro se percibe más sano cuando es algo más rojo, más amarillo y más
+      luminoso (Stephen et al., 2009). Ese es el mecanismo real detrás de "este
+      color te favorece".
+    </p>
+
+    {% if r.identificabilidad is defined and r.identificabilidad %}
+    <h3>De dónde sale el índice de identificabilidad</h3>
+    <p>
+      No es una opinión ni una salida de la IA: es una suma ponderada de cinco
+      componentes calculados con tus respuestas, y cada uno vale lo que vale
+      porque unos activos se recuerdan antes que otros —
+      {% for nombre, comp in r.identificabilidad.componentes.items() %}
+      {{ nombre }} ({{ comp.peso }}){% if not loop.last %}, {% endif %}
+      {% endfor %}.
+      Los pesos se renormalizan sobre los componentes de los que hay dato, así que
+      un cuestionario a medias no sale artificialmente bajo por lo que no
+      contestaste. Mide si <em>hay</em> algo que repetir, no si eso te separa de tu
+      gremio: eso último exige un bloque de contexto competitivo que hoy no se
+      pregunta, y preferimos un hueco declarado a un número inventado.
+    </p>
+    {% endif %}
+
+    <h3>Qué es heurística, no ciencia</h3>
+    <p>
+      Las estaciones cromáticas, los tipos de Kibbe y las tipologías de estilo
+      personal <strong>no tienen validación científica</strong>: nadie ha demostrado
+      que dos analistas asignen la misma categoría a la misma persona. El propio
+      David Kibbe ha repudiado el test que popularizó en los años ochenta. Las
+      usamos porque acotan decisiones y dan vocabulario compartido, no porque sean
+      un diagnóstico. Trátalas como un punto de partida, no como un veredicto.
+    </p>
+    <p>
+      Tampoco encontrarás aquí la famosa estadística de que "el 90 % de la decisión
+      de compra depende del color". No tiene ningún estudio detrás.
+    </p>
+
+    <h3>Sobre el cabello</h3>
+    <p>
+      Existe investigación sólida (Perception Institute; Koval y Rosette, Duke) de
+      que el cabello afro, las trenzas y los locs se perciben como "menos
+      profesionales". Eso es un <strong>sesgo del observador</strong>, documentado y
+      racial. Te informamos de que existe; no lo convertimos en recomendación. Ningún
+      peinado te resta valor: hay entornos que aún no lo han entendido.
+    </p>
+  </div>
+</section>
+
+</body>
+</html>
